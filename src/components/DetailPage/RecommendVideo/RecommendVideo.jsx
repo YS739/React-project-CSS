@@ -1,5 +1,11 @@
+import { RecommendBody } from './style';
+
 const RecommendVideo = () => {
-  return <div>RecommendVideo 테스트</div>;
+  return (
+    <RecommendBody>
+      <div>sss</div>
+    </RecommendBody>
+  );
 };
 
 export default RecommendVideo;

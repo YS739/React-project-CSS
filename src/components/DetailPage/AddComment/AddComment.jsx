@@ -1,5 +1,5 @@
 const AddComment = () => {
-  return <div>gdgd</div>;
+  return <div>gffff</div>;
 };
 
 export default AddComment;
