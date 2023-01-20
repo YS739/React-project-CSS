@@ -1,6 +1,5 @@
 import { BsBookmark } from 'react-icons/bs';
 import {
-  AddIconWrap,
   AddCommentListWrap,
   AddCommentListAll,
   AddCommentListTwo,
@@ -11,6 +10,12 @@ import {
   AddCommentText,
   AddCommentBtn,
   AddIcornBtn,
+  AddGitInputDiv,
+  AddCommentPlusGit,
+  AddGitText,
+  AddCommentDiv,
+  AddInputDiv,
+  AddCommentBtnDiv,
 } from './style';
 
 const AddComment = () => {
@@ -20,30 +25,28 @@ const AddComment = () => {
         <AddNickName>개발자1</AddNickName>
 
         <AddCommentListTwo>
-          <div>
+          <AddCommentPlusGit>
             <AddGitLink>
-              <div>Add Github Link </div>
-              <div>
+              <AddGitText>Github Link </AddGitText>
+              <AddGitInputDiv>
                 <AddInputFirst placeholder="선택사항입니다." />
-              </div>
+              </AddGitInputDiv>
             </AddGitLink>
             <AddCommentText>
-              <div>댓글 </div>
-              <div>
+              <AddCommentDiv>댓글 </AddCommentDiv>
+              <AddInputDiv>
                 <AddInputTwo />
-              </div>
+              </AddInputDiv>
             </AddCommentText>
-          </div>
-          <div>
+          </AddCommentPlusGit>
+          <AddCommentBtnDiv>
             <AddCommentBtn>댓글등록</AddCommentBtn>
-          </div>
+          </AddCommentBtnDiv>
         </AddCommentListTwo>
       </AddCommentListWrap>
-      <AddIconWrap>
-        <AddIcornBtn>
-          <BsBookmark />
-        </AddIcornBtn>
-      </AddIconWrap>
+      <AddIcornBtn>
+        <BsBookmark />
+      </AddIcornBtn>
     </AddCommentListAll>
   );
 };
