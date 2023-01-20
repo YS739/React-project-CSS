@@ -1,5 +1,5 @@
 const RecommendVideo = () => {
-  return <div>RecommendVideo</div>;
+  return <div></div>;
 };
 
 export default RecommendVideo;

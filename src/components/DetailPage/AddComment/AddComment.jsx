@@ -1,5 +1,7 @@
+import { AddCommentContainer } from './style';
+
 const AddComment = () => {
-  return <div>gdgd</div>;
+  return <AddCommentContainer></AddCommentContainer>;
 };
 
 export default AddComment;
