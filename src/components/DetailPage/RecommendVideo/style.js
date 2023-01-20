@@ -11,7 +11,6 @@ export const ViewBody = styled.div`
 
   padding: 1%;
   margin-left: 11%;
-  margin-top: 3%;
 
   display: flex;
   justify-content: center;
@@ -31,7 +30,7 @@ export const TextBody = styled.div`
 `;
 
 export const VideoText = styled.div`
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 8%;
 `;

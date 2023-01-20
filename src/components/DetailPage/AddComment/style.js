@@ -1,24 +1,25 @@
 import styled from 'styled-components';
 
 export const AddCommentListAll = styled.div`
+  width: 100%;
+  height: 20%;
+  margin-left: 8%;
+  margin-top: 1%;
   display: flex;
   justify-content: space-between;
-  height: 20%;
 `;
 
 export const AddCommentListWrap = styled.div`
   display: flex;
   flex-direction: row;
   border: 1px solid black;
-  margin-left: 100px;
-  margin-top: 10px;
+
   width: 85%;
+  height: 100%;
 `;
 
 export const AddCommentListTwo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 25px;
+  margin-left: 5%;
   margin-top: 15px;
 `;
 
@@ -29,13 +30,11 @@ export const AddNickName = styled.div`
 `;
 
 export const AddGitLink = styled.div`
-  font-weight: 700;
+  display: flex;
 `;
 
 export const AddCommentText = styled.div`
-  margin-left: 50px;
-  margin-top: 10px;
-  font-weight: 700;
+  display: flex;
 `;
 
 export const AddIconWrap = styled.div`
@@ -55,29 +54,20 @@ export const AddIcornBtn = styled.button`
 
 export const AddInputFirst = styled.input`
   padding: 5px;
-  width: 825px;
+  width: 80%;
   /* border-radius: 5px; */
 `;
 
-export const AddInputTwo = styled.input`
-  margin-left: 5px;
-  width: 830px;
-  height: 60px;
-  border-radius: 5px;
-  border-color: blue;
-`;
+export const AddInputTwo = styled.input``;
 
 export const AddCommentBtn = styled.button`
-  display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: gray;
   color: white;
   border-radius: 5px;
-  width: 10%;
-  height: 22%;
-  margin-left: 840px;
-  margin-top: 10px;
+  width: 100px;
+  height: 30px;
   cursor: pointer;
 `;
