@@ -13,5 +13,6 @@ export const DetailLeftBody = styled.div`
 `;
 
 export const DetailRight = styled.div`
-  width: 34%;
+  width: 35%;
+  height: 100%;
 `;
