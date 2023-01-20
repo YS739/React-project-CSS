@@ -1,0 +1,852 @@
+[
+  {
+    "kind": "youtube#searchResult",
+    "etag": "bN-BNAG7yMOmb2GiFtnhmMgNels",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "67stn7Pu7s4"
+    },
+    "snippet": {
+      "publishedAt": "2020-03-14T08:42:00Z",
+      "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+      "title": "클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript",
+      "description": "유튜브 사이트를 반응형으로 만들어 볼꺼예요. 순수 HTML, CSS를 이용해서 (Javascript 약간) 만들어 보고, 다음에 Javascript를 배우 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/67stn7Pu7s4/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/67stn7Pu7s4/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/67stn7Pu7s4/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "드림코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-03-14T08:42:00Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "x954tdmuy4RsGeVf7YcfKOkRWg0",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "tshTCv1hwJQ"
+    },
+    "snippet": {
+      "publishedAt": "2022-07-24T14:30:47Z",
+      "channelId": "UChfcUNsM20UbvKrYaydBNqA",
+      "title": "[클론코딩] 쿠팡로그인 클론코딩 JS까지! #HTML #CSS #javascript #클론코딩  #초보 #쉬운코딩",
+      "description": "영상봐주셔서 감사합니다! 구독 꾹 ~! 눌러주세요 강의 블로그 링크(아래) https://webty.tistory.com/ *영상에서 사용한 이미지자료는 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "유코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-07-24T14:30:47Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "QggXC4x7bVabI3xYShMWmbhE8dE",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "JI7epsxcmnU"
+    },
+    "snippet": {
+      "publishedAt": "2021-07-26T23:05:29Z",
+      "channelId": "UCSEOUzkGNCT_29EU_vnBYjg",
+      "title": "클론코딩 멈춰!",
+      "description": "처음 웹을 배울때는 클론 코딩을 통해 빠르게 한 사이클을 돌려보는것이 굉장히 효율적이라고 생각합니다 ^^ 클론 코딩 무조건 안돼!",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/JI7epsxcmnU/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/JI7epsxcmnU/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/JI7epsxcmnU/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "개발바닥",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-07-26T23:05:29Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "NcVnVOmlkUeZAgN7S2JNtDWONLE",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "L0t7-4ldaeg"
+    },
+    "snippet": {
+      "publishedAt": "2021-04-21T07:53:47Z",
+      "channelId": "UC8B8z9BHiwmEmNEqDpDNd8Q",
+      "title": "자바스크립트 원래 이렇게 어렵나요? 비전공자가 코딩하면 생기는 일",
+      "description": "안녕하세요! 자바스크립트에 겁없이 도전했다가 잔뜩 혼난 후기입니다..ㅋㅋ 사실 엄청 오래 전부터 촬영했는데 결국 이런 결말을 가져 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/L0t7-4ldaeg/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/L0t7-4ldaeg/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/L0t7-4ldaeg/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "hyosunglim임효성",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-04-21T07:53:47Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "QMHadjZq6VV0eeEnUbWGFj6fDIo",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "X91jsJyZofw"
+    },
+    "snippet": {
+      "publishedAt": "2020-03-03T12:19:16Z",
+      "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+      "title": "웹사이트 따라만들기, 반응형 헤더편 | 프론트엔드 개발자 입문편: HTML, CSS, Javascript",
+      "description": "HTML, CSS를 이용해서 (Javascript 약간) 반응형 헤더를 함께 만들어 볼꺼예요 (↙ 자세한 내용). 풀스택 개발 로드맵 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/X91jsJyZofw/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/X91jsJyZofw/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/X91jsJyZofw/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "드림코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-03-03T12:19:16Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "Kzp_BZhISpHWfLX2HVKfyuWKoK8",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "B4ZDhc_-Hbg"
+    },
+    "snippet": {
+      "publishedAt": "2022-07-27T06:40:02Z",
+      "channelId": "UC1bbIVz7kQ014sWnY2UXBuQ",
+      "title": "클론코딩, 블로그 만들지마세요",
+      "description": "개발자 취준생 여러분. 클론코딩, 블로그 많이 만드실겁니다. 하지만 개발자 이력서에 담기엔 2프로 부족합니다. 그러면 뭐 만들라고요 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "비개발 쑤난",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-07-27T06:40:02Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "sjqQAT6wbt7n1lr6giogxy0aV_U",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "sD8neywGxVk"
+    },
+    "snippet": {
+      "publishedAt": "2021-06-27T13:53:31Z",
+      "channelId": "UCLxPNvxa9D-3UIdocAJUxfQ",
+      "title": "클론코딩으로 공부해서 실력이 안늘어요",
+      "description": "문의 : androimaster@gmail.com 고민 문의는 유튜브 영상 제작에 정보 오픈이 가능하신 분들만 예민한 정보를 제거하거나 명시를 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/sD8neywGxVk/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/sD8neywGxVk/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/sD8neywGxVk/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "빵굽는개발자 빵형",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-06-27T13:53:31Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "Yaye2DzQgyja-z3e-5Xl8l5uVks",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "e56H5n1SvEs"
+    },
+    "snippet": {
+      "publishedAt": "2020-09-16T02:00:02Z",
+      "channelId": "UCzA62wwyiLnVnqFP4VEUOZg",
+      "title": "[HTML+CSS+Javascript 강의] 타이핑 효과 랜딩 페이지 만들기 / 실습 / 웹 코딩",
+      "description": "이번 영상에서는 타이핑 효과가 인상적인 랜딩 페이지를 함께 만들어보도록 하겠습니다. HTML과 CSS, Javascript를 적절하게 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/e56H5n1SvEs/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/e56H5n1SvEs/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/e56H5n1SvEs/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "수코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-09-16T02:00:02Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "YJE89AWfOwGHBe8sLNAX609AcEc",
+    "id": {
+      "kind": "youtube#playlist",
+      "playlistId": "PLv2d7VI9OotQ1F92Jp9Ce7ovHEsuRQB3Y"
+    },
+    "snippet": {
+      "publishedAt": "2019-12-29T13:12:52Z",
+      "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+      "title": "프론트엔드 강의 - 프론트엔드 개발자 되기 입문편⭐️ (개념 + 클론코딩)",
+      "description": "HTML, CSS, Javascript.",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/NeEaTeYcFhE/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/NeEaTeYcFhE/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/NeEaTeYcFhE/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "드림코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2019-12-29T13:12:52Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "m9CLg9WUo5DzfsZGFYfUocFfuis",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "yu7GQ4zbTsw"
+    },
+    "snippet": {
+      "publishedAt": "2021-08-19T10:15:03Z",
+      "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+      "title": "클론코딩 &quot;제대로&quot; 하는 방법 #Shorts",
+      "description": "생각없이 따라치면 당연히 도움이 안 됩니다~! 이해 하지않고 생각없이 따라치면 영타연습이겠죠? #클론코딩 #코린이 #코알못 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/yu7GQ4zbTsw/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/yu7GQ4zbTsw/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/yu7GQ4zbTsw/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "노마드 코더 Nomad Coders",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-08-19T10:15:03Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "ylbgIQTtncR_ZtJcqjwkuZyMET4",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "v2Aw9f-MK5s"
+    },
+    "snippet": {
+      "publishedAt": "2020-05-13T08:59:49Z",
+      "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+      "title": "클론코딩 포트폴리오 반응형 웹사이트 따라 만들기 | HTML, CSS, JavaScript 프론트엔드 강의(드림코딩 아카데미 오픈)",
+      "description": "프론트엔드 강의도 듣도 포트폴리오 사이트도 만들고 1석 2조의 기회 ⭐️ 포트폴리오 클론 코딩 코스: ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/v2Aw9f-MK5s/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/v2Aw9f-MK5s/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/v2Aw9f-MK5s/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "드림코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-05-13T08:59:49Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "SUMgWVGtjYTHdE1IQIAOyaTho-I",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "4Vq8CQf-egI"
+    },
+    "snippet": {
+      "publishedAt": "2021-11-27T03:54:22Z",
+      "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+      "title": "올해부턴 CSS 다르게 짬 ㅅㄱ (2022년 CSS 채신기술)",
+      "description": "컴포넌트 기반 웹개발이 유행이니 CSS도 그에 맞춰 변화하고 있습니다 시간이 지나도 변하지 않는 것은 아마 우리들의 코딩실력뿐 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/4Vq8CQf-egI/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/4Vq8CQf-egI/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/4Vq8CQf-egI/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "코딩애플",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-11-27T03:54:22Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "6B-uOPNTol44UEu6lXE41bSU0-k",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "_YrXKxY8PTY"
+    },
+    "snippet": {
+      "publishedAt": "2019-07-08T14:50:24Z",
+      "channelId": "UCQNE2JmbasNYbjGAcuBiRRg",
+      "title": "[CSS 기초와 활용] 구글 클론 사이트 만들기! 개발자도구와 Bootstrap, codepen 활용",
+      "description": "CSS의 개념과 기초 문법에 대해 학습하고 이를 이용해 Google 유사 클론 웹사이트(Joogle)를 만드는 학습 영상입니다. 영상에 나온 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/_YrXKxY8PTY/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/_YrXKxY8PTY/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/_YrXKxY8PTY/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "조코딩 JoCoding",
+      "liveBroadcastContent": "none",
+      "publishTime": "2019-07-08T14:50:24Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "_j_AQ__e5-v2qM00gpA5dJAbPF0",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "tIC9MfxGOow"
+    },
+    "snippet": {
+      "publishedAt": "2022-10-15T01:00:18Z",
+      "channelId": "UCQNE2JmbasNYbjGAcuBiRRg",
+      "title": "CSS 기초부터 실전 구글 클론 코딩 강의 (ft. Figma, Bootstrap, Tailwindcss, Codepen)",
+      "description": "이번 영상은 웹 개발 5주 완성 라이브 강의 편집본으로 CSS 기초를 배우고 Figma를 보며 구글 클론 사이트를 만드는 강의입니다.",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/tIC9MfxGOow/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/tIC9MfxGOow/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/tIC9MfxGOow/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "조코딩 JoCoding",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-10-15T01:00:18Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "9PdQOr0zg0WAsDRrupg6wYCv8GU",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "afaqr875gUE"
+    },
+    "snippet": {
+      "publishedAt": "2022-03-27T20:22:13Z",
+      "channelId": "UC-4YvDoWlOI1RK25ItIJ77A",
+      "title": "Tesla website clone with HTML, CSS and Javascript",
+      "description": "This tutorial shows how to create tesla.com homepage clone with html5, css3 and some vanilla javascript (no dependencies or ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/afaqr875gUE/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/afaqr875gUE/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/afaqr875gUE/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "Coding With Dawid",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-03-27T20:22:13Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "RSuwQk4nJq3nBqCSXTJN2Whqkmk",
+    "id": {
+      "kind": "youtube#playlist",
+      "playlistId": "PLgRxBCVPaZ_1iBe1v3-ZSSzHGdQo7AZPq"
+    },
+    "snippet": {
+      "publishedAt": "2022-02-05T12:52:16Z",
+      "channelId": "UCbMGBIayK26L4VaFrs5jyBw",
+      "title": "인스타그램 클론코딩",
+      "description": "",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/hM2whwf2u14/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/hM2whwf2u14/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/hM2whwf2u14/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "개발하는남자",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-02-05T12:52:16Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "HGOwCZQskByfHrqBAMVqfn3YavQ",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "jxgKxJYbPuE"
+    },
+    "snippet": {
+      "publishedAt": "2020-10-11T16:11:00Z",
+      "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+      "title": "무언가 따라 만들기(클론코딩)",
+      "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/jxgKxJYbPuE/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/jxgKxJYbPuE/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/jxgKxJYbPuE/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "ZeroCho TV",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-10-11T16:11:00Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "_fI_jZGy5Q_WdxtWCgOktx4cVEM",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "ZDArFuzEj_Y"
+    },
+    "snippet": {
+      "publishedAt": "2022-10-04T03:54:27Z",
+      "channelId": "UC4Hha9F0LZcOtqyL0F3aNkw",
+      "title": "클론 코딩, 제대로 안하면 독이 된다",
+      "description": "개발자 #학습 #클론코딩 Jombo - Every programming tutorial https://youtu.be/MAlSjtxy5ak 집필 서적 - 혼자 공부하는 컴퓨터 구조 + ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/ZDArFuzEj_Y/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ZDArFuzEj_Y/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/ZDArFuzEj_Y/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "개발자 강민철",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-10-04T03:54:27Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "F7IMyXQS0sZDJN1zxxnzfCRkmLg",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "_KmyIO1jUPI"
+    },
+    "snippet": {
+      "publishedAt": "2022-05-25T11:30:06Z",
+      "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+      "title": "슬랙 클론코딩을 이렇게 쉽게 할 수 있다고? 10분컷!",
+      "description": "잘 갖다 쓰는 것도 실력입니다. 너무 쉬우니까 꼭 따라해보세요! 스타트업. 개인 프로젝트를 위한 무료 Stream API 계정 만들기!",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/_KmyIO1jUPI/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/_KmyIO1jUPI/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/_KmyIO1jUPI/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "노마드 코더 Nomad Coders",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-05-25T11:30:06Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "6jnMLpr94ha5GnB6lPeMQEp3Sqg",
+    "id": {
+      "kind": "youtube#playlist",
+      "playlistId": "PLcqDmjxt30Rsb8Zpgbemt-NaCOjr2WIUj"
+    },
+    "snippet": {
+      "publishedAt": "2019-09-26T01:54:09Z",
+      "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+      "title": "HTML/CSS 무료 강좌(네이버 메인)",
+      "description": "",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/ohpjJNal2lk/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ohpjJNal2lk/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/ohpjJNal2lk/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "ZeroCho TV",
+      "liveBroadcastContent": "none",
+      "publishTime": "2019-09-26T01:54:09Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "c7vwc7gkLtUB-MlDmpzKV9Hqc1k",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "b79_XuSBqPY"
+    },
+    "snippet": {
+      "publishedAt": "2020-01-16T11:12:23Z",
+      "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+      "title": "코딩을 빨리 배우는 법 (온라인 강의로 배울때 200% 효과적으로 배우기)",
+      "description": "요즘 굳이 대학을 가지 않아도 온라인 강의 만으로 다양한 기술들을 배울 수 있는데요. 코딩도 온라인 강의로 폭넓게 또 깊게 배울 수 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/b79_XuSBqPY/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/b79_XuSBqPY/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/b79_XuSBqPY/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "드림코딩",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-01-16T11:12:23Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "x3Vd8-tNTBtpjqXRZcTfcOM-CZI",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "XH1DriGkT2E"
+    },
+    "snippet": {
+      "publishedAt": "2022-02-15T03:29:33Z",
+      "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+      "title": "자바스크립트로 만들어 30억 번 게임 (Vampire Survivors)",
+      "description": "게임은 집에서 만들지 말고 제발 사서 하세요 코드도 집에서 혼자 만들지 말고 https://codingapple.com 구독자용 10% 할인코드 ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/XH1DriGkT2E/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/XH1DriGkT2E/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/XH1DriGkT2E/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "코딩애플",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-02-15T03:29:33Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "TxMZ4QF9otyO_UD-q5K3lRG0VYs",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "ESYsWF8tx74"
+    },
+    "snippet": {
+      "publishedAt": "2023-01-08T14:14:38Z",
+      "channelId": "UCB3nMLm62TNhAmS4qJQqq9g",
+      "title": "html,css,vanilla javascript 10개 프로젝트 클론코딩하기 - 환경설정",
+      "description": "\"html,css,vanilla javascript 10개 프로젝트 클론코딩하기\" 2월 말에 인프런에 강좌 업로드 예정.",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/ESYsWF8tx74/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ESYsWF8tx74/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/ESYsWF8tx74/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "CANES BLACK",
+      "liveBroadcastContent": "none",
+      "publishTime": "2023-01-08T14:14:38Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "RimNgo7fUSRIiLmyxJR-Auas8O0",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "PxlshtCWJ-Y"
+    },
+    "snippet": {
+      "publishedAt": "2021-01-15T11:13:59Z",
+      "channelId": "UCaZzgxjPQe535CTdzO84LPg",
+      "title": "CSS+바닐라 자바스크립트 프론트엔드 클론코딩",
+      "description": "",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/PxlshtCWJ-Y/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/PxlshtCWJ-Y/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/PxlshtCWJ-Y/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "아할거업어",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-01-15T11:13:59Z"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "uDHR3lYgxsFyEYTHIL1b4CEsECo",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "SHfR1tLpe1o"
+    },
+    "snippet": {
+      "publishedAt": "2020-12-22T10:09:35Z",
+      "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+      "title": "백엔드 개발자는 꼭 배워보세요",
+      "description": "Ruby 는 Ruby on Rails 가 있고, Python 에는 Django 가 있고, Java 에는 Spring 이 있다면.... Node.JS 에는? Nest.JS 가 있습니다!",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/SHfR1tLpe1o/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/SHfR1tLpe1o/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/SHfR1tLpe1o/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "노마드 코더 Nomad Coders",
+      "liveBroadcastContent": "none",
+      "publishTime": "2020-12-22T10:09:35Z"
+    }
+  }
+]
