@@ -23,7 +23,6 @@ const AddComment = () => {
     <AddCommentListAll>
       <AddCommentListWrap>
         <AddNickName>개발자1</AddNickName>
-
         <AddCommentListTwo>
           <AddCommentPlusGit>
             <AddGitLink>
