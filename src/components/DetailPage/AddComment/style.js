@@ -19,8 +19,6 @@ export const AddCommentListWrap = styled.div`
 `;
 
 export const AddCommentListTwo = styled.div`
-  /* display: flex;
-  flex-direction: column; */
   margin-left: 5%;
   margin-top: 2%;
   width: 100%;
