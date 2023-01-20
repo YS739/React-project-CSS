@@ -6,7 +6,6 @@ import { Fragment } from 'react';
 const DetailPage = () => {
   return (
     <Fragment>
-      DetailPage
       <RecommendVideo />
       <AddComment />
       <CommentList />
