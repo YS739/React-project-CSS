@@ -20,13 +20,23 @@ const AddComment = () => {
         <AddNickName>개발자1</AddNickName>
 
         <AddCommentListTwo>
-          <AddGitLink>
-            Add Github Link <AddInputFirst placeholder="선택사항입니다." />
-          </AddGitLink>
-          <AddCommentText>
-            댓글 <AddInputTwo />
-          </AddCommentText>
-          <AddCommentBtn>댓글등록</AddCommentBtn>
+          <div>
+            <AddGitLink>
+              <div>Add Github Link </div>
+              <div>
+                <AddInputFirst placeholder="선택사항입니다." />
+              </div>
+            </AddGitLink>
+            <AddCommentText>
+              <div>댓글 </div>
+              <div>
+                <AddInputTwo />
+              </div>
+            </AddCommentText>
+          </div>
+          <div>
+            <AddCommentBtn>댓글등록</AddCommentBtn>
+          </div>
         </AddCommentListTwo>
       </AddCommentListWrap>
       <AddIconWrap>
