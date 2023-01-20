@@ -9,7 +9,7 @@ const Header = () => {
   let currentUserId = localStorage.getItem('id');
 
   // TODO: 회원가입 <-> 마이페이지 / 로그인 <-> 로그아웃 토글
-  // FIXME: 회원가입, 로그인 버튼 사이에 패딩주기
+
   return (
     <Container>
       <Logo src={require('../../../assets/css_logo.png')} alt="css" />

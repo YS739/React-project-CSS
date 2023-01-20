@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const Logo = styled.img`
-  width: 70px;
-  height: 70px;
-  justify-content: center;
-`;
-
 export const LoginContainer = styled.div`
   padding: 50px;
   margin: 100px;
@@ -26,23 +20,8 @@ export const SignUp = styled.div`
 
 export const BlueButton = styled.button`
   background-color: '#243763';
-  width: 200px;
-  height: 40px;
+  width: 45px;
+  height: 15px;
   color: white;
-  font-size: 15px;
-  cursor: pointer;
-`;
-
-export const Button = styled.button`
-  width: 200px;
-  height: 40px;
-  cursor: pointer;
-`;
-
-export const SocialLogin = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  font-size: 10px;
 `;

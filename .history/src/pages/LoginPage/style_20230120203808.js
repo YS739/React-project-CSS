@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const Logo = styled.img`
-  width: 70px;
-  height: 70px;
-  justify-content: center;
-`;
-
 export const LoginContainer = styled.div`
   padding: 50px;
   margin: 100px;
@@ -41,8 +35,6 @@ export const Button = styled.button`
 
 export const SocialLogin = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
 `;

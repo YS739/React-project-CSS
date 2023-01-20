@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 4rem 3rem;
+  padding: 5rem 3rem;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  /* font-size: 30px; */
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -16,7 +18,4 @@ export const LoginToggle = styled.div`
   display: flex;
   align-items: center;
   font-size: 18px;
-  display: flex;
-  margin-left: 20px;
-  align-items: center;
 `;

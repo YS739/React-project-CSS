@@ -17,6 +17,6 @@ export const LoginToggle = styled.div`
   align-items: center;
   font-size: 18px;
   display: flex;
-  margin-left: 20px;
+  margin-right: 20px;
   align-items: center;
 `;

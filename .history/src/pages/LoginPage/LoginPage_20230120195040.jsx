@@ -1,0 +1,16 @@
+const LoginPage = () => {
+  return (
+    <LoginContainer>
+      <Form>
+        아이디
+        <input />
+        비밀번호
+        <input />
+      </Form>
+      <div>아직 회원이 아니세요?</div>
+      <div>회원가입하기</div>
+    </LoginContainer>
+  );
+};
+
+export default LoginPage;
