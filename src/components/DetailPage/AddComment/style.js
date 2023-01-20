@@ -12,7 +12,8 @@ export const AddCommentListAll = styled.div`
 export const AddCommentListWrap = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
+  border: 2px solid #205295;
+  border-radius: 10px;
 
   width: 85%;
   height: 100%;
@@ -48,13 +49,14 @@ export const AddGitText = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 12%;
-  height: 100%;
+  height: 50%;
   font-weight: 700;
 `;
 
 export const AddGitInputDiv = styled.div`
   width: 88%;
   height: 100%;
+  margin-left: 1%;
 `;
 
 export const AddCommentText = styled.div`
@@ -75,26 +77,34 @@ export const AddCommentDiv = styled.div`
 export const AddInputDiv = styled.div`
   width: 100%;
   height: 100%;
+  margin-left: 1%;
 `;
 
 export const AddIcornBtn = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   border: none;
   cursor: pointer;
   background-color: transparent;
   width: 50px;
   font-size: 30px;
-  /* margin-right: 120px; */
+  margin-right: 10%;
 `;
 
 export const AddInputFirst = styled.input`
   width: 95%;
   height: 50%;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 10px;
   /* border-radius: 5px; */
 `;
 
 export const AddInputTwo = styled.input`
   width: 95%;
   height: 100%;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 10px;
 `;
 
 export const AddCommentBtnDiv = styled.div`
@@ -106,7 +116,7 @@ export const AddCommentBtnDiv = styled.div`
 
 export const AddCommentBtn = styled.button`
   border: none;
-  background-color: gray;
+  background-color: #205295;
   color: white;
   border-radius: 5px;
   width: 90px;
