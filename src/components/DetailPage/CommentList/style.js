@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CommentListBody = styled.div`
-  width: 100%;
+  width: 90%;
   height: 13%;
 
   margin-top: 2%;
@@ -35,6 +35,7 @@ export const CommentTime = styled.div`
 
 export const CommentGitIcon = styled.div`
   font-size: 1.5rem;
+  cursor: pointer;
 `;
 
 export const ListTextSection = styled.div`
@@ -42,6 +43,7 @@ export const ListTextSection = styled.div`
   height: 70%;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -49,4 +51,10 @@ export const CommentText = styled.div`
   font-size: 1.2rem;
   font-weight: 600;
   margin-left: 1%;
+`;
+
+export const CommentTextIcon = styled.div`
+  font-size: 1.4rem;
+  margin-right: 1%;
+  cursor: pointer;
 `;

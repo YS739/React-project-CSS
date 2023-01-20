@@ -7,8 +7,10 @@ import {
   CommentGitIcon,
   ListTextSection,
   CommentText,
+  CommentTextIcon,
 } from './style';
 import { BsGithub } from 'react-icons/bs';
+import { GrMoreVertical } from 'react-icons/gr';
 
 export default function CommentList() {
   return (
@@ -25,6 +27,9 @@ export default function CommentList() {
         <CommentText>
           클론 코딩 하면서 리팩토링 좀 해봤어요. 깃헙에서 확인해보세요
         </CommentText>
+        <CommentTextIcon>
+          <GrMoreVertical />
+        </CommentTextIcon>
       </ListTextSection>
     </CommentListBody>
   );
