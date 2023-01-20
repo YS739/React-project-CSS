@@ -9,7 +9,7 @@ export const DetialFragment = styled.div`
 export const DetailLeftBody = styled.div`
   width: 65%;
   height: 100%;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 `;
 
 export const DetailRight = styled.div`
