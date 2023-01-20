@@ -1,4 +1,4 @@
-import { Logo, Form, BlueButton, Login } from './style';
+import { Logo, Form, BlueButton } from './style';
 
 const SignUpPage = () => {
   return (

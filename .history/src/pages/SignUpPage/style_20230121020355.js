@@ -7,7 +7,6 @@ export const Logo = styled.img`
 `;
 export const Form = styled.form`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px;
@@ -21,6 +20,4 @@ export const BlueButton = styled.button`
   font-size: 15px;
   cursor: pointer;
 `;
-export const Login = styled.div`
-  font-size: 15px;
-`;
+export const Login = styled.div``;
