@@ -2,9 +2,6 @@ import {
   Logo,
   LoginContainer,
   Form,
-  Id,
-  PassWord,
-  Input,
   SignUp,
   BlueButton,
   Button,
@@ -20,7 +17,7 @@ const LoginPage = () => {
       <Form>
         <Id>
           이메일
-          <Input placeholder={'css@gmail.com'} />
+          <Input placeholder={'clonecodingsharespace@gmail.com'} />
         </Id>
 
         <PassWord>

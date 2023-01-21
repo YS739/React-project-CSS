@@ -24,7 +24,7 @@ export const Form = styled.form`
 export const Id = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   width: 250px;
 `;
 export const PassWord = styled.div`
@@ -44,7 +44,7 @@ export const Input = styled.input`
 export const SignUp = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
+  margin-bottom: 10px;
 `;
 
 export const BlueButton = styled.button`

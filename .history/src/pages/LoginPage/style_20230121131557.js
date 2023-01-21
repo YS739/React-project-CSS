@@ -44,7 +44,6 @@ export const Input = styled.input`
 export const SignUp = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
 `;
 
 export const BlueButton = styled.button`
@@ -54,8 +53,6 @@ export const BlueButton = styled.button`
   height: 40px;
   color: white;
   font-size: 15px;
-  margin-bottom: 10px;
-
   cursor: pointer;
 `;
 
@@ -64,8 +61,7 @@ export const Button = styled.button`
   width: 250px;
   height: 40px;
   cursor: pointer;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 5px;
 `;
 
 export const SocialLogin = styled.div`

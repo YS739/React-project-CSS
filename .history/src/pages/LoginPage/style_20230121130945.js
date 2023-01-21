@@ -22,29 +22,27 @@ export const Form = styled.form`
 `;
 
 export const Id = styled.div`
-  display: flex;
-  justify-content: space-between;
   padding-bottom: 20px;
-  width: 250px;
+  width: 300px;
 `;
 export const PassWord = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 250px;
+  width: 300px;
 `;
 
 export const Input = styled.input`
+  /* background-color: transparent; */
   border: none;
   border-bottom: 1px solid #ccc;
   color: #555;
   box-sizing: border-box;
   font-size: 18px;
+  /* padding: 0px 20px; */
+  margin-left: 20px;
 `;
 
 export const SignUp = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
 `;
 
 export const BlueButton = styled.button`
@@ -54,8 +52,6 @@ export const BlueButton = styled.button`
   height: 40px;
   color: white;
   font-size: 15px;
-  margin-bottom: 10px;
-
   cursor: pointer;
 `;
 
@@ -64,12 +60,12 @@ export const Button = styled.button`
   width: 250px;
   height: 40px;
   cursor: pointer;
-  margin-bottom: 10px;
-  border-radius: 5px;
 `;
 
 export const SocialLogin = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 `;

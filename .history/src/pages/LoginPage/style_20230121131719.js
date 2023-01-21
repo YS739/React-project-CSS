@@ -18,7 +18,7 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  /* padding: 60px; */
 `;
 
 export const Id = styled.div`
@@ -44,7 +44,7 @@ export const Input = styled.input`
 export const SignUp = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
+  margin-bottom: 10px;
 `;
 
 export const BlueButton = styled.button`

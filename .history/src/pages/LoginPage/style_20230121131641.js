@@ -44,7 +44,6 @@ export const Input = styled.input`
 export const SignUp = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px;
 `;
 
 export const BlueButton = styled.button`
