@@ -4,8 +4,8 @@ import {
   AddCommentListWrap,
   AddCommentListAll,
   AddCommentListTwo,
-  AddInputFirst,
-  AddInputTwo,
+  AddInputGihub,
+  AddInputContent,
   AddNickName,
   AddGitLink,
   AddCommentText,
@@ -55,7 +55,7 @@ const AddComment = () => {
             <AddGitLink>
               <AddGitText>Github Link </AddGitText>
               <AddGitInputDiv>
-                <AddInputFirst
+                <AddInputGihub
                   placeholder="선택사항입니다."
                   onChange={AddGithubText}
                   value={githubText}
@@ -65,7 +65,7 @@ const AddComment = () => {
             <AddCommentText>
               <AddCommentDiv>댓글 </AddCommentDiv>
               <AddInputDiv>
-                <AddInputTwo
+                <AddInputContent
                   onChange={AddCommentTextChange}
                   value={commentText}
                 />
