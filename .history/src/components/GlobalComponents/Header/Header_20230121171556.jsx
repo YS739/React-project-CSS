@@ -1,4 +1,4 @@
-import { Container, Logo, LoginToggle, Nav } from './style.js';
+import { Container, Logo, LoginToggle, SignUp, Login } from './style.js';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -14,13 +14,13 @@ const Header = () => {
       <LoginToggle>
         {loginCheck ? (
           <>
-            <Nav>마이페이지</Nav>
-            <Nav onClick={() => setLoginCheck((e) => !e)}>로그아웃</Nav>
+            <SignUp>마이페이지</SignUp>
+            <SignUp onClick={() => setLoginCheck((e) => !e)}>로그아웃</SignUp>
           </>
         ) : (
           <>
-            <Nav>회원가입</Nav>
-            <Nav>로그인</Nav>
+            <SignUp>회원가입</SignUp>
+            <SignUp>로그인</SignUp>
           </>
         )}
       </LoginToggle>

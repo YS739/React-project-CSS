@@ -10,7 +10,7 @@ export const LoginContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 300px;
+  width: 250px;
   height: 200px;
 `;
 export const Form = styled.form`

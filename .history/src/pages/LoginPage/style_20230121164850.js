@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const LoginContainer = styled.div`
+  /* width: 1100px;
+  height: 100%; */
   padding: 50px;
   margin-bottom: 100px;
   display: flex;
@@ -10,7 +12,7 @@ export const LoginContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 300px;
+  width: 250px;
   height: 200px;
 `;
 export const Form = styled.form`

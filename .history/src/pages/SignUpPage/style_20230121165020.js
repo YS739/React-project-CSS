@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoginContainer = styled.div`
+export const SignUpContainer = styled.div`
   padding: 50px;
   margin-bottom: 100px;
   display: flex;
@@ -12,16 +12,23 @@ export const LoginContainer = styled.div`
 export const Logo = styled.img`
   width: 300px;
   height: 200px;
+  justify-content: center;
 `;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  padding: 50px;
+  /* margin: 5px; */
 `;
-
 export const Id = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  width: 300px;
+`;
+export const Name = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
@@ -30,9 +37,9 @@ export const Id = styled.div`
 export const PassWord = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
   width: 300px;
 `;
-
 export const Input = styled.input`
   border: none;
   border-bottom: 1px solid #ccc;
@@ -44,17 +51,6 @@ export const Input = styled.input`
   }
   padding-left: 10px;
 `;
-export const ToSignUp = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-`;
-export const SignUp = styled.div`
-  padding-left: 5px;
-  font-weight: bold;
-  cursor: pointer;
-`;
-
 export const BlueButton = styled.button`
   background-color: #205295;
   border-radius: 5px;
@@ -63,21 +59,16 @@ export const BlueButton = styled.button`
   color: white;
   font-size: 15px;
   margin-bottom: 10px;
-
   cursor: pointer;
 `;
-
-export const Button = styled.button`
-  background-color: white;
-  width: 250px;
-  height: 40px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  border-radius: 5px;
-`;
-
-export const SocialLogin = styled.div`
+export const ToLogin = styled.div`
+  font-size: 15px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+`;
+export const Login = styled.div`
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
 `;

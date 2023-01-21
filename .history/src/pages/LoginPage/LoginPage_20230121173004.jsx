@@ -12,8 +12,9 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
-const LoginPage = () => {
+const LoginPage = ({ setLoginCheck }) => {
   // TODO: 헤더는 사라져야함
   const navigate = useNavigate();
   // const [loginCheck, setLoginCheck] = useState(false);
@@ -31,15 +32,15 @@ const LoginPage = () => {
           <Input />
         </PassWord>
       </Form>
-      <BlueButton>로그인</BlueButton>
+      <BlueButton onClick={() => setLoginCheck((e) => !e)}>로그인</BlueButton>
 
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <Button>구글 로그인</Button>
-        <Button>Git Hub 로그인</Button>
+        <Button onClick={() => setLoginCheck((e) => !e)}>구글 로그인</Button>
+        <Button onClick={() => setLoginCheck((e) => !e)}>Git Hub 로그인</Button>
       </SocialLogin>
     </LoginContainer>
   );

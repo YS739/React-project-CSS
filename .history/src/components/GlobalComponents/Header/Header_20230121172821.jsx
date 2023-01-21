@@ -7,7 +7,7 @@ const Header = () => {
   // const navigate = useNavigate();
 
   // 회원가입 <-> 마이페이지 / 로그인 <-> 로그아웃 토글
-  const [loginCheck, setLoginCheck] = useState(false);
+  const [loginCheck, setLoginCheck] = useState(true);
   return (
     <Container>
       <Logo src={require('../../../assets/css_logo.png')} alt="css" />
