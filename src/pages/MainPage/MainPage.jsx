@@ -1,11 +1,28 @@
 import { Fragment } from 'react';
-import styled from 'styled-components';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
-import { VscSearch } from 'react-icons/vsc';
+import { HiOutlineSearch } from 'react-icons/hi';
 import CategorySlide from '../../components/MainPage/CategorySlide/CategorySlide';
-import { color } from '../../common/color';
+import { useQuery } from 'react-query';
+import {
+  SearchSection,
+  SearchBox,
+  SearchBtn,
+  VideoSection,
+  VideoBox,
+} from './style';
 
 const MainPage = () => {
+  //FIXME: mockData test - api로 바꿔서 해보기
+  const {
+    isLoading,
+    data: allList,
+    error,
+  } = useQuery(['allList'], async () => {
+    return fetch(`/mockData/allList.json`)
+      .then((res) => res.json())
+      .then((data) => data.items);
+  });
+
   // 검색창 입력값 받기 -useRef 사용하기
   const searchInputHandler = () => {};
 
@@ -25,9 +42,8 @@ const MainPage = () => {
   return (
     <Fragment>
       <SearchSection>
-        {/* TODO: 버튼 필요? */}
-        <Searchbox>
-          <VscSearch />
+        {/* TODO: 완성되면 컴포넌트 분리하기 */}
+        <SearchBox>
           <input
             type="text"
             placeholder="검색어를 입력해주세요."
@@ -35,46 +51,28 @@ const MainPage = () => {
             // onChange={}
             onKeyPress={handleOnKeyPress}
           />
-        </Searchbox>
+          {/* TODO: onClick={searchHandler} 추가하기 */}
+          <SearchBtn>
+            <HiOutlineSearch style={{ fontSize: 20 }} />
+          </SearchBtn>
+        </SearchBox>
       </SearchSection>
       {/* 카테고리 슬라이드 */}
       <CategorySlide />
       {/* 카테고리별 비디오 리스트 */}
-      <VideoList />
+      {isLoading && <p>Loading...</p>}
+      {error && <p>Something is wrong</p>}
+      <VideoSection>
+        {allList && (
+          <VideoBox>
+            {allList.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        )}
+      </VideoSection>
     </Fragment>
   );
 };
 
 export default MainPage;
-
-// TODO: style.js 분리하기
-// 검색창
-export const SearchSection = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px 0;
-`;
-
-export const Searchbox = styled.div`
-  width: 500px;
-  height: 50px;
-  border: 1px solid ${color.navy};
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 10px;
-
-  input {
-    border: none;
-    width: 450px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 16px;
-
-    :focus-visible {
-      outline: none;
-    }
-  }
-`;

@@ -1,45 +1,29 @@
-import styled from 'styled-components';
-import { color } from '../../../common/color';
+import { useNavigate } from 'react-router-dom';
+import { Videos, Video, VideoTitle, Creator } from './style';
 
-const VideoList = () => {
+const VideoList = ({ video }) => {
+  const navigate = useNavigate();
+
   return (
-    <VideoSection>
-      <VideoBox>
-        <Videos></Videos>
-        <Videos></Videos>
-        <Videos></Videos>
-        <Videos></Videos>
-        <Videos></Videos>
-        <Videos></Videos>
-        <Videos></Videos>
-        <Videos></Videos>
-      </VideoBox>
-    </VideoSection>
+    // TODO: navigate id = `/${video.id}` 등으로 바꾸기
+    <Videos onClick={() => navigate(`/:id`)}>
+      <Video>
+        {/* FIXME: 화질... 수정 필요 */}
+        <img
+          width={'100%'}
+          height={'90%'}
+          src={video.snippet.thumbnails.default.url}
+          alt="videoThumbnail"
+        />
+      </Video>
+      {/* TODO: 글자수 자르기 */}
+      <VideoTitle>
+        {video.snippet.title.slice(0, 25)}
+        {video.snippet.title.length > 25 && '...'}
+      </VideoTitle>
+      <Creator>{video.snippet.channelTitle}</Creator>
+    </Videos>
   );
 };
 
 export default VideoList;
-
-// TODO: style.js로 분리하기
-export const VideoSection = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const VideoBox = styled.div`
-  width: 1100px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap; ;
-`;
-
-export const Videos = styled.div`
-  width: 250px;
-  height: 200px;
-  border: 1px solid ${color.navy};
-  background-color: ${color.blue};
-  margin-bottom: 40px;
-`;
