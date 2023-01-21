@@ -35,14 +35,13 @@ const AddComment = () => {
     setCommentText(e.target.value);
   };
 
-  const AddCommentButton = () => {
-    // const db = getFirestore();
+  const AddCommentButton = async () => {
     console.log(db);
-    addDoc(collection(db, 'test'), {
+    await addDoc(collection(db, 'test'), {
       gihub: githubText,
       comment: commentText,
+      date: Date.now(),
     });
-
     setGithubText('');
     setCommentText('');
   };

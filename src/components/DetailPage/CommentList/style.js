@@ -80,7 +80,6 @@ export const CommentDeleteBtn = styled.button`
   height: 25px;
 
   background-color: white;
-
   border-color: #205295;
   color: #205295;
   border-radius: 5px;

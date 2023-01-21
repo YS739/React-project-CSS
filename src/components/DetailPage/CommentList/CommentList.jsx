@@ -16,10 +16,42 @@ import {
 } from './style';
 import { BsGithub } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { db } from '../../../common/firebase';
+import {
+  collection,
+  doc,
+  getDocs,
+  onSnapshot,
+  query,
+  querySnapshot,
+} from 'firebase/firestore';
 
-export default function CommentList() {
+export default function CommentList(
+  githubText,
+  setGithubText,
+  commentText,
+  setCommentText,
+) {
   const [toggleBtn, setToggleBtn] = useState(false);
+
+  useEffect(() => {
+    getCommentList();
+  }, []);
+
+  const getCommentList = () => {
+    const q = query(collection(db, 'test'));
+    onSnapshot(q, (snapshot) => {
+      snapshot.docs.map((doc) => {
+        const commentListdata = {
+          github: doc.data().githubText,
+          comment: doc.data().commentText,
+        };
+        setGithubText(commentListdata.githubText);
+        setCommentText(commentListdata.commentText);
+      });
+    });
+  };
 
   const ToggleDropDown = () => {
     if (toggleBtn === false) {
@@ -34,7 +66,7 @@ export default function CommentList() {
       <ListTitleSection>
         <CommentNickname>엘리짱</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
-        <CommentTime>2023-01-20</CommentTime>
+        <CommentTime>2022 10 30</CommentTime>
         <CommentGitIcon>
           <BsGithub />
         </CommentGitIcon>
