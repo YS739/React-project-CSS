@@ -44,12 +44,9 @@ export const Input = styled.input`
 export const ToSignUp = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 20px;
 `;
 export const SignUp = styled.div`
-  padding-left: 5px;
   font-weight: bold;
-  cursor: pointer;
 `;
 
 export const BlueButton = styled.button`

@@ -5,17 +5,15 @@ import {
   Id,
   PassWord,
   Input,
-  ToSignUp,
   SignUp,
   BlueButton,
   Button,
   SocialLogin,
 } from './style';
-import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  // TODO: 헤더는 사라져야함
-  const navigate = useNavigate();
+  // TODO: 인풋창, 버튼 3개 위치 어떻게 해봐....
+  // TODO: css 로고 가운데로 오고 헤더는 사라져야함
   return (
     <LoginContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
@@ -24,6 +22,7 @@ const LoginPage = () => {
           이메일
           <Input placeholder={'css@gmail.com'} />
         </Id>
+
         <PassWord>
           비밀번호
           <Input />
@@ -31,10 +30,10 @@ const LoginPage = () => {
       </Form>
       <BlueButton>로그인</BlueButton>
 
-      <ToSignUp>
-        아이디가 없으신가요?
-        <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
-      </ToSignUp>
+      <SignUp>
+        <div>아이디가 없으신가요?</div>
+        <div> 회원가입</div>
+      </SignUp>
       <SocialLogin>
         <Button>구글 로그인</Button>
         <Button>Git Hub 로그인</Button>

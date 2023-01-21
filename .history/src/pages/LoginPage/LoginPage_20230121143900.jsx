@@ -5,7 +5,6 @@ import {
   Id,
   PassWord,
   Input,
-  ToSignUp,
   SignUp,
   BlueButton,
   Button,
@@ -31,10 +30,10 @@ const LoginPage = () => {
       </Form>
       <BlueButton>로그인</BlueButton>
 
-      <ToSignUp>
+      <div>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
-      </ToSignUp>
+      </div>
       <SocialLogin>
         <Button>구글 로그인</Button>
         <Button>Git Hub 로그인</Button>

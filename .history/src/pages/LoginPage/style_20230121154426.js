@@ -49,7 +49,6 @@ export const ToSignUp = styled.div`
 export const SignUp = styled.div`
   padding-left: 5px;
   font-weight: bold;
-  cursor: pointer;
 `;
 
 export const BlueButton = styled.button`
