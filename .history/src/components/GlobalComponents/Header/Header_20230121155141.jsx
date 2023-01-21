@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   // TODO: 네비게이트 적용
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // 어느 페이지든 현재 로그인한 유저의 id를 가져오고 싶을 때
   let currentUserId = localStorage.getItem('id');
@@ -14,8 +14,8 @@ const Header = () => {
     <Container>
       <Logo src={require('../../../assets/css_logo.png')} alt="css" />
       <LoginToggle>
-        <SignUp>회원가입</SignUp>
-        <Login>로그인</Login>
+        <SignUp onClick={() => navigate('/signUp')}>회원가입</SignUp>
+        <Login onClick={() => navigate('/login')}>로그인</Login>
       </LoginToggle>
     </Container>
   );

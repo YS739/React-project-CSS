@@ -23,9 +23,7 @@ export const LoginToggle = styled.div`
 export const SignUp = styled.div`
   font-weight: bold;
   padding-right: 5px;
-  cursor: pointer;
 `;
 export const Login = styled.div`
   font-weight: bold;
-  cursor: pointer;
 `;
