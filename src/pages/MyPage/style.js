@@ -143,18 +143,19 @@ export const TabContents = styled.div`
   border: 1px solid #205295;
   border-radius: 7px;
   width: 100%;
-  max-width: 760px;
+  max-width: 745px;
   height: 520px;
-  padding: 10px 40px;
+  padding: 10px 50px 40px;
   overflow: scroll;
   margin-top: 10px;
 
   @media screen and (max-width: 1300px) {
-    max-width: 566px;
+    max-width: 500px;
+    padding: 10px 75px 40px;
   }
 
   @media screen and (max-width: 1000px) {
-    max-width: 345px;
+    max-width: 270px;
     margin: 20px 80px;
   }
 `;
