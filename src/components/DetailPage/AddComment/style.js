@@ -97,14 +97,15 @@ export const AddInputFirst = styled.input`
   height: 50%;
   border: 1px solid rgb(150, 150, 150);
   border-radius: 10px;
-  /* border-radius: 5px; */
+  padding-left: 10px;
+  box-sizing: border-box;
+  :focus-visible {
+    outline: none;
+  }
 `;
 
-export const AddInputTwo = styled.input`
-  width: 95%;
+export const AddInputTwo = styled(AddInputFirst)`
   height: 100%;
-  border: 1px solid rgb(150, 150, 150);
-  border-radius: 10px;
 `;
 
 export const AddCommentBtnDiv = styled.div`
