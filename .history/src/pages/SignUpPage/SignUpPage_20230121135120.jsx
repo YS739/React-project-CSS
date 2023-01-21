@@ -1,19 +1,6 @@
-import {
-  SignUpContainer,
-  Logo,
-  Form,
-  Id,
-  Name,
-  PassWord,
-  Input,
-  BlueButton,
-  Login,
-  ToLogin,
-} from './style';
-import { useNavigate } from 'react-router-dom';
+import { SignUpContainer, Logo, Form, Input, BlueButton, Login } from './style';
 
 const SignUpPage = () => {
-  const navigate = useNavigate();
   return (
     <SignUpContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
@@ -36,10 +23,7 @@ const SignUpPage = () => {
         </PassWord>
       </Form>
       <BlueButton>회원가입</BlueButton>
-      <ToLogin>
-        이미 가입 하셨나요?
-        <Login onClick={() => navigate('/login')}>로그인</Login>
-      </ToLogin>
+      <Login>이미 가입 하셨나요? 로그인</Login>
     </SignUpContainer>
   );
 };

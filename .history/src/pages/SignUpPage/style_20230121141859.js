@@ -20,7 +20,7 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   padding: 50px;
-  /* margin: 5px; */
+  margin: 5px;
 `;
 export const Id = styled.div`
   display: flex;
@@ -37,7 +37,6 @@ export const Name = styled.div`
 export const PassWord = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
   width: 300px;
 `;
 export const Input = styled.input`
@@ -46,7 +45,6 @@ export const Input = styled.input`
   color: #555;
   box-sizing: border-box;
   font-size: 18px;
-  outline: none;
 `;
 export const BlueButton = styled.button`
   background-color: #205295;

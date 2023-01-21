@@ -20,25 +20,24 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   padding: 50px;
-  /* margin: 5px; */
+  margin: 5px;
 `;
 export const Id = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
-  width: 300px;
+  width: 250px;
 `;
 export const Name = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
-  width: 300px;
+  width: 250px;
 `;
 export const PassWord = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
-  width: 300px;
+  width: 250px;
 `;
 export const Input = styled.input`
   border: none;
@@ -46,7 +45,6 @@ export const Input = styled.input`
   color: #555;
   box-sizing: border-box;
   font-size: 18px;
-  outline: none;
 `;
 export const BlueButton = styled.button`
   background-color: #205295;
@@ -62,10 +60,9 @@ export const ToLogin = styled.div`
   font-size: 15px;
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding-right: 5px;
 `;
 export const Login = styled.div`
-  font-weight: bold;
+  font: bold;
   cursor: pointer;
-  margin-left: 5px;
 `;

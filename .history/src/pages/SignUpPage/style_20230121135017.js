@@ -10,8 +10,8 @@ export const SignUpContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 250px;
-  height: 250px;
+  width: 70px;
+  height: 70px;
   justify-content: center;
 `;
 export const Form = styled.form`
@@ -20,25 +20,7 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   padding: 50px;
-  /* margin: 5px; */
-`;
-export const Id = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  width: 300px;
-`;
-export const Name = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  width: 300px;
-`;
-export const PassWord = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  width: 300px;
+  margin: 5px;
 `;
 export const Input = styled.input`
   border: none;
@@ -46,7 +28,6 @@ export const Input = styled.input`
   color: #555;
   box-sizing: border-box;
   font-size: 18px;
-  outline: none;
 `;
 export const BlueButton = styled.button`
   background-color: #205295;
@@ -58,14 +39,6 @@ export const BlueButton = styled.button`
   margin-bottom: 10px;
   cursor: pointer;
 `;
-export const ToLogin = styled.div`
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-`;
 export const Login = styled.div`
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 5px;
+  font-size: 15px;
 `;
