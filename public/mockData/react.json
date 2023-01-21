@@ -1,852 +1,862 @@
-[
-  {
-    "kind": "youtube#searchResult",
-    "etag": "7MLth9WgIu1M_IvZQ7GzQjhnwtk",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "b5BH7kPboMk"
-    },
-    "snippet": {
-      "publishedAt": "2021-03-19T14:50:22Z",
-      "channelId": "UCvq75ScX_9cwIKic376vp5A",
-      "title": "[React 강의] 리액트(react)로  아마존 웹사이트 만들기",
-      "description": "Github : https://github.com/reactbacksu/amazon-clone 사용한 에디터는 Intellij 입니다 + 미흡한 부분 보충 설명 flex-end : 플렉스 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/b5BH7kPboMk/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/b5BH7kPboMk/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/b5BH7kPboMk/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
-      },
-      "channelTitle": "리액트 깎는 노인",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-03-19T14:50:22Z"
-    }
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "RzmFu0Ky3vPrPMs-3EbuhHnai8s",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 38768,
+    "resultsPerPage": 25
   },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "EMJLC0UUh1JAZscm3RQRJyPnaNE",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "j3-4QTcAcNk"
-    },
-    "snippet": {
-      "publishedAt": "2021-03-24T12:36:24Z",
-      "channelId": "UCvq75ScX_9cwIKic376vp5A",
-      "title": "[React 강의] 리액트(react)로  Quora-Clone 웹사이트 만들기",
-      "description": "GitHub : https://github.com/reactbacksu/quora-clone 포기하지 말고 근성!! 시청해주셔서 감사합니다!! #Reactjs #React #리액트 #리 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/j3-4QTcAcNk/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/j3-4QTcAcNk/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/j3-4QTcAcNk/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7MLth9WgIu1M_IvZQ7GzQjhnwtk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "b5BH7kPboMk"
       },
-      "channelTitle": "리액트 깎는 노인",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-03-24T12:36:24Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "Hl4AytxOnlf0JSm3ffCj8g1EOOs",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PLuHgQVnccGMCOGstdDZvH41x0Vtvwyxu7"
+      "snippet": {
+        "publishedAt": "2021-03-19T14:50:22Z",
+        "channelId": "UCvq75ScX_9cwIKic376vp5A",
+        "title": "[React 강의] 리액트(react)로  아마존 웹사이트 만들기",
+        "description": "Github : https://github.com/reactbacksu/amazon-clone 사용한 에디터는 Intellij 입니다 + 미흡한 부분 보충 설명 flex-end : 플렉스 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b5BH7kPboMk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b5BH7kPboMk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b5BH7kPboMk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "리액트 깎는 노인",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-19T14:50:22Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-02-16T10:08:55Z",
-      "channelId": "UCvc8kv-i5fvFTJBFAk6n1SA",
-      "title": "React 2022 개정판",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FEt9-vD-mec9e5z5Reny0Y4_MKA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bJLfBq9npwQ"
       },
-      "channelTitle": "생활코딩",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-02-16T10:08:55Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "SLhisXP09bkqdZA2ePkinzf3TOA",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "TjUju3aUIDM"
+      "snippet": {
+        "publishedAt": "2020-09-23T10:12:59Z",
+        "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+        "title": "리액트 강의 + 유튜브 클론코딩 외 실전 프로젝트",
+        "description": "리액트 1도 몰라도 따라 오실 수 있도록 하지만 현업팁 가득 담아서, 여러분들이 강의를 완성한 뒤 스스로 다른 서비스의 APIs를 이용 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bJLfBq9npwQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bJLfBq9npwQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bJLfBq9npwQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "드림코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-23T10:12:59Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-05-19T11:28:15Z",
-      "channelId": "UCfBvs0ZJdTA43NQrnI9imGA",
-      "title": "리액트로 할일앱을 만들어보자!(웃김주의) | 실제 리액트 개념이 어떻게 사용되는지 살펴보자| 리액트 초보자용",
-      "description": "안녕하세요! 오늘은 그동안배운 기본 컨셉: 컴포넌트,props,state를 가지고 냅다 프로젝트 하나를 만들어보면서 실제 어떻게 사용 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/TjUju3aUIDM/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/TjUju3aUIDM/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/TjUju3aUIDM/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Hl4AytxOnlf0JSm3ffCj8g1EOOs",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLuHgQVnccGMCOGstdDZvH41x0Vtvwyxu7"
       },
-      "channelTitle": "코딩알려주는누나",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-05-19T11:28:15Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "EHeKY4JNXEFCr6QOGRlIMGOCJUM",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PLfLgtT94nNq1e6tr4sm2eH6ZZC2jcqGOy"
+      "snippet": {
+        "publishedAt": "2022-02-16T10:08:55Z",
+        "channelId": "UCvc8kv-i5fvFTJBFAk6n1SA",
+        "title": "React 2022 개정판",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "생활코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-02-16T10:08:55Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2020-07-02T03:15:53Z",
-      "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
-      "title": "리액트 기초 : 블로그 프로젝트 만들기",
-      "description": "코딩애플 리액트 기초강의입니다.",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/LclObYwGj90/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/LclObYwGj90/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/LclObYwGj90/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EHeKY4JNXEFCr6QOGRlIMGOCJUM",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLfLgtT94nNq1e6tr4sm2eH6ZZC2jcqGOy"
       },
-      "channelTitle": "코딩애플",
-      "liveBroadcastContent": "none",
-      "publishTime": "2020-07-02T03:15:53Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "sl1-1cQcxl7YJRcCQv4HjZUBYFg",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "R8j4aQCaE1s"
+      "snippet": {
+        "publishedAt": "2020-07-02T03:15:53Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "리액트 기초 : 블로그 프로젝트 만들기",
+        "description": "코딩애플 리액트 기초강의입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LclObYwGj90/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LclObYwGj90/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LclObYwGj90/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-02T03:15:53Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-12-29T05:40:21Z",
-      "channelId": "UC1LzvduPSKr9puUr-WJo9AA",
-      "title": "[강의 미리보기] React Native로 카카오톡 클론 코딩 이렇게 만들어봐요_완성본 미리보기",
-      "description": "21개 프로젝트로 학습하는 'React Native로 만드는 빠르고 완성도 높은 앱 개발'. 120가지가 넘는 학습 개념을 바탕으로 내가 원하는 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/R8j4aQCaE1s/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/R8j4aQCaE1s/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/R8j4aQCaE1s/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GUBL_ASsoCt-W2HNxqPzoQnt3Nw",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLRx0vPvlEmdCED62ZIWCbI-6G_jcwmuFB"
       },
-      "channelTitle": "패스트캠퍼스",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-12-29T05:40:21Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "Kzp_BZhISpHWfLX2HVKfyuWKoK8",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "B4ZDhc_-Hbg"
+      "snippet": {
+        "publishedAt": "2019-01-26T08:41:46Z",
+        "channelId": "UChflhu32f5EUHlY7_SetNWw",
+        "title": "React JS 이론부터 실전까지",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/s2knmog2j1U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/s2knmog2j1U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/s2knmog2j1U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "동빈나",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-26T08:41:46Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-07-27T06:40:02Z",
-      "channelId": "UC1bbIVz7kQ014sWnY2UXBuQ",
-      "title": "클론코딩, 블로그 만들지마세요",
-      "description": "개발자 취준생 여러분. 클론코딩, 블로그 많이 만드실겁니다. 하지만 개발자 이력서에 담기엔 2프로 부족합니다. 그러면 뭐 만들라고요 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "EMJLC0UUh1JAZscm3RQRJyPnaNE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "j3-4QTcAcNk"
       },
-      "channelTitle": "비개발 쑤난",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-07-27T06:40:02Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "GjC5V5mRHy5Vim8FNLqWdcyUEz4",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PL-J2q3Ga50oMQa1JdSJxYoZELwOJAXExP"
+      "snippet": {
+        "publishedAt": "2021-03-24T12:36:24Z",
+        "channelId": "UCvq75ScX_9cwIKic376vp5A",
+        "title": "[React 강의] 리액트(react)로  Quora-Clone 웹사이트 만들기",
+        "description": "GitHub : https://github.com/reactbacksu/quora-clone 포기하지 말고 근성!! 시청해주셔서 감사합니다!! #Reactjs #React #리액트 #리 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/j3-4QTcAcNk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/j3-4QTcAcNk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/j3-4QTcAcNk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "리액트 깎는 노인",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-24T12:36:24Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2020-08-22T06:32:07Z",
-      "channelId": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
-      "title": "Build App Clones with ReactJS",
-      "description": "Watch Papa React Build Live App Clones.",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/R_OERlafbmw/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/R_OERlafbmw/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/R_OERlafbmw/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Kzp_BZhISpHWfLX2HVKfyuWKoK8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B4ZDhc_-Hbg"
       },
-      "channelTitle": "Clever Programmer",
-      "liveBroadcastContent": "none",
-      "publishTime": "2020-08-22T06:32:07Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "FEt9-vD-mec9e5z5Reny0Y4_MKA",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "bJLfBq9npwQ"
+      "snippet": {
+        "publishedAt": "2022-07-27T06:40:02Z",
+        "channelId": "UC1bbIVz7kQ014sWnY2UXBuQ",
+        "title": "클론코딩, 블로그 만들지마세요",
+        "description": "개발자 취준생 여러분. 클론코딩, 블로그 많이 만드실겁니다. 하지만 개발자 이력서에 담기엔 2프로 부족합니다. 그러면 뭐 만들라고요 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B4ZDhc_-Hbg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "비개발 쑤난",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-27T06:40:02Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2020-09-23T10:12:59Z",
-      "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
-      "title": "리액트 강의 + 유튜브 클론코딩 외 실전 프로젝트",
-      "description": "리액트 1도 몰라도 따라 오실 수 있도록 하지만 현업팁 가득 담아서, 여러분들이 강의를 완성한 뒤 스스로 다른 서비스의 APIs를 이용 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/bJLfBq9npwQ/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/bJLfBq9npwQ/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/bJLfBq9npwQ/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SLhisXP09bkqdZA2ePkinzf3TOA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TjUju3aUIDM"
       },
-      "channelTitle": "드림코딩",
-      "liveBroadcastContent": "none",
-      "publishTime": "2020-09-23T10:12:59Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "QggXC4x7bVabI3xYShMWmbhE8dE",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "JI7epsxcmnU"
+      "snippet": {
+        "publishedAt": "2022-05-19T11:28:15Z",
+        "channelId": "UCfBvs0ZJdTA43NQrnI9imGA",
+        "title": "리액트로 할일앱을 만들어보자!(웃김주의) | 실제 리액트 개념이 어떻게 사용되는지 살펴보자| 리액트 초보자용",
+        "description": "안녕하세요! 오늘은 그동안배운 기본 컨셉: 컴포넌트,props,state를 가지고 냅다 프로젝트 하나를 만들어보면서 실제 어떻게 사용 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TjUju3aUIDM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TjUju3aUIDM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TjUju3aUIDM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩알려주는누나",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-05-19T11:28:15Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2021-07-26T23:05:29Z",
-      "channelId": "UCSEOUzkGNCT_29EU_vnBYjg",
-      "title": "클론코딩 멈춰!",
-      "description": "처음 웹을 배울때는 클론 코딩을 통해 빠르게 한 사이클을 돌려보는것이 굉장히 효율적이라고 생각합니다 ^^ 클론 코딩 무조건 안돼!",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/JI7epsxcmnU/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/JI7epsxcmnU/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/JI7epsxcmnU/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kCUrgfkTBNoKw2W1OJvY36L4mFQ",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLuHgQVnccGMCRv6f8H9K5Xwsdyg4sFSdi"
       },
-      "channelTitle": "개발바닥",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-07-26T23:05:29Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "GUBL_ASsoCt-W2HNxqPzoQnt3Nw",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PLRx0vPvlEmdCED62ZIWCbI-6G_jcwmuFB"
+      "snippet": {
+        "publishedAt": "2019-04-21T14:55:33Z",
+        "channelId": "UCvc8kv-i5fvFTJBFAk6n1SA",
+        "title": "React",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XMb0w3KMw00/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XMb0w3KMw00/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XMb0w3KMw00/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "생활코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-04-21T14:55:33Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2019-01-26T08:41:46Z",
-      "channelId": "UChflhu32f5EUHlY7_SetNWw",
-      "title": "React JS 이론부터 실전까지",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/s2knmog2j1U/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/s2knmog2j1U/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/s2knmog2j1U/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "RSuwQk4nJq3nBqCSXTJN2Whqkmk",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLgRxBCVPaZ_1iBe1v3-ZSSzHGdQo7AZPq"
       },
-      "channelTitle": "동빈나",
-      "liveBroadcastContent": "none",
-      "publishTime": "2019-01-26T08:41:46Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "U3xz2uYtTWhQIalfSQDNZ4WuzCM",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PLf16UKl7nR5AjcrYOe1niifJSAls3spDk"
+      "snippet": {
+        "publishedAt": "2022-02-05T12:52:16Z",
+        "channelId": "UCbMGBIayK26L4VaFrs5jyBw",
+        "title": "인스타그램 클론코딩",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hM2whwf2u14/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hM2whwf2u14/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hM2whwf2u14/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "개발하는남자",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-02-05T12:52:16Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2021-01-06T12:42:32Z",
-      "channelId": "UCqeTj_QAnNlmt7FwzNwHZnA",
-      "title": "🔴 React.js Clones by PAPA React",
-      "description": "This playlist contains everything you need to begin your REACT Journey and crush as a developer in 2021!",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/bvn_HYpix6s/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/bvn_HYpix6s/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/bvn_HYpix6s/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UiKGhyHmsR8BHI3-nZzVRlljtys",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "3MB8DBXzEos"
       },
-      "channelTitle": "Sonny Sangha",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-01-06T12:42:32Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "sjqQAT6wbt7n1lr6giogxy0aV_U",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "sD8neywGxVk"
+      "snippet": {
+        "publishedAt": "2021-09-19T08:12:41Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "리액트 코드짜는 법",
+        "description": "사실에 기반한 본인 인강 : https://codingapple.com 구독자용 할인 코드 : YT123 Music : Dragonfruit Salad ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3MB8DBXzEos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3MB8DBXzEos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3MB8DBXzEos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-19T08:12:41Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2021-06-27T13:53:31Z",
-      "channelId": "UCLxPNvxa9D-3UIdocAJUxfQ",
-      "title": "클론코딩으로 공부해서 실력이 안늘어요",
-      "description": "문의 : androimaster@gmail.com 고민 문의는 유튜브 영상 제작에 정보 오픈이 가능하신 분들만 예민한 정보를 제거하거나 명시를 ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/sD8neywGxVk/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/sD8neywGxVk/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/sD8neywGxVk/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sjqQAT6wbt7n1lr6giogxy0aV_U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sD8neywGxVk"
       },
-      "channelTitle": "빵굽는개발자 빵형",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-06-27T13:53:31Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "OfQAlZDn7IrjMibRXwAeddjxspA",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "I1cpb0tYV74"
+      "snippet": {
+        "publishedAt": "2021-06-27T13:53:31Z",
+        "channelId": "UCLxPNvxa9D-3UIdocAJUxfQ",
+        "title": "클론코딩으로 공부해서 실력이 안늘어요",
+        "description": "문의 : androimaster@gmail.com 고민 문의는 유튜브 영상 제작에 정보 오픈이 가능하신 분들만 예민한 정보를 제거하거나 명시를 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sD8neywGxVk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sD8neywGxVk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sD8neywGxVk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "빵굽는개발자 빵형",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-27T13:53:31Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-09-23T11:43:34Z",
-      "channelId": "UCmXmlB4-HJytD7wek0Uo97A",
-      "title": "Build and Deploy a Better Spotify 2.0 Clone Music App with React 18! (Tailwind, Redux, RapidAPI)",
-      "description": "Master modern web development by building an improved version of Spotify. With a modern homepage, fully-fledged music ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/I1cpb0tYV74/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/I1cpb0tYV74/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/I1cpb0tYV74/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QggXC4x7bVabI3xYShMWmbhE8dE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JI7epsxcmnU"
       },
-      "channelTitle": "JavaScript Mastery",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-09-23T11:43:34Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "3-zkpNenodbaRenkp2wpiQsCkbk",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "FHTbsZEJspU"
+      "snippet": {
+        "publishedAt": "2021-07-26T23:05:29Z",
+        "channelId": "UCSEOUzkGNCT_29EU_vnBYjg",
+        "title": "클론코딩 멈춰!",
+        "description": "처음 웹을 배울때는 클론 코딩을 통해 빠르게 한 사이클을 돌려보는것이 굉장히 효율적이라고 생각합니다 ^^ 클론 코딩 무조건 안돼!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JI7epsxcmnU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JI7epsxcmnU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JI7epsxcmnU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "개발바닥",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-07-26T23:05:29Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-08-26T12:02:28Z",
-      "channelId": "UCmXmlB4-HJytD7wek0Uo97A",
-      "title": "Build and Deploy a Modern YouTube Clone Application in React JS with Material UI 5 | RapidAPI",
-      "description": "Master modern web development by building a responsive React JS application consisting of stunning video sections, custom ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/FHTbsZEJspU/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/FHTbsZEJspU/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/FHTbsZEJspU/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2S-g3zKddlKAUdYGj5M24iZm7zo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AoMv0SIjZL8"
       },
-      "channelTitle": "JavaScript Mastery",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-08-26T12:02:28Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "OtS0rIcSUj1Uk811Nk6HeO5S0r4",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "hT3j87FMR6M"
+      "snippet": {
+        "publishedAt": "2022-03-17T03:00:51Z",
+        "channelId": "UCvc8kv-i5fvFTJBFAk6n1SA",
+        "title": "React 2022년 개정판 - 1. 수업소개",
+        "description": "리액트 입문자를 위한 수업입니다. 만들게 될 것 https://egoing.github.io/react-2022-tutorial-src/ 소스코드 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AoMv0SIjZL8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "생활코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-17T03:00:51Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2019-08-27T12:17:33Z",
-      "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
-      "title": "Intermediate React Tutorial - Todoist Clone (with Firebase, Custom Hooks, SCSS, React Testing)",
-      "description": "In this course, we're going to be creating the popular Todoist list application (https://todoist.com) from scratch using React (Custom ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/hT3j87FMR6M/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/hT3j87FMR6M/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/hT3j87FMR6M/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KreWxjjQ7l7xXcAWQ0iq3pwU9zw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yHoojcPUtMQ"
       },
-      "channelTitle": "freeCodeCamp.org",
-      "liveBroadcastContent": "none",
-      "publishTime": "2019-08-27T12:17:33Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "x2Uw75Rq3w5QhJrnc6kaih_Uzeg",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "R_OERlafbmw"
+      "snippet": {
+        "publishedAt": "2022-12-29T05:46:02Z",
+        "channelId": "UC1LzvduPSKr9puUr-WJo9AA",
+        "title": "[강의 미리보기] React Native로 카카오톡 클론 코딩 이렇게 만들어봐요_내 프로필 구현",
+        "description": "21개 프로젝트로 학습하는 'React Native로 만드는 빠르고 완성도 높은 앱 개발'. 120가지가 넘는 학습 개념을 바탕으로 내가 원하는 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yHoojcPUtMQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yHoojcPUtMQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yHoojcPUtMQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "패스트캠퍼스",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-12-29T05:46:02Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2021-04-21T17:00:16Z",
-      "channelId": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
-      "title": "ASMR | Build Disney+ with React JS (Firebase + Styled Components + Redux)",
-      "description": "Learn React JS for FREE: ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/R_OERlafbmw/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/R_OERlafbmw/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/R_OERlafbmw/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sl1-1cQcxl7YJRcCQv4HjZUBYFg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "R8j4aQCaE1s"
       },
-      "channelTitle": "Clever Programmer",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-04-21T17:00:16Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "4HJRKkQUWA9U8vSxcszk26Ii78Q",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PLbZ4CA8my7fR2IZizpla7ywAxWx4_MZ5b"
+      "snippet": {
+        "publishedAt": "2022-12-29T05:40:21Z",
+        "channelId": "UC1LzvduPSKr9puUr-WJo9AA",
+        "title": "[강의 미리보기] React Native로 카카오톡 클론 코딩 이렇게 만들어봐요_완성본 미리보기",
+        "description": "21개 프로젝트로 학습하는 'React Native로 만드는 빠르고 완성도 높은 앱 개발'. 120가지가 넘는 학습 개념을 바탕으로 내가 원하는 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R8j4aQCaE1s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R8j4aQCaE1s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R8j4aQCaE1s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "패스트캠퍼스",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-12-29T05:40:21Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2021-03-19T17:45:38Z",
-      "channelId": "UCbv2OBLeYiYe7B6WgPDnLow",
-      "title": "Star Wars: The Clone Wars",
-      "description": "Complete reactions of Start Wars: The Clone War. Normies watched this show out of order based on our supporter feedback to ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/WHnli8Dnz0c/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/WHnli8Dnz0c/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/WHnli8Dnz0c/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5-Ni6mUe_ioBdHDb1MbtOnm1aSk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "00yJy7W0DQE"
       },
-      "channelTitle": "The Normies",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-03-19T17:45:38Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "6_ZPisiPou9P0-01AUzL8bwBhlI",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "kn8HPNwPEkw"
+      "snippet": {
+        "publishedAt": "2022-04-25T01:54:11Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "2022 new 리액트 1강 : 리액트 뽕주입과 설치법",
+        "description": "리액트 v18, 리액트라우터 v6, reduxjs/toolkit 이런거 씁니다 Q. 다른거 만들어보나요? A. 아뇨 재탕임 설치관련 에러 모음 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/00yJy7W0DQE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/00yJy7W0DQE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/00yJy7W0DQE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-25T01:54:11Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2021-05-01T21:13:19Z",
-      "channelId": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
-      "title": "🔴Disney+ Clone - ReactJS Challenge (Learn Redux, React JS, Styled Components, and Firebase) | Day 1",
-      "description": "Day 1 of the Disney Plus React JS Challenge Join Profit With JavaScript ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/kn8HPNwPEkw/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/kn8HPNwPEkw/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/kn8HPNwPEkw/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZFNBNRiphcCRM542qeP0xG-ijYY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8M8cc51CJL8"
       },
-      "channelTitle": "Clever Programmer",
-      "liveBroadcastContent": "none",
-      "publishTime": "2021-05-01T21:13:19Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "XiaJQr_eDVh7n8a8hCqRd4cEspk",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "yIaXoop8gl4"
+      "snippet": {
+        "publishedAt": "2021-04-08T14:34:08Z",
+        "channelId": "UCUYzRJIrml_X_7S-M7KMFWw",
+        "title": "React클론코딩 - DANOSHOP 건강한 식단 전문",
+        "description": "쇼핑몰을 클론코딩해보았습니다. 평소에 관심있던 건강한 식단 전문 쇼핑몰인 DANOSHOP을 클론코딩했습니다. 상세 페이지와 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8M8cc51CJL8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8M8cc51CJL8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8M8cc51CJL8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩하는푸들",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-04-08T14:34:08Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-06-30T13:25:52Z",
-      "channelId": "UCOxWrX5MIdXIeRNaXC3sqIg",
-      "title": "React Video Sharing App UI Design | Youtube UI Clone with React",
-      "description": "Video uploading app design using React and Styled Components. Youtube clone design with hooks and functional component.",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/yIaXoop8gl4/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/yIaXoop8gl4/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/yIaXoop8gl4/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "F7IMyXQS0sZDJN1zxxnzfCRkmLg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_KmyIO1jUPI"
       },
-      "channelTitle": "Lama Dev",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-06-30T13:25:52Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "_QCo7EVQVpzLl63sePvtL42yQaw",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "WDTNwmXUz2c"
+      "snippet": {
+        "publishedAt": "2022-05-25T11:30:06Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "슬랙 클론코딩을 이렇게 쉽게 할 수 있다고? 10분컷!",
+        "description": "잘 갖다 쓰는 것도 실력입니다. 너무 쉬우니까 꼭 따라해보세요! 스타트업. 개인 프로젝트를 위한 무료 Stream API 계정 만들기!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_KmyIO1jUPI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_KmyIO1jUPI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_KmyIO1jUPI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-05-25T11:30:06Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-03-15T13:00:21Z",
-      "channelId": "UC8S4rDRZn6Z_StJ-hh7ph8g",
-      "title": "Build a Wordle Clone in ReactJS - Best React Project",
-      "description": "The first 1000 people to use this link will get a 1 month free trial of Skillshare: https://skl.sh/pedrotech03221 In this video I will be ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/WDTNwmXUz2c/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/WDTNwmXUz2c/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/WDTNwmXUz2c/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x2Uw75Rq3w5QhJrnc6kaih_Uzeg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "R_OERlafbmw"
       },
-      "channelTitle": "PedroTech",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-03-15T13:00:21Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "diWoUAv-GK3TwHuaQ9_JOKtFVf4",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "x_EEwGe-a9o"
+      "snippet": {
+        "publishedAt": "2021-04-21T17:00:16Z",
+        "channelId": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
+        "title": "ASMR | Build Disney+ with React JS (Firebase + Styled Components + Redux)",
+        "description": "Learn React JS for FREE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R_OERlafbmw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R_OERlafbmw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R_OERlafbmw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Clever Programmer",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-04-21T17:00:16Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2020-09-15T10:00:13Z",
-      "channelId": "UC1DUQiZduv_yNZy0O7n_iHA",
-      "title": "Netflix Clone - React Tutorial - Styled Components - Firebase (Firestore &amp; Auth)",
-      "description": "Subscribe: https://bit.ly/CognitiveSurge Support the channel by becoming a member: ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/x_EEwGe-a9o/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/x_EEwGe-a9o/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/x_EEwGe-a9o/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ytrhSJPdsfeuu25n4-wxp2I6NOU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QZcYz2NrDIs"
       },
-      "channelTitle": "Karl Hadwen",
-      "liveBroadcastContent": "none",
-      "publishTime": "2020-09-15T10:00:13Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "GAdeZHwyyoYT-9csJOMooL8IfG4",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "RDV3Z1KCBvo"
+      "snippet": {
+        "publishedAt": "2021-09-13T07:20:43Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "React 입문자들이 알아야할 Redux 쉽게설명 (8분컷)",
+        "description": "React 하다보면 Redux를 필히 만나게 되는데 한 해 리덕스 포기자가 10만명이나 되기 때문에 준비했습니다 리액트 강의 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QZcYz2NrDIs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QZcYz2NrDIs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QZcYz2NrDIs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-13T07:20:43Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2020-10-14T21:08:27Z",
-      "channelId": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
-      "title": "Let&#39;s Build a Full-Stack AMAZON Clone with REACT JS for Beginners (Full E-Comm Store in 8 Hrs) 2021",
-      "description": "Join FREE React.js Course: ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/RDV3Z1KCBvo/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/RDV3Z1KCBvo/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/RDV3Z1KCBvo/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "_gcSzCeD64KnKWWGVJ16iO7bxTQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XtMThy8QKqU"
       },
-      "channelTitle": "Clever Programmer",
-      "liveBroadcastContent": "none",
-      "publishTime": "2020-10-14T21:08:27Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "kCUrgfkTBNoKw2W1OJvY36L4mFQ",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PLuHgQVnccGMCRv6f8H9K5Xwsdyg4sFSdi"
+      "snippet": {
+        "publishedAt": "2020-07-09T22:16:40Z",
+        "channelId": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
+        "title": "🔴 How to Build a NETFLIX Clone with REACT JS for Beginners (in 3 Hours!)",
+        "description": "Learn React JS for FREE: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XtMThy8QKqU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XtMThy8QKqU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XtMThy8QKqU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Clever Programmer",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-09T22:16:40Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2019-04-21T14:55:33Z",
-      "channelId": "UCvc8kv-i5fvFTJBFAk6n1SA",
-      "title": "React",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/XMb0w3KMw00/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/XMb0w3KMw00/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/XMb0w3KMw00/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "an2DPJRuvxq8YIDwMgjBx-LSViU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CNWEKChFHoY"
       },
-      "channelTitle": "생활코딩",
-      "liveBroadcastContent": "none",
-      "publishTime": "2019-04-21T14:55:33Z"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "RDSPCkw1-ALugtmjAMKSL5xltBY",
-    "id": {
-      "kind": "youtube#video",
-      "videoId": "tVpHovQJIW4"
+      "snippet": {
+        "publishedAt": "2022-02-11T08:08:52Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "[강좌 미리보기]리액트 네이티브 시작하기",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CNWEKChFHoY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CNWEKChFHoY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CNWEKChFHoY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-02-11T08:08:52Z"
+      }
     },
-    "snippet": {
-      "publishedAt": "2022-05-27T00:21:59Z",
-      "channelId": "UCH9ihB7PtJ0gg1BIrQpqrdg",
-      "title": "Clone Troopers React To Stormtrooper Armor | LEGO Star Wars Stop Motion",
-      "description": "Thanks for watching the video! Follow me on Instagram ↘ https://www.instagram.com/dwenpoong/ Clone Army Customs ...",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/tVpHovQJIW4/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/tVpHovQJIW4/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/tVpHovQJIW4/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SUMgWVGtjYTHdE1IQIAOyaTho-I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4Vq8CQf-egI"
       },
-      "channelTitle": "DwenPoong",
-      "liveBroadcastContent": "none",
-      "publishTime": "2022-05-27T00:21:59Z"
+      "snippet": {
+        "publishedAt": "2021-11-27T03:54:22Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "올해부턴 CSS 다르게 짬 ㅅㄱ (2022년 CSS 채신기술)",
+        "description": "컴포넌트 기반 웹개발이 유행이니 CSS도 그에 맞춰 변화하고 있습니다 시간이 지나도 변하지 않는 것은 아마 우리들의 코딩실력뿐 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4Vq8CQf-egI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4Vq8CQf-egI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4Vq8CQf-egI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-11-27T03:54:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "XtMFUAOSIRbmfUiyL7IJvtvVSYM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LclObYwGj90"
+      },
+      "snippet": {
+        "publishedAt": "2020-06-28T13:17:13Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "React 기초 0강 : 리액트왜 쓰는지 알려줌 (+ 수강시 필요 사전지식)",
+        "description": "1. 그냥 앱만들기, 발행하기 쉽고 UX적으로 뛰어나서 씁니다. 2. 2020년 이후로 리액트 문법이 class 없이 쉬워져서 만만해짐 3.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LclObYwGj90/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LclObYwGj90/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LclObYwGj90/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-06-28T13:17:13Z"
+      }
     }
-  }
-]
+  ]
+}
