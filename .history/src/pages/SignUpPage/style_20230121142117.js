@@ -20,7 +20,7 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   padding: 50px;
-  /* margin: 5px; */
+  margin: 5px;
 `;
 export const Id = styled.div`
   display: flex;
@@ -46,7 +46,6 @@ export const Input = styled.input`
   color: #555;
   box-sizing: border-box;
   font-size: 18px;
-  outline: none;
 `;
 export const BlueButton = styled.button`
   background-color: #205295;
@@ -57,6 +56,7 @@ export const BlueButton = styled.button`
   font-size: 15px;
   margin-bottom: 10px;
   cursor: pointer;
+  outline: none;
 `;
 export const ToLogin = styled.div`
   font-size: 15px;
