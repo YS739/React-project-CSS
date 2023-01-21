@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react';
+import { db } from '../../../common/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 import { BsBookmark } from 'react-icons/bs';
 import {
   AddCommentListWrap,
@@ -19,6 +22,18 @@ import {
 } from './style';
 
 const AddComment = () => {
+  const [users, setUsers] = useState([]);
+  const usersCollectionRef = collection(db, 'users');
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(usersCollectionRef);
+      console.log(data);
+    };
+
+    getUsers();
+  }, []);
+
   return (
     <AddCommentListAll>
       <AddCommentListWrap>
