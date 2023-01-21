@@ -42,7 +42,6 @@ export const Input = styled.input`
   :focus-visible {
     outline: none;
   }
-  padding-left: 10px;
 `;
 export const ToSignUp = styled.div`
   display: flex;
