@@ -4,7 +4,7 @@ import { color } from '../../../common/color';
 export const CategoryBox = styled.div`
   width: 800px;
   height: 50px;
-  margin: 0 auto;
+  margin: 40px auto;
 `;
 
 export const Category = styled.div`
