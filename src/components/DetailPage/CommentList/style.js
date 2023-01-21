@@ -54,7 +54,52 @@ export const CommentText = styled.div`
 `;
 
 export const CommentTextIcon = styled.div`
+  width: 7%;
+
   font-size: 1.4rem;
-  margin-right: 1%;
   cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const CommentIconBody = styled.div`
+  width: 25%;
+  margin-right: 15%;
+`;
+
+export const UpdateDeleteBody = styled.div`
+  width: 50%;
+
+  margin-right: 25%;
+`;
+
+export const CommentDeleteBtn = styled.button`
+  width: 70px;
+  height: 25px;
+
+  background-color: white;
+
+  border-color: #205295;
+  color: #205295;
+  border-radius: 5px;
+  cursor: pointer;
+
+  display: block;
+  margin-bottom: 5px;
+
+  :hover {
+    background-color: #205295;
+    color: white;
+    border-radius: 5px;
+    border: none;
+  }
+`;
+
+export const CommentUpdateBtn = styled(CommentDeleteBtn)`
+  margin-bottom: 5px;
+`;
+export const NoneDiv = styled.div`
+  display: none;
 `;

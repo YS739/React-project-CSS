@@ -92,19 +92,20 @@ export const AddIcornBtn = styled.button`
   margin-right: 10%;
 `;
 
-export const AddInputFirst = styled.input`
+export const AddInputGihub = styled.input`
   width: 95%;
   height: 50%;
   border: 1px solid rgb(150, 150, 150);
   border-radius: 10px;
-  /* border-radius: 5px; */
+  padding-left: 10px;
+  box-sizing: border-box;
+  :focus-visible {
+    outline: none;
+  }
 `;
 
-export const AddInputTwo = styled.input`
-  width: 95%;
+export const AddInputContent = styled(AddInputGihub)`
   height: 100%;
-  border: 1px solid rgb(150, 150, 150);
-  border-radius: 10px;
 `;
 
 export const AddCommentBtnDiv = styled.div`

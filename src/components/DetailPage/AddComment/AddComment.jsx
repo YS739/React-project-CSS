@@ -1,13 +1,10 @@
-import { useState, useEffect } from 'react';
-import { db } from '../../../common/firebase';
-import { collection, getDocs } from 'firebase/firestore';
 import { BsBookmark } from 'react-icons/bs';
 import {
   AddCommentListWrap,
   AddCommentListAll,
   AddCommentListTwo,
-  AddInputFirst,
-  AddInputTwo,
+  AddInputGihub,
+  AddInputContent,
   AddNickName,
   AddGitLink,
   AddCommentText,
@@ -22,18 +19,6 @@ import {
 } from './style';
 
 const AddComment = () => {
-  const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, 'users');
-
-  useEffect(() => {
-    const getUsers = async () => {
-      const data = await getDocs(usersCollectionRef);
-      console.log(data);
-    };
-
-    getUsers();
-  }, []);
-
   return (
     <AddCommentListAll>
       <AddCommentListWrap>
@@ -43,13 +28,13 @@ const AddComment = () => {
             <AddGitLink>
               <AddGitText>Github Link </AddGitText>
               <AddGitInputDiv>
-                <AddInputFirst placeholder="선택사항입니다." />
+                <AddInputGihub placeholder="선택사항입니다." />
               </AddGitInputDiv>
             </AddGitLink>
             <AddCommentText>
               <AddCommentDiv>댓글 </AddCommentDiv>
               <AddInputDiv>
-                <AddInputTwo />
+                <AddInputContent />
               </AddInputDiv>
             </AddCommentText>
           </AddCommentPlusGit>
