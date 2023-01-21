@@ -8,6 +8,7 @@ function App() {
   const queryClient = new QueryClient();
   return (
     <Fragment>
+      {/* 로그인 여부에 따라 헤더 바뀌기 */}
       <Header />
       <QueryClientProvider client={queryClient}>
         <Router />
