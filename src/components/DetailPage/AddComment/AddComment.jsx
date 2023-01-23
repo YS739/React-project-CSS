@@ -56,6 +56,7 @@ const AddComment = () => {
       comment: commentText,
       gihub: githubText,
       username: username,
+      completed: false,
       videoId: '',
       uid: authService.currentUser?.uid,
       date: Date.now(),

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
-import { authService, db } from '../../../common/firebase';
-import { deleteDoc, doc } from 'firebase/firestore';
+import { db, authService } from '../../../common/firebase';
+import { deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import {
   ListTitleSection,
   CommentNickname,
@@ -21,22 +21,28 @@ import {
 
 export default function Comment({ user }) {
   const [editBox, setEditBox] = useState(false);
-  const [editValue, setEditValue] = useState('');
+  const [editValue, setEditValue] = useState(user.comment);
   const [toggleBtn, setToggleBtn] = useState(false);
 
   const currentUid = authService.currentUser.uid;
 
   //  수정, 삭제 토글 버튼
+  const handleChange = (e) => {
+    e.preventDefault();
+    if (user.complete === true) {
+      setEditValue(user.comment);
+    } else {
+      user.comment = '';
+      setEditValue(e.target.value);
+    }
+  };
+
   const ToggleDropDown = () => {
     if (toggleBtn === false) {
       setToggleBtn(true);
     } else if (toggleBtn === true) {
       setToggleBtn(false);
     }
-  };
-  // 댓글 수정
-  const editChange = (e) => {
-    setEditValue(e.target.value);
   };
 
   const editHandler = (comment) => {
@@ -45,8 +51,9 @@ export default function Comment({ user }) {
   };
 
   // 여기에다 업데이트로직 짜기
-  const completeHandler = () => {
+  const completeHandler = async (user, comment) => {
     setEditBox(false);
+    await updateDoc(doc(db, 'test', user.id), { comment: comment });
   };
   // 댓글 삭제
   const deleteHandler = async (id, uid) => {
@@ -71,7 +78,7 @@ export default function Comment({ user }) {
         {!editBox ? (
           <CommentText>{user.comment}</CommentText>
         ) : (
-          <input value={editValue} name="name" onChange={editChange} />
+          <input value={editValue} onChange={handleChange} />
         )}
         <CommentTextIcon>
           <CommentIconBody>
@@ -88,7 +95,9 @@ export default function Comment({ user }) {
                   수정
                 </CommentUpdateBtn>
               ) : (
-                <CommentUpdateBtn onClick={completeHandler}>
+                <CommentUpdateBtn
+                  onClick={() => completeHandler(user, editValue)}
+                >
                   완료
                 </CommentUpdateBtn>
               )}
