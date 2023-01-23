@@ -26,22 +26,19 @@ export default function Comment({ user }) {
 
   const currentUid = authService.currentUser.uid;
 
-  //  수정, 삭제 토글 버튼
   const handleChange = (e) => {
     e.preventDefault();
-    if (user.complete === true) {
-      setEditValue(user.comment);
-    } else {
-      user.comment = '';
-      setEditValue(e.target.value);
-    }
+
+    setEditValue(e.target.value);
   };
 
-  const ToggleDropDown = () => {
-    if (toggleBtn === false) {
+  //  수정, 삭제 토글 버튼
+  const ToggleDropDown = (uid) => {
+    if (uid === currentUid) {
       setToggleBtn(true);
-    } else if (toggleBtn === true) {
-      setToggleBtn(false);
+      if (toggleBtn === true) {
+        setToggleBtn(false);
+      }
     }
   };
 
@@ -54,7 +51,9 @@ export default function Comment({ user }) {
   const completeHandler = async (user, comment) => {
     setEditBox(false);
     await updateDoc(doc(db, 'test', user.id), { comment: comment });
+    console.log(user.comment);
   };
+
   // 댓글 삭제
   const deleteHandler = async (id, uid) => {
     if (uid === currentUid) {
@@ -82,7 +81,7 @@ export default function Comment({ user }) {
         )}
         <CommentTextIcon>
           <CommentIconBody>
-            <GrMoreVertical onClick={ToggleDropDown} />
+            <GrMoreVertical onClick={() => ToggleDropDown(user.uid)} />
           </CommentIconBody>
           {toggleBtn ? (
             <UpdateDeleteBody>
@@ -96,7 +95,7 @@ export default function Comment({ user }) {
                 </CommentUpdateBtn>
               ) : (
                 <CommentUpdateBtn
-                  onClick={() => completeHandler(user, editValue)}
+                  onClick={() => completeHandler(user, editValue, user.uid)}
                 >
                   완료
                 </CommentUpdateBtn>
