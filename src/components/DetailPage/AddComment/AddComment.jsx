@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import { BsBookmark } from 'react-icons/bs';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../../../common/firebase';
 import {
   AddCommentListWrap,
   AddCommentListAll,
@@ -19,6 +22,25 @@ import {
 } from './style';
 
 const AddComment = () => {
+  const [newGitLink, setNewGitLink] = useState('');
+  const [newcommentt, setNewComment] = useState('');
+  const usersCollectionRef = collection(db, 'users');
+
+  const createUser = async (e) => {
+    e.preventDefault();
+    if (newcommentt !== '') {
+      await addDoc(usersCollectionRef, {
+        github: newGitLink,
+        comment: newcommentt,
+        date: Date.now(),
+        userName: '심대호',
+        userNameBar: 'l',
+      });
+      setNewGitLink('');
+      setNewComment('');
+    }
+  };
+
   return (
     <AddCommentListAll>
       <AddCommentListWrap>
@@ -28,18 +50,29 @@ const AddComment = () => {
             <AddGitLink>
               <AddGitText>Github Link </AddGitText>
               <AddGitInputDiv>
-                <AddInputGihub placeholder="선택사항입니다." />
+                <AddInputGihub
+                  value={newGitLink}
+                  onChange={(event) => {
+                    setNewGitLink(event.target.value);
+                  }}
+                  placeholder="선택사항입니다."
+                />
               </AddGitInputDiv>
             </AddGitLink>
             <AddCommentText>
               <AddCommentDiv>댓글 </AddCommentDiv>
               <AddInputDiv>
-                <AddInputContent />
+                <AddInputContent
+                  value={newcommentt}
+                  onChange={(event) => {
+                    setNewComment(event.target.value);
+                  }}
+                />
               </AddInputDiv>
             </AddCommentText>
           </AddCommentPlusGit>
           <AddCommentBtnDiv>
-            <AddCommentBtn>댓글등록</AddCommentBtn>
+            <AddCommentBtn onClick={createUser}>댓글등록</AddCommentBtn>
           </AddCommentBtnDiv>
         </AddCommentListTwo>
       </AddCommentListWrap>

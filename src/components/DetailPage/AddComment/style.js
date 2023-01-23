@@ -116,11 +116,19 @@ export const AddCommentBtnDiv = styled.div`
 `;
 
 export const AddCommentBtn = styled.button`
-  border: none;
-  background-color: #205295;
-  color: white;
-  border-radius: 5px;
   width: 90px;
   height: 40px;
   cursor: pointer;
+
+  background-color: white;
+  border-color: #205295;
+  color: #205295;
+  border-radius: 5px;
+
+  :hover {
+    background-color: #205295;
+    color: white;
+    border-radius: 5px;
+    border: none;
+  }
 `;
