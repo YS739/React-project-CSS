@@ -6,7 +6,7 @@ const VideoList = ({ video }) => {
 
   return (
     // TODO: navigate id = `/${video.id}` 등으로 바꾸기
-    <Videos onClick={() => navigate(`/:id`)}>
+    <Videos onClick={() => navigate(`/detail/:id`)}>
       <Video>
         {/* FIXME: 화질... 수정 필요 */}
         <img

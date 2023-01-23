@@ -1,5 +1,5 @@
-import { BsBookmark } from 'react-icons/bs';
 import { useState } from 'react';
+import { BsBookmark } from 'react-icons/bs';
 import {
   AddCommentListWrap,
   AddCommentListAll,
@@ -59,9 +59,7 @@ const AddComment = () => {
       videoId: '',
       uid: authService.currentUser?.uid,
       date: Date.now(),
-      // commentid: comments[0].id,
     });
-    console.log('auth서비스', authService.currentUser.displayName);
     setGithubText('');
     setCommentText('');
   };
