@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
-import { db } from '../../../common/firebase';
+import { authService, db } from '../../../common/firebase';
 import { deleteDoc, doc } from 'firebase/firestore';
 import {
   ListTitleSection,
@@ -24,6 +24,9 @@ export default function Comment({ user }) {
   const [editValue, setEditValue] = useState('');
   const [toggleBtn, setToggleBtn] = useState(false);
 
+  const currentUid = authService.currentUser.uid;
+
+  //  수정, 삭제 토글 버튼
   const ToggleDropDown = () => {
     if (toggleBtn === false) {
       setToggleBtn(true);
@@ -31,24 +34,27 @@ export default function Comment({ user }) {
       setToggleBtn(false);
     }
   };
+  // 댓글 수정
+  const editChange = (e) => {
+    setEditValue(e.target.value);
+  };
 
   const editHandler = (comment) => {
-    setEditBox(true);
     setEditValue(comment);
-
-    // console.log('id', id);
-    // console.log(editBox);
+    setEditBox(true);
   };
 
   // 여기에다 업데이트로직 짜기
   const completeHandler = () => {
     setEditBox(false);
   };
-  // 데이터 삭제
-  const deleteHandler = async (uid) => {
-    const userDoc = doc(db, 'test', uid);
-    await deleteDoc(userDoc);
-    console.log(uid);
+  // 댓글 삭제
+  const deleteHandler = async (id, uid) => {
+    if (uid === currentUid) {
+      const userDoc = doc(db, 'test', id);
+      await deleteDoc(userDoc);
+      console.log(uid, 'uid비교', id);
+    }
   };
 
   return (
@@ -65,7 +71,7 @@ export default function Comment({ user }) {
         {!editBox ? (
           <CommentText>{user.comment}</CommentText>
         ) : (
-          <input value={editValue} />
+          <input value={editValue} name="name" onChange={editChange} />
         )}
         <CommentTextIcon>
           <CommentIconBody>
@@ -76,7 +82,7 @@ export default function Comment({ user }) {
               {!editBox ? (
                 <CommentUpdateBtn
                   onClick={() => {
-                    editHandler(user.uid, user.comment);
+                    editHandler(user.comment);
                   }}
                 >
                   수정
@@ -89,7 +95,7 @@ export default function Comment({ user }) {
 
               <CommentDeleteBtn
                 onClick={() => {
-                  deleteHandler(user.uid);
+                  deleteHandler(user.id, user.uid);
                 }}
               >
                 삭제
