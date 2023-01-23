@@ -12,83 +12,88 @@ import {
   CommentDeleteBtn,
   UpdateDeleteBody,
   CommentIconBody,
-  NoneDiv,
 } from './style';
 import { BsGithub } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../../../common/firebase';
-import {
-  collection,
-  doc,
-  getDocs,
-  onSnapshot,
-  query,
-  querySnapshot,
-} from 'firebase/firestore';
 
-export default function CommentList(
-  githubText,
-  setGithubText,
-  commentText,
-  setCommentText,
-) {
-  const [toggleBtn, setToggleBtn] = useState(false);
-
+export default function CommentList() {
+  const ToggleDropDown = async (data) => {
+    //   const q = query(collection(db, 'test'));
+    //   const queryData = await getDocs(q);
+    //   queryData.forEach((doc) => {
+    //     if (doc.id === data.id) {
+    //     }
+    //     console.log('버튼 아이디', toggleBtn.id);
+    //     console.log(doc.id, '아이디 비교값', data.id);
+    //     console.log(
+    //       data.uid,
+    //       '===',
+    //       authService.currentUser.uid,
+    //       '&&',
+    //       data.id,
+    //       '===',
+    //       doc.id,
+    //     );
+    //   });
+  };
+  // 데이터 실시간 변경 확인
+  const [comments, setComments] = useState([]);
   useEffect(() => {
-    getCommentList();
+    const q = query(collection(db, 'test'), orderBy('date', 'desc'));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const newComments = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setComments(newComments);
+    });
+
+    return unsubscribe;
   }, []);
 
-  const getCommentList = () => {
-    const q = query(collection(db, 'test'));
-    onSnapshot(q, (snapshot) => {
-      snapshot.docs.map((doc) => {
-        const commentListdata = {
-          github: doc.data().githubText,
-          comment: doc.data().commentText,
-        };
-        setGithubText(commentListdata.githubText);
-        setCommentText(commentListdata.commentText);
-      });
-    });
-  };
+  // 수정
+  const commnetListEditBtn = () => {};
 
-  const ToggleDropDown = () => {
-    if (toggleBtn === false) {
-      setToggleBtn(true);
-    } else if (toggleBtn === true) {
-      setToggleBtn(false);
-    }
-  };
-
+  // 삭제
+  const commnetListDeleteBtn = () => {};
   return (
-    <CommentListBody>
-      <ListTitleSection>
-        <CommentNickname>엘리짱</CommentNickname>
-        <CommentNicknameBar>|</CommentNicknameBar>
-        <CommentTime>2022 10 30</CommentTime>
-        <CommentGitIcon>
-          <BsGithub />
-        </CommentGitIcon>
-      </ListTitleSection>
-      <ListTextSection>
-        <CommentText>
-          클론 코딩 하면서 리팩토링 좀 해봤어요. 깃헙에서 확인해보세요
-        </CommentText>
-        <CommentTextIcon>
-          <CommentIconBody>
-            <GrMoreVertical onClick={ToggleDropDown} />
-          </CommentIconBody>
-          {toggleBtn ? (
-            <UpdateDeleteBody>
-              <CommentUpdateBtn>수정</CommentUpdateBtn>
-              <CommentDeleteBtn>삭제</CommentDeleteBtn>
-            </UpdateDeleteBody>
-          ) : (
-            <NoneDiv></NoneDiv>
-          )}
-        </CommentTextIcon>
-      </ListTextSection>
-    </CommentListBody>
+    <>
+      {comments.map((data) => (
+        <CommentListBody key={data.id}>
+          <ListTitleSection>
+            <CommentNickname>{data.username}</CommentNickname>
+            <CommentNicknameBar>|</CommentNicknameBar>
+            <CommentTime>
+              {new Date(data.date).toLocaleDateString('kr')}
+            </CommentTime>
+            <CommentGitIcon>
+              <BsGithub />
+            </CommentGitIcon>
+          </ListTitleSection>
+          <ListTextSection>
+            <CommentText>{data.comment}</CommentText>
+            <CommentTextIcon>
+              <CommentIconBody>
+                <GrMoreVertical onClick={() => ToggleDropDown(data)} />
+              </CommentIconBody>
+
+              <UpdateDeleteBody>
+                <>
+                  <CommentUpdateBtn onClick={commnetListEditBtn}>
+                    수정
+                  </CommentUpdateBtn>
+                  <CommentDeleteBtn onClick={commnetListDeleteBtn}>
+                    삭제
+                  </CommentDeleteBtn>
+                </>
+              </UpdateDeleteBody>
+            </CommentTextIcon>
+          </ListTextSection>
+        </CommentListBody>
+      ))}
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import AddComment from '../../components/DetailPage/AddComment/AddComment';
-import CommentList from '../../components/DetailPage/CommentList/CommentList';
+// import CommentList from '../../components/DetailPage/CommentList/CommentList';
 import DetailVideo from '../../components/DetailPage/DetailVideo/DetailVideo';
 import RecommendVideo from '../../components/DetailPage/RecommendVideo/RecommendVideo';
 // import { Fragment } from 'react';
@@ -11,7 +11,7 @@ const DetailPage = () => {
       <DetailLeftBody>
         <DetailVideo />
         <AddComment />
-        <CommentList />
+        {/* <CommentList /> */}
       </DetailLeftBody>
       <DetailRight>
         <RecommendVideo />
