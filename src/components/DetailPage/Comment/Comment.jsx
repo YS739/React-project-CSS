@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
 import { db } from '../../../common/firebase';
-import { deleteDoc, doc } from 'firebase/firestore';
+import { deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import {
   ListTitleSection,
   CommentNickname,
@@ -21,8 +21,18 @@ import {
 
 export default function Comment({ user }) {
   const [editBox, setEditBox] = useState(false);
-  const [editValue, setEditValue] = useState('');
+  const [editValue, setEditValue] = useState(user.comment);
   const [toggleBtn, setToggleBtn] = useState(false);
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    if (user.complete === true) {
+      setEditValue(user.comment);
+    } else {
+      user.comment = '';
+      setEditValue(e.target.value);
+    }
+  };
 
   const ToggleDropDown = () => {
     if (toggleBtn === false) {
@@ -41,14 +51,15 @@ export default function Comment({ user }) {
   };
 
   // 여기에다 업데이트로직 짜기
-  const completeHandler = () => {
+  const completeHandler = async (user, comment) => {
     setEditBox(false);
+    await updateDoc(doc(db, 'test', user.id), { comment: comment });
   };
   // 데이터 삭제
-  const deleteHandler = async (uid) => {
-    const userDoc = doc(db, 'test', uid);
+  const deleteHandler = async (id) => {
+    const userDoc = doc(db, 'test', id);
     await deleteDoc(userDoc);
-    console.log(uid);
+    console.log(id);
   };
 
   return (
@@ -65,7 +76,7 @@ export default function Comment({ user }) {
         {!editBox ? (
           <CommentText>{user.comment}</CommentText>
         ) : (
-          <input value={editValue} />
+          <input value={editValue} onChange={handleChange} />
         )}
         <CommentTextIcon>
           <CommentIconBody>
@@ -76,20 +87,22 @@ export default function Comment({ user }) {
               {!editBox ? (
                 <CommentUpdateBtn
                   onClick={() => {
-                    editHandler(user.uid, user.comment);
+                    editHandler(user.comment);
                   }}
                 >
                   수정
                 </CommentUpdateBtn>
               ) : (
-                <CommentUpdateBtn onClick={completeHandler}>
+                <CommentUpdateBtn
+                  onClick={() => completeHandler(user, editValue)}
+                >
                   완료
                 </CommentUpdateBtn>
               )}
 
               <CommentDeleteBtn
                 onClick={() => {
-                  deleteHandler(user.uid);
+                  deleteHandler(user.id);
                 }}
               >
                 삭제
