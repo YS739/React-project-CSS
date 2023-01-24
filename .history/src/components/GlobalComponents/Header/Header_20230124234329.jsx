@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
   // TODO: 네비게이트 적용 - 로고, 회원가입, 로그인 버튼 클릭 시
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // TODO: 로그인한 회원의 이름을 띄운다
   // const [user,setUser] = useState({})
@@ -37,7 +37,7 @@ const Header = () => {
       <Logo
         src={require('../../../assets/css_logo.png')}
         alt="css"
-        // onClick={() => navigate('/')}
+        onClick={() => navigate('/')}
       />
       <LoginToggle>
         {loginCheck ? (

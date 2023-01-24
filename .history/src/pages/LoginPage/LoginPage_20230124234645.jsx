@@ -29,7 +29,6 @@ const LoginPage = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        alert(`${user.email}으로 로그인 되었습니다.`);
         setEmail('');
         setPassword('');
         navigate('/');

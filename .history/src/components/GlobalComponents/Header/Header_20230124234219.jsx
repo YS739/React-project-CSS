@@ -34,11 +34,7 @@ const Header = () => {
   const [loginCheck, setLoginCheck] = useState(false);
   return (
     <Container>
-      <Logo
-        src={require('../../../assets/css_logo.png')}
-        alt="css"
-        // onClick={() => navigate('/')}
-      />
+      <Logo src={require('../../../assets/css_logo.png')} alt="css" />
       <LoginToggle>
         {loginCheck ? (
           <>
