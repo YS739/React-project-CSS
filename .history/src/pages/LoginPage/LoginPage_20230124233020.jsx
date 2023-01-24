@@ -25,6 +25,12 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // 로그인한 회원의 이름을 띄운다
+  const [user, setUser] = useState({});
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
   const LoginHandler = async (e) => {
     e.preventDefault();
     const auth = getAuth();
