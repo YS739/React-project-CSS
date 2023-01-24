@@ -1,21 +1,10 @@
 import { Container, Logo, LoginToggle, Nav } from './style.js';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import {
-  getAuth,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from 'firebase/auth';
 
 const Header = () => {
   // TODO: 네비게이트 적용 - 로고, 회원가입, 로그인 버튼 클릭 시
   // const navigate = useNavigate();
-
-  // TODO: 로그인한 회원의 이름을 띄운다
-  // const [user,setUser] = useState({})
-  // onAuthStateChanged(auth, (currentUser)=>{
-  //   setUser(currentUser)
-  // })
 
   // 회원가입 <-> 마이페이지 / 로그인 <-> 로그아웃 토글
   const [loginCheck, setLoginCheck] = useState(false);
@@ -25,7 +14,7 @@ const Header = () => {
       <LoginToggle>
         {loginCheck ? (
           <>
-            {/* {user.name} */}
+            {/* {auth.currentUser.name} */}
             <Nav>마이페이지</Nav>
             {/* onClick = {()=> app.auth().signOut()} */}
             <Nav onClick={() => setLoginCheck((e) => !e)}>로그아웃</Nav>

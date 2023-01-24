@@ -1,57 +1,48 @@
 import {
+  SignUpContainer,
   Logo,
-  LoginContainer,
   Form,
   Id,
+  Name,
   Password,
   Input,
-  ToSignUp,
-  SignUp,
   BlueButton,
-  Button,
-  SocialLogin,
+  Login,
+  ToLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import {
-  getAuth,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from 'firebase/auth';
+import { auth, getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { async } from '@firebase/util';
 
-const LoginPage = () => {
-  // TODO: 헤더는 사라져야함
+const SignUpPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
-  // 로그인한 회원의 이름을 띄운다
-  const [user, setUser] = useState({});
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
-
-  const LoginHandler = async (e) => {
+  // 회원가입 진행 함수
+  const SignUpHandler = async (e) => {
     e.preventDefault();
-    const auth = getAuth();
-    const user = auth.currentUser;
-    await signInWithEmailAndPassword(auth, email, password)
+
+    await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        // ...
+        console.log('user :>> ', user);
         setEmail('');
         setPassword('');
-        navigate('/');
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log('errorMessage', errorMessage);
-        // TODO: 에러났다고 알려주는 방법 고민
+        // ..
       });
   };
   return (
-    <LoginContainer>
+    <SignUpContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
       <Form>
         <Id>
@@ -64,6 +55,16 @@ const LoginPage = () => {
             }}
           />
         </Id>
+        <Name>
+          닉네임
+          <Input
+            value={name}
+            placeholder={'닉네임을 적어주세요'}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+        </Name>
         <Password>
           비밀번호
           <Input
@@ -73,19 +74,18 @@ const LoginPage = () => {
             }}
           />
         </Password>
+        <Password>
+          비밀번호 확인
+          <Input value={password} />
+        </Password>
       </Form>
-      <BlueButton onClick={LoginHandler}>로그인</BlueButton>
-
-      <ToSignUp>
-        아이디가 없으신가요?
-        <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
-      </ToSignUp>
-      <SocialLogin>
-        <Button>구글 로그인</Button>
-        <Button>Git Hub 로그인</Button>
-      </SocialLogin>
-    </LoginContainer>
+      <BlueButton onClick={SignUpHandler}>회원가입</BlueButton>
+      <ToLogin>
+        이미 가입 하셨나요?
+        <Login onClick={() => navigate('/login')}>로그인</Login>
+      </ToLogin>
+    </SignUpContainer>
   );
 };
 
-export default LoginPage;
+export default SignUpPage;

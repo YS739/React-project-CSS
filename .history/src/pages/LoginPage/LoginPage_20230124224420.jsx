@@ -12,12 +12,7 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import {
-  getAuth,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 const LoginPage = () => {
   // TODO: 헤더는 사라져야함
@@ -25,29 +20,18 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // 로그인한 회원의 이름을 띄운다
-  const [user, setUser] = useState({});
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
-
   const LoginHandler = async (e) => {
     e.preventDefault();
     const auth = getAuth();
-    const user = auth.currentUser;
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        setEmail('');
-        setPassword('');
-        navigate('/');
+        // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log('errorMessage', errorMessage);
-        // TODO: 에러났다고 알려주는 방법 고민
       });
   };
   return (

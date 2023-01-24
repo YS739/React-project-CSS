@@ -11,35 +11,33 @@ import {
   ToLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { async } from '@firebase/util';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
   // 회원가입 진행 함수
-  const SignUpHandler = async (e) => {
-    e.preventDefault();
+  const SignUpHandler = (event) => {
+    event.preventDefault();
 
+    const email = document.getElementById('Id').value;
+    const password = document.getElementById('Password').value;
     const auth = getAuth();
-    await createUserWithEmailAndPassword(auth, email, name, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        console.log('userCredential', userCredential);
         // Signed in
         const user = userCredential.user;
-        console.log('user :>> ', user);
+        // ...
         setEmail('');
-        setName('');
         setPassword('');
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log('errorMessage', errorMessage);
-        // TODO: 에러났다고 알려주는 방법 고민
+        // ..
       });
   };
   return (
@@ -48,41 +46,19 @@ const SignUpPage = () => {
       <Form>
         <Id>
           이메일
-          <Input
-            value={email}
-            placeholder={'css@gmail.com'}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
+          <Input value={email} placeholder={'css@gmail.com'} />
         </Id>
         <Name>
           닉네임
-          <Input
-            value={name}
-            placeholder={'닉네임을 적어주세요'}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
+          <Input placeholder={'닉네임을 적어주세요'} />
         </Name>
         <Password>
           비밀번호
-          <Input
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
+          <Input value={password} />
         </Password>
         <Password>
           비밀번호 확인
-          <Input
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
+          <Input value={password} />
         </Password>
       </Form>
       <BlueButton onClick={SignUpHandler}>회원가입</BlueButton>
