@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
-import { BsGithub } from 'react-icons/bs';
+import { useState } from 'react';
+import { BsGithub, BsPencil, BsFillTrashFill } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
 import { db, authService } from '../../../common/firebase';
-import { deleteDoc, doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc } from 'firebase/firestore';
+import { confirmAlert } from 'react-confirm-alert';
 import {
   ListTitleSection,
   CommentNickname,
@@ -16,8 +17,10 @@ import {
   CommentDeleteBtn,
   UpdateDeleteBody,
   CommentIconBody,
+  CommentEditInput,
   NoneDiv,
 } from './style';
+import CustomConfirmUI from './CustomConfirmUI';
 
 export default function Comment({ user }) {
   const [editBox, setEditBox] = useState(false);
@@ -47,20 +50,21 @@ export default function Comment({ user }) {
     setEditBox(true);
   };
 
+  //  TODO: 수정하고나서 완료 버튼 누를때 setTimeOust 설정해주기
   // 여기에다 업데이트로직 짜기
   const completeHandler = async (user, comment) => {
     setEditBox(false);
     await updateDoc(doc(db, 'test', user.id), { comment: comment });
-    console.log(user.comment);
+    setToggleBtn(false);
   };
 
   // 댓글 삭제
-  const deleteHandler = async (id, uid) => {
-    if (uid === currentUid) {
-      const userDoc = doc(db, 'test', id);
-      await deleteDoc(userDoc);
-      console.log(uid, 'uid비교', id);
-    }
+  const deleteHandler = (id) => {
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return <CustomConfirmUI onClose={onClose} id={id} />;
+      },
+    });
   };
 
   return (
@@ -68,7 +72,10 @@ export default function Comment({ user }) {
       <ListTitleSection>
         <CommentNickname>{user.username}</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
-        <CommentTime>{user.date}</CommentTime>
+        <CommentTime>
+          {/*  FIXME: timeago 라이브러리 사용해보기 (시간 남을때) */}
+          {new Date(user.date).toLocaleDateString('kr')}
+        </CommentTime>
         <CommentGitIcon>
           <BsGithub />
         </CommentGitIcon>
@@ -77,7 +84,11 @@ export default function Comment({ user }) {
         {!editBox ? (
           <CommentText>{user.comment}</CommentText>
         ) : (
-          <input value={editValue} onChange={handleChange} />
+          <CommentEditInput
+            value={editValue}
+            onChange={handleChange}
+            type="text"
+          />
         )}
         <CommentTextIcon>
           <CommentIconBody>
@@ -91,6 +102,7 @@ export default function Comment({ user }) {
                     editHandler(user.comment);
                   }}
                 >
+                  <BsPencil />
                   수정
                 </CommentUpdateBtn>
               ) : (
@@ -103,9 +115,10 @@ export default function Comment({ user }) {
 
               <CommentDeleteBtn
                 onClick={() => {
-                  deleteHandler(user.id, user.uid);
+                  deleteHandler(user.id);
                 }}
               >
+                <BsFillTrashFill />
                 삭제
               </CommentDeleteBtn>
             </UpdateDeleteBody>

@@ -40,7 +40,24 @@ export const ListTextSection = styled.div`
 `;
 
 export const CommentText = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: 1%;
+`;
+
+export const CommentEditInput = styled.input`
+  width: 90%;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2.2px solid black;
+
+  :focus {
+    outline: none;
+  }
+
+  font-size: 1.3rem;
   font-weight: 600;
   margin-left: 1%;
 `;
@@ -68,14 +85,17 @@ export const UpdateDeleteBody = styled.div`
 `;
 
 export const CommentDeleteBtn = styled.button`
-  width: 70px;
-  height: 25px;
+  width: 90px;
+  height: 35px;
 
   background-color: white;
   border-color: #205295;
   color: #205295;
   border-radius: 5px;
   cursor: pointer;
+
+  font-size: 1.1rem;
+  font-weight: 600;
 
   display: block;
   margin-bottom: 5px;
@@ -86,11 +106,13 @@ export const CommentDeleteBtn = styled.button`
     border-radius: 5px;
     border: none;
   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 `;
 
-export const CommentUpdateBtn = styled(CommentDeleteBtn)`
-  margin-bottom: 5px;
-`;
+export const CommentUpdateBtn = styled(CommentDeleteBtn)``;
 export const NoneDiv = styled.div`
   display: none;
 `;

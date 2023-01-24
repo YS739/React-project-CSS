@@ -95,8 +95,12 @@ export const AddIcornBtn = styled.button`
 export const AddInputGihub = styled.input`
   width: 95%;
   height: 50%;
+
+  font-weight: 600;
+
   border: 1px solid rgb(150, 150, 150);
   border-radius: 10px;
+
   padding-left: 10px;
   box-sizing: border-box;
   :focus-visible {
@@ -106,6 +110,8 @@ export const AddInputGihub = styled.input`
 
 export const AddInputContent = styled(AddInputGihub)`
   height: 100%;
+  font-size: 1.15rem;
+  font-weight: 600;
 `;
 
 export const AddCommentBtnDiv = styled.div`
@@ -121,9 +127,12 @@ export const AddCommentBtn = styled.button`
   cursor: pointer;
 
   background-color: white;
-  border-color: #205295;
   color: #205295;
+  border-color: #205295;
   border-radius: 5px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
 
   :hover {
     background-color: #205295;

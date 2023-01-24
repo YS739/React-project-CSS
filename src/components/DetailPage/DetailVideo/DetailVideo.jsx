@@ -1,93 +1,37 @@
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import { authService, db } from '../../../common/firebase';
+import { useLocation } from 'react-router-dom';
+import ChannelInfo from '../ChannelInfo/ChannelInfo';
+import RecommendVideo from '../RecommendVideo/RecommendVideo';
 import { DetailVideoContainer } from './style';
+import TestLogin from './TestLogin';
 
 export default function DetailVideo() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [username, setNickname] = useState('');
-
-  const changeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const changePassword = (e) => {
-    setPassword(e.target.value);
-  };
-  const changeNickname = (e) => {
-    setNickname(e.target.value);
-  };
-  const auth = getAuth();
-
-  const handleSignUp = () => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((res) => {
-        setDoc(doc(db, 'testUser', res.user.uid), {
-          uid: res.user.uid,
-          email: email,
-          password: password,
-          username: username,
-        });
-        console.log('회원가입성공');
-        setEmail('');
-        setPassword('');
-        setNickname('');
-      })
-      .catch(() => {
-        console.log('err.message:');
-      });
-  };
-
-  useEffect(() => {
-    onAuthStateChanged(authService, (user) => {
-      if (user) {
-        console.log('로그인 되어있음');
-      } else if (!user) {
-        console.log('로그인 안됨');
-      }
-    });
-  }, []);
-
-  const loginHandler = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        console.log('로그인 성공');
-      })
-      .catch(() => {
-        console.log('로그인 실패');
-      });
-  };
-
-  const logoutHandler = () => {
-    authService.signOut();
-    console.log('로그아웃 됨');
-  };
+  // const {
+  //   state: { video },
+  // } = useLocation();
+  // const { title, channelId, channelTitle, description } = video.snippet;
+  // console.log(video);
   return (
-    <DetailVideoContainer>
-      <input
-        placeholder="UserEmail"
-        value={email}
-        onChange={changeEmail}
-      ></input>
-      <input
-        placeholder="password"
-        value={password}
-        onChange={changePassword}
-      ></input>
-      <input
-        placeholder="UserEmail"
-        value={username}
-        onChange={changeNickname}
-      ></input>
-      <button onClick={handleSignUp}>회원가입</button>
-      <button onClick={loginHandler}>로그인</button>
-      <button onClick={logoutHandler}>로그아웃</button>
-    </DetailVideoContainer>
+    <>
+      <TestLogin />
+      <DetailVideoContainer>
+        {/* <section>
+        <iframe
+          id="player"
+          type="text/html"
+          width="100%"
+          height="640"
+          src={`http://www.youtube.com/embed/${video.id}`}
+          frameBorder="0"
+          title="유튜브"
+        />
+        <div>{title}</div>
+        <ChannelInfo id={channelId} name={channelTitle} />
+        <pre>{description}</pre>
+      </section>
+      <section>
+        <RecommendVideo id={video.id} />
+      </section> */}
+      </DetailVideoContainer>
+    </>
   );
 }

@@ -8,14 +8,14 @@ import {
   VideoTime,
 } from './style';
 
-const RecommendVideo = () => {
+const RecommendVideo = ({ id }) => {
   return (
     <RecommendBody>
       <ViewBody>
         <VideoView src="https://i.ytimg.com/vi/WjIlVlmmNqs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcQFX6Yn-zDQndvKO3cj_XGOFoOg" />
         <TextBody>
           <VideoText>한시간만에 Node.js 백엔드 기초 끝내기</VideoText>
-          <VideoNickName>조코딩 JoCoding</VideoNickName>
+          <VideoNickName>조코딩 </VideoNickName>
           <VideoTime>2month ago</VideoTime>
         </TextBody>
       </ViewBody>

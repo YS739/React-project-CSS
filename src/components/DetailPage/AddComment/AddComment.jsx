@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsBookmark } from 'react-icons/bs';
 import {
   AddCommentListWrap,
@@ -21,6 +21,7 @@ import {
 import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const AddComment = () => {
   const [githubText, setGithubText] = useState('');
@@ -35,14 +36,24 @@ const AddComment = () => {
     setCommentText(e.target.value);
   };
 
-  // 데이터 올리기
+  useEffect(() => {
+    onAuthStateChanged(authService, (user) => {
+      if (user) {
+        getInfoUsername(username);
+        console.log('Add Commnet 로그인 되어있음');
+      } else if (!user) {
+        console.log('로그인 안됨');
+      }
+    });
+  }, []);
 
-  const AddCommentButton = async () => {
+  // 기존 username 정보 가져오기
+  const getInfoUsername = () => {
     const q = query(
       collection(db, 'testUser'),
       where('uid', '==', authService.currentUser.uid),
     );
-    await getDocs(q).then((querySnapshop) => {
+    getDocs(q).then((querySnapshop) => {
       const userInfo = [];
       querySnapshop.forEach((doc) => {
         userInfo.push({
@@ -52,6 +63,11 @@ const AddComment = () => {
         console.log('유저인포', username);
       });
     });
+  };
+
+  // 데이터 올리기
+
+  const AddCommentButton = async () => {
     await addDoc(collection(db, 'test'), {
       comment: commentText,
       gihub: githubText,
