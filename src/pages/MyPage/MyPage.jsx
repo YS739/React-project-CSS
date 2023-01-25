@@ -25,7 +25,7 @@ const MyPage = () => {
         {/* 닉네임, 깃허브 링크 수정 */}
         <MyInfoContainer>
           <NickNameContainer>
-            <MyPageTagTitle>닉네임</MyPageTagTitle>
+            <MyPageTagTitle>닉네</MyPageTagTitle>
             <InputCheckContainer>
               <MyInfoInput type="text" />
               <MyInfoEditButton onClick={''}>수정</MyInfoEditButton>
