@@ -47,12 +47,14 @@ const LoginPage = () => {
   const LoginHandler = () => {
     // 유효성 검사
     if (validateInputs() === false) {
+      console.log('유효성 검사 결과', validateInputs());
       return;
     }
 
     // 로그인 요청
     // const auth = getAuth();
-    console.log('유효성 검사 결과', validateInputs());
+    console.log('email :>> ', email);
+    console.log('password :>> ', password);
     signInWithEmailAndPassword(authService, email, password)
       .then(() => {
         // Signed in

@@ -12,12 +12,8 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-} from 'firebase/auth';
+import { useState, useRef } from 'react';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
 
 const LoginPage = () => {
@@ -29,8 +25,9 @@ const LoginPage = () => {
   const passwordRef = useRef(null);
 
   const validateInputs = () => {
-    console.log('email유효성검사', email);
-    console.log('password유효성검사', password);
+    console.log('email', email);
+    console.log('password :>> ', password);
+    console.log('email=true');
     if (!email) {
       alert('email을 입력해주세요.');
       emailRef.current.focus();
@@ -42,21 +39,27 @@ const LoginPage = () => {
       console.log('pw = true');
       return false;
     }
+    console.log('return true');
     return true;
   };
-  const LoginHandler = () => {
+  const LoginHandler = async (e) => {
+    e.preventDefault();
+
     // 유효성 검사
     if (validateInputs() === false) {
+      console.log('validateInputs():', validateInputs());
       return;
     }
 
     // 로그인 요청
-    // const auth = getAuth();
-    console.log('유효성 검사 결과', validateInputs());
-    signInWithEmailAndPassword(authService, email, password)
-      .then(() => {
+    const auth = getAuth();
+    // const user = auth.currentUser;
+    await signInWithEmailAndPassword(authService, email, password)
+      .then((userCredential) => {
         // Signed in
-        alert('로그인 되었습니다.');
+        const user = userCredential.user;
+        console.log('user', user);
+        alert(`${user.email}으로 로그인 되었습니다.`);
         setEmail('');
         setPassword('');
         navigate('/');
@@ -69,15 +72,6 @@ const LoginPage = () => {
       });
   };
 
-  useEffect(() => {
-    onAuthStateChanged(authService, (user) => {
-      if (user) {
-        console.log('로그인 되어있음');
-      } else if (!user) {
-        console.log('로그인 안됨');
-      }
-    });
-  }, []);
   return (
     <LoginContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />

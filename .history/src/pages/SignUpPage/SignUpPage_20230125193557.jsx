@@ -14,13 +14,12 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
-import { updateProfile } from 'firebase/auth';
 import { async } from '@firebase/util';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
-  const [nickName, setNickName] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
   // 에러 나면 그곳에 커서 이동되도록
@@ -96,20 +95,20 @@ const SignUpPage = () => {
             alert('회원가입 성공!');
             setEmail('');
             setNickName('');
-            setPassword('');
-            navigate('/');
+            setPw('');
+            navigate('Tabs', { screen: 'Home' });
           })
-          .catch((error) => {
-            console.log(error.message);
+          .catch((err) => {
+            console.log(err.message);
           });
       })
-      .catch((error) => {
-        console.log(error.message);
-        if (error.message.includes('already-in-use')) {
-          alert('이미 사용중인 아이디입니다.');
-        }
+      .catch((err) => {
+        console.log(err.message);
       });
 
+    if (errorMessage.includes('already-in-use')) {
+      alert('이미 사용중인 아이디입니다.');
+    }
     // TODO: 에러 - alert 말고 input 창 밑에 빨간 글씨
   };
   return (
@@ -131,10 +130,10 @@ const SignUpPage = () => {
           닉네임
           <Input
             ref={displayNameRef}
-            value={nickName}
+            value={displayName}
             placeholder={'닉네임을 적어주세요'}
             onChange={(e) => {
-              setNickName(e.target.value);
+              setDisplayName(e.target.value);
             }}
           />
         </Name>

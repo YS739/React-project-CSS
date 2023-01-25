@@ -97,7 +97,7 @@ const SignUpPage = () => {
             setEmail('');
             setNickName('');
             setPassword('');
-            navigate('/');
+            navigate('Tabs', { screen: 'Home' });
           })
           .catch((error) => {
             console.log(error.message);
@@ -105,11 +105,11 @@ const SignUpPage = () => {
       })
       .catch((error) => {
         console.log(error.message);
-        if (error.message.includes('already-in-use')) {
-          alert('이미 사용중인 아이디입니다.');
-        }
       });
 
+    if (error.message.includes('already-in-use')) {
+      alert('이미 사용중인 아이디입니다.');
+    }
     // TODO: 에러 - alert 말고 input 창 밑에 빨간 글씨
   };
   return (

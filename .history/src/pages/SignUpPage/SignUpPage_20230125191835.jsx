@@ -14,13 +14,12 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
-import { updateProfile } from 'firebase/auth';
 import { async } from '@firebase/util';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
-  const [nickName, setNickName] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
   // 에러 나면 그곳에 커서 이동되도록
@@ -87,30 +86,25 @@ const SignUpPage = () => {
 
     // 회원가입
     await createUserWithEmailAndPassword(authService, email, password)
-      .then(() => {
-        console.log('회원가입 성공!');
-        updateProfile(authService.currentUser, {
-          displayName: nickName,
-        })
-          .then(() => {
-            alert('회원가입 성공!');
-            setEmail('');
-            setNickName('');
-            setPassword('');
-            navigate('/');
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        console.log('password', password);
+        alert('회원가입이 완료되었습니다.');
+        setEmail('');
+        setPassword('');
+        navigate('/');
       })
       .catch((error) => {
-        console.log(error.message);
-        if (error.message.includes('already-in-use')) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log('errorMessage', errorMessage);
+        if (errorMessage.includes('already-in-use')) {
           alert('이미 사용중인 아이디입니다.');
         }
+        // TODO: 에러 - alert 말고 input 창 밑에 빨간 글씨
       });
-
-    // TODO: 에러 - alert 말고 input 창 밑에 빨간 글씨
   };
   return (
     <SignUpContainer>
@@ -127,17 +121,17 @@ const SignUpPage = () => {
             }}
           />
         </Id>
-        <Name>
+        {/* <Name>
           닉네임
           <Input
             ref={displayNameRef}
-            value={nickName}
+            value={displayName}
             placeholder={'닉네임을 적어주세요'}
             onChange={(e) => {
-              setNickName(e.target.value);
+              setDisplayName(e.target.value);
             }}
-          />
-        </Name>
+          /> */}
+        {/* </Name> */}
         <Password>
           비밀번호
           {/* FIXME: 비밀번호가 안 가려진다 */}
