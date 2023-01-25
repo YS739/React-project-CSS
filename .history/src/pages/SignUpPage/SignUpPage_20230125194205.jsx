@@ -97,7 +97,7 @@ const SignUpPage = () => {
             setEmail('');
             setNickName('');
             setPassword('');
-            navigate('/');
+            navigate('Tabs', { screen: 'Home' });
           })
           .catch((error) => {
             console.log(error.message);

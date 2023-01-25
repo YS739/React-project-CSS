@@ -19,8 +19,9 @@ const Header = () => {
     setUser(currentUser);
   });
   // 닉네임 불러오기
-  const currentUser = auth.currentUser;
-  const userNickName = currentUser?.displayName;
+  const username = auth.currentUser;
+  const userNickName = username.displayName;
+  console.log('userNickName :>> ', userNickName);
   // 로그아웃
   const LogOutHandler = async () => {
     await signOut(auth)
@@ -45,7 +46,7 @@ const Header = () => {
       <LoginToggle>
         {user ? (
           <>
-            {userNickName}
+            {/* {user?.name} */}
             <Nav>마이페이지</Nav>
             <Nav
               onClick={LogOutHandler}

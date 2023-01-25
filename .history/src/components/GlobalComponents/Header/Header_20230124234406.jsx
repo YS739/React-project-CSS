@@ -13,19 +13,16 @@ const Header = () => {
   // const navigate = useNavigate();
 
   // TODO: 로그인한 회원의 이름을 띄운다
-  const [user, setUser] = useState({});
-  const auth = getAuth();
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
-  // 닉네임 불러오기
-  const currentUser = auth.currentUser;
-  const userNickName = currentUser?.displayName;
+  // const [user,setUser] = useState({})
+  // onAuthStateChanged(auth, (currentUser)=>{
+  //   setUser(currentUser)
+  // })
+
   // 로그아웃
+  const auth = getAuth();
   const LogOutHandler = async () => {
     await signOut(auth)
       .then(() => {
-        alert('로그아웃되었습니다.');
         // Sign-out successful.
       })
       .catch((error) => {
@@ -34,7 +31,7 @@ const Header = () => {
   };
 
   // 회원가입 <-> 마이페이지 / 로그인 <-> 로그아웃 토글
-  // const [loginCheck, setLoginCheck] = useState(false);
+  const [loginCheck, setLoginCheck] = useState(false);
   return (
     <Container>
       <Logo
@@ -43,16 +40,17 @@ const Header = () => {
         // onClick={() => navigate('/')}
       />
       <LoginToggle>
-        {user ? (
+        {loginCheck ? (
           <>
-            {userNickName}
+            {/* {user?.name} */}
             <Nav>마이페이지</Nav>
             <Nav
-              onClick={LogOutHandler}
+              onClick={{ LogOutHandler }}
               //     () => setLoginCheck((e) => !e)}
             >
               로그아웃
             </Nav>
+            //{' '}
           </>
         ) : (
           <>

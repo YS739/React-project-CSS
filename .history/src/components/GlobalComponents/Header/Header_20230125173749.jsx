@@ -18,14 +18,11 @@ const Header = () => {
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-  // 닉네임 불러오기
-  const currentUser = auth.currentUser;
-  const userNickName = currentUser?.displayName;
+
   // 로그아웃
   const LogOutHandler = async () => {
     await signOut(auth)
       .then(() => {
-        alert('로그아웃되었습니다.');
         // Sign-out successful.
       })
       .catch((error) => {
@@ -45,7 +42,7 @@ const Header = () => {
       <LoginToggle>
         {user ? (
           <>
-            {userNickName}
+            {/* {user?.name} */}
             <Nav>마이페이지</Nav>
             <Nav
               onClick={LogOutHandler}

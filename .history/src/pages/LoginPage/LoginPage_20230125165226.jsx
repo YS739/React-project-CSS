@@ -29,8 +29,9 @@ const LoginPage = () => {
   const passwordRef = useRef(null);
 
   const validateInputs = () => {
-    console.log('email유효성검사', email);
-    console.log('password유효성검사', password);
+    console.log('email', email);
+    console.log('password :>> ', password);
+    console.log('email=true');
     if (!email) {
       alert('email을 입력해주세요.');
       emailRef.current.focus();
@@ -42,20 +43,25 @@ const LoginPage = () => {
       console.log('pw = true');
       return false;
     }
+    console.log('return true');
     return true;
   };
   const LoginHandler = () => {
     // 유효성 검사
     if (validateInputs() === false) {
+      console.log('validateInputs():', validateInputs());
       return;
     }
 
     // 로그인 요청
     // const auth = getAuth();
-    console.log('유효성 검사 결과', validateInputs());
+    console.log('email :>> ', email);
+    console.log('password :>> ', password);
     signInWithEmailAndPassword(authService, email, password)
       .then(() => {
         // Signed in
+        // const user = userCredential.user;
+        // console.log('user', user);
         alert('로그인 되었습니다.');
         setEmail('');
         setPassword('');

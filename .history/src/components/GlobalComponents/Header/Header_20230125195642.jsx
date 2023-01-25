@@ -21,6 +21,7 @@ const Header = () => {
   // 닉네임 불러오기
   const currentUser = auth.currentUser;
   const userNickName = currentUser?.displayName;
+  console.log('userNickName :>> ', userNickName);
   // 로그아웃
   const LogOutHandler = async () => {
     await signOut(auth)
