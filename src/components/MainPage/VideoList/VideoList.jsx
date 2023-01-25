@@ -1,27 +1,32 @@
 import { useNavigate } from 'react-router-dom';
-import { Videos, Video, VideoTitle, Creator } from './style';
+import { Videos, Video, VideoTitle, VideoFooter, Creator } from './style';
+import { format, register } from 'timeago.js';
+import KoLocale from 'timeago.js/lib/lang/ko';
+
+// 비디오 생성날짜 한국어로 표기하기
+register('ko', KoLocale);
 
 const VideoList = ({ video }) => {
   const navigate = useNavigate();
-
+  const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   return (
-    // TODO: navigate id = `/${video.id}` 등으로 바꾸기
-    <Videos onClick={() => navigate(`/:id`)}>
+    // 클릭한 영상의 id로 이동하기
+    <Videos onClick={() => navigate(`/detail/${video.id.videoId}`)}>
       <Video>
-        {/* FIXME: 화질... 수정 필요 */}
         <img
           width={'100%'}
           height={'90%'}
-          src={video.snippet.thumbnails.default.url}
+          src={thumbnails.medium.url}
           alt="videoThumbnail"
         />
       </Video>
-      {/* TODO: 글자수 자르기 */}
       <VideoTitle>
-        {video.snippet.title.slice(0, 25)}
-        {video.snippet.title.length > 25 && '...'}
+        {title.slice(0, 21)}
+        {title.length > 21 && '...'}
       </VideoTitle>
-      <Creator>{video.snippet.channelTitle}</Creator>
+      <VideoFooter>
+        <div>{format(publishedAt, 'ko')}</div> <Creator>{channelTitle}</Creator>
+      </VideoFooter>
     </Videos>
   );
 };
