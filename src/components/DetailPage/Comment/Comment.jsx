@@ -27,8 +27,6 @@ export default function Comment({ user }) {
   const [editValue, setEditValue] = useState(user.comment);
   const [toggleBtn, setToggleBtn] = useState(false);
 
-  const currentUid = authService.currentUser.uid;
-
   const handleChange = (e) => {
     e.preventDefault();
 
@@ -37,6 +35,7 @@ export default function Comment({ user }) {
 
   //  수정, 삭제 토글 버튼
   const ToggleDropDown = (uid) => {
+    const currentUid = authService.currentUser.uid;
     if (uid === currentUid) {
       setToggleBtn(true);
       if (toggleBtn === true) {
@@ -77,7 +76,9 @@ export default function Comment({ user }) {
           {new Date(user.date).toLocaleDateString('kr')}
         </CommentTime>
         <CommentGitIcon>
-          <BsGithub />
+          <a href={user.github} title={user.github}>
+            <BsGithub />
+          </a>
         </CommentGitIcon>
       </ListTitleSection>
       <ListTextSection>

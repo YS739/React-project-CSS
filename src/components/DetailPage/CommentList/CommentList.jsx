@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
-import { db } from '../../../common/firebase';
-import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
+import { authService, db } from '../../../common/firebase';
+import {
+  collection,
+  query,
+  onSnapshot,
+  orderBy,
+  where,
+} from 'firebase/firestore';
 import { CommentListBody } from './style';
 import Comment from '../Comment/Comment';
 

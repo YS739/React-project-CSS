@@ -8,7 +8,7 @@ const VideoList = ({ video }) => {
     // TODO: navigate id = `/${video.id}` 등으로 바꾸기
     <Videos
       onClick={() => {
-        navigate(`/detail/${video.id}`, { state: { video } });
+        navigate(`/detail/${video.id.videoId}`, { state: { video } });
       }}
     >
       <Video>

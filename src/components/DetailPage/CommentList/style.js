@@ -4,6 +4,5 @@ export const CommentListBody = styled.div`
   width: 90%;
   height: 13%;
 
-  margin-top: 2%;
-  margin-left: 8%;
+  margin-top: 4%;
 `;
