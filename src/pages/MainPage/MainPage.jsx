@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
 import CategorySlide from '../../components/MainPage/CategorySlide/CategorySlide';
-import { getVideoList } from '../../common/apis';
+import { allVideoList, categoryVideoList } from '../../common/apis';
 import {
   SearchSection,
   SearchForm,
@@ -16,17 +16,27 @@ import { HiOutlineSearch } from 'react-icons/hi';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState('');
+  const [category, setCategory] = useState('');
 
+  // 클론 코딩 관련 전체 리스트 불러오기
   const {
     isLoading,
-    data: videoList,
+    data: allList,
     error,
-  } = useQuery(['getVideoList', keyword], () => getVideoList(keyword));
+    isError,
+  } = useQuery('allVideoList', allVideoList);
 
-  // allList에서 검색어에 해당 하는 title이 있는 list만 가져오기
-  // FIXME: 키워드를 api에 넘겨줄 땐 기존 리스트가 아닌 키워드로 검색한 결과를 가져올 텐데
-  // 이 때는 allList를 받아오는 api를 따로 만들어 allList data=videoList로 해야 하나?
-  const searched = videoList?.filter((item) =>
+  // 카테고리별 리스트 불러오기
+
+  const {
+    // isLoading: isLoadingCategory,
+    data: categoryList,
+    // error: errorCategory,
+    // isError: isErrorCategory,
+  } = useQuery(['categoryList', category], () => categoryVideoList(category));
+
+  // allList에서 검색어가 포함된 title이 있는 list만 가져오기
+  const searchedList = allList?.filter((item) =>
     item.snippet.title.includes(keyword),
   );
 
@@ -37,15 +47,19 @@ const MainPage = () => {
     if (keyword.trim().length === 0) {
       alert('검색어를 입력해주세요.');
     }
-    // navigate(`/${keyword}`);
     setKeyword(keyword);
   };
 
-  // 검색 실행 함수 - 키보드의 enter를 눌렀을 때
-  const handleOnKeyPress = (e) => {
+  // 키보드의 enter를 눌렀을 때도 검색 함수 실행
+  const OnKeyPressHandler = (e) => {
     if (e.key === 'Enter') {
       searchHandler();
     }
+  };
+
+  // 해당 카테고리를 눌렀을 때 api 검색어 부분에 넣을 단어를 받아온다
+  const categoryHandler = (category) => {
+    setCategory(category);
   };
 
   return (
@@ -58,7 +72,7 @@ const MainPage = () => {
             placeholder="검색어를 입력해주세요."
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
-            onKeyPress={handleOnKeyPress}
+            onKeyPress={OnKeyPressHandler}
           />
           <SearchBtn type="submit">
             <HiOutlineSearch style={{ fontSize: 20 }} />
@@ -71,24 +85,84 @@ const MainPage = () => {
           <SearchResult>{keyword} 검색 결과</SearchResult>{' '}
         </SearchResultBox>
       ) : (
-        <CategorySlide />
+        <CategorySlide categoryClick={categoryHandler} />
       )}
+      {/* 로딩중이거나 에러가 생기면 화면에 표시 */}
       {isLoading && <p>Loading...</p>}
-      {error && <p>Something is wrong</p>}
+      {isError && (
+        <>
+          <p>Something is wrong.</p>
+          <p>{String(error)}</p>
+        </>
+      )}
       <VideoSection>
         {keyword ? (
           <VideoBox>
-            {searched?.map((video) => (
+            {searchedList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        ) : category ? (
+          <VideoBox>
+            {categoryList?.map((video) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
           </VideoBox>
         ) : (
           <VideoBox>
-            {videoList?.map((video) => (
+            {allList?.map((video) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
           </VideoBox>
         )}
+
+        {/* {category && (
+          <VideoBox>
+            {categoryList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        )}
+        {keyword && (
+          <VideoBox>
+            {searchedList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        )}
+        {!keyword && !category && (
+          <VideoBox>
+            {allList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        )} */}
+        {/* {category ? (
+          <VideoBox>
+            {categoryList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        ) : (
+          <VideoBox>
+            {allList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        )} */}
+        {/* {keyword ? (
+          <VideoBox>
+            {searchedList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        ) : (
+          <VideoBox>
+            {allList?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        )} */}
       </VideoSection>
     </>
   );
