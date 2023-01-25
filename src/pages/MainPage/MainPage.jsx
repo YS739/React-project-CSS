@@ -1,77 +1,96 @@
-import { Fragment } from 'react';
-import VideoList from '../../components/MainPage/VideoList/VideoList';
-import { HiOutlineSearch } from 'react-icons/hi';
-import CategorySlide from '../../components/MainPage/CategorySlide/CategorySlide';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
+import VideoList from '../../components/MainPage/VideoList/VideoList';
+import CategorySlide from '../../components/MainPage/CategorySlide/CategorySlide';
+import { getVideoList } from '../../common/apis';
 import {
   SearchSection,
-  SearchBox,
+  SearchForm,
   SearchBtn,
+  SearchResultBox,
+  SearchResult,
   VideoSection,
   VideoBox,
 } from './style';
+import { HiOutlineSearch } from 'react-icons/hi';
 
 const MainPage = () => {
-  //FIXME: mockData test - api로 바꿔서 해보기
+  const [keyword, setKeyword] = useState('');
+
   const {
     isLoading,
-    data: allList,
+    data: videoList,
     error,
-  } = useQuery(['allList'], async () => {
-    return fetch(`/mockData/allList.json`)
-      .then((res) => res.json())
-      .then((data) => data.items);
-  });
+  } = useQuery(['getVideoList', keyword], () => getVideoList(keyword));
 
-  // 검색창 입력값 받기 -useRef 사용하기
-  const searchInputHandler = () => {};
+  // allList에서 검색어에 해당 하는 title이 있는 list만 가져오기
+  // FIXME: 키워드를 api에 넘겨줄 땐 기존 리스트가 아닌 키워드로 검색한 결과를 가져올 텐데
+  // 이 때는 allList를 받아오는 api를 따로 만들어 allList data=videoList로 해야 하나?
+  const searched = videoList?.filter((item) =>
+    item.snippet.title.includes(keyword),
+  );
 
-  // 검색 실행 함수
-  const searchHandler = () => {};
+  // 검색 실행 함수 - 검색 버튼 눌렀을 때
+  const searchHandler = (e) => {
+    e.preventDefault();
+    // TODO: alert창 라이브러리..?
+    if (keyword.trim().length === 0) {
+      alert('검색어를 입력해주세요.');
+    }
+    // navigate(`/${keyword}`);
+    setKeyword(keyword);
+  };
 
-  // 검색창 - 키보드의 enter를 눌렀을 때 실행
+  // 검색 실행 함수 - 키보드의 enter를 눌렀을 때
   const handleOnKeyPress = (e) => {
     if (e.key === 'Enter') {
-      // TODO: 검색 실행 함수로 바꾸기
-      // TODO: 검색 기능 실행 여부에 따라 카테고리 숨기기(상태관리)
-      // TODO: input창 초기화
-      alert('success');
+      searchHandler();
     }
   };
 
   return (
-    <Fragment>
+    <>
       <SearchSection>
         {/* TODO: 완성되면 컴포넌트 분리하기 */}
-        <SearchBox>
+        <SearchForm onSubmit={searchHandler}>
           <input
             type="text"
             placeholder="검색어를 입력해주세요."
-            // TODO: state관리 - value
-            // onChange={}
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
             onKeyPress={handleOnKeyPress}
           />
-          {/* TODO: onClick={searchHandler} 추가하기 */}
-          <SearchBtn>
+          <SearchBtn type="submit">
             <HiOutlineSearch style={{ fontSize: 20 }} />
           </SearchBtn>
-        </SearchBox>
+        </SearchForm>
       </SearchSection>
-      {/* 카테고리 슬라이드 */}
-      <CategorySlide />
-      {/* 카테고리별 비디오 리스트 */}
+      {/* 검색 결과를 보여줄 땐 카테고리 슬라이드가 안 보이게 함 */}
+      {keyword ? (
+        <SearchResultBox>
+          <SearchResult>{keyword} 검색 결과</SearchResult>{' '}
+        </SearchResultBox>
+      ) : (
+        <CategorySlide />
+      )}
       {isLoading && <p>Loading...</p>}
       {error && <p>Something is wrong</p>}
       <VideoSection>
-        {allList && (
+        {keyword ? (
           <VideoBox>
-            {allList.map((video) => (
+            {searched?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+        ) : (
+          <VideoBox>
+            {videoList?.map((video) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
           </VideoBox>
         )}
       </VideoSection>
-    </Fragment>
+    </>
   );
 };
 
