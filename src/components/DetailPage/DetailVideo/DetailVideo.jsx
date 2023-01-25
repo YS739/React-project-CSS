@@ -1,6 +1,6 @@
-import { useLocation } from 'react-router-dom';
-import ChannelInfo from '../ChannelInfo/ChannelInfo';
-import RecommendVideo from '../RecommendVideo/RecommendVideo';
+// import { useLocation } from 'react-router-dom';
+// import ChannelInfo from '../ChannelInfo/ChannelInfo';
+// import RecommendVideo from '../RecommendVideo/RecommendVideo';
 import { DetailVideoContainer } from './style';
 import TestLogin from './TestLogin';
 
