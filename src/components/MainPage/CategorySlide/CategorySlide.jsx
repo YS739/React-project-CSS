@@ -24,7 +24,7 @@ const SamplePrevArrow = (props) => {
   );
 };
 
-const CategorySlide = () => {
+const CategorySlide = ({ categoryClick }) => {
   const settings = {
     className: 'center',
     infinite: true,
@@ -38,23 +38,31 @@ const CategorySlide = () => {
   return (
     <CategoryBox>
       <Slider {...settings}>
+        {/* TODO: api로 변경하고 나서는 Click 인자 변경하기 All => 클론 코딩하기 */}
         <div>
-          <Category>All</Category>
+          <Category onClick={() => categoryClick('allList')}>All</Category>
         </div>
         <div>
-          <Category>HTML</Category>
+          <Category onClick={() => categoryClick('html')}>HTML</Category>
         </div>
         <div>
-          <Category>Javascript</Category>
+          <Category onClick={() => categoryClick('css')}>CSS</Category>
         </div>
         <div>
-          <Category>React</Category>
+          <Category onClick={() => categoryClick('js')}>Javascript</Category>
         </div>
         <div>
-          <Category>ReactNative</Category>
+          <Category onClick={() => categoryClick('react')}>React</Category>
         </div>
         <div>
-          <Category>Typescript</Category>
+          <Category onClick={() => categoryClick('reactNative')}>
+            ReactNative
+          </Category>
+        </div>
+        <div>
+          <Category onClick={() => categoryClick('typescript')}>
+            Typescript
+          </Category>
         </div>
       </Slider>
     </CategoryBox>
