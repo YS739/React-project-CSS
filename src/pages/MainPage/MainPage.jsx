@@ -29,10 +29,10 @@ const MainPage = () => {
   // 카테고리별 리스트 불러오기
 
   const {
-    // isLoading: isLoadingCategory,
+    isLoading: isLoadingCategory,
     data: categoryList,
-    // error: errorCategory,
-    // isError: isErrorCategory,
+    error: errorCategory,
+    isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
@@ -79,15 +79,15 @@ const MainPage = () => {
           </SearchBtn>
         </SearchForm>
       </SearchSection>
-      {/* 검색 결과를 보여줄 땐 카테고리 슬라이드가 안 보이게 함 */}
+      {/* 검색 결과를 보여줄 땐 카테고리 슬라이드 대신 검색결과 text 보여주기 */}
       {keyword ? (
         <SearchResultBox>
-          <SearchResult>{keyword} 검색 결과</SearchResult>{' '}
+          <SearchResult>{keyword} 검색 결과</SearchResult>
         </SearchResultBox>
       ) : (
         <CategorySlide categoryClick={categoryHandler} />
       )}
-      {/* 로딩중이거나 에러가 생기면 화면에 표시 */}
+      {/* allList - 로딩중이거나 에러가 생기면 화면에 표시 */}
       {isLoading && <p>Loading...</p>}
       {isError && (
         <>
@@ -104,6 +104,14 @@ const MainPage = () => {
           </VideoBox>
         ) : category ? (
           <VideoBox>
+            {/* categoryList - 로딩중이거나 에러가 생기면 화면에 표시 */}
+            {isLoadingCategory && <p>Loading...</p>}
+            {isErrorCategory && (
+              <>
+                <p>Something is wrong.</p>
+                <p>{String(errorCategory)}</p>
+              </>
+            )}
             {categoryList?.map((video) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}

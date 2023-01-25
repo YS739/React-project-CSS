@@ -38,7 +38,8 @@ const CategorySlide = ({ categoryClick }) => {
   return (
     <CategoryBox>
       <Slider {...settings}>
-        {/* TODO: api로 변경하고 나서는 Click 인자 변경하기 All => 클론 코딩하기 */}
+        {/* TODO: api로 변경하고 나서는 Click 인자 변경하기 
+        All => 클론 코딩하기, html => html 클론 코딩하기 */}
         <div>
           <Category onClick={() => categoryClick('allList')}>All</Category>
         </div>
