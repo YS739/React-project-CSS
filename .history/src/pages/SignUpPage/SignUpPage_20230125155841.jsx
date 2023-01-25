@@ -129,7 +129,7 @@ const SignUpPage = () => {
             value={displayName}
             placeholder={'닉네임을 적어주세요'}
             onChange={(e) => {
-              setDisplayName(e.target.value);
+              setName(e.target.value);
             }}
           />
         </Name>

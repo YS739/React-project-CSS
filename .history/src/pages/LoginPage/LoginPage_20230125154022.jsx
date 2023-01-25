@@ -38,7 +38,6 @@ const LoginPage = () => {
 
     // 유효성 검사
     if (!!validateInputs() === false) {
-      console.log('!!validateInputs():', !!validateInputs());
       return;
     }
 

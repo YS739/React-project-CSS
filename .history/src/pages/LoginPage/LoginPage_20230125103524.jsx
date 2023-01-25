@@ -21,30 +21,28 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const validateInputs = () => {
-    if (!email) {
-      alert('email을 입력해주세요.');
-      email.current.focus();
-      return true;
-    }
-    if (!password) {
-      alert('password를 입력해주세요.');
-      password.current.focus();
-      return true;
-    }
-  };
   const LoginHandler = async (e) => {
     e.preventDefault();
 
-    // 유효성 검사
-    if (!!validateInputs() === false) {
-      console.log('!!validateInputs():', !!validateInputs());
-      return;
-    }
-
+    const validateInputs = () => {
+      if (!email) {
+        alert('email을 입력해주세요.');
+        emailRef.current.focus();
+        return true;
+      }
+      if (!pw) {
+        alert('password를 입력해주세요.');
+        pwRef.current.focus();
+        return true;
+      }
+      // 유효성 검사
+      if (validateInputs()) {
+        return;
+      }
+    };
     // 로그인 요청
     const auth = getAuth();
-    // const user = auth.currentUser;
+    const user = auth.currentUser;
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -61,7 +59,6 @@ const LoginPage = () => {
         // TODO: 에러났다고 알려주는 방법 고민
       });
   };
-
   return (
     <LoginContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />

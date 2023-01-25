@@ -18,12 +18,12 @@ import { async } from '@firebase/util';
 const SignUpPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
-  const [displayName, setDisplayName] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
   // 에러 나면 그곳에 커서 이동되도록
   const emailRef = useRef(null);
-  const displayNameRef = useRef(null);
+  const nameRef = useRef(null);
   const passwordRef = useRef(null);
   const passwordCheckRef = useRef(null);
 
@@ -40,9 +40,9 @@ const SignUpPage = () => {
     }
     // TODO: 닉네임은 사용자 프로필에 저장되도록 하고 빈칸이면 디폴트값
     // internal-error로 처리돼서 에러처리 제대로 안됨
-    if (!displayName) {
+    if (!name) {
       alert('닉네임을 입력해주세요.');
-      displayNameRef.current.focus();
+      nameRef.current.focus();
       return true;
     }
     if (!password) {
@@ -55,9 +55,9 @@ const SignUpPage = () => {
       passwordCheckRef.current.focus();
       return true;
     }
-
     const matchedEmail = email.match(emailRegex);
     const matchedPw = password.match(passwordRegex);
+    // const wrongPw = passwordCheck.match(passwordRegex);
     if (matchedEmail === null) {
       alert('이메일 형식에 맞게 입력해 주세요.');
       emailRef.current.focus();
@@ -69,6 +69,7 @@ const SignUpPage = () => {
       return true;
     }
     if (passwordCheck !== password) alert('비밀번호를 잘못 입력하셨습니다.');
+    console.log('passwordCheck', passwordCheck);
     passwordCheckRef.current.focus();
     return true;
   };
@@ -78,22 +79,21 @@ const SignUpPage = () => {
     e.preventDefault();
 
     // 유효성 검사
-    if (!!validateInputs() === false) {
-      console.log('!!validateInputs()', !!validateInputs());
+    if (validateInputs()) {
       return;
     }
 
     // 회원가입
     const auth = getAuth();
-    await createUserWithEmailAndPassword(auth, email, displayName, password)
+    await createUserWithEmailAndPassword(auth, email, name, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         console.log('user', user);
         console.log('passwordCheck', passwordCheck);
-        alert(`${displayName}님, 회원가입이 완료되었습니다.`);
+        alert('회원가입이 완료되었습니다.');
         setEmail('');
-        setDisplayName('');
+        setName('');
         setPassword('');
         navigate('/login');
       })
@@ -125,11 +125,11 @@ const SignUpPage = () => {
         <Name>
           닉네임
           <Input
-            ref={displayNameRef}
-            value={displayName}
+            ref={nameRef}
+            value={name}
             placeholder={'닉네임을 적어주세요'}
             onChange={(e) => {
-              setDisplayName(e.target.value);
+              setName(e.target.value);
             }}
           />
         </Name>
