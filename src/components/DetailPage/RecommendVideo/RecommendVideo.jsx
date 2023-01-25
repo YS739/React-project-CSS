@@ -16,7 +16,7 @@ const RecommendVideo = ({ id }) => {
         <TextBody>
           <VideoText>한시간만에 Node.js 백엔드 기초 끝내기</VideoText>
           <VideoNickName>조코딩 </VideoNickName>
-          <VideoTime>2month ago</VideoTime>
+          <VideoTime>2month agos</VideoTime>
         </TextBody>
       </ViewBody>
     </RecommendBody>
