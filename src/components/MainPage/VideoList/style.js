@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { color } from '../../../common/color';
 
 export const Videos = styled.div`
   width: 330px;
-  height: 200px;
+  height: 220px;
   margin-bottom: 40px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
   display: flex;
@@ -15,7 +14,7 @@ export const Videos = styled.div`
 
   :hover {
     width: 350px;
-    height: 220px;
+    height: 250px;
     transition: 0.7s;
   }
 `;
@@ -27,6 +26,16 @@ export const Video = styled.div`
 
 export const VideoTitle = styled.div`
   font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+`;
+
+export const VideoFooter = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
 `;
 
 export const Creator = styled.div`
