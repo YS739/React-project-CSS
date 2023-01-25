@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
 import CategorySlide from '../../components/MainPage/CategorySlide/CategorySlide';
@@ -115,54 +115,6 @@ const MainPage = () => {
             ))}
           </VideoBox>
         )}
-
-        {/* {category && (
-          <VideoBox>
-            {categoryList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        )}
-        {keyword && (
-          <VideoBox>
-            {searchedList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        )}
-        {!keyword && !category && (
-          <VideoBox>
-            {allList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        )} */}
-        {/* {category ? (
-          <VideoBox>
-            {categoryList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        ) : (
-          <VideoBox>
-            {allList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        )} */}
-        {/* {keyword ? (
-          <VideoBox>
-            {searchedList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        ) : (
-          <VideoBox>
-            {allList?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-        )} */}
       </VideoSection>
     </>
   );
