@@ -22,11 +22,14 @@ import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const AddComment = () => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
   const [username, setUsername] = useState('');
+
+  const navigate = useNavigate();
 
   const AddGithubText = (e) => {
     setGithubText(e.target.value);
@@ -39,7 +42,7 @@ const AddComment = () => {
   useEffect(() => {
     onAuthStateChanged(authService, (user) => {
       if (user) {
-        getInfoUsername(username);
+        getInfoUsername();
         console.log('Add Commnet 로그인 되어있음');
       } else if (!user) {
         console.log('로그인 안됨');
@@ -70,7 +73,7 @@ const AddComment = () => {
   const AddCommentButton = async () => {
     await addDoc(collection(db, 'test'), {
       comment: commentText,
-      gihub: githubText,
+      github: githubText,
       username: username,
       videoId: '',
       uid: authService.currentUser?.uid,
@@ -84,7 +87,7 @@ const AddComment = () => {
     <>
       <AddCommentListAll>
         <AddCommentListWrap>
-          <AddNickName>닉네임</AddNickName>
+          <AddNickName>{}</AddNickName>
           <AddCommentListTwo>
             <AddCommentPlusGit>
               <AddGitLink>

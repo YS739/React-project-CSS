@@ -6,13 +6,13 @@ import { DetialFragment, DetailLeftBody, DetailRight } from './style';
 const DetailPage = () => {
   return (
     <DetialFragment>
-      <DetailLeftBody>
-        <DetailVideo />
-        <AddComment />
-      </DetailLeftBody>
-      <DetailRight>
-        <RecommendVideo />
-      </DetailRight>
+      {/* <DetailLeftBody> */}
+      <DetailVideo />
+      {/* <AddComment /> */}
+      {/* </DetailLeftBody> */}
+      {/* <DetailRight> */}
+      {/* <RecommendVideo /> */}
+      {/* </DetailRight> */}
     </DetialFragment>
   );
 };

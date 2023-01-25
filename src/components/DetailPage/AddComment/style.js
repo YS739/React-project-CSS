@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const AddCommentListAll = styled.div`
   width: 100%;
   height: 20%;
-  margin-left: 8%;
   margin-top: 1%;
   display: flex;
   justify-content: space-between;
