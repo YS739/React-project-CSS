@@ -1,5 +1,5 @@
+import { useEffect, useState } from 'react';
 import { BsBookmark } from 'react-icons/bs';
-import { useState } from 'react';
 import {
   AddCommentListWrap,
   AddCommentListAll,
@@ -18,14 +18,18 @@ import {
   AddInputDiv,
   AddCommentBtnDiv,
 } from './style';
-import { addDoc, collection } from 'firebase/firestore';
-import { db } from '../../../common/firebase';
+import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
+import { authService, db } from '../../../common/firebase';
+import CommentList from '../CommentList/CommentList';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const AddComment = () => {
-  // const [addCommentNickName, setAddCommentNickName] = useState('닉네임');
-
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
+  const [username, setUsername] = useState('');
+
+  const navigate = useNavigate();
 
   const AddGithubText = (e) => {
     setGithubText(e.target.value);
@@ -35,11 +39,44 @@ const AddComment = () => {
     setCommentText(e.target.value);
   };
 
+  useEffect(() => {
+    onAuthStateChanged(authService, (user) => {
+      if (user) {
+        getInfoUsername();
+        console.log('Add Commnet 로그인 되어있음');
+      } else if (!user) {
+        console.log('로그인 안됨');
+      }
+    });
+  }, []);
+
+  // 기존 username 정보 가져오기
+  const getInfoUsername = () => {
+    const q = query(
+      collection(db, 'testUser'),
+      where('uid', '==', authService.currentUser.uid),
+    );
+    getDocs(q).then((querySnapshop) => {
+      const userInfo = [];
+      querySnapshop.forEach((doc) => {
+        userInfo.push({
+          username: doc.data().username,
+        });
+        setUsername(userInfo[0].username);
+        console.log('유저인포', username);
+      });
+    });
+  };
+
+  // 데이터 올리기
+
   const AddCommentButton = async () => {
-    console.log(db);
     await addDoc(collection(db, 'test'), {
-      gihub: githubText,
       comment: commentText,
+      github: githubText,
+      username: username,
+      videoId: '',
+      uid: authService.currentUser?.uid,
       date: Date.now(),
     });
     setGithubText('');
@@ -47,40 +84,44 @@ const AddComment = () => {
   };
 
   return (
-    <AddCommentListAll>
-      <AddCommentListWrap>
-        <AddNickName>닉네임</AddNickName>
-        <AddCommentListTwo>
-          <AddCommentPlusGit>
-            <AddGitLink>
-              <AddGitText>Github Link </AddGitText>
-              <AddGitInputDiv>
-                <AddInputGihub
-                  placeholder="선택사항입니다."
-                  onChange={AddGithubText}
-                  value={githubText}
-                />
-              </AddGitInputDiv>
-            </AddGitLink>
-            <AddCommentText>
-              <AddCommentDiv>댓글 </AddCommentDiv>
-              <AddInputDiv>
-                <AddInputContent
-                  onChange={AddCommentTextChange}
-                  value={commentText}
-                />
-              </AddInputDiv>
-            </AddCommentText>
-          </AddCommentPlusGit>
-          <AddCommentBtnDiv>
-            <AddCommentBtn onClick={AddCommentButton}>댓글등록</AddCommentBtn>
-          </AddCommentBtnDiv>
-        </AddCommentListTwo>
-      </AddCommentListWrap>
-      <AddIcornBtn>
-        <BsBookmark />
-      </AddIcornBtn>
-    </AddCommentListAll>
+    <>
+      <AddCommentListAll>
+        <AddCommentListWrap>
+          <AddNickName>{}</AddNickName>
+          <AddCommentListTwo>
+            <AddCommentPlusGit>
+              <AddGitLink>
+                <AddGitText>Github Link </AddGitText>
+                <AddGitInputDiv>
+                  <AddInputGihub
+                    placeholder="선택사항입니다."
+                    onChange={AddGithubText}
+                    value={githubText}
+                  />
+                </AddGitInputDiv>
+              </AddGitLink>
+              <AddCommentText>
+                <AddCommentDiv>댓글 </AddCommentDiv>
+                <AddInputDiv>
+                  <AddInputContent
+                    onChange={AddCommentTextChange}
+                    value={commentText}
+                  />
+                </AddInputDiv>
+              </AddCommentText>
+            </AddCommentPlusGit>
+            <AddCommentBtnDiv>
+              <AddCommentBtn onClick={AddCommentButton}>댓글등록</AddCommentBtn>
+            </AddCommentBtnDiv>
+          </AddCommentListTwo>
+        </AddCommentListWrap>
+        <AddIcornBtn>
+          <BsBookmark />
+        </AddIcornBtn>
+      </AddCommentListAll>
+
+      <CommentList />
+    </>
   );
 };
 

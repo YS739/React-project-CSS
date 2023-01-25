@@ -8,10 +8,12 @@ register('ko', KoLocale);
 
 const VideoList = ({ video }) => {
   const navigate = useNavigate();
+
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   return (
     // 클릭한 영상의 id로 이동하기
     <Videos onClick={() => navigate(`/detail/${video.id.videoId}`)}>
+
       <Video>
         <img
           width={'100%'}
