@@ -44,7 +44,7 @@ const SignUpPage = () => {
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
   // 유효성 검사 통과
-  const [disable, setDisable] = useState(true);
+  const [disable, setDisable] = useState(false);
 
   // 유효성 검사
   const validateInputs = () => {
@@ -116,7 +116,7 @@ const SignUpPage = () => {
     // 유효성 검사
     if (validateInputs() === 8) {
       console.log('유효성 검사 결과', validateInputs());
-      setDisable(false);
+      setDisable(true);
       return;
     }
 

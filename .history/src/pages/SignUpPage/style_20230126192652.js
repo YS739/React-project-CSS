@@ -51,7 +51,7 @@ export const Input = styled.input`
   padding-left: 10px;
 `;
 export const Error = styled.text`
-  color: red;
+  color: red;s
   font-size: 12px;
   padding: 5px;
 `;

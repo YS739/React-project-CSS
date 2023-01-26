@@ -53,7 +53,7 @@ export const Input = styled.input`
 export const Error = styled.text`
   color: red;
   font-size: 12px;
-  padding: 5px;
+  padding-bottom: 5px;
 `;
 export const BlueButton = styled.button`
   background-color: #205295;

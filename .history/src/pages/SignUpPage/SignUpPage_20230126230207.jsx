@@ -43,9 +43,6 @@ const SignUpPage = () => {
   const passwordRegex =
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
-  // 유효성 검사 통과
-  const [disable, setDisable] = useState(true);
-
   // 유효성 검사
   const validateInputs = () => {
     if (!email) {
@@ -116,7 +113,6 @@ const SignUpPage = () => {
     // 유효성 검사
     if (validateInputs() === 8) {
       console.log('유효성 검사 결과', validateInputs());
-      setDisable(false);
       return;
     }
 
@@ -212,9 +208,7 @@ const SignUpPage = () => {
         </Password>
         <Error>{pwCheckErr}</Error>
       </Form>
-      <BlueButton disabled={disable} onClick={SignUpHandler}>
-        회원가입
-      </BlueButton>
+      <BlueButton onClick={SignUpHandler}>회원가입</BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>

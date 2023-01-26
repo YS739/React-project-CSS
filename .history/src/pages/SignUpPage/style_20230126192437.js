@@ -24,19 +24,19 @@ export const Form = styled.form`
 export const Id = styled.div`
   display: flex;
   justify-content: space-between;
-  /* padding-bottom: 5px; */
+  padding-bottom: 5px;
   width: 300px;
 `;
 export const Name = styled.div`
   display: flex;
   justify-content: space-between;
-  /* padding-bottom: 30px; */
+  padding-bottom: 30px;
   width: 300px;
 `;
 export const Password = styled.div`
   display: flex;
   justify-content: space-between;
-  /* padding-bottom: 30px; */
+  padding-bottom: 30px;
   width: 300px;
 `;
 export const Input = styled.input`
@@ -53,7 +53,6 @@ export const Input = styled.input`
 export const Error = styled.text`
   color: red;
   font-size: 12px;
-  padding: 5px;
 `;
 export const BlueButton = styled.button`
   background-color: #205295;

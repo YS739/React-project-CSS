@@ -25,88 +25,50 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
   // 에러 나면 그곳에 커서 이동되도록
+  const [err, setErr] = useState('');
   const emailRef = useRef(null);
   const displayNameRef = useRef(null);
   const passwordRef = useRef(null);
   const passwordCheckRef = useRef(null);
 
-  // 에러 메시지
-  const [idErr, setIdErr] = useState('');
-  const [idRegexErr, setIdRegexErr] = useState('');
-  const [pwErr, setPwErr] = useState('');
-  const [pwRegexErr, setPwRegexErr] = useState('');
-  const [pwCheckErr, setPwCheckErr] = useState('');
-  const [nickNameErr, setNickNameErr] = useState('');
-
-  // 정규식
   const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const passwordRegex =
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
-  // 유효성 검사 통과
-  const [disable, setDisable] = useState(true);
-
   // 유효성 검사
   const validateInputs = () => {
     if (!email) {
-      setIdErr('이메일을 입력해주세요.');
+      setErr('이메일을 입력해주세요.');
       emailRef.current.focus();
-    } else {
-      setIdErr('');
-      return 1;
-    }
-    if (!nickName) {
-      setNickNameErr('닉네임을 설정해주세요.');
-    } else {
-      setNickNameErr('');
-      return 1;
-    }
-    if (nickName > 10) {
-      setNickNameErr('10글자 이하로 적어주세요.');
-    } else {
-      setNickNameErr('');
-      return 1;
+      setErr('');
+      return true;
     }
     if (!password) {
-      setPwErr('비밀번호를 입력해주세요.');
+      setErr('비밀번호를 입력해주세요.');
       passwordRef.current.focus();
-    } else {
-      setPwErr('');
-      return 1;
+      return true;
     }
     if (!passwordCheck) {
-      setPwErr('비밀번호를 확인해주세요.');
+      setErr('비밀번호를 입력해주세요.');
       passwordCheckRef.current.focus();
-    } else {
-      setPwCheckErr('');
-      return 1;
+      return true;
     }
 
     const matchedEmail = email.match(emailRegex);
     const matchedPw = password.match(passwordRegex);
     if (matchedEmail === null) {
-      setIdErr('이메일 형식에 맞게 입력해 주세요.');
+      alert('이메일 형식에 맞게 입력해 주세요.');
       emailRef.current.focus();
-    } else {
-      setIdErr('');
-      return 1;
+      return true;
     }
     if (matchedPw === null) {
-      setPwRegexErr(
-        '비밀번호는 8자리 이상 영문자, 숫자, 특수문자 조합이어야 합니다.',
-      );
+      alert('비밀번호는 8자리 이상 영문자, 숫자, 특수문자 조합이어야 합니다.');
       passwordRef.current.focus();
-    } else {
-      setPwRegexErr('');
-      return 1;
+      return true;
     }
-    if (passwordCheck !== password) {
-      setPwCheckErr('비밀번호를 잘못 입력하셨습니다.');
-      passwordCheckRef.current.focus();
-    } else {
-      setPwCheckErr('');
-      return 1;
-    }
+    if (passwordCheck !== password) alert('비밀번호를 잘못 입력하셨습니다.');
+    passwordCheckRef.current.focus();
+    return true;
   };
 
   // 회원가입 진행 함수
@@ -114,9 +76,8 @@ const SignUpPage = () => {
     e.preventDefault();
 
     // 유효성 검사
-    if (validateInputs() === 8) {
-      console.log('유효성 검사 결과', validateInputs());
-      setDisable(false);
+    if (!!validateInputs() === false) {
+      console.log('!!validateInputs()', !!validateInputs());
       return;
     }
 
@@ -136,15 +97,13 @@ const SignUpPage = () => {
           })
           .catch((error) => {
             console.log(error.message);
-            alert('회원가입을 다시 진행해주세요');
-            navigate('/signUp');
           });
       })
       .catch((error) => {
         console.log(error.message);
         if (error.message.includes('already-in-use')) {
           alert('이미 사용중인 아이디입니다.');
-          navigate('/login');
+          navigate('/logingi');
         }
       });
 
@@ -166,8 +125,7 @@ const SignUpPage = () => {
             }}
           />
         </Id>
-        <Error>{idErr}</Error>
-        {/* <Error>{idRegexErr}</Error> */}
+        <Error>{err}</Error>
         <Name>
           닉네임
           <Input
@@ -180,7 +138,7 @@ const SignUpPage = () => {
             }}
           />
         </Name>
-        <Error>{nickNameErr}</Error>
+        <Error>{err}</Error>
 
         <Password>
           비밀번호
@@ -195,8 +153,7 @@ const SignUpPage = () => {
             }}
           />
         </Password>
-        <Error>{pwErr}</Error>
-        <Error>{pwRegexErr}</Error>
+        <Error>{err}</Error>
 
         <Password>
           비밀번호 확인
@@ -210,11 +167,9 @@ const SignUpPage = () => {
             }}
           />
         </Password>
-        <Error>{pwCheckErr}</Error>
+        <Error>{err}</Error>
       </Form>
-      <BlueButton disabled={disable} onClick={SignUpHandler}>
-        회원가입
-      </BlueButton>
+      <BlueButton onClick={SignUpHandler}>회원가입</BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>
