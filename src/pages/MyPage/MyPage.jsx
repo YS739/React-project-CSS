@@ -40,7 +40,7 @@ const MyPage = () => {
 
   // 현재 유저
   const currentUser = authService.currentUser;
-
+  console.log(currentUser);
   // 유저 닉네임
   const userNickname = currentUser.displayName;
 
@@ -78,6 +78,7 @@ const MyPage = () => {
     if (docSnap.exists()) {
       setGithub(docSnap.data().github);
     }
+    console.log(docSnap.data().github);
     setUserName(userNickname);
   };
 
