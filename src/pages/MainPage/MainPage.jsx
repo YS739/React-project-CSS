@@ -61,7 +61,7 @@ const MainPage = () => {
     item.snippet.title.includes(keyword),
   );
 
-  // 버튼
+  // Page 이동 버튼
   const nextPageBtn = () => {
     setPageToken(allList.nextPageToken);
   };
@@ -89,9 +89,11 @@ const MainPage = () => {
           <p>{String(error)}</p>
         </>
       )}
-      {/* page 이동버튼 */}
+
+      {/* Page 이동버튼 */}
       {pageToken && <button onClick={prevPageBtn}>1</button>}
       {allList?.nextPageToken && <button onClick={nextPageBtn}>2</button>}
+
       {/* VideoList 컴포넌트*/}
       <VideoSection>
         {/* TODO: 더 간단하게 리팩토링 가능? */}
