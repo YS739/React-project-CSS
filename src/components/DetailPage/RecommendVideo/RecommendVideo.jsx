@@ -1,25 +1,24 @@
-import {
-  RecommendBody,
-  ViewBody,
-  VideoView,
-  TextBody,
-  VideoText,
-  VideoNickName,
-  VideoTime,
-} from './style';
+import { RecommendVideoList } from '../../../common/apis';
+import Recommend from './Recommend';
+import { useState } from 'react';
+import { useQuery } from 'react-query';
 
-const RecommendVideo = ({ id }) => {
+const RecommendVideo = ({ videoId }) => {
+  // console.log(id);
+
+  const {
+    // isLoading: isLoadingCategory,
+    data: recommendList,
+    // error: errorCategory,
+    // isError: isErrorCategory,
+  } = useQuery(['recommendList', videoId], () => RecommendVideoList(videoId));
+  // console.log(recommendList);
   return (
-    <RecommendBody>
-      <ViewBody>
-        <VideoView src="https://i.ytimg.com/vi/WjIlVlmmNqs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcQFX6Yn-zDQndvKO3cj_XGOFoOg" />
-        <TextBody>
-          <VideoText>한시간만에 Node.js 백엔드 기초 끝내기</VideoText>
-          <VideoNickName>조코딩 </VideoNickName>
-          <VideoTime>2month agos</VideoTime>
-        </TextBody>
-      </ViewBody>
-    </RecommendBody>
+    <>
+      {recommendList?.map((video) => (
+        <Recommend key={video.id['videoId']} video={video} />
+      ))}
+    </>
   );
 };
 

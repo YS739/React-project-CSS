@@ -22,8 +22,10 @@ export const categoryVideoList = (category) => {
 
 // 연관 비디오 리스트 가져오기
 // // TODO: videoId 설정해야 함
-// export const relatedList = (videoId) => {
-//   return axios.get(
-//     `${BASE_URL}&relatedToVideoId=${videoId}bJLfBq9npwQ&type=video&maxResults=25&key=${API_KEY}`,
-//   ).then((res) => res.data.items);
-// };
+export const RecommendVideoList = (videoId) => {
+  return axios
+    .get(
+      `${BASE_URL}&relatedToVideoId=${videoId}&type=video&maxResults=9&key=${API_KEY}`,
+    )
+    .then((res) => res.data.items);
+};
