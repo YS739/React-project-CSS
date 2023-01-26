@@ -2,6 +2,7 @@ import { API_KEY } from './apiKey.js';
 import axios from 'axios';
 
 const BASE_URL =
+  // TODO: pageToken을 주소에 넣는 게 맞나??
   'https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=24&order=viewCount&pageToken=CBkQAA';
 
 // 클론 코딩 관련 전체 리스트 가져오기
@@ -24,6 +25,6 @@ export const categoryVideoList = (category) => {
 // // TODO: videoId 설정해야 함
 // export const relatedList = (videoId) => {
 //   return axios.get(
-//     `${BASE_URL}&relatedToVideoId=${videoId}bJLfBq9npwQ&key=${API_KEY}`,
+//     `${BASE_URL}&relatedToVideoId=${videoId}bJLfBq9npwQ&type=video&maxResults=25&key=${API_KEY}`,
 //   ).then((res) => res.data.items);
 // };

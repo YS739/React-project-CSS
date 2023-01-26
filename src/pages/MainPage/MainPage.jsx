@@ -1,18 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
-import CategorySlide from '../../components/MainPage/CategorySlide/CategorySlide';
 import { allVideoList, categoryVideoList } from '../../common/apis';
-import {
-  SearchSection,
-  SearchForm,
-  SearchBtn,
-  SearchResultBox,
-  SearchResult,
-  VideoSection,
-  VideoBox,
-} from './style';
-import { HiOutlineSearch } from 'react-icons/hi';
+import { VideoSection, VideoBox } from './style';
+import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState('');
@@ -27,13 +18,26 @@ const MainPage = () => {
   } = useQuery('allVideoList', allVideoList);
 
   // 카테고리별 리스트 불러오기
-
   const {
     isLoading: isLoadingCategory,
     data: categoryList,
     error: errorCategory,
     isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
+
+  useEffect(() => {
+    allVideoList();
+  }, []);
+
+  // TODO: 수정 필요?
+  useEffect(() => {
+    categoryVideoList(category);
+  }, [category]);
+
+  // 해당 카테고리를 눌렀을 때 api 검색어 부분에 넣을 단어를 받아오기
+  const categoryHandler = (category) => {
+    setCategory(category);
+  };
 
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
   const searchedList = allList?.filter((item) =>
@@ -57,36 +61,17 @@ const MainPage = () => {
     }
   };
 
-  // 해당 카테고리를 눌렀을 때 api 검색어 부분에 넣을 단어를 받아온다
-  const categoryHandler = (category) => {
-    setCategory(category);
-  };
-
   return (
     <>
-      <SearchSection>
-        {/* TODO: 완성되면 컴포넌트 분리하기 */}
-        <SearchForm onSubmit={searchHandler}>
-          <input
-            type="text"
-            placeholder="검색어를 입력해주세요."
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            onKeyPress={OnKeyPressHandler}
-          />
-          <SearchBtn type="submit">
-            <HiOutlineSearch style={{ fontSize: 20 }} />
-          </SearchBtn>
-        </SearchForm>
-      </SearchSection>
-      {/* 검색 결과를 보여줄 땐 카테고리 슬라이드 대신 검색결과 text 보여주기 */}
-      {keyword ? (
-        <SearchResultBox>
-          <SearchResult>{keyword} 검색 결과</SearchResult>
-        </SearchResultBox>
-      ) : (
-        <CategorySlide categoryClick={categoryHandler} />
-      )}
+      {/* 검색창 및 결과 컴포넌트*/}
+      <SearchVideo
+        keyword={keyword}
+        setKeyword={setKeyword}
+        searchHandler={searchHandler}
+        OnKeyPressHandler={OnKeyPressHandler}
+        categoryHandler={categoryHandler}
+      />
+
       {/* allList - 로딩중이거나 에러가 생기면 화면에 표시 */}
       {isLoading && <p>Loading...</p>}
       {isError && (
@@ -95,7 +80,10 @@ const MainPage = () => {
           <p>{String(error)}</p>
         </>
       )}
+
+      {/* VideoList 컴포넌트*/}
       <VideoSection>
+        {/* TODO: 더 간단하게 리팩토링 가능? */}
         {keyword ? (
           <VideoBox>
             {searchedList?.map((video) => (
