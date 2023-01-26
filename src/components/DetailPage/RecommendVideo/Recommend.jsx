@@ -1,14 +1,20 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ViewBody,
   VideoView,
-  TextBody,
+  VideoViewTextBody,
   VideoText,
   VideoNickName,
   VideoTime,
   RecommendBody,
+  VideoTitle,
+  VideoViewBox,
+  VideoTextBody,
 } from './style';
+import { format, register } from 'timeago.js';
+import KoLocale from 'timeago.js/lib/lang/ko';
+
+register('ko', KoLocale);
 
 export default function Recommend({ video }) {
   const navigate = useNavigate();
@@ -22,12 +28,20 @@ export default function Recommend({ video }) {
       }
     >
       <ViewBody>
-        <VideoView src={thumbnails.medium.url} alt="videoThumbnail" />
-        <TextBody>
-          <VideoText>{title}</VideoText>
-          <VideoNickName>{channelTitle} </VideoNickName>
-          <VideoTime>2month ago</VideoTime>
-        </TextBody>
+        <VideoViewBox>
+          <VideoView src={thumbnails.medium.url} alt="videoThumbnail" />
+        </VideoViewBox>
+
+        <VideoViewTextBody>
+          <VideoTextBody>
+            <VideoText>{title}</VideoText>
+          </VideoTextBody>
+
+          <VideoTitle>
+            <VideoNickName>{channelTitle} </VideoNickName>
+            <VideoTime>{format(publishedAt, 'ko')}</VideoTime>
+          </VideoTitle>
+        </VideoViewTextBody>
       </ViewBody>
     </RecommendBody>
   );

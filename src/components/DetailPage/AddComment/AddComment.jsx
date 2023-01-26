@@ -6,7 +6,6 @@ import {
   AddCommentListTwo,
   AddInputGihub,
   AddInputContent,
-  AddNickName,
   AddGitLink,
   AddCommentText,
   AddCommentBtn,
@@ -84,7 +83,6 @@ const AddComment = ({ video }) => {
     <>
       <AddCommentListAll>
         <AddCommentListWrap>
-          <AddNickName>{}</AddNickName>
           <AddCommentListTwo>
             <AddCommentPlusGit>
               <AddGitLink>
