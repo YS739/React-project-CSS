@@ -21,14 +21,8 @@ export const LoginToggle = styled.div`
   margin-left: 20px;
   align-items: center;
 `;
-export const Nav = styled.div`
+export const Link = styled(Link)`
   font-weight: bold;
   padding-right: 5px;
   cursor: pointer;
 `;
-
-// export const Link = styled.div`
-//   font-weight: bold;
-//   padding-right: 5px;
-//   cursor: pointer;
-// `;

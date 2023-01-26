@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   padding: 2rem 3rem;
@@ -21,14 +20,8 @@ export const LoginToggle = styled.div`
   margin-left: 20px;
   align-items: center;
 `;
-export const Nav = styled.div`
+export const Link = styled.link`
   font-weight: bold;
   padding-right: 5px;
   cursor: pointer;
 `;
-
-// export const Link = styled.div`
-//   font-weight: bold;
-//   padding-right: 5px;
-//   cursor: pointer;
-// `;

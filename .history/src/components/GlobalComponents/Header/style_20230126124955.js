@@ -26,9 +26,3 @@ export const Nav = styled.div`
   padding-right: 5px;
   cursor: pointer;
 `;
-
-// export const Link = styled.div`
-//   font-weight: bold;
-//   padding-right: 5px;
-//   cursor: pointer;
-// `;

@@ -9,11 +9,11 @@ const Header = () => {
   const navigate = useNavigate();
 
   // // TODO: 로그인한 회원의 이름을 띄운다
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const auth = getAuth();
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUser(currentUser);
+  // });
   // // 닉네임 불러오기
   const currentUser = auth.currentUser;
   const userNickName = currentUser?.displayName;

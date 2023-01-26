@@ -9,14 +9,14 @@ const Header = () => {
   const navigate = useNavigate();
 
   // // TODO: 로그인한 회원의 이름을 띄운다
-  const [user, setUser] = useState({});
-  const auth = getAuth();
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  // const [user, setUser] = useState({});
+  // const auth = getAuth();
+  // onAuthStateChanged(auth, (currentUser) => {
+  //   setUser(currentUser);
+  // });
   // // 닉네임 불러오기
-  const currentUser = auth.currentUser;
-  const userNickName = currentUser?.displayName;
+  // const currentUser = auth.currentUser;
+  // const userNickName = currentUser?.displayName;
   // 로그아웃
   const LogOutHandler = async () => {
     await signOut(auth)
@@ -47,7 +47,7 @@ const Header = () => {
       />
 
       <LoginToggle>
-        {currentUser ? (
+        {user ? (
           <>
             <Nav>`${userNickName}님`</Nav>
             <Nav onClick={() => navigate('/my')}>마이페이지</Nav>
