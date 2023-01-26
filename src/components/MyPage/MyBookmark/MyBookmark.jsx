@@ -11,7 +11,6 @@ const MyBookmark = () => {
       <YouTubeThumNail src={require('./image 1.png')} alt="youtube img" />
       <YouTubeThumNail src={require('./image 1.png')} alt="youtube img" />
       <YouTubeThumNail src={require('./image 1.png')} alt="youtube img" />
-      <YouTubeThumNail src={require('./image 1.png')} alt="youtube img" />
     </BookMarkContainer>
   );
 };

@@ -34,6 +34,8 @@ export const NickNameContainer = styled.div`
 export const InputCheckContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  height: 63px;
 `;
 
 export const GithubContainer = styled.div``;
@@ -42,7 +44,7 @@ export const MyPageTagTitle = styled.div`
   font-weight: 600;
 `;
 
-export const MyInfoInput = styled.input`
+export const MyInfoInput = styled.div`
   border: none;
   border-bottom: 0.6px solid #c6c6c6;
   min-width: 200px;
