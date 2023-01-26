@@ -8,6 +8,7 @@ import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 const MainPage = () => {
   const [keyword, setKeyword] = useState('');
   const [category, setCategory] = useState('');
+  const [nextPageToken, setNextPageToken] = useState('CBkQAA');
 
   // 클론 코딩 관련 전체 리스트 불러오기
   const {
@@ -15,7 +16,11 @@ const MainPage = () => {
     data: allList,
     error,
     isError,
-  } = useQuery('allVideoList', allVideoList);
+  } = useQuery(['allVideoList', nextPageToken], () =>
+    allVideoList(nextPageToken),
+  );
+
+  console.log(allList);
 
   // 카테고리별 리스트 불러오기
   const {
@@ -26,8 +31,8 @@ const MainPage = () => {
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
   useEffect(() => {
-    allVideoList();
-  }, []);
+    allVideoList(nextPageToken);
+  }, [nextPageToken]);
 
   // TODO: 수정 필요?
   useEffect(() => {
@@ -61,6 +66,11 @@ const MainPage = () => {
     }
   };
 
+  // 페이지 불러오기 test
+  const nextPageBtn = () => {
+    setNextPageToken(allList.nextPageToken);
+  };
+
   return (
     <>
       {/* 검색창 및 결과 컴포넌트*/}
@@ -80,6 +90,11 @@ const MainPage = () => {
           <p>{String(error)}</p>
         </>
       )}
+
+      {/* Page 버튼 - test*/}
+      <button>1</button>
+      <br />
+      <button onClick={nextPageBtn}>2</button>
 
       {/* VideoList 컴포넌트*/}
       <VideoSection>
