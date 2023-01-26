@@ -6,7 +6,6 @@ import {
   AddCommentListTwo,
   AddInputGihub,
   AddInputContent,
-  AddNickName,
   AddGitLink,
   AddCommentText,
   AddCommentBtn,
@@ -22,14 +21,12 @@ import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
 
-const AddComment = () => {
+const AddComment = ({ video }) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
-  const [username, setUsername] = useState('');
 
-  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
 
   const AddGithubText = (e) => {
     setGithubText(e.target.value);
@@ -50,10 +47,10 @@ const AddComment = () => {
     });
   }, []);
 
-  // 기존 username 정보 가져오기
+  // 기존 user 정보 가져오기
   const getInfoUsername = () => {
     const q = query(
-      collection(db, 'testUser'),
+      collection(db, 'user'),
       where('uid', '==', authService.currentUser.uid),
     );
     getDocs(q).then((querySnapshop) => {
@@ -63,7 +60,6 @@ const AddComment = () => {
           username: doc.data().username,
         });
         setUsername(userInfo[0].username);
-        console.log('유저인포', username);
       });
     });
   };
@@ -71,11 +67,11 @@ const AddComment = () => {
   // 데이터 올리기
 
   const AddCommentButton = async () => {
-    await addDoc(collection(db, 'test'), {
+    await addDoc(collection(db, 'comments'), {
       comment: commentText,
       github: githubText,
       username: username,
-      videoId: '',
+      videoId: video.id.videoId,
       uid: authService.currentUser?.uid,
       date: Date.now(),
     });
@@ -87,14 +83,13 @@ const AddComment = () => {
     <>
       <AddCommentListAll>
         <AddCommentListWrap>
-          <AddNickName>{}</AddNickName>
           <AddCommentListTwo>
             <AddCommentPlusGit>
               <AddGitLink>
                 <AddGitText>Github Link </AddGitText>
                 <AddGitInputDiv>
                   <AddInputGihub
-                    placeholder="선택사항입니다."
+                    placeholder="https:// 로 시작해주세요"
                     onChange={AddGithubText}
                     value={githubText}
                   />
@@ -120,7 +115,7 @@ const AddComment = () => {
         </AddIcornBtn>
       </AddCommentListAll>
 
-      <CommentList />
+      <CommentList video={video} />
     </>
   );
 };

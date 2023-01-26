@@ -1,7 +1,5 @@
 import { useLocation } from 'react-router-dom';
 import AddComment from '../AddComment/AddComment';
-import ChannelInfo from '../ChannelInfo/ChannelInfo';
-import CommentList from '../CommentList/CommentList';
 import RecommendVideo from '../RecommendVideo/RecommendVideo';
 import {
   DetailVideoContainer,
@@ -11,6 +9,9 @@ import {
   RecommendVideoBody,
   DetailCommentBody,
   DetailPageBody,
+  ChannelName,
+  ChannelBox,
+  ChannelImg,
 } from './style';
 import TestLogin from './TestLogin';
 
@@ -18,12 +19,12 @@ export default function DetailVideo() {
   const {
     state: { video },
   } = useLocation();
-  const { title, channelId, channelTitle, description } = video.snippet;
-  console.log(video);
+  const { title, channelTitle, description, thumbnails } = video.snippet;
+  console.log('비디오', video);
   return (
     <DetailPageBody>
-      <TestLogin />
       <DetailVideoContainer>
+        {/* <TestLogin /> */}
         <DetailVideoSection>
           <iframe
             id="player"
@@ -35,16 +36,19 @@ export default function DetailVideo() {
             title="유튜브"
           />
           <DetailVideoTitle>{title}</DetailVideoTitle>
-          <ChannelInfo id={channelId} name={channelTitle} />
-          <DetailVideoDesc>{description}</DetailVideoDesc>
+          <ChannelBox>
+            <ChannelImg src={thumbnails.default.url} alt="" />
+            <ChannelName>{channelTitle}</ChannelName>
+          </ChannelBox>
+          {/* <DetailVideoDesc>{description}</DetailVideoDesc> */}
         </DetailVideoSection>
         <DetailCommentBody>
-          <AddComment />
+          <AddComment video={video} />
         </DetailCommentBody>
       </DetailVideoContainer>
 
       <RecommendVideoBody>
-        {/* <RecommendVideo id={video.id.videoId} /> */}
+        <RecommendVideo videoId={video.id.videoId} />
       </RecommendVideoBody>
     </DetailPageBody>
   );

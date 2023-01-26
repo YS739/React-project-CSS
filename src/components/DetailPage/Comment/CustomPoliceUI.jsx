@@ -1,27 +1,24 @@
-import { deleteDoc, doc } from 'firebase/firestore';
 import styled from 'styled-components';
-import { db } from '../../../common/firebase';
 
-export default function CustomConfirmUI(props) {
+export default function CustomPoliceUI(props) {
   return (
     <ConfirmBody>
       <ConfirmBox>
         <TitleBox>
-          <ConfirmTitle>댓글 삭제</ConfirmTitle>
+          <ConfirmTitle>신고 사유</ConfirmTitle>
         </TitleBox>
         <TextBox>
-          <ConfirmText>댓글을 완전히 삭제할까요?</ConfirmText>
+          <Textinput type="text" placeholder="신고 사유를 입력해주세요." />
         </TextBox>
         <BtnBox>
           <ConfirmCancelBtn onClick={props.onClose}>취소</ConfirmCancelBtn>
           <ConfirmDeleteBtn
             onClick={() => {
-              const userDoc = doc(db, 'comments', props.id);
-              deleteDoc(userDoc);
+              alert('완료');
               props.onClose();
             }}
           >
-            삭제
+            완료
           </ConfirmDeleteBtn>
         </BtnBox>
       </ConfirmBox>
@@ -62,7 +59,27 @@ const TextBox = styled.div`
   justify-content: center;
 `;
 
-const ConfirmText = styled.p``;
+const Textinput = styled.input`
+  width: 270px;
+  height: 25px;
+
+  font-size: 1.1rem;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2.2px solid black;
+
+  :focus {
+    outline: none;
+  }
+  ::placeholder {
+    font-size: 14px;
+  }
+`;
 
 const BtnBox = styled.div`
   margin-top: 7%;

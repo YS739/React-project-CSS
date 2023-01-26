@@ -1,4 +1,4 @@
-import { API_KEY } from './apiKey.js';
+import { API_KEY } from './apiKey';
 import axios from 'axios';
 
 export const BASE_URL =
@@ -35,8 +35,10 @@ export const categoryVideoList = (category) => {
 
 // 연관 비디오 리스트 가져오기
 // // TODO: videoId 설정해야 함
-// export const relatedList = (videoId) => {
-//   return axios.get(
-//     `${BASE_URL}&relatedToVideoId=${videoId}&maxResults=6&key=${API_KEY}`,
-//   ).then((res) => res.data.items);
-// };
+export const RecommendVideoList = (videoId) => {
+  return axios
+    .get(
+      `${BASE_URL}&relatedToVideoId=${videoId}&type=video&maxResults=9&key=${API_KEY}`,
+    )
+    .then((res) => res.data.items);
+};
