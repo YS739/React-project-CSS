@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useQuery } from 'react-query';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
 import { allVideoList, categoryVideoList } from '../../common/apis';
@@ -9,6 +9,7 @@ const MainPage = () => {
   const [keyword, setKeyword] = useState('');
   const [category, setCategory] = useState('');
   const [pageToken, setPageToken] = useState('');
+  const setObservationTarget = useRef(null);
 
   // 클론 코딩 전체 리스트 불러오기
   const {
@@ -17,7 +18,7 @@ const MainPage = () => {
     error,
     isError,
   } = useQuery(['allVideoList', pageToken], () => allVideoList(pageToken));
-
+  // console.log(allList?.nextPageToken);
   // 카테고리별 리스트 불러오기
   const {
     isLoading: isLoadingCategory,
@@ -26,13 +27,10 @@ const MainPage = () => {
     isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
-  useEffect(() => {
-    allVideoList(pageToken);
-  }, [pageToken]);
+  // FIXME: 계속 데이터를 불러오는 것 같음
+  useEffect(() => {}, [pageToken]);
 
-  useEffect(() => {
-    categoryVideoList(category);
-  }, [category]);
+  useEffect(() => {}, [category]);
 
   // 해당 카테고리를 눌렀을 때 api 검색어 부분에 넣을 단어를 받아오기
   const categoryHandler = (category) => {
@@ -41,7 +39,6 @@ const MainPage = () => {
 
   // 검색 실행 함수 - 검색 버튼 눌렀을 때
   const searchHandler = (e) => {
-    e.preventDefault();
     // TODO: alert창 라이브러리..?
     if (keyword.trim().length === 0) {
       alert('검색어를 입력해주세요.');
@@ -51,6 +48,7 @@ const MainPage = () => {
 
   // 키보드의 enter를 눌렀을 때도 검색 함수 실행
   const OnKeyPressHandler = (e) => {
+    e.preventDefault();
     if (e.key === 'Enter') {
       searchHandler();
     }
@@ -62,13 +60,40 @@ const MainPage = () => {
   );
 
   // Page 이동 버튼
-  const nextPageBtn = () => {
-    setPageToken(allList.nextPageToken);
-  };
+  // const nextPageBtn = () => {
+  //   setPageToken(allList.nextPageToken);
+  // };
 
-  const prevPageBtn = () => {
-    setPageToken(allList.prevPageToken);
-  };
+  // const prevPageBtn = () => {
+  //   setPageToken(allList.prevPageToken);
+  // };
+
+  // observer api
+  const observer = useRef(
+    new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          alert('안녕');
+          // setPageToken(allList?.nextPageToken);
+        }
+      },
+      { threshold: 1 },
+    ),
+  );
+
+  useEffect(() => {
+    const currentTarget = setObservationTarget.current;
+    const currentObserver = observer.current;
+    if (currentTarget) {
+      currentObserver.observe(currentTarget);
+    }
+
+    return () => {
+      if (currentTarget) {
+        currentObserver.unobserve(currentTarget);
+      }
+    };
+  }, [setObservationTarget]);
 
   return (
     <>
@@ -80,7 +105,6 @@ const MainPage = () => {
         OnKeyPressHandler={OnKeyPressHandler}
         categoryHandler={categoryHandler}
       />
-
       {/* allList - 로딩중이거나 에러가 생기면 화면에 표시 */}
       {isLoading && <p>Loading...</p>}
       {isError && (
@@ -89,11 +113,9 @@ const MainPage = () => {
           <p>{String(error)}</p>
         </>
       )}
-
       {/* Page 이동버튼 */}
-      {pageToken && <button onClick={prevPageBtn}>1</button>}
-      {allList?.nextPageToken && <button onClick={nextPageBtn}>2</button>}
-
+      {/* {pageToken && <button onClick={prevPageBtn}>1</button>}
+      {allList?.nextPageToken && <button onClick={nextPageBtn}>2</button>} */}
       {/* VideoList 컴포넌트*/}
       <VideoSection>
         {/* TODO: 더 간단하게 리팩토링 가능? */}
@@ -122,6 +144,7 @@ const MainPage = () => {
             {allList?.items.map((video) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
+            <div ref={setObservationTarget}></div>
           </VideoBox>
         )}
       </VideoSection>
