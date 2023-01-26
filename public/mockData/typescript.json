@@ -1,215 +1,114 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "dk-JOF3jWTwH2SU6bzDVLfbtyYY",
-  "nextPageToken": "CBkQAA",
+  "etag": "sj1Nck5huXxKwmvbp7Dm5rDPLYo",
+  "nextPageToken": "CDEQAA",
+  "prevPageToken": "CBkQAQ",
   "regionCode": "US",
   "pageInfo": {
-    "totalResults": 491270,
-    "resultsPerPage": 25
+    "totalResults": 492920,
+    "resultsPerPage": 24
   },
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "18maQas8kxwrHIlvMScQAz6xna0",
+      "etag": "PZtOdPjGl5H3T4NeSuIcV2_aleY",
       "id": {
         "kind": "youtube#video",
-        "videoId": "jBmrduvKl5w"
+        "videoId": "knqz3_rPcKk"
       },
       "snippet": {
-        "publishedAt": "2022-04-23T16:00:31Z",
-        "channelId": "UCFbNIlppjAuEX4znoulh0Cw",
-        "title": "How To Build Your First TypeScript Project - TODO List Application",
-        "description": "It is finally time that I create a full TypeScript project. In this video I show you how to create an entire TODO list application in ...",
+        "publishedAt": "2021-08-01T12:30:07Z",
+        "channelId": "UCIPZVAwDGa-A4ZJxCBvXRuQ",
+        "title": "React Typescript Tutorial with Project | Learn React JS with Typescript [2021]",
+        "description": "ReactTypescript #Typescript #ReactJSProject #ReactHooks Learn React JS with Typescript in one video. We will learn typescript ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/jBmrduvKl5w/default.jpg",
+            "url": "https://i.ytimg.com/vi/knqz3_rPcKk/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/jBmrduvKl5w/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/knqz3_rPcKk/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/jBmrduvKl5w/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/knqz3_rPcKk/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Web Dev Simplified",
+        "channelTitle": "RoadsideCoder",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-04-23T16:00:31Z"
+        "publishTime": "2021-08-01T12:30:07Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "sFwNxuCp4FitFKMR4V1XpL0ySG8",
+      "etag": "bKYtcwnNVJklrd3MMYuR1NNS5LM",
       "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PL41PQx5PPbt6OheJQkg-QNROfx9j75MuR"
+        "kind": "youtube#video",
+        "videoId": "1o9YOHeKhNQ"
       },
       "snippet": {
-        "publishedAt": "2022-01-04T11:34:35Z",
-        "channelId": "UCPiDFfW9b_iIRovh-vWiSOA",
-        "title": "Typescript Projects",
-        "description": "",
+        "publishedAt": "2021-11-17T23:30:01Z",
+        "channelId": "UCKVOwZgRhzRhQ8nxHU1WdxQ",
+        "title": "Node.js API From Scratch Using TypeScript, Express And MongoDB #1",
+        "description": "Ever wanted to learn how to create your own NodeJS APIs using Node.js, Typescript, MongoDB and Express? Well you're in luck!",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/F2JCjVSZlG0/default.jpg",
+            "url": "https://i.ytimg.com/vi/1o9YOHeKhNQ/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/F2JCjVSZlG0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/1o9YOHeKhNQ/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/F2JCjVSZlG0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/1o9YOHeKhNQ/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Kondwani Ngulube",
+        "channelTitle": "Rettson",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-01-04T11:34:35Z"
+        "publishTime": "2021-11-17T23:30:01Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ZMfiExx0DfSH7kzo3M-vykUWMdQ",
+      "etag": "1tOlfTYpo21E3taqdDce3L5w8tQ",
       "id": {
         "kind": "youtube#video",
-        "videoId": "7yngRdsKc4U"
+        "videoId": "KflcnV7sYOk"
       },
       "snippet": {
-        "publishedAt": "2022-02-10T15:30:02Z",
-        "channelId": "UCsvqVGtbbyHaMoevxPAq9Fg",
-        "title": "Typescript Project - Chat Application | How to Build a Chat Application? | TypeScript | Simplilearn",
-        "description": "In this video, we will learn how to create a Real-time Chat application using Node.js as a server along with TypeScript ...",
+        "publishedAt": "2020-08-30T21:45:58Z",
+        "channelId": "UCl1tBjQczRev4VtylN0_o_w",
+        "title": "React Native TypeScript Tutorial | Build a Simple React Native App With TypeScript",
+        "description": "reactnative #typescript Learn how to start using Typescript in your React Native code. I go over props, hooks, and render props ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/7yngRdsKc4U/default.jpg",
+            "url": "https://i.ytimg.com/vi/KflcnV7sYOk/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/7yngRdsKc4U/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/KflcnV7sYOk/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/7yngRdsKc4U/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/KflcnV7sYOk/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Simplilearn",
+        "channelTitle": "Dope Programming",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-02-10T15:30:02Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "Q8KEIv5D5eZAqRVGxgqZ2hVbNjE",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "ahCwqrYpIuM"
-      },
-      "snippet": {
-        "publishedAt": "2018-11-29T19:13:07Z",
-        "channelId": "UCsBjURrPoezykLs9EqgamOA",
-        "title": "TypeScript - The Basics",
-        "description": "TypeScript has forever altered the lives of JavaScript developers. Learn why TS is so awesome and the basic concepts required to ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ahCwqrYpIuM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ahCwqrYpIuM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ahCwqrYpIuM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Fireship",
-        "liveBroadcastContent": "none",
-        "publishTime": "2018-11-29T19:13:07Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "r-gZ78DM7R7Ga7KkHncbFmOkTVQ",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "d56mG7DezGs"
-      },
-      "snippet": {
-        "publishedAt": "2022-05-23T13:00:18Z",
-        "channelId": "UCWv7vMbMWH4-V0ZXdmDpPBA",
-        "title": "TypeScript Tutorial for Beginners",
-        "description": "TypeScript Tutorial for Beginners. Learn TypeScript to write better large-scale JavaScript apps. This tutorial helps you get started ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/d56mG7DezGs/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/d56mG7DezGs/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/d56mG7DezGs/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Programming with Mosh",
-        "liveBroadcastContent": "none",
-        "publishTime": "2022-05-23T13:00:18Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "pI1ZDUX2LLR3T4L7FpkJgw_JBUA",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "61v23Ce5SXA"
-      },
-      "snippet": {
-        "publishedAt": "2022-11-25T14:00:03Z",
-        "channelId": "UCY38RvRIxYODO4penyxUwTg",
-        "title": "Typescript Project from Scratch | Complete Tutorial for Beginners",
-        "description": "Web Dev Roadmap for Beginners (Free!): https://bit.ly/DaveGrayWebDevRoadmap Learn how to build a Typescript Project from ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/61v23Ce5SXA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/61v23Ce5SXA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/61v23Ce5SXA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Dave Gray",
-        "liveBroadcastContent": "none",
-        "publishTime": "2022-11-25T14:00:03Z"
+        "publishTime": "2020-08-30T21:45:58Z"
       }
     },
     {
@@ -248,138 +147,308 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "AHsDoq64z2lpwlR9-cVZqFktN30",
+      "etag": "Zj-YoVMSS-4GYmBqaJW26GrwJ8I",
       "id": {
         "kind": "youtube#video",
-        "videoId": "BwuLxPH8IDs"
+        "videoId": "82XE1X0Xblo"
       },
       "snippet": {
-        "publishedAt": "2020-01-21T16:00:03Z",
-        "channelId": "UCSJbGtTlrDami-tDGPUV9-w",
-        "title": "TypeScript Course for Beginners - Learn TypeScript from Scratch!",
-        "description": "Free TypeScript Introduction for Beginners: Get Started with TypeScript, learn the Basics, its Features, Workflows and how to use it ...",
+        "publishedAt": "2019-12-03T04:25:06Z",
+        "channelId": "UCkw4JCwteGrDHIsyIIKo4tQ",
+        "title": "TypeScript Tutorial for Beginners | What is TypeScript | Introduction to TypeScript Basics | Edureka",
+        "description": "Full Stack Web Developer Masters Program: https://www.edureka.co/masters-program/full-stack-developer-training *** This ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/BwuLxPH8IDs/default.jpg",
+            "url": "https://i.ytimg.com/vi/82XE1X0Xblo/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/BwuLxPH8IDs/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/82XE1X0Xblo/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/BwuLxPH8IDs/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/82XE1X0Xblo/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Academind",
+        "channelTitle": "edureka!",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-01-21T16:00:03Z"
+        "publishTime": "2019-12-03T04:25:06Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "wYqH2wbzNwvnszv70R9vX-5pcOw",
+      "etag": "-DVstIyHNJN4AkrAX61iVmGdoMc",
       "id": {
         "kind": "youtube#video",
-        "videoId": "L02BfvA7mgA"
+        "videoId": "VyEKwp6Q4fY"
       },
       "snippet": {
-        "publishedAt": "2020-05-08T14:23:44Z",
-        "channelId": "UCUTKXJqFhBb4YlnkEQYIvQg",
-        "title": "CLI Calculator Tutorial - Typescript Project for Beginners",
-        "description": "Today we are building a typescript command line calculator from scratch. Useful links: ...",
+        "publishedAt": "2021-04-05T13:45:17Z",
+        "channelId": "UCroJckuB_ohjtZUewCv0Ukw",
+        "title": "Using Sequelize With TypeScript: Basic Project Setup",
+        "description": "Sequelize #TypeScript In this video, we set up a project using Sequelize and TypeScript along with a Postgres database.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/L02BfvA7mgA/default.jpg",
+            "url": "https://i.ytimg.com/vi/VyEKwp6Q4fY/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/L02BfvA7mgA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/VyEKwp6Q4fY/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/L02BfvA7mgA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/VyEKwp6Q4fY/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Beaufort Tek",
+        "channelTitle": "willjw3",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-05-08T14:23:44Z"
+        "publishTime": "2021-04-05T13:45:17Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "Bbk7m9OQLQhzK6-yCi8GAbzYX-s",
+      "etag": "EBYy0yc1f0TnKevjI1ccHs0K490",
       "id": {
         "kind": "youtube#video",
-        "videoId": "zQnBQ4tB3ZA"
+        "videoId": "3uRd4NOXT8w"
       },
       "snippet": {
-        "publishedAt": "2020-11-25T15:28:06Z",
-        "channelId": "UCsBjURrPoezykLs9EqgamOA",
-        "title": "TypeScript in 100 Seconds",
-        "description": "Learn the basics if TypeScript in 100 Seconds! If you love TS, upgrade to Fireship PRO for 40% off using code mbus5Kcj at ...",
+        "publishedAt": "2022-01-26T04:09:52Z",
+        "channelId": "UC5AI4n6o_2T3ldxULze4TDA",
+        "title": "How to Install and Compile Typescript with Visual Studio Code | Vscode | IAmUmair",
+        "description": "Hi, in this video we are going to install and compile Typescript using Visual Studio Code ( VSCode ). Typescript is a strongly typed ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/zQnBQ4tB3ZA/default.jpg",
+            "url": "https://i.ytimg.com/vi/3uRd4NOXT8w/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/zQnBQ4tB3ZA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/3uRd4NOXT8w/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/zQnBQ4tB3ZA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/3uRd4NOXT8w/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Fireship",
+        "channelTitle": "IAmUmair",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-11-25T15:28:06Z"
+        "publishTime": "2022-01-26T04:09:52Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "lP9aW8C0oUHTgPDtnyeJ9CCHOYs",
+      "etag": "qB-EEX16zqLpk_ONlugml0MyeWU",
       "id": {
         "kind": "youtube#video",
-        "videoId": "5JqzCjg4YRU"
+        "videoId": "HRrGr0FIPAg"
       },
       "snippet": {
-        "publishedAt": "2021-06-29T15:26:21Z",
-        "channelId": "UCsBjURrPoezykLs9EqgamOA",
-        "title": "TypeScript is Literal Magic",
-        "description": "TypeScript Tip! Merge union types into every possible combination using template literal types. #shorts #js #typescript Docs ...",
+        "publishedAt": "2018-02-17T09:48:23Z",
+        "channelId": "UCYt1sfh5464XaDBH0oH_o7Q",
+        "title": "TypeScript Basics 24 - Installing libraries and type definitions",
+        "description": "Access the full course here: https://javabrains.io/courses/typescript_basics Learn how to set up the project for TypeScript ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/5JqzCjg4YRU/default.jpg",
+            "url": "https://i.ytimg.com/vi/HRrGr0FIPAg/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/5JqzCjg4YRU/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HRrGr0FIPAg/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/5JqzCjg4YRU/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HRrGr0FIPAg/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Fireship",
+        "channelTitle": "Java Brains",
         "liveBroadcastContent": "none",
-        "publishTime": "2021-06-29T15:26:21Z"
+        "publishTime": "2018-02-17T09:48:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FXYhhUUf5gg0i0Poeg5IT7o_zpI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "y0W2TD1EUXE"
+      },
+      "snippet": {
+        "publishedAt": "2021-04-18T21:00:26Z",
+        "channelId": "UCGD_0i6L48hucTiiyhb5QzQ",
+        "title": "Introducing NextJS with TypeScript",
+        "description": "In this lesson we look at how you can quickly get started with #NextJS using #TypeScript. We also demonstrate creating your first ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y0W2TD1EUXE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y0W2TD1EUXE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y0W2TD1EUXE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "basarat",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-04-18T21:00:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bUh0rShHgb1_S9qOgzxG8IN-z9Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "68l7wyHw97Y"
+      },
+      "snippet": {
+        "publishedAt": "2022-01-13T22:54:25Z",
+        "channelId": "UCWUk0Y_h1bLvB8qLZ4lAS8A",
+        "title": "Create A React Native TypeScript Project | A Beautiful Wallet App Design",
+        "description": "In this video, we look at how to create a React Native TypeScript project based on a beautiful wallet app design. GET SOURCE ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/68l7wyHw97Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/68l7wyHw97Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/68l7wyHw97Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ToThePointCode",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-01-13T22:54:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "z2lHKScQsoM-FsS85ydGmHjy7cM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Lp4NOZY9644"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-19T15:58:03Z",
+        "channelId": "UCRv2Mj40Cdp_YJiA__azrag",
+        "title": "Testing React Components (TypeScript)",
+        "description": "Full Typescript testing course: https://www.udemy.com/course/unit-testing-typescript-nodejs/?couponCode=YTTSREACT Project ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Lp4NOZY9644/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Lp4NOZY9644/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Lp4NOZY9644/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alex Horea",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-19T15:58:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hE3vNbMSqfbWTVvYxDIJRj_TBgk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VJH8dsPtbeU"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-10T23:29:34Z",
+        "channelId": "UCsrVDPJBYeXItETFHG0qzyw",
+        "title": "An overview of the create T3 App (Next, Typescript, Tailwind, tRPC, Next-Auth)",
+        "description": "Just giving a quick walkthrough of how the project is setup and explaining tRPC some ------------ Patreon ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VJH8dsPtbeU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VJH8dsPtbeU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VJH8dsPtbeU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Web Dev Cody",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-10T23:29:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FtvDAp2yZNraUVVGQNAZqLHfN7w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "M_Oes39FNuk"
+      },
+      "snippet": {
+        "publishedAt": "2021-05-03T02:08:11Z",
+        "channelId": "UCMm15RFnHUvM-aSc50e7R9A",
+        "title": "Master React Like Pro w/ Redux, Typescript, and GraphQL | Beginner to Advanced in React",
+        "description": "If you are a beginner to React and know basic stuff like creating components and managing local state with Hooks or using class ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M_Oes39FNuk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M_Oes39FNuk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M_Oes39FNuk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "CoderOne",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-05-03T02:08:11Z"
       }
     },
     {
@@ -418,444 +487,342 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "VGPmtp6m0KPKjD8az4l8Wr90c3A",
+      "etag": "DnnOfUv8k5MBtmv0CUxZ_yiaFCo",
       "id": {
         "kind": "youtube#video",
-        "videoId": "lATafp15HWA"
+        "videoId": "SEnAS_ooHeA"
       },
       "snippet": {
-        "publishedAt": "2022-06-21T16:00:23Z",
-        "channelId": "UCFbNIlppjAuEX4znoulh0Cw",
-        "title": "How To Create An Advanced Shopping Cart With React and TypeScript",
-        "description": "FREE React Hooks Course: https://courses.webdevsimplified.com/react-hooks-simplified Learn React Today Course: ...",
+        "publishedAt": "2021-02-12T14:00:22Z",
+        "channelId": "UC8S4rDRZn6Z_StJ-hh7ph8g",
+        "title": "How To Configure TypeScript in NodeJS - Beginners Tutorial",
+        "description": "Best Tech Resume Template: https://papermoontech.com/pmcsrtk/pedro Use code: PEDRO for 20% off ^ Commands: - sudo yarn ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/lATafp15HWA/default.jpg",
+            "url": "https://i.ytimg.com/vi/SEnAS_ooHeA/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/lATafp15HWA/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/SEnAS_ooHeA/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/lATafp15HWA/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/SEnAS_ooHeA/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Web Dev Simplified",
+        "channelTitle": "PedroTech",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-06-21T16:00:23Z"
+        "publishTime": "2021-02-12T14:00:22Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "QIWK0PE9F4gn9U6vaHxdxa81gmM",
+      "etag": "cLUUQvIABTSpw2NcASqqVwnoFrM",
       "id": {
         "kind": "youtube#video",
-        "videoId": "BCg4U1FzODs"
+        "videoId": "OdU9H-_d14Y"
       },
       "snippet": {
-        "publishedAt": "2021-08-18T13:13:38Z",
-        "channelId": "UC29ju8bIPH5as8OGnQzwJyA",
-        "title": "TypeScript Crash Course",
-        "description": "Learn the basics of TypeScript in this beginner-friendly crash course Visit Our Sponsor: Stream https://getstream.io/traversy ...",
+        "publishedAt": "2019-09-21T20:44:03Z",
+        "channelId": "UCtxCXg-UvSnTKPOzLH4wJaQ",
+        "title": "Convert a React Native Project to Typescript in 10 Minutes",
+        "description": "\"As TypeScript continues it's gradual take over of the JavaScript world, you might be having some similar FOMO as myself: “What ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/BCg4U1FzODs/default.jpg",
+            "url": "https://i.ytimg.com/vi/OdU9H-_d14Y/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/BCg4U1FzODs/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/OdU9H-_d14Y/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/BCg4U1FzODs/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/OdU9H-_d14Y/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Traversy Media",
+        "channelTitle": "Coding Tech",
         "liveBroadcastContent": "none",
-        "publishTime": "2021-08-18T13:13:38Z"
+        "publishTime": "2019-09-21T20:44:03Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "Rgx3pX8SRmQZJ0TxQsUVUEmm3Cc",
+      "etag": "Qc-UJDNj7fxDAojJK03V5XEo_sc",
       "id": {
         "kind": "youtube#video",
-        "videoId": "j898RGRw0b4"
+        "videoId": "wjLSEfiMAZU"
       },
       "snippet": {
-        "publishedAt": "2022-11-15T17:00:27Z",
-        "channelId": "UCFbNIlppjAuEX4znoulh0Cw",
-        "title": "The Perfect Advanced React/TypeScript Project - Markdown Supported Note Taking With Categories",
-        "description": "Highlight: https://app.highlight.run/?promo=WEBDEVSIMPLIFIED Coupon Code: WEBDEVSIMPLIFIED (This should be ...",
+        "publishedAt": "2021-06-23T16:35:14Z",
+        "channelId": "UCvHX2bCZG2m9ddUhwxudKYA",
+        "title": "Angular 12 tutorial in Hindi #31 Basic typescript for angular",
+        "description": "In this angular 12 version video, we learn about Basic of TS for angular . This video is made by anil Sidhu in the Hindi language.",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/j898RGRw0b4/default.jpg",
+            "url": "https://i.ytimg.com/vi/wjLSEfiMAZU/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/j898RGRw0b4/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/wjLSEfiMAZU/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/j898RGRw0b4/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/wjLSEfiMAZU/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Web Dev Simplified",
+        "channelTitle": "Code Step By Step",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-11-15T17:00:27Z"
+        "publishTime": "2021-06-23T16:35:14Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "iDVYasSS28gcZxcbAtNexXYW_WY",
+      "etag": "dQY-fP719nKo-92rH6_PmBDrSnI",
       "id": {
         "kind": "youtube#video",
-        "videoId": "FJDVKeh7RJI"
+        "videoId": "BKz7rnbQyK4"
       },
       "snippet": {
-        "publishedAt": "2022-01-25T14:48:33Z",
-        "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
-        "title": "React &amp; TypeScript - Course for Beginners",
-        "description": "Learn how to build React apps using TypeScript. First, learn the basics of TypeScript. Then, learn how to integrate TypeScript in a ...",
+        "publishedAt": "2021-03-14T16:47:18Z",
+        "channelId": "UC3QP9uZ1UgqsZleXXZKs8cw",
+        "title": "Node.js Backend Project Setup with Typescript, ESLint, Prettier, and Jest",
+        "description": "Walkthrough of how I like to set up my Node.js backend projects. Configured with Typescript, ESLint, Prettier, Jest, Nodemon, ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/FJDVKeh7RJI/default.jpg",
+            "url": "https://i.ytimg.com/vi/BKz7rnbQyK4/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/FJDVKeh7RJI/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/BKz7rnbQyK4/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/FJDVKeh7RJI/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/BKz7rnbQyK4/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "freeCodeCamp.org",
+        "channelTitle": "Leo Roese",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-01-25T14:48:33Z"
+        "publishTime": "2021-03-14T16:47:18Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "HtEX7W62ARqiuEkv0zOJAm4nsx4",
+      "etag": "cH1yTMAFXJ-uUiF3-DCASR6Bkic",
       "id": {
         "kind": "youtube#video",
-        "videoId": "sfmL6bGbiN8"
+        "videoId": "HMP5e5utTwg"
       },
       "snippet": {
-        "publishedAt": "2021-01-21T14:26:24Z",
-        "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
-        "title": "Build a Shopping Cart with React and TypeScript - Tutorial",
-        "description": "Learn the fundamentals and how to build a ReactJS shopping cart with Typescript, Material UI, Styled Components and ...",
+        "publishedAt": "2021-11-11T11:09:33Z",
+        "channelId": "UChPxqdfDbulLE9PyUqhijWw",
+        "title": "Learn React TypeScript &amp; Bootstrap with one Project | React TypeScript Tutorial for Beginners",
+        "description": "This video is an easy and complete React + TypeScript + Bootstrap tutorial for Beginners. In this video we will build a Notes ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/sfmL6bGbiN8/default.jpg",
+            "url": "https://i.ytimg.com/vi/HMP5e5utTwg/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/sfmL6bGbiN8/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HMP5e5utTwg/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/sfmL6bGbiN8/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/HMP5e5utTwg/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "freeCodeCamp.org",
+        "channelTitle": "Dipesh Malvia",
         "liveBroadcastContent": "none",
-        "publishTime": "2021-01-21T14:26:24Z"
+        "publishTime": "2021-11-11T11:09:33Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "ToiUHyLTDai8KRF7qQn4nAgAyUQ",
+      "etag": "ayyJEKaHqPLx8rk7x4UT-OhVo64",
       "id": {
         "kind": "youtube#video",
-        "videoId": "H91aqUHn8sE"
+        "videoId": "qFMMOJucqTw"
       },
       "snippet": {
-        "publishedAt": "2022-11-29T19:10:48Z",
-        "channelId": "UC2Xd-TjJByJyK2w1zNwY0zQ",
-        "title": "How to Setup Node.js with TypeScript in 2023",
-        "description": "Learn how to setup Node.js with TypeScript while supporting native ES modules. Use the new NodeNext option to easily interop ...",
+        "publishedAt": "2020-05-30T09:23:05Z",
+        "channelId": "UCGT8sh9T27ZqXjyPdODdP8g",
+        "title": "Node.js: Migration from JavaScript to TypeScript",
+        "description": "javascript #typescript #nodejs In this video, I'm taking a simple Node.js application written in JavaScript and migrating it to ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/H91aqUHn8sE/default.jpg",
+            "url": "https://i.ytimg.com/vi/qFMMOJucqTw/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/H91aqUHn8sE/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/qFMMOJucqTw/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/H91aqUHn8sE/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/qFMMOJucqTw/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Beyond Fireship",
+        "channelTitle": "JavaScript Room",
         "liveBroadcastContent": "none",
-        "publishTime": "2022-11-29T19:10:48Z"
+        "publishTime": "2020-05-30T09:23:05Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "83ERGyL0noGfZo1DfnTV22M_Wgc",
+      "etag": "AG4q77FnYsFW6-S7vHKSEA2MG4c",
       "id": {
         "kind": "youtube#video",
-        "videoId": "0DzDqtcxnz0"
+        "videoId": "5A_u1g7Z-hc"
       },
       "snippet": {
-        "publishedAt": "2020-05-08T07:59:46Z",
-        "channelId": "UCW5YeuERMmlnqo4oq8vwUpg",
-        "title": "TypeScript Tutorial #3 - Type Basics",
-        "description": "Hey gang, in this TypeScript tutorial we'll take a look at some of the basic types - strings, numbers & booleans. ‍    ‍   JOIN ...",
+        "publishedAt": "2018-02-17T09:48:23Z",
+        "channelId": "UCYt1sfh5464XaDBH0oH_o7Q",
+        "title": "TypeScript Basics 26 - Installing dependencies",
+        "description": "Access the full course here: https://javabrains.io/courses/typescript_basics Hands On: We'll add two types of dependencies to the ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/0DzDqtcxnz0/default.jpg",
+            "url": "https://i.ytimg.com/vi/5A_u1g7Z-hc/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/0DzDqtcxnz0/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/5A_u1g7Z-hc/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/0DzDqtcxnz0/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/5A_u1g7Z-hc/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "The Net Ninja",
+        "channelTitle": "Java Brains",
         "liveBroadcastContent": "none",
-        "publishTime": "2020-05-08T07:59:46Z"
+        "publishTime": "2018-02-17T09:48:23Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "-6_20hoYFxG_ybxclasib588JGw",
+      "etag": "36_aA1TFuQOtm9DjF4MWRPerWoE",
       "id": {
         "kind": "youtube#video",
-        "videoId": "ydkQlJhodio"
+        "videoId": "LjznJIMT0aU"
       },
       "snippet": {
-        "publishedAt": "2021-04-19T15:04:23Z",
-        "channelId": "UCsBjURrPoezykLs9EqgamOA",
-        "title": "How to use TypeScript with React... But should you?",
-        "description": "Learn how to setup React with TypeScript. Compare the pros and cons of using TypeScript in an React project. Learn more in the ...",
+        "publishedAt": "2021-05-01T08:23:43Z",
+        "channelId": "UCw4WQJ6A38AnUTQKhxwITSw",
+        "title": "React Tutorial with Typescript in Hindi Part-1 | React Tutorial in Hindi | React course with project",
+        "description": "Learn React Tutorial with typescript for beginners in hindi | How react works in hindi | React tutorial full course with project in hindi ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/ydkQlJhodio/default.jpg",
+            "url": "https://i.ytimg.com/vi/LjznJIMT0aU/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/ydkQlJhodio/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/LjznJIMT0aU/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/ydkQlJhodio/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/LjznJIMT0aU/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Fireship",
+        "channelTitle": "Anuj Singla",
         "liveBroadcastContent": "none",
-        "publishTime": "2021-04-19T15:04:23Z"
+        "publishTime": "2021-05-01T08:23:43Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "-BpW967ngOJ0Ls_wdKgVbdBm3Zk",
+      "etag": "aIhe04TrD7BFMrj9Tn95QGdjvnM",
       "id": {
         "kind": "youtube#video",
-        "videoId": "267ALPsWVkc"
+        "videoId": "fwDxnN97MTE"
       },
       "snippet": {
-        "publishedAt": "2021-08-30T07:00:01Z",
-        "channelId": "UC8aFE06Cti9OnQcKpl6rDvQ",
-        "title": "How To Create a Node Project With Typescript",
-        "description": "In this video, you'll learn how to build up a TypeScript project with Node. You'll use TypeScript to create an Express application ...",
+        "publishedAt": "2021-05-30T02:00:04Z",
+        "channelId": "UCG2ovypNCpVOTFeY1YCocmQ",
+        "title": "Redux Saga: 03 - Setup project dùng Typescript, Redux Toolkit và Create React App 🚀",
+        "description": "Cùng mình tìm hiểu các setup một dự án có Typescript, Redux Toolkit và Create React App nhé! ——— VIDEO CHAPTERS: Made ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/267ALPsWVkc/default.jpg",
+            "url": "https://i.ytimg.com/vi/fwDxnN97MTE/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/267ALPsWVkc/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/fwDxnN97MTE/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/267ALPsWVkc/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/fwDxnN97MTE/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "ProgrammingKnowledge2",
+        "channelTitle": "Easy Frontend",
         "liveBroadcastContent": "none",
-        "publishTime": "2021-08-30T07:00:01Z"
+        "publishTime": "2021-05-30T02:00:04Z"
       }
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "mufaUeGpCybjmYn8xX8ySS_2_fI",
+      "etag": "VCbQ4o_3k9GVRiaJ8dbBKuD_mWU",
       "id": {
         "kind": "youtube#video",
-        "videoId": "k-we8VesHFo"
+        "videoId": "ktTPCJx7F1Q"
       },
       "snippet": {
-        "publishedAt": "2017-08-02T12:10:55Z",
-        "channelId": "UC_w7GHuhC8n63_GtedoufVw",
-        "title": "TypeScript Tutorials - 03 First Program in TypeScript",
-        "description": "\"First Program in TypeScript\" In this lesson, I am going to discuss how to write our first program in TypeScript. I have got \"tsproject\" ...",
+        "publishedAt": "2021-05-28T21:30:04Z",
+        "channelId": "UC3QP9uZ1UgqsZleXXZKs8cw",
+        "title": "Setup AWS Serverless Project with Typescript Lambda Functions",
+        "description": "I will guide you guys on setting up a serverless project with typescript lambda functions for AWS. I will help in setting up some ...",
         "thumbnails": {
           "default": {
-            "url": "https://i.ytimg.com/vi/k-we8VesHFo/default.jpg",
+            "url": "https://i.ytimg.com/vi/ktTPCJx7F1Q/default.jpg",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i.ytimg.com/vi/k-we8VesHFo/mqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ktTPCJx7F1Q/mqdefault.jpg",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i.ytimg.com/vi/k-we8VesHFo/hqdefault.jpg",
+            "url": "https://i.ytimg.com/vi/ktTPCJx7F1Q/hqdefault.jpg",
             "width": 480,
             "height": 360
           }
         },
-        "channelTitle": "Ashman Malhotra",
+        "channelTitle": "Leo Roese",
         "liveBroadcastContent": "none",
-        "publishTime": "2017-08-02T12:10:55Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "oSqUhP4G6Desws2EnLv83oPiW2k",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "J-bqJoE5IcA"
-      },
-      "snippet": {
-        "publishedAt": "2021-02-13T17:03:54Z",
-        "channelId": "UCE3Ay7LrWbJAOybaPvFkhmA",
-        "title": "Typescript Tutorial - Basic Project Setup and Tree Shaking",
-        "description": "In this video I introduce you to my Typescript Boiler Plate project, which is available via my Github. This Boiler Plate provides ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/J-bqJoE5IcA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/J-bqJoE5IcA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/J-bqJoE5IcA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Michael Breitung",
-        "liveBroadcastContent": "none",
-        "publishTime": "2021-02-13T17:03:54Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "P2A4j1DxBdOHntklMtPJSHPyE14",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "-ONUyenGnWw"
-      },
-      "snippet": {
-        "publishedAt": "2022-11-01T16:00:01Z",
-        "channelId": "UCFbNIlppjAuEX4znoulh0Cw",
-        "title": "This Is A Great Beginner React/TypeScript Project",
-        "description": "FREE React Hooks Course: https://courses.webdevsimplified.com/react-hooks-simplified Hangman is the perfect beginner React ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/-ONUyenGnWw/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/-ONUyenGnWw/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/-ONUyenGnWw/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Web Dev Simplified",
-        "liveBroadcastContent": "none",
-        "publishTime": "2022-11-01T16:00:01Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "-DVstIyHNJN4AkrAX61iVmGdoMc",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "VyEKwp6Q4fY"
-      },
-      "snippet": {
-        "publishedAt": "2021-04-05T13:45:17Z",
-        "channelId": "UCroJckuB_ohjtZUewCv0Ukw",
-        "title": "Using Sequelize With TypeScript: Basic Project Setup",
-        "description": "Sequelize #TypeScript In this video, we set up a project using Sequelize and TypeScript along with a Postgres database.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/VyEKwp6Q4fY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/VyEKwp6Q4fY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/VyEKwp6Q4fY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "willjw3",
-        "liveBroadcastContent": "none",
-        "publishTime": "2021-04-05T13:45:17Z"
+        "publishTime": "2021-05-28T21:30:04Z"
       }
     }
   ]

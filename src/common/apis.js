@@ -2,14 +2,13 @@ import { API_KEY } from './apiKey.js';
 import axios from 'axios';
 
 const BASE_URL =
-  // TODO: pageToken을 주소에 넣는 게 맞나??
-  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=24&order=viewCount&pageToken=CBkQAA';
+  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=24&order=viewCount';
 
 // 클론 코딩 관련 전체 리스트 가져오기
-export const allVideoList = () => {
+export const allVideoList = (pageToken) => {
   return axios.get(`/mockData/allList.json`).then((res) => res.data.items);
   // TODO: api로 변경시엔 이 부분 활용하기
-  // .get(`${BASE_URL}&q=클론 코딩하기&key=${API_KEY}`)
+  // .get(`${BASE_URL}&pageToken=${pageToken}&q=클론 코딩&key=${API_KEY}`)
   // .then((res) => res.data.items)
 };
 
