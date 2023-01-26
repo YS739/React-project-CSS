@@ -86,7 +86,9 @@ export default function Comment({ user }) {
           {new Date(user.date).toLocaleDateString('kr')}
         </CommentTime>
         <CommentGitIcon>
-          <BsGithub />
+          <a href={user.github}>
+            <BsGithub />
+          </a>
         </CommentGitIcon>
       </ListTitleSection>
       <ListTextSection>
