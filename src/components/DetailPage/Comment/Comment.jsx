@@ -64,7 +64,7 @@ export default function Comment({ user }) {
   // 여기에다 업데이트로직 짜기
   const completeHandler = async (user, comment) => {
     setEditBox(false);
-    await updateDoc(doc(db, 'test', user.id), { comment: comment });
+    await updateDoc(doc(db, 'comments', user.id), { comment: comment });
     setToggleBtn(false);
   };
 
@@ -92,11 +92,12 @@ export default function Comment({ user }) {
         <CommentNickname>{user.username}</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
         <CommentTime>
-          {/*  FIXME: timeago 라이브러리 사용해보기 (시간 남을때) */}
           {new Date(user.date).toLocaleDateString('kr')}
         </CommentTime>
         <CommentGitIcon>
-          <BsGithub />
+          <a href={user.github}>
+            <BsGithub />
+          </a>
         </CommentGitIcon>
       </ListTitleSection>
       <ListTextSection>

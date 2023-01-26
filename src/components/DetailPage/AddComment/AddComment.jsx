@@ -27,7 +27,7 @@ const AddComment = ({ video }) => {
   const [commentText, setCommentText] = useState('');
 
   const [username, setUsername] = useState('');
-  // const [videoId, setVideoId] = useState('');
+
   const AddGithubText = (e) => {
     setGithubText(e.target.value);
   };
@@ -50,7 +50,7 @@ const AddComment = ({ video }) => {
   // 기존 user 정보 가져오기
   const getInfoUsername = () => {
     const q = query(
-      collection(db, 'testUser'),
+      collection(db, 'user'),
       where('uid', '==', authService.currentUser.uid),
     );
     getDocs(q).then((querySnapshop) => {
@@ -67,7 +67,7 @@ const AddComment = ({ video }) => {
   // 데이터 올리기
 
   const AddCommentButton = async () => {
-    await addDoc(collection(db, 'test'), {
+    await addDoc(collection(db, 'comments'), {
       comment: commentText,
       github: githubText,
       username: username,
@@ -89,7 +89,7 @@ const AddComment = ({ video }) => {
                 <AddGitText>Github Link </AddGitText>
                 <AddGitInputDiv>
                   <AddInputGihub
-                    placeholder="선택사항입니다."
+                    placeholder="https:// 로 시작해주세요"
                     onChange={AddGithubText}
                     value={githubText}
                   />

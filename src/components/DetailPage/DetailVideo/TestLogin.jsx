@@ -28,7 +28,7 @@ export default function TestLogin() {
   const handleSignUp = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        setDoc(doc(db, 'testUser', res.user.uid), {
+        setDoc(doc(db, 'users', res.user.uid), {
           uid: res.user.uid,
           email: email,
           password: password,

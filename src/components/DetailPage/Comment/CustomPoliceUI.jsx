@@ -30,16 +30,17 @@ const ConfirmBody = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 100vw;
-  height: 200vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const ConfirmBox = styled.div`
   width: 350px;
   height: 200px;
-
   border-radius: 10px;
+  background-color: #ffffff;
 
   position: relative;
   bottom: 80px;

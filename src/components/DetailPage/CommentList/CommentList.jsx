@@ -9,7 +9,7 @@ export default function CommentList({ video }) {
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    const q = query(collection(db, 'test'), orderBy('date', 'desc'));
+    const q = query(collection(db, 'comments'), orderBy('date', 'desc'));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const newComments = snapshot.docs.map((doc) => ({
         id: doc.id,
