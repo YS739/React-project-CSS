@@ -96,7 +96,7 @@ const AddComment = ({ video }) => {
                 </AddGitInputDiv>
               </AddGitLink>
               <AddCommentText>
-                <AddCommentDiv>댓글 </AddCommentDiv>
+                <AddCommentDiv>댓글글 </AddCommentDiv>
                 <AddInputDiv>
                   <AddInputContent
                     onChange={AddCommentTextChange}
