@@ -44,7 +44,7 @@ export default function DetailVideo() {
       </DetailVideoContainer>
 
       <RecommendVideoBody>
-        {/* <RecommendVideo id={video.id.videoId} /> */}
+        <RecommendVideo videoId={video.id.videoId} />
       </RecommendVideoBody>
     </DetailPageBody>
   );
