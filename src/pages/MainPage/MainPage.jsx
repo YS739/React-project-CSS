@@ -8,7 +8,7 @@ import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 const MainPage = () => {
   const [keyword, setKeyword] = useState('');
   const [category, setCategory] = useState('');
-  const [nextPageToken, setNextPageToken] = useState('CBkQAA');
+  const [pageToken, setPageToken] = useState('CBkQAA');
 
   // 클론 코딩 관련 전체 리스트 불러오기
   const {
@@ -16,9 +16,7 @@ const MainPage = () => {
     data: allList,
     error,
     isError,
-  } = useQuery(['allVideoList', nextPageToken], () =>
-    allVideoList(nextPageToken),
-  );
+  } = useQuery(['allVideoList', pageToken], () => allVideoList(pageToken));
 
   console.log(allList);
 
@@ -31,8 +29,8 @@ const MainPage = () => {
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
   useEffect(() => {
-    allVideoList(nextPageToken);
-  }, [nextPageToken]);
+    allVideoList(pageToken);
+  }, [pageToken]);
 
   // TODO: 수정 필요?
   useEffect(() => {
@@ -45,9 +43,9 @@ const MainPage = () => {
   };
 
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
-  const searchedList = allList?.filter((item) =>
-    item.snippet.title.includes(keyword),
-  );
+  // const searchedList = allList?.filter((item) =>
+  //   item.snippet.title.includes(keyword),
+  // );
 
   // 검색 실행 함수 - 검색 버튼 눌렀을 때
   const searchHandler = (e) => {
@@ -66,9 +64,13 @@ const MainPage = () => {
     }
   };
 
-  // 페이지 불러오기 test
+  // 버튼
   const nextPageBtn = () => {
-    setNextPageToken(allList.nextPageToken);
+    setPageToken(allList.nextPageToken);
+  };
+
+  const prevPageBtn = () => {
+    setPageToken(allList.prevPageToken);
   };
 
   return (
@@ -90,16 +92,18 @@ const MainPage = () => {
           <p>{String(error)}</p>
         </>
       )}
-
-      {/* Page 버튼 - test*/}
-      <button>1</button>
-      <br />
-      <button onClick={nextPageBtn}>2</button>
-
+      {/* page 버튼 */}
+      {pageToken && <button onClick={prevPageBtn}>1</button>}
+      {pageToken && <button onClick={nextPageBtn}>2</button>}
       {/* VideoList 컴포넌트*/}
       <VideoSection>
+        <VideoBox>
+          {allList?.items.map((video) => (
+            <VideoList key={video.id['videoId']} video={video} />
+          ))}
+        </VideoBox>
         {/* TODO: 더 간단하게 리팩토링 가능? */}
-        {keyword ? (
+        {/* {keyword ? (
           <VideoBox>
             {searchedList?.map((video) => (
               <VideoList key={video.id['videoId']} video={video} />
@@ -108,7 +112,7 @@ const MainPage = () => {
         ) : category ? (
           <VideoBox>
             {/* categoryList - 로딩중이거나 에러가 생기면 화면에 표시 */}
-            {isLoadingCategory && <p>Loading...</p>}
+        {/* {isLoadingCategory && <p>Loading...</p>}
             {isErrorCategory && (
               <>
                 <p>Something is wrong.</p>
@@ -125,7 +129,7 @@ const MainPage = () => {
               <VideoList key={video.id['videoId']} video={video} />
             ))}
           </VideoBox>
-        )}
+        )} */}
       </VideoSection>
     </>
   );

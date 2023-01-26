@@ -6,11 +6,14 @@ const BASE_URL =
 
 // 클론 코딩 관련 전체 리스트 가져오기
 export const allVideoList = (pageToken) => {
-  return axios
-    .get(`${BASE_URL}&pageToken=${pageToken}&q=클론 코딩&key=${API_KEY}`)
-    .then((res) => res.data);
-  // mockData
+  return axios.get(`/mockData/allList.json`).then((res) => res.data);
+
+  // pagenation 안 할 때 mockData
   // .get(`/mockData/allList.json`).then((res) => res.data.items);
+
+  // pagenation 할 때 씀
+  // .get(`${BASE_URL}&pageToken=${pageToken}&q=클론 코딩&key=${API_KEY}`)
+  // .then((res) => res.data)
 
   // TODO: api로 변경시엔 이 부분 활용하기
   // .get(`${BASE_URL}&pageToken=${pageToken}&q=클론 코딩&key=${API_KEY}`)
