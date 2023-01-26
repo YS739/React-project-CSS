@@ -114,6 +114,7 @@ const SignUpPage = () => {
           <Input
             ref={emailRef}
             value={email}
+            placeholder={'css@gmail.com'}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
