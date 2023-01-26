@@ -12,10 +12,11 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
   getAuth,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithPopup,
   GoogleAuthProvider,
   GithubAuthProvider,
@@ -81,19 +82,6 @@ const LoginPage = () => {
       });
   };
 
-  // TODO: 배포하고 도메인 생기면 깃헙 생성
-  // git hub signin
-  const githubSignUpHandler = () => {
-    signInWithPopup(authService, new GithubAuthProvider())
-      .then(() => {
-        alert('회원가입이 완료되었습니다.');
-        navigate('/');
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
-
   return (
     <LoginContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
@@ -127,8 +115,7 @@ const LoginPage = () => {
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <Button onClick={googleSignUpHandler}>Google 로그인</Button>
-        {/* <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button> */}
+        <Button onClick={googleSignUpHandler}>구글 로그인</Button>
         <Button>Git Hub 로그인</Button>
       </SocialLogin>
     </LoginContainer>

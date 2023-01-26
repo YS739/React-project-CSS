@@ -6,7 +6,12 @@ import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';
 const Header = () => {
   // TODO: 네비게이트 적용 - 로고, 회원가입, 로그인 버튼 클릭 시
   const navigate = useNavigate();
+
+  const [user, setUser] = useState({});
   const auth = getAuth();
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
 
   const currentUser = auth.currentUser;
   const userNickName = currentUser?.displayName;
@@ -16,7 +21,6 @@ const Header = () => {
       .then(() => {
         alert('로그아웃되었습니다.');
         // Sign-out successful.
-        navigate('/');
       })
       .catch((error) => {
         // An error happened.
@@ -34,7 +38,7 @@ const Header = () => {
       <LoginToggle>
         {currentUser ? (
           <>
-            <Nav>{userNickName}님 </Nav>
+            <Nav>`${userNickName}님`</Nav>
             <Nav onClick={() => navigate('/my')}>마이페이지</Nav>
             <Nav onClick={LogOutHandler}>로그아웃</Nav>
           </>

@@ -17,4 +17,5 @@ export default Layout;
 const LayOut = styled.div`
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
 `;

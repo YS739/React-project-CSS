@@ -16,7 +16,6 @@ const Header = () => {
       .then(() => {
         alert('로그아웃되었습니다.');
         // Sign-out successful.
-        navigate('/');
       })
       .catch((error) => {
         // An error happened.
@@ -34,7 +33,7 @@ const Header = () => {
       <LoginToggle>
         {currentUser ? (
           <>
-            <Nav>{userNickName}님 </Nav>
+            <Nav>`${userNickName}님`</Nav>
             <Nav onClick={() => navigate('/my')}>마이페이지</Nav>
             <Nav onClick={LogOutHandler}>로그아웃</Nav>
           </>

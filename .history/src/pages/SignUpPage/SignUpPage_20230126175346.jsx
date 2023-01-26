@@ -118,7 +118,6 @@ const SignUpPage = () => {
               setEmail(e.target.value);
             }}
           />
-          {/* <Error>{}</Error> */}
         </Id>
         <Name>
           닉네임

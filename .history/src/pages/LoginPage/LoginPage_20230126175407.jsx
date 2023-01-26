@@ -12,10 +12,11 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import {
   getAuth,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithPopup,
   GoogleAuthProvider,
   GithubAuthProvider,
@@ -46,12 +47,14 @@ const LoginPage = () => {
     }
     return true;
   };
-  const loginHandler = () => {
+  const LoginHandler = () => {
     // 유효성 검사
     if (validateInputs() === false) {
       return;
     }
 
+    // 로그인 요청
+    // const auth = getAuth();
     console.log('유효성 검사 결과', validateInputs());
     signInWithEmailAndPassword(authService, email, password)
       .then(() => {
@@ -81,19 +84,15 @@ const LoginPage = () => {
       });
   };
 
-  // TODO: 배포하고 도메인 생기면 깃헙 생성
-  // git hub signin
-  const githubSignUpHandler = () => {
-    signInWithPopup(authService, new GithubAuthProvider())
-      .then(() => {
-        alert('회원가입이 완료되었습니다.');
-        navigate('/');
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
-
+  useEffect(() => {
+    onAuthStateChanged(authService, (user) => {
+      if (user) {
+        console.log('로그인 되어있음');
+      } else if (!user) {
+        console.log('로그인 안됨');
+      }
+    });
+  }, []);
   return (
     <LoginContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
@@ -120,15 +119,14 @@ const LoginPage = () => {
           />
         </Password>
       </Form>
-      <BlueButton onClick={loginHandler}>로그인</BlueButton>
+      <BlueButton onClick={LoginHandler}>로그인</BlueButton>
 
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <Button onClick={googleSignUpHandler}>Google 로그인</Button>
-        {/* <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button> */}
+        <Button>구글 로그인</Button>
         <Button>Git Hub 로그인</Button>
       </SocialLogin>
     </LoginContainer>
