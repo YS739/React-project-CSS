@@ -22,6 +22,7 @@ import {
   CommentPoliceBtn,
 } from './style';
 import CustomConfirmUI from './CustomConfirmUI';
+import CustomPoliceUI from './CustomPoliceUI';
 
 export default function Comment({ user }) {
   const [editBox, setEditBox] = useState(false);
@@ -72,6 +73,15 @@ export default function Comment({ user }) {
     confirmAlert({
       customUI: ({ onClose }) => {
         return <CustomConfirmUI onClose={onClose} id={id} />;
+      },
+    });
+  };
+
+  // 신고 버튼
+  const ClickPolice = (id) => {
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return <CustomPoliceUI onClose={onClose} id={id} />;
       },
     });
   };
@@ -136,7 +146,7 @@ export default function Comment({ user }) {
                 </UpdateDeleteBody>
               ) : (
                 <UpdateDeleteBody>
-                  <CommentPoliceBtn>
+                  <CommentPoliceBtn onClick={() => ClickPolice(user.id)}>
                     <BsFlag />
                     신고
                   </CommentPoliceBtn>
