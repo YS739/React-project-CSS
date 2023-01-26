@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BsGithub, BsPencil, BsFillTrashFill } from 'react-icons/bs';
+import { BsGithub, BsPencil, BsFillTrashFill, BsFlag } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
 import { db, authService } from '../../../common/firebase';
 import { doc, updateDoc } from 'firebase/firestore';
@@ -19,6 +19,7 @@ import {
   CommentIconBody,
   CommentEditInput,
   NoneDiv,
+  CommentPoliceBtn,
 } from './style';
 import CustomConfirmUI from './CustomConfirmUI';
 
@@ -27,8 +28,6 @@ export default function Comment({ user }) {
   const [editValue, setEditValue] = useState(user.comment);
   const [toggleBtn, setToggleBtn] = useState(false);
 
-  const currentUid = authService.currentUser.uid;
-
   const handleChange = (e) => {
     e.preventDefault();
 
@@ -36,12 +35,22 @@ export default function Comment({ user }) {
   };
 
   //  수정, 삭제 토글 버튼
+  // 유저에 따라 버튼 다르게
+  const [areYouUser, setAreYouUser] = useState(false);
+
   const ToggleDropDown = (uid) => {
-    if (uid === currentUid) {
-      setToggleBtn(true);
-      if (toggleBtn === true) {
-        setToggleBtn(false);
+    const currentUid = authService.currentUser.uid;
+
+    if (toggleBtn === false) {
+      if (uid === currentUid) {
+        setAreYouUser(true);
       }
+      setToggleBtn(true);
+    } else if (toggleBtn === true) {
+      if (uid === currentUid) {
+        setAreYouUser(false);
+      }
+      setToggleBtn(false);
     }
   };
 
@@ -94,34 +103,46 @@ export default function Comment({ user }) {
           <CommentIconBody>
             <GrMoreVertical onClick={() => ToggleDropDown(user.uid)} />
           </CommentIconBody>
-          {toggleBtn ? (
-            <UpdateDeleteBody>
-              {!editBox ? (
-                <CommentUpdateBtn
-                  onClick={() => {
-                    editHandler(user.comment);
-                  }}
-                >
-                  <BsPencil />
-                  수정
-                </CommentUpdateBtn>
-              ) : (
-                <CommentUpdateBtn
-                  onClick={() => completeHandler(user, editValue, user.uid)}
-                >
-                  완료
-                </CommentUpdateBtn>
-              )}
 
-              <CommentDeleteBtn
-                onClick={() => {
-                  deleteHandler(user.id);
-                }}
-              >
-                <BsFillTrashFill />
-                삭제
-              </CommentDeleteBtn>
-            </UpdateDeleteBody>
+          {toggleBtn ? (
+            <>
+              {areYouUser ? (
+                <UpdateDeleteBody>
+                  {!editBox ? (
+                    <CommentUpdateBtn
+                      onClick={() => {
+                        editHandler(user.comment);
+                      }}
+                    >
+                      <BsPencil />
+                      수정
+                    </CommentUpdateBtn>
+                  ) : (
+                    <CommentUpdateBtn
+                      onClick={() => completeHandler(user, editValue, user.uid)}
+                    >
+                      완료
+                    </CommentUpdateBtn>
+                  )}
+
+                  <CommentDeleteBtn
+                    onClick={() => {
+                      deleteHandler(user.id);
+                    }}
+                  >
+                    <BsFillTrashFill />
+                    삭제
+                  </CommentDeleteBtn>
+                </UpdateDeleteBody>
+              ) : (
+                <UpdateDeleteBody>
+                  <CommentPoliceBtn>
+                    <BsFlag />
+                    신고
+                  </CommentPoliceBtn>
+                </UpdateDeleteBody>
+              )}
+            </>
           ) : (
             <NoneDiv></NoneDiv>
           )}

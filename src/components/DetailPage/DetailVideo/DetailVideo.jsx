@@ -19,7 +19,7 @@ export default function DetailVideo() {
     state: { video },
   } = useLocation();
   const { title, channelId, channelTitle, description } = video.snippet;
-  console.log(video);
+  console.log('비디오', video);
   return (
     <DetailPageBody>
       <TestLogin />
@@ -39,7 +39,7 @@ export default function DetailVideo() {
           <DetailVideoDesc>{description}</DetailVideoDesc>
         </DetailVideoSection>
         <DetailCommentBody>
-          <AddComment />
+          <AddComment video={video} />
         </DetailCommentBody>
       </DetailVideoContainer>
 
