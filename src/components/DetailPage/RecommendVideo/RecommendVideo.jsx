@@ -14,7 +14,7 @@ const RecommendVideo = ({ videoId }) => {
       {isLoading && <p>Loading...</p>}
       {isError && (
         <>
-          <p>Something is wrong.</p>
+          <p>Something is wrong..</p>
         </>
       )}
       {recommendList?.map((video) => (
