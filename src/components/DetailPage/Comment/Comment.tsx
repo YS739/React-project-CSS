@@ -23,13 +23,15 @@ import {
 } from './style';
 import CustomConfirmUI from './CustomConfirmUI';
 import CustomPoliceUI from './CustomPoliceUI';
+import React, { ChangeEvent } from 'react';
 
-export default function Comment({ user }) {
+// TODO: any 수정하기
+const Comment: React.FC = ({ user }: any) => {
   const [editBox, setEditBox] = useState(false);
   const [editValue, setEditValue] = useState(user.comment);
   const [toggleBtn, setToggleBtn] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     e.preventDefault();
 
     setEditValue(e.target.value);
@@ -39,7 +41,8 @@ export default function Comment({ user }) {
   // 유저에 따라 버튼 다르게
   const [areYouUser, setAreYouUser] = useState(false);
 
-  const ToggleDropDown = (userId) => {
+  const ToggleDropDown = (userId: string) => {
+    // TODO: 수정하기
     const currentUid = authService.currentUser.uid;
 
     if (toggleBtn === false) {
@@ -55,21 +58,22 @@ export default function Comment({ user }) {
     }
   };
 
-  const editHandler = (comment) => {
+  const editHandler = (comment: string) => {
     setEditValue(comment);
     setEditBox(true);
   };
 
   //  TODO: 수정하고나서 완료 버튼 누를때 setTimeOust 설정해주기
   // 여기에다 업데이트로직 짜기
-  const completeHandler = async (user, comment) => {
+  // TODO: any 수정하기
+  const completeHandler = async (user: any, comment: string) => {
     setEditBox(false);
     await updateDoc(doc(db, 'comments', user.id), { comment: comment });
     setToggleBtn(false);
   };
 
   // 댓글 삭제
-  const deleteHandler = (id) => {
+  const deleteHandler = (id: string) => {
     confirmAlert({
       customUI: ({ onClose }) => {
         return <CustomConfirmUI onClose={onClose} id={id} />;
@@ -78,7 +82,7 @@ export default function Comment({ user }) {
   };
 
   // 신고 버튼
-  const ClickPolice = (id) => {
+  const ClickPolice = (id: string) => {
     confirmAlert({
       customUI: ({ onClose }) => {
         return <CustomPoliceUI onClose={onClose} id={id} />;
@@ -165,4 +169,6 @@ export default function Comment({ user }) {
       </ListTextSection>
     </>
   );
-}
+};
+
+export default Comment;

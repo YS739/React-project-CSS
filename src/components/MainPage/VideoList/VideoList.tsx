@@ -6,7 +6,8 @@ import KoLocale from 'timeago.js/lib/lang/ko';
 // 비디오 생성날짜 한국어로 표기하기
 register('ko', KoLocale);
 
-const VideoList = ({ video }) => {
+// TODO: any 수정하기
+const VideoList = ({ video }: any) => {
   const navigate = useNavigate();
 
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;

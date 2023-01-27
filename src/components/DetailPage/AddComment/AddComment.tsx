@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, ChangeEvent, MouseEvent } from 'react';
 import {
   AddCommentListWrap,
   AddCommentListAll,
@@ -20,9 +20,6 @@ import {
 import {
   collection,
   getDoc,
-  getDocs,
-  query,
-  where,
   doc,
   deleteDoc,
   setDoc,
@@ -34,33 +31,32 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { confirmAlert } from 'react-confirm-alert';
 import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
 
-const AddComment = ({ video }) => {
-  // console.log(video.items.snippet.thumbnails.url);
-  console.log(video.snippet.thumbnails.medium.url);
+//TODO: any 수정하기
+const AddComment: React.FC = ({ video }: any) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
-  // const [userName, setUsername] = useState('');
   const [bookmark, setBookmark] = useState(false);
   const [changeColor, setChangeColor] = useState('rgba(32, 82, 149, 0.6)');
-  const AddGithubText = (e) => {
+  const AddGithubText = (e: ChangeEvent<HTMLInputElement>) => {
     setGithubText(e.target.value);
   };
 
-  const AddCommentTextChange = (e) => {
+  const AddCommentTextChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCommentText(e.target.value);
   };
 
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUserName, setCurrentUserName] = useState<
+    string | null | undefined
+  >('');
+  const [currentUserUid, setCurrentUserUid] = useState<
+    string | null | undefined
+  >('');
 
   useEffect(() => {
-    // if (!authService.currentUser) return;
-    // if (!authService.currentUser.displayName) return;
     onAuthStateChanged(authService, (user) => {
       if (user) {
-        setCurrentUser(authService.currentUser);
-        console.log('유저', authService.currentUser);
-        // getInfoUsername();
-        console.log('Add Commnet 로그인 되어있음');
+        setCurrentUserName(authService.currentUser?.displayName);
+        setCurrentUserUid(authService.currentUser?.uid);
       } else if (!user) {
         console.log('로그인 안됨');
       }
@@ -68,40 +64,24 @@ const AddComment = ({ video }) => {
 
     // 북마크 정보 가져오기
     getBookmark();
-  }, [currentUser]);
-
-  // 기존 user 정보 가져오기
-  // const getInfoUsername = () => {
-  //   const q = query(
-  //     collection(db, 'users'),
-  //     where('userId', '==', authService.currentUser.userId),
-  //   );
-  //   getDocs(q).then((querySnapshop) => {
-  //     const userInfo = [];
-  //     querySnapshop.forEach((doc) => {
-  //       userInfo.push({
-  //         userName: doc.data().userName,
-  //       });
-  //       setUsername(userInfo[0].userName);
-  //     });
-  //   });
-  // };
+  }, [currentUserName, currentUserUid]);
 
   // 데이터 올리기
   const NewDate = new Date().toLocaleDateString('kr');
 
-  const AddCommentButton = async (e) => {
+  const AddCommentButton = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    const newComment: AddCommentJ = {
+      comment: commentText,
+      github: githubText,
+      userName: currentUserName,
+      videoId: video.id.videoId,
+      userId: currentUserUid,
+      createdAt: new Date(),
+      date: NewDate,
+    };
     if (commentText !== '') {
-      await addDoc(collection(db, 'comments'), {
-        comment: commentText,
-        github: githubText,
-        userName: currentUser.displayName,
-        videoId: video.id.videoId,
-        userId: currentUser.uid,
-        createdAt: new Date(),
-        date: NewDate,
-      });
+      await addDoc(collection(db, 'comments'), newComment);
       setGithubText('');
       setCommentText('');
     } else if (commentText === '') {
@@ -115,7 +95,7 @@ const AddComment = ({ video }) => {
 
   // 북마크 가져오기
   const getBookmark = async () => {
-    const newId = authService.currentUser?.userId + video.id.videoId;
+    const newId = currentUserUid + video.id.videoId;
     const docRef = doc(db, 'bookmark', newId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -126,7 +106,7 @@ const AddComment = ({ video }) => {
 
   // 북마크 저장
   const updateBookmark = async () => {
-    const newId = authService.currentUser?.userId + video.id.videoId;
+    const newId = currentUserUid + video.id.videoId;
     if (bookmark === false) {
       // 북마크가 되어있지 않을 경우 DB에 추가
       await setDoc(doc(db, 'bookmark', newId), {

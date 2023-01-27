@@ -4,9 +4,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { CategoryBox, Category, LeftIcon, RightIcon } from './style';
 import { color } from '../../../common/color';
+import React, { MouseEventHandler } from 'react';
 
 // 왼쪽, 오른쪽 화살표 커스텀
-const SampleNextArrow = (props) => {
+const SampleNextArrow: React.FC<{
+  onClick: MouseEventHandler<HTMLSpanElement>;
+}> = (props) => {
   const { onClick } = props;
   return (
     <LeftIcon onClick={onClick}>
@@ -15,7 +18,9 @@ const SampleNextArrow = (props) => {
   );
 };
 
-const SamplePrevArrow = (props) => {
+const SamplePrevArrow: React.FC<{
+  onClick: MouseEventHandler<HTMLSpanElement>;
+}> = (props) => {
   const { onClick } = props;
   return (
     <RightIcon onClick={onClick}>
