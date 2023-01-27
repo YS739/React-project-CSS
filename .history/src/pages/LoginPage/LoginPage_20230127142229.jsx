@@ -48,7 +48,6 @@ const LoginPage = () => {
   // 에러 나면 그곳에 커서 이동되도록
   const idRef = useRef(null);
   const pwRef = useRef(null);
-
   //* id (이메일)
   const onChangeId = (e) => {
     const currentId = e.target.value;
@@ -69,10 +68,9 @@ const LoginPage = () => {
     const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
     if (!pwRegex.test(currentPw)) {
-      setPwErrMsg('! 비밀번호를 다시 확인해주세요');
       setPwValid(true);
     } else {
-      setPwValid(false);
+      setPwValid(fasle);
     }
   };
 
@@ -89,7 +87,6 @@ const LoginPage = () => {
         const errorMessage = error.message;
         console.log('errorMessage', errorMessage);
         setError(errorMessage);
-        alert('! 계정을 다시 확인해주세요');
       });
   };
 
@@ -139,12 +136,15 @@ const LoginPage = () => {
           />
         </Id>
         <Error>
-          {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
+          {!emailValid && email.length > 0 && (
+            <div>! 이메일을 확인해주세요.</div>
+          )}
         </Error>
         <Password>
           비밀번호
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
+        <Error>{pwErrMsg}</Error>
       </Form>
       <BlueButton disabled={notAllow} onClick={onSubmit}>
         로그인

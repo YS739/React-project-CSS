@@ -26,13 +26,14 @@ const SignUpPage = () => {
   const [nickName, setNickName] = useState('');
   const [pw, setPw] = useState('');
   const [pwConfirm, setPwConfirm] = useState('');
-  const [error, setError] = useState('');
 
   // 에러 메시지
   const [idErrMsg, setIdErrMsg] = useState('');
   const [nickNameErrMsg, setNickNameErrMsg] = useState('');
   const [pwErrMsg, setPwErrMsg] = useState('');
-  const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
+  const [pwCheckErrMsg, setPwCheckErrMsg] = useState('');
+  // const [pwRegexErrMsg, setPwRegexErrMsg] = useState('');
+  // const [idRegexErrMsg, setIdRegexErrMsg] = useState('');
 
   // 유효성 검사
   const [isId, setIsId] = useState(false);
@@ -44,16 +45,20 @@ const SignUpPage = () => {
   const [notAllow, setNotAllow] = useState(true);
 
   // 에러 나면 그곳에 커서 이동되도록
-  const idRef = useRef(null);
+  const emailRef = useRef(null);
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
-  const pwConfirmRef = useRef(null);
+  const pwCheckRef = useRef(null);
+  // 정규식
+  const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  const passwordRegex =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
   // 회원가입 완료
-  const onSubmit = async (e) => {
+  const SignUpHandler = async (e) => {
     e.preventDefault();
 
-    await createUserWithEmailAndPassword(authService, id, pw)
+    await createUserWithEmailAndPassword(authService, email, password)
       .then(() => {
         console.log('회원가입 성공!');
         updateProfile(authService.currentUser, {
@@ -61,9 +66,9 @@ const SignUpPage = () => {
         })
           .then(() => {
             alert('회원가입이 완료되었습니다.');
-            setId('');
+            setEmail('');
             setNickName('');
-            setPw('');
+            setPassword('');
             navigate('/');
           })
           .catch((error) => {
@@ -73,9 +78,25 @@ const SignUpPage = () => {
           });
       })
       .catch((error) => {
-        setError(error.message);
-        alert('! 이미 존재하는 계정 입니다.');
-        console.log(error);
+        console.log(error.message);
+        if (error.message.includes('already-in-use')) {
+          alert('이미 사용중인 이메일입니다. 로그인 화면으로 이동합니다.');
+          navigate('/login');
+        }
+        // if (error.message.includes('invalid-email')) {
+        //   setIdErr('이메일을 확인해주세요');
+        //   emailRef.current.focus();
+        // }
+        if (email.match(emailRegex) === null) {
+          setIdRegexErr('이메일 형식에 맞게 입력해 주세요.');
+          emailRef.current.focus();
+        }
+        if (password.match(passwordRegex) === null) {
+          setPwRegexErr(
+            '비밀번호는 8자리 이상 영문자, 숫자, 특수문자 조합이어야 합니다.',
+          );
+          passwordRef.current.focus();
+        }
       });
   };
 
@@ -83,13 +104,13 @@ const SignUpPage = () => {
   const onChangeId = (e) => {
     const currentId = e.target.value;
     setId(currentId);
-    const idRegex =
+    const emailRegex =
       /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    if (!idRegex.test(currentId)) {
+    if (!emailRegex.test(currentId)) {
       setIdErrMsg('! 잘못된 이메일 주소입니다.');
       setIsId(false);
     } else {
-      setIdErrMsg('사용 가능합니다.');
+      setIdErrMsg('! 사용가능한 이메일입니다.');
       setIsId(true);
     }
   };
@@ -97,13 +118,13 @@ const SignUpPage = () => {
   //* 닉네임
   const onChangeNickName = (e) => {
     const currentNickName = e.target.value;
-    setNickName(currentNickName);
+    setName(currentNickName);
 
     if (currentNickName.length < 2 || currentNickName.length > 12) {
-      setNickNameErrMsg('! 2글자 이상, 12글자 미만으로만 사용할 수 있습니다.');
+      setNickNameMsg('! 2글자 이상, 12글자 미만으로만 사용할 수 있습니다.');
       setIsNickName(false);
     } else {
-      setNickNameErrMsg('사용 가능합니다.');
+      setNickNameMsg('! 사용 가능한 닉네임 입니다.');
       setIsNickName(true);
     }
   };
@@ -111,13 +132,14 @@ const SignUpPage = () => {
   const onChangePw = (e) => {
     const currentPw = e.target.value;
     setPw(currentPw);
-    const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+    const passwordRegExp =
+      /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
-    if (!pwRegex.test(currentPw)) {
-      setPwErrMsg('! 숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요.');
+    if (!passwordRegex.test(currentPw)) {
+      setPwMsg('숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요!');
       setIsPwConfirm(false);
     } else {
-      setPwErrMsg('사용 가능합니다.');
+      setPwMsg('! 사용 가능한 비밀번호에요.');
       setIsPw(true);
     }
   };
@@ -126,11 +148,11 @@ const SignUpPage = () => {
   const onChangePwConfirm = (e) => {
     const currentPwConfirm = e.target.value;
     setPwConfirm(currentPwConfirm);
-    if (pw === currentPwConfirm) {
-      setPwConfirmErrMsg('일치합니다.');
+    if (password === currentPwConfirm) {
+      setPwConfirmMsg('! 비밀번호가 일치합니다.');
       setIsPwConfirm(true);
     } else {
-      setPwConfirmErrMsg('! 비밀번호가 일치하지 않습니다.');
+      setPwConfirmMsg('! 비밀번호가 일치하지 않아요. 다시 입력해주세요.');
       setIsPwConfirm(false);
     }
   };
@@ -152,7 +174,7 @@ const SignUpPage = () => {
           <Input
             name="id"
             type="email"
-            ref={idRef}
+            ref={emailRef}
             value={id}
             onChange={onChangeId}
           />
@@ -164,6 +186,7 @@ const SignUpPage = () => {
             </span>
           )}
         </Error>
+        <Error>{idErrMsg}</Error>
         <Name>
           닉네임
           <Input
@@ -178,10 +201,11 @@ const SignUpPage = () => {
 
         <Password>
           비밀번호
+          {/* FIXME: 비밀번호가 안 가려진다 */}
           <Input
             name="password"
             type="password"
-            ref={pwRef}
+            ref={passwordRef}
             value={pw}
             onChange={onChangePw}
           />
@@ -193,16 +217,14 @@ const SignUpPage = () => {
           <Input
             name="password"
             type="password"
-            ref={pwConfirmRef}
+            ref={passwordCheckRef}
             value={pwConfirm}
             onChange={onChangePwConfirm}
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
       </Form>
-      <BlueButton disabled={notAllow} onClick={onSubmit}>
-        회원가입
-      </BlueButton>
+      <BlueButton disabled={notAllow}>회원가입</BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>

@@ -13,7 +13,7 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -27,14 +27,9 @@ const LoginPage = () => {
   // TODO: 헤더는 사라져야함
   const navigate = useNavigate();
 
-  // 초기값 세팅 - 이메일, 비밀번호
+  // 초기값 세팅 - 이메일, 닉네임, 비밀번호, 비밀번호 확인
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
-  // const [user, setUser] = useState({});
-  // 유효성 값 초기화...?
-  const [idValid, setIdValid] = useState(false);
-  const [pwValid, setPwValid] = useState(false);
-  const [notAllow, setNotAllow] = useState(false);
   const [error, setError] = useState('');
 
   // 에러 메시지
@@ -45,38 +40,15 @@ const LoginPage = () => {
   const [isId, setIsId] = useState(false);
   const [isPw, setIsPw] = useState(false);
 
+  // 회원가입 버튼 활성화
+  const [notAllow, setNotAllow] = useState(true);
+
   // 에러 나면 그곳에 커서 이동되도록
   const idRef = useRef(null);
   const pwRef = useRef(null);
 
-  //* id (이메일)
-  const onChangeId = (e) => {
-    const currentId = e.target.value;
-    setId(currentId);
-    const idRegex =
-      /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    if (idRegex.test(currentId)) {
-      setIdValid(true);
-    } else {
-      setIdValid(false);
-    }
-  };
-
-  //* 비밀번호
-  const onChangePw = (e) => {
-    const currentPw = e.target.value;
-    setPw(currentPw);
-    const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
-
-    if (!pwRegex.test(currentPw)) {
-      setPwErrMsg('! 비밀번호를 다시 확인해주세요');
-      setPwValid(true);
-    } else {
-      setPwValid(false);
-    }
-  };
-
   const onSubmit = async () => {
+    console.log('유효성 검사 결과', validateInputs());
     await signInWithEmailAndPassword(authService, id, pw)
       .then(() => {
         // Signed in
@@ -88,9 +60,37 @@ const LoginPage = () => {
       .catch((error) => {
         const errorMessage = error.message;
         console.log('errorMessage', errorMessage);
-        setError(errorMessage);
-        alert('! 계정을 다시 확인해주세요');
       });
+  };
+
+  //* id (이메일)
+  const onChangeId = (e) => {
+    const currentId = e.target.value;
+    setId(currentId);
+    const idRegex =
+      /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (!idRegex.test(currentId)) {
+      setIdErrMsg('! 잘못된 이메일 주소입니다.');
+      setIsId(false);
+    } else {
+      setIdErrMsg('사용 가능합니다.');
+      setIsId(true);
+    }
+  };
+
+  //* 비밀번호
+  const onChangePw = (e) => {
+    const currentPw = e.target.value;
+    setPw(currentPw);
+    const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
+    if (!pwRegex.test(currentPw)) {
+      setPwErrMsg('! 숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요.');
+      setIsPwConfirm(false);
+    } else {
+      setPwErrMsg('사용 가능합니다.');
+      setIsPw(true);
+    }
   };
 
   // google signin
@@ -118,7 +118,7 @@ const LoginPage = () => {
   };
 
   useEffect(() => {
-    if (id.length === 0 || pw.length === 0) {
+    if (isId && isPw) {
       setNotAllow(false);
       return;
     }
@@ -139,12 +139,17 @@ const LoginPage = () => {
           />
         </Id>
         <Error>
-          {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
+          {id.length > 0 && (
+            <span className={`message ${isId ? 'success' : 'error'}`}>
+              {idErrMsg}
+            </span>
+          )}
         </Error>
         <Password>
           비밀번호
-          <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
+          <Input ref={pwRef} value={pw} onChange={onChangePw} />
         </Password>
+        <Error>{pwErrMsg}</Error>
       </Form>
       <BlueButton disabled={notAllow} onClick={onSubmit}>
         로그인

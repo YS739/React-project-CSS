@@ -69,7 +69,6 @@ const LoginPage = () => {
     const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
     if (!pwRegex.test(currentPw)) {
-      setPwErrMsg('! 비밀번호를 다시 확인해주세요');
       setPwValid(true);
     } else {
       setPwValid(false);
@@ -89,7 +88,6 @@ const LoginPage = () => {
         const errorMessage = error.message;
         console.log('errorMessage', errorMessage);
         setError(errorMessage);
-        alert('! 계정을 다시 확인해주세요');
       });
   };
 
@@ -145,6 +143,7 @@ const LoginPage = () => {
           비밀번호
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
+        <Error>{pwErrMsg}</Error>
       </Form>
       <BlueButton disabled={notAllow} onClick={onSubmit}>
         로그인

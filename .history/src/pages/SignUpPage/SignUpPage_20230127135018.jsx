@@ -33,6 +33,8 @@ const SignUpPage = () => {
   const [nickNameErrMsg, setNickNameErrMsg] = useState('');
   const [pwErrMsg, setPwErrMsg] = useState('');
   const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
+  // const [pwRegexErrMsg, setPwRegexErrMsg] = useState('');
+  // const [idRegexErrMsg, setIdRegexErrMsg] = useState('');
 
   // 유효성 검사
   const [isId, setIsId] = useState(false);
@@ -41,13 +43,17 @@ const SignUpPage = () => {
   const [isNickName, setIsNickName] = useState(false);
 
   // 회원가입 버튼 활성화
-  const [notAllow, setNotAllow] = useState(true);
+  const [notAllow, setNotAllow] = useState(false);
 
   // 에러 나면 그곳에 커서 이동되도록
   const idRef = useRef(null);
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
   const pwConfirmRef = useRef(null);
+  // 정규식
+  // const idRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  // const pwRegex =
+  //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
   // 회원가입 완료
   const onSubmit = async (e) => {
@@ -200,9 +206,7 @@ const SignUpPage = () => {
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
       </Form>
-      <BlueButton disabled={notAllow} onClick={onSubmit}>
-        회원가입
-      </BlueButton>
+      <BlueButton disabled={notAllow}>회원가입</BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>

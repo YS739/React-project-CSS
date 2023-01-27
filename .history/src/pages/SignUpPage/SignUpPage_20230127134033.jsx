@@ -33,6 +33,8 @@ const SignUpPage = () => {
   const [nickNameErrMsg, setNickNameErrMsg] = useState('');
   const [pwErrMsg, setPwErrMsg] = useState('');
   const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
+  // const [pwRegexErrMsg, setPwRegexErrMsg] = useState('');
+  // const [idRegexErrMsg, setIdRegexErrMsg] = useState('');
 
   // 유효성 검사
   const [isId, setIsId] = useState(false);
@@ -48,6 +50,10 @@ const SignUpPage = () => {
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
   const pwConfirmRef = useRef(null);
+  // 정규식
+  // const idRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  // const pwRegex =
+  //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
   // 회원가입 완료
   const onSubmit = async (e) => {
@@ -74,7 +80,7 @@ const SignUpPage = () => {
       })
       .catch((error) => {
         setError(error.message);
-        alert('! 이미 존재하는 계정 입니다.');
+        alert('이미 존재하는 계정 입니다.');
         console.log(error);
       });
   };
@@ -89,7 +95,7 @@ const SignUpPage = () => {
       setIdErrMsg('! 잘못된 이메일 주소입니다.');
       setIsId(false);
     } else {
-      setIdErrMsg('사용 가능합니다.');
+      setIdErrMsg('! 사용가능한 이메일입니다.');
       setIsId(true);
     }
   };
@@ -103,7 +109,7 @@ const SignUpPage = () => {
       setNickNameErrMsg('! 2글자 이상, 12글자 미만으로만 사용할 수 있습니다.');
       setIsNickName(false);
     } else {
-      setNickNameErrMsg('사용 가능합니다.');
+      setNickNameErrMsg('! 사용 가능한 닉네임 입니다.');
       setIsNickName(true);
     }
   };
@@ -114,10 +120,10 @@ const SignUpPage = () => {
     const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
     if (!pwRegex.test(currentPw)) {
-      setPwErrMsg('! 숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요.');
+      setPwErrMsg('숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요!');
       setIsPwConfirm(false);
     } else {
-      setPwErrMsg('사용 가능합니다.');
+      setPwErrMsg('! 사용 가능한 비밀번호에요.');
       setIsPw(true);
     }
   };
@@ -127,10 +133,10 @@ const SignUpPage = () => {
     const currentPwConfirm = e.target.value;
     setPwConfirm(currentPwConfirm);
     if (pw === currentPwConfirm) {
-      setPwConfirmErrMsg('일치합니다.');
+      setPwConfirmErrMsg('! 비밀번호가 일치합니다.');
       setIsPwConfirm(true);
     } else {
-      setPwConfirmErrMsg('! 비밀번호가 일치하지 않습니다.');
+      setPwConfirmErrMsg('! 비밀번호가 일치하지 않아요. 다시 입력해주세요.');
       setIsPwConfirm(false);
     }
   };
@@ -164,6 +170,7 @@ const SignUpPage = () => {
             </span>
           )}
         </Error>
+        {/* <Error>{idErrMsg}</Error> */}
         <Name>
           닉네임
           <Input
@@ -178,6 +185,7 @@ const SignUpPage = () => {
 
         <Password>
           비밀번호
+          {/* FIXME: 비밀번호가 안 가려진다 */}
           <Input
             name="password"
             type="password"
@@ -200,9 +208,7 @@ const SignUpPage = () => {
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
       </Form>
-      <BlueButton disabled={notAllow} onClick={onSubmit}>
-        회원가입
-      </BlueButton>
+      <BlueButton disabled={notAllow}>회원가입</BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>

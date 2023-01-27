@@ -33,6 +33,8 @@ const SignUpPage = () => {
   const [nickNameErrMsg, setNickNameErrMsg] = useState('');
   const [pwErrMsg, setPwErrMsg] = useState('');
   const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
+  // const [pwRegexErrMsg, setPwRegexErrMsg] = useState('');
+  // const [idRegexErrMsg, setIdRegexErrMsg] = useState('');
 
   // 유효성 검사
   const [isId, setIsId] = useState(false);
@@ -48,6 +50,10 @@ const SignUpPage = () => {
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
   const pwConfirmRef = useRef(null);
+  // 정규식
+  // const idRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  // const pwRegex =
+  //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
   // 회원가입 완료
   const onSubmit = async (e) => {
