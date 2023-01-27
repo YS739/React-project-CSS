@@ -1,4 +1,4 @@
-import { API_KEY } from './apikey';
+import { API_KEY } from './apiKey';
 import axios from 'axios';
 
 const BASE_URL =
