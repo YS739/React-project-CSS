@@ -89,15 +89,17 @@ export default function Comment({ user }) {
   return (
     <>
       <ListTitleSection>
-        <CommentNickname>{user.username}</CommentNickname>
+        <CommentNickname>{user.userName}</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
-        <CommentTime>
-          {new Date(user.date).toLocaleDateString('kr')}
-        </CommentTime>
+        <CommentTime>{user.date}</CommentTime>
         <CommentGitIcon>
-          <a href={user.github}>
-            <BsGithub />
-          </a>
+          {user.github !== '' ? (
+            <a href={user.github} target="_blank" title={user.github}>
+              <BsGithub svg color="black" />
+            </a>
+          ) : (
+            <div></div>
+          )}
         </CommentGitIcon>
       </ListTitleSection>
       <ListTextSection>

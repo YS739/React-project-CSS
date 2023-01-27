@@ -31,6 +31,8 @@ const MyComments = () => {
       commentList.push({
         userId: doc.data().userId,
         comment: doc.data().comment,
+        github: doc.data().github,
+        date: doc.data().date,
       });
     });
     setComments(commentList);
@@ -38,21 +40,21 @@ const MyComments = () => {
 
   return (
     <div>
-      {comments.map((x) => {
+      {comments.map((comment) => {
         return (
-          <CommentContainer>
+          <CommentContainer key={comment.id}>
             <CommentInfo>
               <CommentNickName>{userNickname}</CommentNickName>
-              <CommentDate>2023.01.20</CommentDate>
-              <GitHubIcon href="https://github.com/" target="_blank">
-                <FaGithub size={23} />
-              </GitHubIcon>
+              <CommentDate>{comment.date}</CommentDate>
+              {comment.github.length > 0 ? (
+                <GitHubIcon href={comment.github} target="_blank">
+                  <FaGithub size={23} />
+                </GitHubIcon>
+              ) : (
+                ''
+              )}
             </CommentInfo>
-            <CommentContents>
-              clone coding하면서 refactoring 좀 해 봤어요 refactoring 좀 해
-              봤어요 refactoring 좀 해 봤어요 ! clone coding하면서 refactoring
-              좀 해 봤어요 refactoring 좀 해 봤어요 refactoring 좀 해 봤어요 !
-            </CommentContents>
+            <CommentContents>{comment.comment}</CommentContents>
           </CommentContainer>
         );
       })}
