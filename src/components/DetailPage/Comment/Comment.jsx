@@ -39,16 +39,16 @@ export default function Comment({ user }) {
   // 유저에 따라 버튼 다르게
   const [areYouUser, setAreYouUser] = useState(false);
 
-  const ToggleDropDown = (uid) => {
+  const ToggleDropDown = (userId) => {
     const currentUid = authService.currentUser.uid;
 
     if (toggleBtn === false) {
-      if (uid === currentUid) {
+      if (userId === currentUid) {
         setAreYouUser(true);
       }
       setToggleBtn(true);
     } else if (toggleBtn === true) {
-      if (uid === currentUid) {
+      if (userId === currentUid) {
         setAreYouUser(false);
       }
       setToggleBtn(false);
@@ -114,7 +114,7 @@ export default function Comment({ user }) {
         )}
         <CommentTextIcon>
           <CommentIconBody>
-            <GrMoreVertical onClick={() => ToggleDropDown(user.uid)} />
+            <GrMoreVertical onClick={() => ToggleDropDown(user.userId)} />
           </CommentIconBody>
 
           {toggleBtn ? (
@@ -132,7 +132,9 @@ export default function Comment({ user }) {
                     </CommentUpdateBtn>
                   ) : (
                     <CommentUpdateBtn
-                      onClick={() => completeHandler(user, editValue, user.uid)}
+                      onClick={() =>
+                        completeHandler(user, editValue, user.userId)
+                      }
                     >
                       완료
                     </CommentUpdateBtn>
