@@ -10,7 +10,7 @@ const Header = () => {
 
   const currentUser = auth.currentUser;
   const userNickName = currentUser?.displayName;
-  // 로그아웃
+  // // 로그아웃
   const LogOutHandler = async () => {
     await signOut(auth)
       .then(() => {
