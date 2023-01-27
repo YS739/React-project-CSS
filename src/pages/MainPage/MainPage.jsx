@@ -18,7 +18,7 @@ const MainPage = () => {
     error,
     isError,
   } = useQuery(['allVideoList', pageToken], () => allVideoList(pageToken));
-  // console.log(allList?.nextPageToken);
+
   // 카테고리별 리스트 불러오기
   const {
     isLoading: isLoadingCategory,
@@ -27,7 +27,6 @@ const MainPage = () => {
     isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
-  // FIXME: 계속 데이터를 불러오는 것 같음
   useEffect(() => {}, [pageToken]);
 
   useEffect(() => {}, [category]);
@@ -68,13 +67,16 @@ const MainPage = () => {
   //   setPageToken(allList.prevPageToken);
   // };
 
+  const {} = useQuery;
+
   // observer api
   const observer = useRef(
     new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          const videoContainer = document.getElementById('videoBox');
+
           alert('안녕');
-          // setPageToken(allList?.nextPageToken);
         }
       },
       { threshold: 1 },
@@ -116,7 +118,7 @@ const MainPage = () => {
       {/* Page 이동버튼 */}
       {/* {pageToken && <button onClick={prevPageBtn}>1</button>}
       {allList?.nextPageToken && <button onClick={nextPageBtn}>2</button>} */}
-      {/* VideoList 컴포넌트*/}
+      {/* VideoList 컴포넌트 */}
       <VideoSection>
         {/* TODO: 더 간단하게 리팩토링 가능? */}
         {keyword ? (
@@ -140,11 +142,13 @@ const MainPage = () => {
             ))}
           </VideoBox>
         ) : (
-          <VideoBox>
+          <VideoBox id="videoBox">
             {allList?.items.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
+              <>
+                <VideoList key={video.id['videoId']} video={video} />
+                <div id="nextList" ref={setObservationTarget}></div>
+              </>
             ))}
-            <div ref={setObservationTarget}></div>
           </VideoBox>
         )}
       </VideoSection>
