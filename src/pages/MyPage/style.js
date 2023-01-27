@@ -34,6 +34,8 @@ export const NickNameContainer = styled.div`
 export const InputCheckContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  height: 63px;
 `;
 
 export const GithubContainer = styled.div``;
@@ -42,7 +44,7 @@ export const MyPageTagTitle = styled.div`
   font-weight: 600;
 `;
 
-export const MyInfoInput = styled.input`
+export const MyInfoInput = styled.div`
   border: none;
   border-bottom: 0.6px solid #c6c6c6;
   min-width: 200px;
@@ -99,7 +101,7 @@ export const TabItem = styled(Tab)`
   width: 410px;
   height: 26px;
   margin-right: 4px;
-  border: 2px solid #205295;
+  border: 1px solid #205295;
   border-radius: 7px;
   color: #205295;
   font-weight: 600;
@@ -111,10 +113,7 @@ export const TabItem = styled(Tab)`
   &.is-selected {
     background: #205295;
     color: #fff;
-    border: none;
-    height: 30px;
   }
-
   &:focus {
     outline: none;
   }
@@ -142,20 +141,18 @@ TabsPanel.tabsRole = 'TabPanel';
 export const TabContents = styled.div`
   border: 1px solid #205295;
   border-radius: 7px;
-  width: 100%;
-  max-width: 745px;
+  width: 845px;
   height: 520px;
-  padding: 10px 50px 40px;
+  padding: 10px 20px;
   overflow: scroll;
   margin-top: 10px;
+  box-sizing: border-box;
 
   @media screen and (max-width: 1300px) {
-    max-width: 500px;
-    padding: 10px 75px 40px;
+    max-width: 645px;
   }
 
   @media screen and (max-width: 1000px) {
-    max-width: 270px;
-    margin: 20px 80px;
+    max-width: 425px;
   }
 `;

@@ -113,6 +113,8 @@ export const CommentDeleteBtn = styled.button`
 `;
 
 export const CommentUpdateBtn = styled(CommentDeleteBtn)``;
+export const CommentPoliceBtn = styled(CommentDeleteBtn)``;
+
 export const NoneDiv = styled.div`
   display: none;
 `;

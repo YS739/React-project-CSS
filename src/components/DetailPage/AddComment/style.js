@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { BsFillBookmarkFill } from 'react-icons/bs';
 
 export const AddCommentListAll = styled.div`
   width: 100%;
-  height: 20%;
+  height: 25%;
   margin-top: 1%;
   display: flex;
   justify-content: space-between;
@@ -49,6 +50,8 @@ export const AddGitText = styled.div`
   align-items: center;
   width: 12%;
   height: 50%;
+
+  font-size: 1.1rem;
   font-weight: 700;
 `;
 
@@ -70,6 +73,8 @@ export const AddCommentDiv = styled.div`
   align-items: center;
   height: 100%;
   width: 13.5%;
+
+  font-size: 1.2rem;
   font-weight: 700;
 `;
 
@@ -93,7 +98,7 @@ export const AddIcornBtn = styled.button`
 
 export const AddInputGihub = styled.input`
   width: 95%;
-  height: 50%;
+  height: 65%;
 
   font-weight: 600;
 
@@ -108,7 +113,7 @@ export const AddInputGihub = styled.input`
 `;
 
 export const AddInputContent = styled(AddInputGihub)`
-  height: 100%;
+  height: 105%;
   font-size: 1.15rem;
   font-weight: 600;
 `;
@@ -116,7 +121,7 @@ export const AddInputContent = styled(AddInputGihub)`
 export const AddCommentBtnDiv = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-right: 3.5%;
+  margin-right: 4.5%;
   margin-top: 2%;
 `;
 
@@ -138,5 +143,14 @@ export const AddCommentBtn = styled.button`
     color: white;
     border-radius: 5px;
     border: none;
+  }
+`;
+
+export const BookMark = styled(BsFillBookmarkFill)`
+  /* color: rgba(32, 82, 149, 0.6); */
+  /* color: white; */
+  /* border: 1px solid; */
+  :hover {
+    color: red;
   }
 `;
