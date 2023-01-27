@@ -78,17 +78,21 @@ const AddComment = ({ video }) => {
   };
 
   // 데이터 올리기
-  const AddCommentButton = async () => {
-    await setDoc(collection(db, 'comments'), {
-      comment: commentText,
-      github: githubText,
-      username: username,
-      videoId: video.id.videoId,
-      uid: authService.currentUser?.uid,
-      date: Date.now(),
-    });
-    setGithubText('');
-    setCommentText('');
+
+  const AddCommentButton = async (e) => {
+    e.preventDefault();
+    if (commentText !== '') {
+      await addDoc(collection(db, 'comments'), {
+        comment: commentText,
+        github: githubText,
+        username: username,
+        videoId: video.id.videoId,
+        uid: authService.currentUser?.uid,
+        date: Date.now(),
+      });
+      setGithubText('');
+      setCommentText('');
+    }
   };
 
   // 북마크 가져오기
