@@ -37,7 +37,7 @@ import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
 const AddComment = ({ video }) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
-  const [username, setUsername] = useState('');
+  const [userName, setUsername] = useState('');
   const [bookmark, setBookmark] = useState(false);
   const [changeColor, setChangeColor] = useState('rgba(32, 82, 149, 0.6)');
   const AddGithubText = (e) => {
@@ -66,15 +66,15 @@ const AddComment = ({ video }) => {
   const getInfoUsername = () => {
     const q = query(
       collection(db, 'users'),
-      where('uid', '==', authService.currentUser.uid),
+      where('userId', '==', authService.currentUser.userId),
     );
     getDocs(q).then((querySnapshop) => {
       const userInfo = [];
       querySnapshop.forEach((doc) => {
         userInfo.push({
-          username: doc.data().username,
+          userName: doc.data().userName,
         });
-        setUsername(userInfo[0].username);
+        setUsername(userInfo[0].userName);
       });
     });
   };
@@ -88,9 +88,9 @@ const AddComment = ({ video }) => {
       await addDoc(collection(db, 'comments'), {
         comment: commentText,
         github: githubText,
-        username: username,
+        userName: userName,
         videoId: video.id.videoId,
-        uid: authService.currentUser?.uid,
+        userId: authService.currentUser?.userId,
         date: NewDate,
       });
       setGithubText('');
@@ -106,7 +106,7 @@ const AddComment = ({ video }) => {
 
   // 북마크 가져오기
   const getBookmark = async () => {
-    const newId = authService.currentUser?.uid + video.id.videoId;
+    const newId = authService.currentUser?.userId + video.id.videoId;
     const docRef = doc(db, 'bookmark', newId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -117,12 +117,12 @@ const AddComment = ({ video }) => {
 
   // 북마크 저장
   const updateBookmark = async () => {
-    const newId = authService.currentUser?.uid + video.id.videoId;
+    const newId = authService.currentUser?.userId + video.id.videoId;
     if (bookmark === false) {
       // 북마크가 되어있지 않을 경우 DB에 추가
       await setDoc(doc(db, 'bookmark', newId), {
         videoId: video.id.videoId,
-        uid: authService.currentUser?.uid,
+        userId: authService.currentUser?.userId,
       });
 
       setBookmark(true);

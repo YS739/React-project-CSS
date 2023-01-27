@@ -89,7 +89,7 @@ export default function Comment({ user }) {
   return (
     <>
       <ListTitleSection>
-        <CommentNickname>{user.username}</CommentNickname>
+        <CommentNickname>{user.userName}</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
         <CommentTime>
           {new Date(user.date).toLocaleDateString('kr')}
