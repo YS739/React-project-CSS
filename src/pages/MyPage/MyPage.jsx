@@ -98,7 +98,7 @@ const MyPage = () => {
             <InputCheckContainer>
               <MyInfoInput>{userName}</MyInfoInput>
               <MyInfoEditButton onClick={openUserNameModal}>
-                수정
+                수정정
               </MyInfoEditButton>
               {modalOpen && (
                 <EditModal
