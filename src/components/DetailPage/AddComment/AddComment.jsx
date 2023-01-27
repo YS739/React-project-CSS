@@ -64,7 +64,7 @@ const AddComment = ({ video }) => {
   const getInfoUsername = () => {
     const q = query(
       collection(db, 'users'),
-      where('uid', '==', authService.currentUser.uid),
+      where('userId', '==', authService.currentUser.userId),
     );
     getDocs(q).then((querySnapshop) => {
       const userInfo = [];
@@ -87,7 +87,7 @@ const AddComment = ({ video }) => {
         github: githubText,
         username: username,
         videoId: video.id.videoId,
-        uid: authService.currentUser?.uid,
+        userId: authService.currentUser?.userId,
         date: Date.now(),
       });
       setGithubText('');
@@ -103,7 +103,7 @@ const AddComment = ({ video }) => {
 
   // 북마크 가져오기
   const getBookmark = async () => {
-    const newId = authService.currentUser?.uid + video.id.videoId;
+    const newId = authService.currentUser?.userId + video.id.videoId;
     const docRef = doc(db, 'bookmark', newId);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
@@ -114,12 +114,12 @@ const AddComment = ({ video }) => {
 
   // 북마크 저장
   const updateBookmark = async () => {
-    const newId = authService.currentUser?.uid + video.id.videoId;
+    const newId = authService.currentUser?.userId + video.id.videoId;
     if (bookmark === false) {
       // 북마크가 되어있지 않을 경우 DB에 추가
       await setDoc(doc(db, 'bookmark', newId), {
         videoId: video.id.videoId,
-        uid: authService.currentUser?.uid,
+        userId: authService.currentUser?.userId,
       });
 
       setBookmark(true);
