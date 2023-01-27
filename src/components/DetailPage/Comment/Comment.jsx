@@ -1,15 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BsGithub, BsPencil, BsFillTrashFill, BsFlag } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
 import { db, authService } from '../../../common/firebase';
-import {
-  collection,
-  doc,
-  getDocs,
-  query,
-  updateDoc,
-  where,
-} from 'firebase/firestore';
+import { doc, updateDoc } from 'firebase/firestore';
 import { confirmAlert } from 'react-confirm-alert';
 import {
   ListTitleSection,
@@ -30,7 +23,6 @@ import {
 } from './style';
 import CustomConfirmUI from './CustomConfirmUI';
 import CustomPoliceUI from './CustomPoliceUI';
-import { onAuthStateChanged } from 'firebase/auth';
 
 export default function Comment({ user }) {
   const [editBox, setEditBox] = useState(false);

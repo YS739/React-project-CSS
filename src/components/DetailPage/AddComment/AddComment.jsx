@@ -31,6 +31,8 @@ import {
 import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
+import { confirmAlert } from 'react-confirm-alert';
+import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
 
 const AddComment = ({ video }) => {
   const [githubText, setGithubText] = useState('');
@@ -78,6 +80,7 @@ const AddComment = ({ video }) => {
   };
 
   // 데이터 올리기
+  const NewDate = new Date().toLocaleDateString('kr');
 
   const AddCommentButton = async (e) => {
     e.preventDefault();
@@ -88,16 +91,16 @@ const AddComment = ({ video }) => {
         username: username,
         videoId: video.id.videoId,
         uid: authService.currentUser?.uid,
-        date: Date.now(),
+        date: NewDate,
       });
       setGithubText('');
       setCommentText('');
-    }
-    // if (githubText == '') {
-    //    useGithubLinkText()
-    // }
-    if (commentText == '') {
-      alert('댓글 입력은 필수입니다!');
+    } else if (commentText === '') {
+      confirmAlert({
+        customUI: ({ onClose }) => {
+          return <CustomAddBtnAlertUI onClose={onClose} />;
+        },
+      });
     }
   };
 

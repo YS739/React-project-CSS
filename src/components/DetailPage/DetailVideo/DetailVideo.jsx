@@ -19,7 +19,7 @@ export default function DetailVideo() {
     state: { video },
   } = useLocation();
   const { title, channelTitle, thumbnails } = video.snippet;
-  console.log('비디오', video);
+
   return (
     <DetailPageBody>
       <DetailVideoContainer>
