@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { BsBookmark } from 'react-icons/bs';
 import {
   AddCommentListWrap,
   AddCommentListAll,

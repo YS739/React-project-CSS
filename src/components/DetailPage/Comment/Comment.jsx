@@ -106,7 +106,7 @@ export default function Comment({ user }) {
         <CommentGitIcon>
           {user.github !== '' ? (
             <a href={user.github} target="_blank" title={user.github}>
-              <BsGithub />
+              <BsGithub svg color="black" />
             </a>
           ) : (
             <div></div>
