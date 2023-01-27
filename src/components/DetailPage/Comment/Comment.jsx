@@ -1,8 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BsGithub, BsPencil, BsFillTrashFill, BsFlag } from 'react-icons/bs';
 import { GrMoreVertical } from 'react-icons/gr';
 import { db, authService } from '../../../common/firebase';
-import { doc, updateDoc } from 'firebase/firestore';
+import {
+  collection,
+  doc,
+  getDocs,
+  query,
+  updateDoc,
+  where,
+} from 'firebase/firestore';
 import { confirmAlert } from 'react-confirm-alert';
 import {
   ListTitleSection,
@@ -23,6 +30,7 @@ import {
 } from './style';
 import CustomConfirmUI from './CustomConfirmUI';
 import CustomPoliceUI from './CustomPoliceUI';
+import { onAuthStateChanged } from 'firebase/auth';
 
 export default function Comment({ user }) {
   const [editBox, setEditBox] = useState(false);
@@ -94,10 +102,15 @@ export default function Comment({ user }) {
         <CommentTime>
           {new Date(user.date).toLocaleDateString('kr')}
         </CommentTime>
+
         <CommentGitIcon>
-          <a href={user.github} target="_blank">
-            <BsGithub />
-          </a>
+          {user.github !== '' ? (
+            <a href={user.github} target="_blank" title={user.github}>
+              <BsGithub />
+            </a>
+          ) : (
+            <div></div>
+          )}
         </CommentGitIcon>
       </ListTitleSection>
       <ListTextSection>

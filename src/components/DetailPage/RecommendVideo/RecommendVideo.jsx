@@ -1,20 +1,22 @@
 import { RecommendVideoList } from '../../../common/apis';
 import Recommend from './Recommend';
-import { useState } from 'react';
 import { useQuery } from 'react-query';
 
 const RecommendVideo = ({ videoId }) => {
-  // console.log(id);
-
   const {
-    // isLoading: isLoadingCategory,
+    isLoading,
     data: recommendList,
-    // error: errorCategory,
-    // isError: isErrorCategory,
+    isError,
   } = useQuery(['recommendList', videoId], () => RecommendVideoList(videoId));
-  // console.log(recommendList);
+
   return (
     <>
+      {isLoading && <p>Loading...</p>}
+      {isError && (
+        <>
+          <p>Something is wrong.</p>
+        </>
+      )}
       {recommendList?.map((video) => (
         <Recommend key={video.id['videoId']} video={video} />
       ))}

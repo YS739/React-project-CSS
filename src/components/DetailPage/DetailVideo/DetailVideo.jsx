@@ -5,7 +5,6 @@ import {
   DetailVideoContainer,
   DetailVideoSection,
   DetailVideoTitle,
-  DetailVideoDesc,
   RecommendVideoBody,
   DetailCommentBody,
   DetailPageBody,
@@ -19,7 +18,7 @@ export default function DetailVideo() {
   const {
     state: { video },
   } = useLocation();
-  const { title, channelTitle, description, thumbnails } = video.snippet;
+  const { title, channelTitle, thumbnails } = video.snippet;
   console.log('비디오', video);
   return (
     <DetailPageBody>
@@ -40,7 +39,6 @@ export default function DetailVideo() {
             <ChannelImg src={thumbnails.default.url} alt="" />
             <ChannelName>{channelTitle}</ChannelName>
           </ChannelBox>
-          {/* <DetailVideoDesc>{description}</DetailVideoDesc> */}
         </DetailVideoSection>
         <DetailCommentBody>
           <AddComment video={video} />

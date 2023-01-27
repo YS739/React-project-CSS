@@ -64,7 +64,7 @@ const AddComment = ({ video }) => {
   // 기존 user 정보 가져오기
   const getInfoUsername = () => {
     const q = query(
-      collection(db, 'user'),
+      collection(db, 'users'),
       where('uid', '==', authService.currentUser.uid),
     );
     getDocs(q).then((querySnapshop) => {
@@ -93,9 +93,11 @@ const AddComment = ({ video }) => {
       });
       setGithubText('');
       setCommentText('');
-    } else if (githubText !== '') {
-      alert('댓글창이 비어있어요 ㅜㅜ');
-    } else if ((githubText == '') & (commentText == '')) {
+    }
+    // if (githubText == '') {
+    //    useGithubLinkText()
+    // }
+    if (commentText == '') {
       alert('댓글 입력은 필수입니다!');
     }
   };
@@ -149,7 +151,7 @@ const AddComment = ({ video }) => {
                 </AddGitInputDiv>
               </AddGitLink>
               <AddCommentText>
-                <AddCommentDiv>댓글글 </AddCommentDiv>
+                <AddCommentDiv>댓글</AddCommentDiv>
                 <AddInputDiv>
                   <AddInputContent
                     onChange={AddCommentTextChange}
