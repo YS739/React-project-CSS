@@ -33,6 +33,8 @@ import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
 
 const AddComment = ({ video }) => {
+  // console.log(video.items.snippet.thumbnails.url);
+  console.log(video.snippet.thumbnails.medium.url);
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
   const [username, setUsername] = useState('');
@@ -108,8 +110,13 @@ const AddComment = ({ video }) => {
     if (bookmark === false) {
       // 북마크가 되어있지 않을 경우 DB에 추가
       await setDoc(doc(db, 'bookmark', newId), {
+        userId: authService.currentUser?.uid,
         videoId: video.id.videoId,
-        uid: authService.currentUser?.uid,
+        thumbnail: video.snippet.thumbnails.medium.url,
+        videoTitle: video.snippet.title,
+        date: Date.now(),
+        channelTitle: video.snippet.channelTitle,
+        video: video,
       });
 
       setBookmark(true);
@@ -140,7 +147,7 @@ const AddComment = ({ video }) => {
                 </AddGitInputDiv>
               </AddGitLink>
               <AddCommentText>
-                <AddCommentDiv>댓글글 </AddCommentDiv>
+                <AddCommentDiv>댓글</AddCommentDiv>
                 <AddInputDiv>
                   <AddInputContent
                     onChange={AddCommentTextChange}
