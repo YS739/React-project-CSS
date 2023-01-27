@@ -22,7 +22,7 @@ import {
   TabsPanel,
   TabContents,
   TabsList,
-} from './style.js';
+} from './style';
 
 const MyPage = () => {
   const [github, setGithub] = useState('');
@@ -75,8 +75,6 @@ const MyPage = () => {
     if (docSnap.exists()) {
       setGithub(docSnap.data().github);
     }
-    // console.log(docSnap.data().github);
-    // setUserName(userName);
   };
 
   useEffect(() => {
@@ -84,7 +82,6 @@ const MyPage = () => {
       if (user) {
         setCurrentUser(authService.currentUser.uid);
         setUserName(authService.currentUser.displayName);
-        console.log('Mypage', authService.currentUser);
         getUserInfo();
         console.log('로그인 되어있음');
       } else if (!user) {
@@ -92,7 +89,6 @@ const MyPage = () => {
       }
     });
     if (!currentUser) return;
-    // if (!currentUser.displayName) return;
   }, []);
 
   return (

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
 import { useFirestoreDocumentMutation } from '@react-query-firebase/firestore';
 import { doc } from 'firebase/firestore';
-import { db } from '../../../common/firebase.js';
+import { db } from '../../../common/firebase';
 import {
   ModalBackground,
   ModalContainer,
@@ -12,7 +12,7 @@ import {
   CancelButton,
   SaveButton,
   ErrorMessage,
-} from './style.js';
+} from './style';
 
 const EditModal = ({
   setModalOpen,

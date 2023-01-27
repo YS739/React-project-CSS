@@ -7,9 +7,9 @@ import {
   BookmarkedDate,
   ChannelTitle,
   BookmarkText,
-} from './style.js';
+} from './style';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { authService, db } from '../../../common/firebase.js';
+import { authService, db } from '../../../common/firebase';
 import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useNavigate, useLocation } from 'react-router-dom';

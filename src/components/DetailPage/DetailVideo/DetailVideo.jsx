@@ -12,7 +12,16 @@ import {
   ChannelBox,
   ChannelImg,
 } from './style';
-import TestLogin from './TestLogin';
+
+// interface DetailIframeJ {
+//   id: string;
+//   type: string;
+//   width: string;
+//   height: string;
+//   src: string;
+//   frameBorder: string;
+//   title: string;
+// }
 
 export default function DetailVideo() {
   const {

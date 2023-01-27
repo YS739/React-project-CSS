@@ -1,4 +1,4 @@
-import { Container, Logo, LoginToggle, Nav } from './style.js';
+import { Container, Logo, LoginToggle, Nav } from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';

@@ -26,12 +26,13 @@ import CustomPoliceUI from './CustomPoliceUI';
 import React, { ChangeEvent } from 'react';
 
 // TODO: any 수정하기
-const Comment: React.FC = ({ user }: any) => {
+const Comment = ({ user }) => {
   const [editBox, setEditBox] = useState(false);
   const [editValue, setEditValue] = useState(user.comment);
   const [toggleBtn, setToggleBtn] = useState(false);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  // const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (e) => {
     e.preventDefault();
 
     setEditValue(e.target.value);
@@ -41,7 +42,7 @@ const Comment: React.FC = ({ user }: any) => {
   // 유저에 따라 버튼 다르게
   const [areYouUser, setAreYouUser] = useState(false);
 
-  const ToggleDropDown = (userId: string) => {
+  const ToggleDropDown = (userId) => {
     // TODO: 수정하기
     const currentUid = authService.currentUser.uid;
 
@@ -58,7 +59,7 @@ const Comment: React.FC = ({ user }: any) => {
     }
   };
 
-  const editHandler = (comment: string) => {
+  const editHandler = (comment) => {
     setEditValue(comment);
     setEditBox(true);
   };
@@ -66,14 +67,14 @@ const Comment: React.FC = ({ user }: any) => {
   //  TODO: 수정하고나서 완료 버튼 누를때 setTimeOust 설정해주기
   // 여기에다 업데이트로직 짜기
   // TODO: any 수정하기
-  const completeHandler = async (user: any, comment: string) => {
+  const completeHandler = async (user, comment) => {
     setEditBox(false);
     await updateDoc(doc(db, 'comments', user.id), { comment: comment });
     setToggleBtn(false);
   };
 
   // 댓글 삭제
-  const deleteHandler = (id: string) => {
+  const deleteHandler = (id) => {
     confirmAlert({
       customUI: ({ onClose }) => {
         return <CustomConfirmUI onClose={onClose} id={id} />;
@@ -82,7 +83,7 @@ const Comment: React.FC = ({ user }: any) => {
   };
 
   // 신고 버튼
-  const ClickPolice = (id: string) => {
+  const ClickPolice = (id) => {
     confirmAlert({
       customUI: ({ onClose }) => {
         return <CustomPoliceUI onClose={onClose} id={id} />;

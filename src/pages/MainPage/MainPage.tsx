@@ -6,11 +6,11 @@ import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 
 const MainPage = () => {
-  const [keyword, setKeyword] = useState('');
-  const [category, setCategory] = useState('');
+  const [keyword, setKeyword] = useState<string>('');
+  const [category, setCategory] = useState<string>('');
 
   // 스크롤 시 추가로 불러오는 VideoList
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState<any>([]);
   const [nextPageToken, setNextPageToken] = useState<string>('');
   const observerRef = useRef<HTMLDivElement>(null);
   // 클론 코딩 전체 리스트 불러오기
@@ -141,7 +141,7 @@ const MainPage = () => {
           <>
             <VideoBox>
               {/* infinite scroll - nextPage Video 불러오는 부분 */}
-              {videos.map((video) => (
+              {videos.map((video: any) => (
                 <VideoList key={video.id['videoId']} video={video} />
               ))}
             </VideoBox>

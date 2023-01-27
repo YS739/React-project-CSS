@@ -7,3 +7,7 @@ declare interface AddCommentJ {
   createdAt: Date;
   date: string;
 }
+
+declare interface NewCommentsJ extends AddCommentJ {
+  id: string;
+}

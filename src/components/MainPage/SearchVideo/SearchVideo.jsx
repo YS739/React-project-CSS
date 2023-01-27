@@ -7,6 +7,7 @@ import {
 } from './style';
 import { HiOutlineSearch } from 'react-icons/hi';
 import CategorySlide from '../CategorySlide/CategorySlide';
+import React from 'react';
 
 const SearchVideo = ({
   keyword,
