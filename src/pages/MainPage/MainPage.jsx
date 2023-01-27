@@ -4,18 +4,14 @@ import VideoList from '../../components/MainPage/VideoList/VideoList';
 import { allVideoList, categoryVideoList } from '../../common/apis';
 import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
-import axios from 'axios';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState('');
   const [category, setCategory] = useState('');
-  const [pageToken, setPageToken] = useState('');
-  const setObservationTarget = useRef(null);
 
-  // test
+  // 스크롤 시 추가로 불러오는 VideoList
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const observerRef = useRef(null);
 
   // 클론 코딩 전체 리스트 불러오기
@@ -24,7 +20,9 @@ const MainPage = () => {
     data: allList,
     error,
     isError,
-  } = useQuery(['allVideoList', pageToken], () => allVideoList(pageToken));
+  } = useQuery(['allVideoList', nextPageToken], () =>
+    allVideoList(nextPageToken),
+  );
 
   const allListData = allList?.items;
 
@@ -36,7 +34,7 @@ const MainPage = () => {
     isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
-  useEffect(() => {}, [pageToken]);
+  useEffect(() => {}, [nextPageToken]);
 
   useEffect(() => {}, [category]);
 
@@ -47,7 +45,7 @@ const MainPage = () => {
 
   // 검색 실행 함수 - 검색 버튼 눌렀을 때
   const searchHandler = (e) => {
-    // TODO: alert창 라이브러리..?
+    // TODO: confirm alert로 바꾸기
     if (keyword.trim().length === 0) {
       alert('검색어를 입력해주세요.');
     }
@@ -67,62 +65,22 @@ const MainPage = () => {
     item.snippet.title.includes(keyword),
   );
 
-  // observer api - 안녕이 스크롤이 타겟에 닿을 때마다 생성됨
-  // const observer = useRef(
-  //   new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         const videoContainer = document.querySelector('#videoBox');
-  //         const video = document.createElement('div');
-  //         video.innerHTML = `<div>안녕</div>`;
-  //         videoContainer.appendChild(video);
-
-  //         // allListData.forEach((item) => {
-  //         //   const video = document.createElement('div');
-
-  //         //   video.innerHTML = `<div>${item.snippet.title}</div>`;
-  //         //   videoContainer.appendChild(video);
-  //         // });
-
-  //         observer.observe(videoContainer.lastChild);
-  //       }
-  //     },
-  //     { threshold: 1 },
-  //   ),
-  // );
-
-  // useEffect(() => {
-  //   const currentTarget = setObservationTarget.current;
-  //   const currentObserver = observer.current;
-  //   if (currentTarget) {
-  //     currentObserver.observe(currentTarget);
-  //   }
-
-  //   return () => {
-  //     if (currentTarget) {
-  //       currentObserver.unobserve(currentTarget);
-  //     }
-  //   };
-  // }, [setObservationTarget]);
-
   // new test
   const handleLoadMore = async () => {
-    setIsLoading(true);
     try {
-      const response = await axios.get(`/mockData/allList.json`);
-      setVideos([...videos, ...response.data.items]);
-      setNextPageToken(response.data.nextPageToken);
+      setVideos([...videos, ...allList?.items]);
+      setNextPageToken(allList.nextPageToken);
     } catch (error) {
       console.log(error);
     }
-    setIsLoading(false);
   };
 
+  // FIXME: category, 검색어 기능이 안 됨
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.3,
+      threshold: 0.5,
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -177,22 +135,35 @@ const MainPage = () => {
             ))}
           </VideoBox>
         ) : (
-          <VideoBox>
-            {allListData?.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-            <div style={{ width: 1100 }} ref={setObservationTarget}></div>
-          </VideoBox>
+          <>
+            <VideoBox>
+              {videos.map((video) => (
+                <VideoList key={video.id['videoId']} video={video} />
+              ))}
+            </VideoBox>
+            <div ref={observerRef}></div>
+          </>
+          // {/* // <VideoBox>
+          // //   {allListData?.map((video) => ( */}
+          // {/* //     <VideoList key={video.id['videoId']} video={video} />
+          // //   ))}
+          // // </VideoBox> */}
         )}
       </VideoSection>
-      {/* nextData 불러오는 부분 */}
-      {/* FIXME: 수정하기 CSS */}
-      <VideoBox>
-        {videos.map((video) => (
-          <VideoList key={video.id['videoId']} video={video} />
-        ))}
-        <div ref={observerRef}></div>
-      </VideoBox>
+      {/* infinite scroll - nextPage Video 불러오는 부분 */}
+      {/* TODO: 이 부분이 위의 allListData대신 들어가야 하나? */}
+      {/* {!category && !keyword ? (
+        <VideoSection>
+          <VideoBox>
+            {videos.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
+            ))}
+          </VideoBox>
+          <div ref={observerRef}></div>
+        </VideoSection>
+      ) : (
+        ''
+      )} */}
     </>
   );
 };

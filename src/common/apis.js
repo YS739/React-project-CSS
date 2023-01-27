@@ -5,7 +5,7 @@ export const BASE_URL =
   'https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&order=viewCount';
 
 // 클론 코딩 관련 전체 리스트 가져오기
-export const allVideoList = (pageToken) => {
+export const allVideoList = (nextPageToken) => {
   return axios.get(`/mockData/allList.json`).then((res) => res.data);
 
   // pagenation 안 할 때 mockData
@@ -13,12 +13,12 @@ export const allVideoList = (pageToken) => {
 
   // pagenation 할 때 씀
   // .get(
-  //   `${BASE_URL}&pageToken=${pageToken}&maxResults=12&q=클론 코딩&key=${API_KEY}`,
+  //   `${BASE_URL}&pageToken=${nextPageToken}&maxResults=12&q=클론 코딩&key=${API_KEY}`,
   // )
   // .then((res) => res.data)
 
   //  pagenation 안 할 때 api
-  // .get(`${BASE_URL}&pageToken=${pageToken}&maxResults=24&q=클론 코딩&key=${API_KEY}`)
+  // .get(`${BASE_URL}&pageToken=${nextPageToken}&maxResults=24&q=클론 코딩&key=${API_KEY}`)
   // .then((res) => res.data.items)
 };
 
