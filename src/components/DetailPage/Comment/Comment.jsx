@@ -96,7 +96,7 @@ export default function Comment({ user }) {
         </CommentTime>
         <CommentGitIcon>
           <a href={user.github} target="_blank">
-            <BsGithub />
+            <BsGithub svg color="black" />
           </a>
         </CommentGitIcon>
       </ListTitleSection>
