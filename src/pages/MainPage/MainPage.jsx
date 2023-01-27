@@ -137,11 +137,11 @@ const MainPage = () => {
         ) : (
           <>
             <VideoBox>
+              {/* infinite scroll - nextPage Video 불러오는 부분 */}
               {videos.map((video) => (
                 <VideoList key={video.id['videoId']} video={video} />
               ))}
             </VideoBox>
-            <div ref={observerRef}></div>
           </>
           // {/* // <VideoBox>
           // //   {allListData?.map((video) => ( */}
@@ -149,21 +149,8 @@ const MainPage = () => {
           // //   ))}
           // // </VideoBox> */}
         )}
+        <div ref={observerRef}></div>
       </VideoSection>
-      {/* infinite scroll - nextPage Video 불러오는 부분 */}
-      {/* TODO: 이 부분이 위의 allListData대신 들어가야 하나? */}
-      {/* {!category && !keyword ? (
-        <VideoSection>
-          <VideoBox>
-            {videos.map((video) => (
-              <VideoList key={video.id['videoId']} video={video} />
-            ))}
-          </VideoBox>
-          <div ref={observerRef}></div>
-        </VideoSection>
-      ) : (
-        ''
-      )} */}
     </>
   );
 };
