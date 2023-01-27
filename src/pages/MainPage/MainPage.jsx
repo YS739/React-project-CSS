@@ -4,6 +4,7 @@ import VideoList from '../../components/MainPage/VideoList/VideoList';
 import { allVideoList, categoryVideoList } from '../../common/apis';
 import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
+import axios from 'axios';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState('');
@@ -11,13 +12,21 @@ const MainPage = () => {
   const [pageToken, setPageToken] = useState('');
   const setObservationTarget = useRef(null);
 
+  // test
+  const [videos, setVideos] = useState([]);
+  const [nextPageToken, setNextPageToken] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const observerRef = useRef(null);
+
   // 클론 코딩 전체 리스트 불러오기
   const {
-    isLoading,
+    isLoading: isLoadingAll,
     data: allList,
     error,
     isError,
   } = useQuery(['allVideoList', pageToken], () => allVideoList(pageToken));
+
+  const allListData = allList?.items;
 
   // 카테고리별 리스트 불러오기
   const {
@@ -54,48 +63,77 @@ const MainPage = () => {
   };
 
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
-  const searchedList = allList?.items?.filter((item) =>
+  const searchedList = allListData?.filter((item) =>
     item.snippet.title.includes(keyword),
   );
 
-  // Page 이동 버튼
-  // const nextPageBtn = () => {
-  //   setPageToken(allList.nextPageToken);
-  // };
+  // observer api - 안녕이 스크롤이 타겟에 닿을 때마다 생성됨
+  // const observer = useRef(
+  //   new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         const videoContainer = document.querySelector('#videoBox');
+  //         const video = document.createElement('div');
+  //         video.innerHTML = `<div>안녕</div>`;
+  //         videoContainer.appendChild(video);
 
-  // const prevPageBtn = () => {
-  //   setPageToken(allList.prevPageToken);
-  // };
+  //         // allListData.forEach((item) => {
+  //         //   const video = document.createElement('div');
 
-  const {} = useQuery;
+  //         //   video.innerHTML = `<div>${item.snippet.title}</div>`;
+  //         //   videoContainer.appendChild(video);
+  //         // });
 
-  // observer api
-  const observer = useRef(
-    new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const videoContainer = document.getElementById('videoBox');
+  //         observer.observe(videoContainer.lastChild);
+  //       }
+  //     },
+  //     { threshold: 1 },
+  //   ),
+  // );
 
-          alert('안녕');
-        }
-      },
-      { threshold: 1 },
-    ),
-  );
+  // useEffect(() => {
+  //   const currentTarget = setObservationTarget.current;
+  //   const currentObserver = observer.current;
+  //   if (currentTarget) {
+  //     currentObserver.observe(currentTarget);
+  //   }
+
+  //   return () => {
+  //     if (currentTarget) {
+  //       currentObserver.unobserve(currentTarget);
+  //     }
+  //   };
+  // }, [setObservationTarget]);
+
+  // new test
+  const handleLoadMore = async () => {
+    setIsLoading(true);
+    try {
+      const response = await axios.get(`/mockData/allList.json`);
+      setVideos([...videos, ...response.data.items]);
+      setNextPageToken(response.data.nextPageToken);
+    } catch (error) {
+      console.log(error);
+    }
+    setIsLoading(false);
+  };
 
   useEffect(() => {
-    const currentTarget = setObservationTarget.current;
-    const currentObserver = observer.current;
-    if (currentTarget) {
-      currentObserver.observe(currentTarget);
-    }
-
-    return () => {
-      if (currentTarget) {
-        currentObserver.unobserve(currentTarget);
-      }
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
     };
-  }, [setObservationTarget]);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          handleLoadMore();
+        }
+      });
+    }, options);
+    observer.observe(observerRef.current);
+    return () => observer.disconnect();
+  }, [handleLoadMore]);
 
   return (
     <>
@@ -108,17 +146,14 @@ const MainPage = () => {
         categoryHandler={categoryHandler}
       />
       {/* allList - 로딩중이거나 에러가 생기면 화면에 표시 */}
-      {isLoading && <p>Loading...</p>}
+      {isLoadingAll && <p>Loading...</p>}
       {isError && (
         <>
           <p>Something is wrong.</p>
           <p>{String(error)}</p>
         </>
       )}
-      {/* Page 이동버튼 */}
-      {/* {pageToken && <button onClick={prevPageBtn}>1</button>}
-      {allList?.nextPageToken && <button onClick={nextPageBtn}>2</button>} */}
-      {/* VideoList 컴포넌트 */}
+
       <VideoSection>
         {/* TODO: 더 간단하게 리팩토링 가능? */}
         {keyword ? (
@@ -142,16 +177,22 @@ const MainPage = () => {
             ))}
           </VideoBox>
         ) : (
-          <VideoBox id="videoBox">
-            {allList?.items.map((video) => (
-              <>
-                <VideoList key={video.id['videoId']} video={video} />
-                <div id="nextList" ref={setObservationTarget}></div>
-              </>
+          <VideoBox>
+            {allListData?.map((video) => (
+              <VideoList key={video.id['videoId']} video={video} />
             ))}
+            <div style={{ width: 1100 }} ref={setObservationTarget}></div>
           </VideoBox>
         )}
       </VideoSection>
+      {/* nextData 불러오는 부분 */}
+      {/* FIXME: 수정하기 CSS */}
+      <VideoBox>
+        {videos.map((video) => (
+          <VideoList key={video.id['videoId']} video={video} />
+        ))}
+        <div ref={observerRef}></div>
+      </VideoBox>
     </>
   );
 };

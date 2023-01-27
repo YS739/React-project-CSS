@@ -11,7 +11,7 @@ const VideoList = ({ video }) => {
 
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   return (
-    // 클릭한 영상의 id로 이동하기
+    // 클릭한 영상의 id로 이동하기 - state(param)로 video를 넘겨준다.
     <Videos
       onClick={() => {
         navigate(`/detail/${video.id.videoId}`, { state: { video } });
