@@ -29,7 +29,7 @@ export default function TestLogin() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
         setDoc(doc(db, 'users', res.user.uid), {
-          uid: res.user.uid,
+          userId: res.user.uid,
           email: email,
           password: password,
           username: username,
