@@ -65,7 +65,7 @@ const MainPage = () => {
     item.snippet.title.includes(keyword),
   );
 
-  // new test
+  // Intersection Observer API - 무한 스크롤
   const handleLoadMore = async () => {
     try {
       setVideos([...videos, ...allList?.items]);
@@ -75,7 +75,6 @@ const MainPage = () => {
     }
   };
 
-  // FIXME: category, 검색어 기능이 안 됨
   useEffect(() => {
     const options = {
       root: null,
