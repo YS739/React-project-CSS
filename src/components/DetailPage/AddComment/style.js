@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { BsFillBookmarkFill } from 'react-icons/bs';
 
 export const AddCommentListAll = styled.div`
   width: 100%;
@@ -142,5 +143,14 @@ export const AddCommentBtn = styled.button`
     color: white;
     border-radius: 5px;
     border: none;
+  }
+`;
+
+export const BookMark = styled(BsFillBookmarkFill)`
+  /* color: rgba(32, 82, 149, 0.6); */
+  /* color: white; */
+  /* border: 1px solid; */
+  :hover {
+    color: red;
   }
 `;
