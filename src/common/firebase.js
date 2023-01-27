@@ -17,14 +17,6 @@ const firebaseConfig = {
   // appId: '1:944609198241:web:417b5c12874e63cffdf0e0',
   // measurementId: 'G-TGLWB5N10G',
 
-  // apiKey: 'AIzaSyAPTGoXX_M5Gm4PjcKarOB8pU4wEeVYk6A',
-  // authDomain: 'pj-bfeda.firebaseapp.com',
-  // projectId: 'pj-bfeda',
-  // storageBucket: 'pj-bfeda.appspot.com',
-  // messagingSenderId: '419716600931',
-  // appId: '1:419716600931:web:252e6d02276d82f41b1456',
-  // measurementId: 'G-WWWDZGQEG3',
-
   apiKey: 'AIzaSyCoM9RclYcyw01TkfHZ9pn5VmyVp7Hsx4w',
   authDomain: 'temp-9d727.firebaseapp.com',
   projectId: 'temp-9d727',

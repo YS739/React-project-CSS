@@ -27,6 +27,7 @@ import {
   doc,
   deleteDoc,
   setDoc,
+  addDoc,
 } from 'firebase/firestore';
 import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
@@ -78,17 +79,25 @@ const AddComment = ({ video }) => {
   };
 
   // 데이터 올리기
-  const AddCommentButton = async () => {
-    await setDoc(collection(db, 'comments'), {
-      comment: commentText,
-      github: githubText,
-      username: username,
-      videoId: video.id.videoId,
-      uid: authService.currentUser?.uid,
-      date: Date.now(),
-    });
-    setGithubText('');
-    setCommentText('');
+
+  const AddCommentButton = async (e) => {
+    e.preventDefault();
+    if (commentText !== '') {
+      await addDoc(collection(db, 'comments'), {
+        comment: commentText,
+        github: githubText,
+        username: username,
+        videoId: video.id.videoId,
+        uid: authService.currentUser?.uid,
+        date: Date.now(),
+      });
+      setGithubText('');
+      setCommentText('');
+    } else if (githubText !== '') {
+      alert('댓글창이 비어있어요 ㅜㅜ');
+    } else if ((githubText == '') & (commentText == '')) {
+      alert('댓글 입력은 필수입니다!');
+    }
   };
 
   // 북마크 가져오기
