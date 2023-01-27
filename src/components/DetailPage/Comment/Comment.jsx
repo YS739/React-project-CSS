@@ -91,10 +91,7 @@ export default function Comment({ user }) {
       <ListTitleSection>
         <CommentNickname>{user.userName}</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
-        <CommentTime>
-          {new Date(user.date).toLocaleDateString('kr')}
-        </CommentTime>
-
+        <CommentTime>{user.date}</CommentTime>
         <CommentGitIcon>
           {user.github !== '' ? (
             <a href={user.github} target="_blank" title={user.github}>

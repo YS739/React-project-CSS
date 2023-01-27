@@ -35,6 +35,8 @@ import { confirmAlert } from 'react-confirm-alert';
 import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
 
 const AddComment = ({ video }) => {
+  // console.log(video.items.snippet.thumbnails.url);
+  console.log(video.snippet.thumbnails.medium.url);
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
   const [userName, setUsername] = useState('');
@@ -121,8 +123,13 @@ const AddComment = ({ video }) => {
     if (bookmark === false) {
       // 북마크가 되어있지 않을 경우 DB에 추가
       await setDoc(doc(db, 'bookmark', newId), {
+        userId: authService.currentUser?.uid,
         videoId: video.id.videoId,
-        userId: authService.currentUser?.userId,
+        thumbnail: video.snippet.thumbnails.medium.url,
+        videoTitle: video.snippet.title,
+        date: Date.now(),
+        channelTitle: video.snippet.channelTitle,
+        video: video,
       });
 
       setBookmark(true);

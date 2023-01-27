@@ -3,14 +3,9 @@ import MyComments from '../../components/MyPage/MyComments/MyComments';
 import EditModal from '../../components/MyPage/EditModal/EditModal';
 import { Fragment, useEffect } from 'react';
 import { db, authService } from '../../common/firebase';
-import {
-  collection,
-  where,
-  query,
-  getDocs,
-  doc,
-  getDoc,
-} from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
+
+import { doc, getDoc } from 'firebase/firestore';
 import { useState } from 'react';
 
 import {
@@ -37,15 +32,14 @@ const MyPage = () => {
 
   // 모달창 노출 여부 state
   const [modalOpen, setModalOpen] = useState(false);
-
+  const [currentUser, setCurrentUser] = useState('');
   // 현재 유저
-  const currentUser = authService.currentUser;
-  console.log(currentUser);
+  // const currentUser = authService.currentUser;
   // 유저 닉네임
-  const userNickname = currentUser.displayName;
+  // const userNickname = currentUser.displayName;
 
   // 닉네임 수정
-  const [userName, setUserName] = useState(userNickname);
+  const [userName, setUserName] = useState('');
 
   // 닉네임 수정 모달 창 열림
   const openUserNameModal = () => {
@@ -68,24 +62,37 @@ const MyPage = () => {
 
   // 깃허브 링크 입력
   const updateGithub = (item) => {
+    console.log('item', item);
     setGithub(item);
   };
 
   // 유저 정보 가져오기
   const getUserInfo = async () => {
-    const docRef = doc(db, 'users', currentUser.uid);
+    // console.log('currentUser***', currentUser);
+    const docRef = doc(db, 'users', currentUser);
     const docSnap = await getDoc(docRef);
+    console.log('docSnap', docSnap);
     if (docSnap.exists()) {
       setGithub(docSnap.data().github);
     }
-    console.log(docSnap.data().github);
-    setUserName(userNickname);
+    // console.log(docSnap.data().github);
+    // setUserName(userName);
   };
 
   useEffect(() => {
-    if (!authService.currentUser) return;
-    if (!currentUser.displayName) return;
-    getUserInfo();
+    onAuthStateChanged(authService, (user) => {
+      if (user) {
+        setCurrentUser(authService.currentUser.uid);
+        setUserName(authService.currentUser.displayName);
+        console.log('Mypage', authService.currentUser);
+        getUserInfo();
+        console.log('로그인 되어있음');
+      } else if (!user) {
+        console.log('로그인 안됨');
+      }
+    });
+    if (!currentUser) return;
+    // if (!currentUser.displayName) return;
   }, []);
 
   return (
