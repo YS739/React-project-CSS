@@ -8,7 +8,7 @@ export default function CommentList({ video }) {
   // 데이터 실시간 변경 확인
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    const q = query(collection(db, 'comments'), orderBy('date', 'desc'));
+    const q = query(collection(db, 'comments'), orderBy('createdAt', 'desc'));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const newComments = snapshot.docs.map((doc) => ({
         id: doc.id,

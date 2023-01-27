@@ -39,7 +39,7 @@ const AddComment = ({ video }) => {
   console.log(video.snippet.thumbnails.medium.url);
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
-  const [userName, setUsername] = useState('');
+  // const [userName, setUsername] = useState('');
   const [bookmark, setBookmark] = useState(false);
   const [changeColor, setChangeColor] = useState('rgba(32, 82, 149, 0.6)');
   const AddGithubText = (e) => {
@@ -50,10 +50,16 @@ const AddComment = ({ video }) => {
     setCommentText(e.target.value);
   };
 
+  const [currentUser, setCurrentUser] = useState('');
+
   useEffect(() => {
+    // if (!authService.currentUser) return;
+    // if (!authService.currentUser.displayName) return;
     onAuthStateChanged(authService, (user) => {
       if (user) {
-        getInfoUsername();
+        setCurrentUser(authService.currentUser);
+        console.log('유저', authService.currentUser);
+        // getInfoUsername();
         console.log('Add Commnet 로그인 되어있음');
       } else if (!user) {
         console.log('로그인 안됨');
@@ -62,24 +68,24 @@ const AddComment = ({ video }) => {
 
     // 북마크 정보 가져오기
     getBookmark();
-  }, []);
+  }, [currentUser]);
 
   // 기존 user 정보 가져오기
-  const getInfoUsername = () => {
-    const q = query(
-      collection(db, 'users'),
-      where('userId', '==', authService.currentUser.userId),
-    );
-    getDocs(q).then((querySnapshop) => {
-      const userInfo = [];
-      querySnapshop.forEach((doc) => {
-        userInfo.push({
-          userName: doc.data().userName,
-        });
-        setUsername(userInfo[0].userName);
-      });
-    });
-  };
+  // const getInfoUsername = () => {
+  //   const q = query(
+  //     collection(db, 'users'),
+  //     where('userId', '==', authService.currentUser.userId),
+  //   );
+  //   getDocs(q).then((querySnapshop) => {
+  //     const userInfo = [];
+  //     querySnapshop.forEach((doc) => {
+  //       userInfo.push({
+  //         userName: doc.data().userName,
+  //       });
+  //       setUsername(userInfo[0].userName);
+  //     });
+  //   });
+  // };
 
   // 데이터 올리기
   const NewDate = new Date().toLocaleDateString('kr');
@@ -90,9 +96,10 @@ const AddComment = ({ video }) => {
       await addDoc(collection(db, 'comments'), {
         comment: commentText,
         github: githubText,
-        userName: userName,
+        userName: currentUser.displayName,
         videoId: video.id.videoId,
-        userId: authService.currentUser?.userId,
+        userId: currentUser.uid,
+        createdAt: new Date(),
         date: NewDate,
       });
       setGithubText('');
