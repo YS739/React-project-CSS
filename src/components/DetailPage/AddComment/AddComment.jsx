@@ -27,6 +27,7 @@ import {
   doc,
   deleteDoc,
   setDoc,
+  addDoc,
 } from 'firebase/firestore';
 import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
@@ -92,6 +93,10 @@ const AddComment = ({ video }) => {
       });
       setGithubText('');
       setCommentText('');
+    } else if (githubText !== '') {
+      alert('댓글창이 비어있어요 ㅜㅜ');
+    } else if ((githubText == '') & (commentText == '')) {
+      alert('댓글 입력은 필수입니다!');
     }
   };
 
