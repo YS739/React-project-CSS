@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
 import { useFirestoreDocumentMutation } from '@react-query-firebase/firestore';
-import { useEffect, useState } from 'react';
-import { doc, updateDoc, collection, setDoc } from 'firebase/firestore';
+import { doc } from 'firebase/firestore';
 import { db } from '../../../common/firebase.js';
 import {
   ModalBackground,
@@ -30,7 +30,7 @@ const EditModal = ({
   // 저장 버튼 활성화
   const [buttonValidation, setButtonValidation] = useState(true);
 
-  const docRef = doc(db, 'users', currentUser.uid);
+  const docRef = doc(db, 'users', currentUser);
   const mutation = useFirestoreDocumentMutation(docRef);
 
   // 수정 취소
@@ -53,7 +53,7 @@ const EditModal = ({
       alert('정보가 업데이트 되었습니다');
     } else {
       // github 수정
-      mutation.mutate({ github: currentInput });
+      mutation.mutate({ github: currentInput, userId: currentUser });
       updateGithub(currentInput);
     }
     setModalOpen(false);
