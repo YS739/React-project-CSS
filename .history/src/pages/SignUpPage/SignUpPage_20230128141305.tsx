@@ -18,14 +18,11 @@ import {
   useEffect,
   ChangeEvent,
   FormEventHandler,
-  MouseEvent,
 } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
-import { updateProfile } from 'firebase/auth';
+import { updateProfile, User } from 'firebase/auth';
 import { async } from '@firebase/util';
-import { confirmAlert } from 'react-confirm-alert';
-import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -57,61 +54,37 @@ const SignUpPage = () => {
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
   const pwConfirmRef = useRef(null);
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    if (authService.currentUser === null) return;
+  }, [currentUser]);
 
   // 회원가입 완료
-  const onSubmit = async (e: MouseEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async () => {
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
-        console.log('회원가입 성공!');
-        if (authService.currentUser)
-          updateProfile(authService?.currentUser, {
-            displayName: nickName,
+        // if (authService.currentUser === null) return;
+        setCurrentUser(authService?.currentUser);
+        updateProfile(currentUser, {
+          displayName: nickName,
+        })
+          .then(() => {
+            alert('회원가입이 완료되었습니다.');
+            setId('');
+            setNickName('');
+            setPw('');
+            navigate('/');
           })
-            .then(() => {
-              confirmAlert({
-                customUI: ({ onClose }) => {
-                  return (
-                    <AlertUI
-                      title={'회원가입이 완료되었습니다.'}
-                      onClose={onClose}
-                    />
-                  );
-                },
-              });
-
-              setId('');
-              setNickName('');
-              setPw('');
-              navigate('/');
-            })
-            .catch((error) => {
-              console.log(error.message);
-              confirmAlert({
-                customUI: ({ onClose }) => {
-                  return (
-                    <AlertUI
-                      title={'회원가입을 다시 진행해주세요.'}
-                      onClose={onClose}
-                    />
-                  );
-                },
-              });
-              navigate('/signUp');
-            });
+          .catch((error) => {
+            console.log(error.message);
+            alert('회원가입을 다시 진행해주세요');
+            navigate('/signUp');
+          });
       })
       .catch((error) => {
         setError(error.message);
-        confirmAlert({
-          customUI: ({ onClose }) => {
-            return (
-              <AlertUI
-                title={'! 이미 존재하는 계정 입니다.'}
-                onClose={onClose}
-              />
-            );
-          },
-        });
+        alert('! 이미 존재하는 계정 입니다.');
         console.log(error);
       });
   };
