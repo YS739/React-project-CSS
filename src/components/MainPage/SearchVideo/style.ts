@@ -12,7 +12,7 @@ export const SearchSection = styled.div`
 export const SearchForm = styled.form`
   width: 500px;
   height: 50px;
-  border: 1px solid ${color.navy};
+  border: 1px solid ${color.darkColor};
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
@@ -49,7 +49,7 @@ export const SearchResultBox = styled.div`
 
 export const SearchResult = styled.div`
   width: 250px;
-  border-bottom: 3px solid ${color.navy};
+  border-bottom: 3px solid ${color.darkColor};
   font-size: 22px;
   font-weight: 800;
   text-align: center;

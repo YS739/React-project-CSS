@@ -10,6 +10,7 @@ import {
   CommentNicknameBar,
   CommentTime,
   CommentGitIcon,
+  ListContainer,
   ListTextSection,
   CommentText,
   CommentTextIcon,
@@ -92,7 +93,7 @@ const Comment = ({ user }) => {
   };
 
   return (
-    <>
+    <ListContainer>
       <ListTitleSection>
         <CommentNickname>{user.userName}</CommentNickname>
         <CommentNicknameBar>|</CommentNicknameBar>
@@ -168,7 +169,7 @@ const Comment = ({ user }) => {
           )}
         </CommentTextIcon>
       </ListTextSection>
-    </>
+    </ListContainer>
   );
 };
 

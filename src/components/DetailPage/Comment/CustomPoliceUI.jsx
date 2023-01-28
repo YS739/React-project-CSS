@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from '../../../common/color';
 
 export default function CustomPoliceUI(props) {
   return (
@@ -90,7 +91,7 @@ const BtnBox = styled.div`
 const ConfirmCancelBtn = styled.button`
   font-size: 16px;
   font-weight: 600;
-  color: #205295;
+  color: ${color.lightColor};
 
   background: none;
   border: none;

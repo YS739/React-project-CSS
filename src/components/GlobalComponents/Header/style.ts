@@ -17,14 +17,16 @@ export const Logo = styled.img`
 export const LoginToggle = styled.div`
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   align-items: center;
 `;
 export const Nav = styled.div`
   font-weight: bold;
-  padding-right: 5px;
+  padding-left: 30px;
+  /* background-color: aliceblue; */
+  box-sizing: border-box;
   cursor: pointer;
 `;
 

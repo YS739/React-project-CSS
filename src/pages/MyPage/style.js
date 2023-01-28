@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import { color } from '../../common/color';
 
 export const MyPageContainer = styled.div`
   display: flex;
@@ -55,9 +56,9 @@ export const MyInfoInput = styled.div`
 `;
 
 export const MyInfoEditButton = styled.button`
-  border: 1px solid #205295;
+  border: 1px solid ${color.darkColor};
   border-radius: 7px;
-  color: #205295;
+  color: ${color.darkColor};
   background-color: #fff;
   font-weight: 600;
   padding: 5px 10px;
@@ -68,7 +69,7 @@ export const MyInfoEditButton = styled.button`
   flex: 20%;
 
   &:hover {
-    background: #205295;
+    background: ${color.darkColor};
     color: #fff;
   }
 
@@ -101,9 +102,9 @@ export const TabItem = styled(Tab)`
   width: 410px;
   height: 26px;
   margin-right: 4px;
-  border: 1px solid #205295;
+  border: 1px solid ${color.darkColor};
   border-radius: 7px;
-  color: #205295;
+  color: ${color.darkColor};
   font-weight: 600;
   padding: 4px;
   cursor: pointer;
@@ -111,7 +112,7 @@ export const TabItem = styled(Tab)`
   align-items: center;
   justify-content: center;
   &.is-selected {
-    background: #205295;
+    background: ${color.darkColor};
     color: #fff;
   }
   &:focus {
@@ -139,7 +140,7 @@ export const TabsPanel = styled(TabPanel)`
 TabsPanel.tabsRole = 'TabPanel';
 
 export const TabContents = styled.div`
-  border: 1px solid #205295;
+  border: 1px solid ${color.darkColor};
   border-radius: 7px;
   width: 845px;
   height: 520px;

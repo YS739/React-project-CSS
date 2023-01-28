@@ -2,20 +2,8 @@ import styled from 'styled-components';
 
 export const DetialFragment = styled.div`
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
+  margin: 2% 3%;
 `;
 
-export const DetailLeftBody = styled.div`
-  width: 65%;
-  height: 100%;
-  margin-top: 2%;
-
-  /* background-color: whitesmoke; */
-`;
-
-export const DetailRight = styled.div`
-  width: 35%;
-  height: 100%;
-  margin-top: 2%;
-`;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { color } from '../../../common/color';
 
 export default function CustomAddBtnAlertUI(props) {
   return (
@@ -34,7 +35,7 @@ const ConfirmBox = styled.div`
 
   position: relative;
   bottom: 80px;
-  box-shadow: 2px 2px 15px 2px #205295;
+  box-shadow: 2px 2px 15px 2px ${color.lightColor};
 `;
 
 const TextBox = styled.div`
@@ -58,7 +59,7 @@ const BtnBox = styled.div`
 const ConfirmCancelBtn = styled.button`
   font-size: 16px;
   font-weight: 600;
-  color: #205295;
+  color: ${color.lightColor};
 
   background: none;
   border: none;
