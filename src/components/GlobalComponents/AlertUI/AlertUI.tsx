@@ -8,6 +8,7 @@ import {
   ConfirmBtn,
 } from './style';
 
+// 공통 alert UI
 const AlertUI: React.FC<{
   title: string;
   onClose: MouseEventHandler<HTMLElement>;

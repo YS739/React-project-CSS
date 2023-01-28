@@ -1,3 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+import { useState, useRef, useEffect, ChangeEvent } from 'react';
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+  GithubAuthProvider,
+} from 'firebase/auth';
+import { authService } from '../../common/firebase';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 import {
   Logo,
   LoginContainer,
@@ -12,28 +24,13 @@ import {
   Button,
   SocialLogin,
 } from './style';
-import { useNavigate } from 'react-router-dom';
-import { useState, useRef, useEffect, ChangeEvent } from 'react';
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-} from 'firebase/auth';
-import { authService } from '../../common/firebase';
-import { confirmAlert } from 'react-confirm-alert';
-import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 
 const LoginPage = () => {
-  // TODO: 헤더는 사라져야함
   const navigate = useNavigate();
 
   // 초기값 세팅 - 이메일, 비밀번호
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
-  // const [user, setUser] = useState({});
-  // 유효성 값 초기화...?
   const [idValid, setIdValid] = useState(false);
   const [pwValid, setPwValid] = useState(false);
   const [notAllow, setNotAllow] = useState(false);

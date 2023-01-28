@@ -3,6 +3,8 @@ import { updateProfile } from 'firebase/auth';
 import { useFirestoreDocumentMutation } from '@react-query-firebase/firestore';
 import { doc } from 'firebase/firestore';
 import { db } from '../../../common/firebase';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 import {
   ModalBackground,
   ModalContainer,
@@ -13,8 +15,6 @@ import {
   SaveButton,
   ErrorMessage,
 } from './style';
-import { confirmAlert } from 'react-confirm-alert';
-import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 
 const EditModal = ({
   setModalOpen,
@@ -31,7 +31,7 @@ const EditModal = ({
   const [inputValidation, setInputValidation] = useState(false);
   // 저장 버튼 활성화
   const [buttonValidation, setButtonValidation] = useState(true);
-
+  // mutation 사용 - 닉네임 수정
   const docRef = doc(db, 'users', currentUser);
   const mutation = useFirestoreDocumentMutation(docRef);
 

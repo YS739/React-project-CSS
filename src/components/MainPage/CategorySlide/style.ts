@@ -9,7 +9,6 @@ export const CategoryBox = styled.div`
   @media screen and (max-width: 1000px) {
     width: 600px;
   }
-
   @media screen and (max-width: 800px) {
     width: 400px;
   }
@@ -27,14 +26,12 @@ export const Category = styled.button`
   font-weight: 400;
   padding-top: 4px;
   box-sizing: border-box;
-
   cursor: pointer;
 
   :hover {
     background-color: white;
     color: ${colors.PURPLE};
   }
-
   :focus {
     background-color: white;
     color: ${colors.PURPLE};
@@ -47,7 +44,6 @@ export const LeftIcon = styled.span`
   position: absolute;
   top: -7px;
   left: -85px;
-
   cursor: pointer;
 
   @media screen and (max-width: 600px) {
@@ -61,11 +57,9 @@ export const RightIcon = styled(LeftIcon)`
   @media screen and (max-width: 1000px) {
     left: 650px;
   }
-
   @media screen and (max-width: 800px) {
     left: 450px;
   }
-
   @media screen and (max-width: 600px) {
     left: 410px;
   }

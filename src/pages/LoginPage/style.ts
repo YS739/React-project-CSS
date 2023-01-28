@@ -14,6 +14,7 @@ export const Logo = styled.img`
   width: 200px;
   height: 100px;
 `;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -28,6 +29,7 @@ export const Id = styled.div`
   padding-bottom: 20px;
   width: 300px;
 `;
+
 export const Password = styled.div`
   display: flex;
   justify-content: space-between;
@@ -45,16 +47,19 @@ export const Input = styled.input`
   }
   padding-left: 10px;
 `;
+
 export const Error = styled.text`
   color: red;
   font-size: 12px;
   padding: 5px;
 `;
+
 export const ToSignUp = styled.div`
   display: flex;
   flex-direction: row;
   padding: 20px;
 `;
+
 export const SignUp = styled.div`
   padding-left: 5px;
   font-weight: bold;
@@ -69,7 +74,6 @@ export const BlueButton = styled.button`
   color: white;
   font-size: 15px;
   margin-bottom: 10px;
-
   cursor: pointer;
 `;
 

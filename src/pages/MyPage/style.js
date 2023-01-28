@@ -10,18 +10,20 @@ export const MyPageContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    margin: 0 auto;
   }
 `;
 export const MyInfoContainer = styled.div`
   padding-top: 65px;
   flex: 30%;
   margin: 0 auto;
+  padding-left: 40px;
+  box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 0px;
   }
 `;
 
@@ -48,7 +50,7 @@ export const MyPageTagTitle = styled.div`
 
 export const MyInfoInput = styled.div`
   border: none;
-  border-bottom: 0.6px solid #c6c6c6;
+  border-bottom: 0.6px solid ${colors.PURPLE};
   min-width: 200px;
   width: 70%;
   margin: 20px 10px 20px 0;
@@ -123,7 +125,6 @@ export const TabItem = styled(Tab)`
   @media screen and (max-width: 1300px) {
     width: 310px;
   }
-
   @media screen and (max-width: 1000px) {
     width: 200px;
   }
@@ -153,7 +154,6 @@ export const TabContents = styled.div`
   @media screen and (max-width: 1300px) {
     max-width: 645px;
   }
-
   @media screen and (max-width: 1000px) {
     max-width: 425px;
   }
