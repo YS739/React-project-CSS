@@ -61,7 +61,7 @@ const SignUpPage: SignUpPageN = () => {
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
         console.log('회원가입 성공!');
-        updateProfile(authService?.currentUser, {
+        updateProfile(authService.currentUser, {
           displayName: nickName,
         })
           .then(() => {
@@ -204,8 +204,10 @@ const SignUpPage: SignUpPageN = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
-        <BlueButton disabled={notAllow}>회원가입</BlueButton>
       </Form>
+      <BlueButton disabled={notAllow} onClick={onSubmit}>
+        회원가입
+      </BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>

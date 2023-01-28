@@ -16,12 +16,12 @@ import {
   useState,
   useRef,
   useEffect,
-  FormEventHandler,
   ChangeEvent,
+  FormEventHandler,
 } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
-import { updateProfile } from 'firebase/auth';
+import { updateProfile, User } from 'firebase/auth';
 import { async } from '@firebase/util';
 
 type SignUpPageN = () => any;
@@ -42,46 +42,61 @@ const SignUpPage: SignUpPageN = () => {
   const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
 
   // 유효성 검사
-  const [isId, setIsId] = useState(false);
-  const [isPw, setIsPw] = useState(false);
-  const [isPwConfirm, setIsPwConfirm] = useState(false);
-  const [isNickName, setIsNickName] = useState(false);
+  const [isId, setIsId] = useState<boolean>(false);
+  const [isPw, setIsPw] = useState<boolean>(false);
+  const [isPwConfirm, setIsPwConfirm] = useState<boolean>(false);
+  const [isNickName, setIsNickName] = useState<boolean>(false);
 
   // 회원가입 버튼 활성화
-  const [notAllow, setNotAllow] = useState(true);
+  const [notAllow, setNotAllow] = useState<boolean>(true);
 
   // 에러 나면 그곳에 커서 이동되도록
   const idRef = useRef(null);
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
   const pwConfirmRef = useRef(null);
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
+
+  // useEffect(() => {
+  //   if (authService.currentUser === null) return;
+  // }, [currentUser]);
 
   // 회원가입 완료
-  const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async () => {
-    await createUserWithEmailAndPassword(authService, id, pw)
+  const onSubmit = async () => {
+    // await createUserWithEmailAndPassword(authService, id, pw)
+    const userCredential = await createUserWithEmailAndPassword(
+      authService,
+      id,
+      pw,
+    );
+    const newUser = {
+      id,
+      displayName: nickName,
+    };
+    // .then(() => {
+    // if (authService.currentUser === null) return;
+    // setCurrentUser(newUser);
+    updateProfile(userCredential.user, {
+      displayName: nickName,
+    })
       .then(() => {
-        console.log('회원가입 성공!');
-        updateProfile(authService?.currentUser, {
-          displayName: nickName,
-        })
-          .then(() => {
-            alert('회원가입이 완료되었습니다.');
-            setId('');
-            setNickName('');
-            setPw('');
-            navigate('/');
-          })
-          .catch((error) => {
-            console.log(error.message);
-            alert('회원가입을 다시 진행해주세요');
-            navigate('/signUp');
-          });
+        alert('회원가입이 완료되었습니다.');
+        setId('');
+        setNickName('');
+        setPw('');
+        navigate('/');
       })
       .catch((error) => {
-        setError(error.message);
-        alert('! 이미 존재하는 계정 입니다.');
-        console.log(error);
+        console.log(error.message);
+        alert('회원가입을 다시 진행해주세요');
+        navigate('/signUp');
       });
+    // })
+    // .catch((error) => {
+    //   setError(error.message);
+    //   alert('! 이미 존재하는 계정 입니다.');
+    //   console.log(error);
+    // });
   };
 
   //* id (이메일)
@@ -204,6 +219,7 @@ const SignUpPage: SignUpPageN = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
+
         <BlueButton disabled={notAllow}>회원가입</BlueButton>
       </Form>
       <ToLogin>

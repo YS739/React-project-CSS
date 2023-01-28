@@ -55,9 +55,9 @@ const SignUpPage: SignUpPageN = () => {
   const nickNameRef = useRef(null);
   const pwRef = useRef(null);
   const pwConfirmRef = useRef(null);
-
+  type OnSubmitN = () => void;
   // 회원가입 완료
-  const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async () => {
+  const onSubmit: OnSubmitN = async () => {
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
         console.log('회원가입 성공!');

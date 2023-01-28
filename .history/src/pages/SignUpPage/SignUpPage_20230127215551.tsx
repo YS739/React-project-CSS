@@ -16,16 +16,15 @@ import {
   useState,
   useRef,
   useEffect,
-  FormEventHandler,
   ChangeEvent,
+  FormEventHandler,
 } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
 import { updateProfile } from 'firebase/auth';
 import { async } from '@firebase/util';
 
-type SignUpPageN = () => any;
-const SignUpPage: SignUpPageN = () => {
+const SignUpPage = () => {
   const navigate = useNavigate();
 
   // 초기값 세팅 - 이메일, 닉네임, 비밀번호, 비밀번호 확인
@@ -42,13 +41,13 @@ const SignUpPage: SignUpPageN = () => {
   const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
 
   // 유효성 검사
-  const [isId, setIsId] = useState(false);
-  const [isPw, setIsPw] = useState(false);
-  const [isPwConfirm, setIsPwConfirm] = useState(false);
-  const [isNickName, setIsNickName] = useState(false);
+  const [isId, setIsId] = useState<boolean>(false);
+  const [isPw, setIsPw] = useState<boolean>(false);
+  const [isPwConfirm, setIsPwConfirm] = useState<boolean>(false);
+  const [isNickName, setIsNickName] = useState<boolean>(false);
 
   // 회원가입 버튼 활성화
-  const [notAllow, setNotAllow] = useState(true);
+  const [notAllow, setNotAllow] = useState<boolean>(true);
 
   // 에러 나면 그곳에 커서 이동되도록
   const idRef = useRef(null);
@@ -60,6 +59,7 @@ const SignUpPage: SignUpPageN = () => {
   const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async () => {
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
+        if (authService.currentUser === null) return;
         console.log('회원가입 성공!');
         updateProfile(authService?.currentUser, {
           displayName: nickName,
@@ -204,6 +204,7 @@ const SignUpPage: SignUpPageN = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
+
         <BlueButton disabled={notAllow}>회원가입</BlueButton>
       </Form>
       <ToLogin>
