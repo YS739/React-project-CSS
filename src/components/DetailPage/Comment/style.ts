@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import { color } from '../../../common/color';
+
+export const ListContainer
+ = styled.div`
+  margin-bottom: 20px;
+`;
+
 
 export const ListTitleSection = styled.div`
   width: 100%;
@@ -40,25 +47,24 @@ export const ListTextSection = styled.div`
 `;
 
 export const CommentText = styled.div`
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-left: 1%;
 `;
 
 export const CommentEditInput = styled.input`
   width: 90%;
-
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 2.2px solid black;
+  border-bottom: 1px solid black;
 
   :focus {
     outline: none;
   }
 
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1rem;
+  /* font-weight: 600; */
   margin-left: 1%;
 `;
 
@@ -80,28 +86,28 @@ export const CommentIconBody = styled.div`
 
 export const UpdateDeleteBody = styled.div`
   width: 50%;
-
   margin-right: 25%;
+  /* background-color: aliceblue; */
 `;
 
 export const CommentDeleteBtn = styled.button`
-  width: 90px;
-  height: 35px;
+  width: 80px;
+  height: 30px;
 
   background-color: white;
-  border-color: #205295;
-  color: #205295;
+  border:2px solid ${color.darkColor};
+  color: ${color.darkColor};
   border-radius: 5px;
   cursor: pointer;
 
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
 
   display: block;
   margin-bottom: 5px;
 
   :hover {
-    background-color: #205295;
+    background-color: ${color.darkColor};
     color: white;
     border-radius: 5px;
     border: none;

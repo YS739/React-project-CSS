@@ -1,26 +1,31 @@
 import styled from 'styled-components';
+import { color } from '../../common/color';
 
 export const SignUpContainer = styled.div`
   padding: 50px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: antiquewhite; */
 `;
 
 export const Logo = styled.img`
-  width: 300px;
-  height: 200px;
+  width: 220px;
+  height: 130px;
   justify-content: center;
 `;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px;
+  background-color: aliceblue;
 `;
+
 export const Id = styled.div`
   display: flex;
   justify-content: space-between;
@@ -50,13 +55,13 @@ export const Input = styled.input`
   }
   padding-left: 10px;
 `;
-export const Error = styled.text`
+export const Error = styled.div`
   color: red;
   font-size: 12px;
   padding: 5px;
 `;
 export const BlueButton = styled.button`
-  background-color: #205295;
+  background-color: ${color.lightColor};
   border-radius: 5px;
   width: 250px;
   height: 40px;

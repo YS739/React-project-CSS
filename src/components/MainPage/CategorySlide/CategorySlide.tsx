@@ -15,7 +15,7 @@ const SampleNextArrow = (props: Props) => {
   const { onClick } = props;
   return (
     <LeftIcon onClick={onClick}>
-      <MdChevronLeft style={{ fontSize: 50, color: color.blue }} />
+      <MdChevronLeft style={{ fontSize: 50, color: color.lightColor }} />
     </LeftIcon>
   );
 };
@@ -26,7 +26,7 @@ const SamplePrevArrow: React.FC<{
   const { onClick } = props;
   return (
     <RightIcon onClick={onClick}>
-      <MdChevronRight style={{ fontSize: 50, color: color.blue }} />
+      <MdChevronRight style={{ fontSize: 50, color: color.lightColor }} />
     </RightIcon>
   );
 };

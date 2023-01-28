@@ -36,7 +36,9 @@ const AddComment: React.FC = ({ video }: any) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
   const [bookmark, setBookmark] = useState(false);
-  const [changeColor, setChangeColor] = useState('rgba(32, 82, 149, 0.6)');
+  const [changeColor, setChangeColor] = useState<string>(
+    'rgba(32, 82, 149, 0.6)',
+  );
   const AddGithubText = (e: ChangeEvent<HTMLInputElement>) => {
     setGithubText(e.target.value);
   };
@@ -58,7 +60,7 @@ const AddComment: React.FC = ({ video }: any) => {
         setCurrentUserName(authService.currentUser?.displayName);
         setCurrentUserUid(authService.currentUser?.uid);
       } else if (!user) {
-        console.log('로그인 안됨');
+        console.log('로그인 안됨.');
       }
     });
 
@@ -80,7 +82,15 @@ const AddComment: React.FC = ({ video }: any) => {
       createdAt: new Date(),
       date: NewDate,
     };
-    if (commentText !== '') {
+    if (!authService.currentUser) {
+      confirmAlert({
+        customUI: ({ onClose }) => {
+          return <AlertUI title={'로그인을 해주세요.'} onClose={onClose} />;
+        },
+      });
+      setGithubText('');
+      setCommentText('');
+    } else if (commentText !== '') {
       await addDoc(collection(db, 'comments'), newComment);
       setGithubText('');
       setCommentText('');
@@ -100,7 +110,7 @@ const AddComment: React.FC = ({ video }: any) => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       setBookmark(true);
-      setChangeColor('#205295');
+      setChangeColor('#84D2C5');
     }
   };
 
@@ -140,7 +150,7 @@ const AddComment: React.FC = ({ video }: any) => {
                 <AddGitText>Github Link </AddGitText>
                 <AddGitInputDiv>
                   <AddInputGihub
-                    placeholder="https:// 로 시작해주세요"
+                    placeholder="https:// 로 시작해주세요."
                     onChange={AddGithubText}
                     value={githubText}
                   />

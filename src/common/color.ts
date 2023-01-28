@@ -1,4 +1,8 @@
 export const color = {
-  navy: '#243763',
-  blue: `#205295`,
+  darkColor: `#7286D3`,
+  lightColor: `##5EE3CD`,
 };
+
+// lightcolor: 205295 - blue
+// 567189 -
+// 84D2C5 - 민트

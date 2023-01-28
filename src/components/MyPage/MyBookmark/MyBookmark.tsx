@@ -11,7 +11,7 @@ import {
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { authService, db } from '../../../common/firebase';
 import { useState, useEffect } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
+import {onAuthStateChanged, User } from 'firebase/auth';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { format, register } from 'timeago.js';
 import KoLocale from 'timeago.js/lib/lang/ko';
@@ -24,22 +24,22 @@ const MyBookmark = () => {
   // } = useLocation();
   // console.log(video)
   // 북마크 리스트
-  const [bookmarks, setBookmarks] = useState([]);
+  const [bookmarks, setBookmarks] = useState<BookmarkH[]>([]);
   // 현재 유저
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
   // const currentUser = authService.currentUser;
 
   useEffect(() => {
     onAuthStateChanged(authService, (user) => {
       if (user) {
-        setCurrentUser(authService.currentUser.uid);
+        setCurrentUser(authService.currentUser);
         getBookmarks();
         console.log('로그인 되어있음');
       } else if (!user) {
         console.log('로그인 안됨');
       }
     });
-  }, [bookmarks]);
+  }, [currentUser]);
 
   // const {
   //   state: { video },
@@ -50,10 +50,10 @@ const MyBookmark = () => {
   const getBookmarks = async () => {
     const q = query(
       collection(db, 'bookmark'),
-      where('userId', '==', currentUser),
+      where('userId', '==', currentUser?.uid),
     );
     await getDocs(q).then((querySnapshot) => {
-      const bookMarklist = [];
+      const bookMarklist:BookmarkH[] = [];
       querySnapshot.forEach((doc) => {
         bookMarklist.push({
           userId: doc.data().userId,
