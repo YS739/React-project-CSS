@@ -17,7 +17,7 @@ export const DetailPageBody = styled.div`
 `;
 
 export const DetailVideoContainer = styled.div`
-  width: 1200px;
+  width: 1150px;
   /* height: 500px; */
   /* background-color:blueviolet; */
   /* margin-left: 8%; */
@@ -67,7 +67,7 @@ export const ChannelName = styled.div`
 
 // 댓글 리스트
 export const DetailCommentBody = styled.div`
-  width: 100%;
+  width: 650px;
   margin-top: 30px;
   /* height: 100%; */
   /* background-color: aqua; */
@@ -75,6 +75,12 @@ export const DetailCommentBody = styled.div`
 
 // 추천 리스트
 export const RecommendVideoBody = styled.div`
-  width: 40%;
-  height: 100%;
+  width: 1200px;
+  /* height: 100%; */
+
+  display: flex;
+`;
+
+export const RecommendVideoBox = styled.div`
+  width: 530px;
 `;
