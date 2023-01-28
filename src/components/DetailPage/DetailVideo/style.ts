@@ -6,21 +6,26 @@ import styled from 'styled-components';
 
 // 디테일 페이지 전체 Body
 export const DetailPageBody = styled.div`
-  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
   /* height: 100%; */
   /* background-color: aliceblue; */
   /* margin: 0 auto; */
   /* margin: 0px 100px; */
   /* display: flex; */
-  max-width: 1600px;
+  /* max-width: 1600px; */
   justify-content: center;
 `;
 
 export const DetailVideoContainer = styled.div`
-  width: 1150px;
+  max-width: 95%;
   /* height: 500px; */
   /* background-color:blueviolet; */
   /* margin-left: 8%; */
+  @media screen and (max-width: 480px) {
+    width: 360px;
+    margin: 0 auto;
+  }
 `;
 
 export const DetailVideoSection = styled.div`
@@ -33,6 +38,9 @@ export const DetailVideoTitle = styled.div`
   font-weight: 600;
   margin-top: 2%;
   letter-spacing: -1px;
+  @media screen and (max-width: 480px) {
+    width: 450px;
+  }
 `;
 
 export const ChannelBox = styled.div`
@@ -79,6 +87,12 @@ export const RecommendVideoBody = styled.div`
   /* height: 100%; */
 
   display: flex;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 780px) {
+    display: block;
+  }
 `;
 
 export const RecommendVideoBox = styled.div`

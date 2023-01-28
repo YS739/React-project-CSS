@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { color } from '../../../common/color';
 
-export const ListContainer
- = styled.div`
+export const ListContainer = styled.div`
   margin-bottom: 20px;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
-
 
 export const ListTitleSection = styled.div`
   width: 100%;
@@ -44,6 +45,12 @@ export const ListTextSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 1200px) {
+    width: 350px;
+  }
+  @media screen and (max-width: 780px) {
+    width: 580px;
+  }
 `;
 
 export const CommentText = styled.div`
@@ -95,7 +102,7 @@ export const CommentDeleteBtn = styled.button`
   height: 30px;
 
   background-color: white;
-  border:2px solid ${color.darkColor};
+  border: 2px solid ${color.darkColor};
   color: ${color.darkColor};
   border-radius: 5px;
   cursor: pointer;
