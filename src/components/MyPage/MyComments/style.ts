@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from '../../../common/color';
 
 export const CommentContainer = styled.div`
   cursor: pointer;
@@ -11,14 +12,15 @@ export const CommentInfo = styled.div`
 `;
 
 export const CommentNickName = styled.p`
-  padding-right: 10px;
-  border-right: 1px solid #c6c6c6;
+  /* padding-right: 10px;
+  border-right: 1px solid ${color.darkColor}; */
 `;
 
 export const CommentDate = styled.p`
   padding: 0 10px;
   color: #a0a0a0;
   font-size: 15px;
+  letter-spacing: -1px;
 `;
 
 export const GitHubIcon = styled.a`
@@ -29,6 +31,6 @@ export const GitHubIcon = styled.a`
 
 export const CommentContents = styled.p`
   margin: 0;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #c6c6c6;
+  padding-bottom: 25px;
+  border-bottom: 1px solid ${color.darkColor};
 `;

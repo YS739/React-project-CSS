@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const BookMarkContainer = styled.div`
   display: flex;
-  /* justify-content: flex-start; */
   flex-direction: row;
   font-size: 15px;
   font-weight: 600;

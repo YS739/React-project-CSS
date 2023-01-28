@@ -5,7 +5,8 @@ import { color } from '../../common/color';
 export const MyPageContainer = styled.div`
   display: flex;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 1200px;
+  width: 100%;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
