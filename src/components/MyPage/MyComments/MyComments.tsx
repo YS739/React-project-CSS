@@ -1,3 +1,9 @@
+
+import { FaGithub } from 'react-icons/fa';
+import { authService, db } from '../../../common/firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
+import {onAuthStateChanged, User } from 'firebase/auth';
 import {
   CommentContainer,
   CommentInfo,
@@ -6,13 +12,6 @@ import {
   CommentContents,
   GitHubIcon,
 } from './style';
-import { FaGithub } from 'react-icons/fa';
-import { authService, db } from '../../../common/firebase';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { useState, useEffect } from 'react';
-import {onAuthStateChanged, User } from 'firebase/auth';
-
-
 interface CommentListJ {
   userId: string;
   comment: string;
@@ -24,17 +23,10 @@ interface CommentListJ {
 const MyComments = () => {
   // 댓글 리스트
   const [comments, setComments] = useState<CommentListJ[]>([]);
-  const [userNickname, setUserNickname] = useState<string | null | undefined>(
-    '',
-  );
 
   // 현재 유저
   const [currentUser, setCurrentUser] = useState<User | null>(null);
 
-  // export const AuthContext = React.createContext<User | null>(null);
-
-  // 유저 닉네임
-  // const userNickname = currentUser.displayName;
   useEffect(() => {
     onAuthStateChanged(authService, (user) => {
       if (user) {
@@ -65,7 +57,6 @@ const MyComments = () => {
       setComments(commentList);
   });
   }
-
   return (
     <div>
       {comments.map((comment) => {

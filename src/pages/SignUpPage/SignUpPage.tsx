@@ -5,8 +5,10 @@ import {
   Id,
   Name,
   Password,
+  Label,
   Input,
   Error,
+  SubmitButtonContainer,
   BlueButton,
   Login,
   ToLogin,
@@ -55,7 +57,6 @@ const SignUpPage = () => {
     e.preventDefault();
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
-        console.log('회원가입 성공!');
         if (authService.currentUser)
           updateProfile(authService?.currentUser, {
             displayName: nickName,
@@ -177,7 +178,8 @@ const SignUpPage = () => {
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
       <Form onSubmit={onSubmit}>
         <Id>
-          이메일
+          <Label>이메일</Label>
+
           <Input
             name="id"
             type="email"
@@ -194,7 +196,8 @@ const SignUpPage = () => {
           )}
         </Error>
         <Name>
-          닉네임
+          <Label>닉네임</Label>
+
           <Input
             name="nickName"
             maxLength={10}
@@ -206,7 +209,7 @@ const SignUpPage = () => {
         <Error>{nickNameErrMsg}</Error>
 
         <Password>
-          비밀번호
+          <Label>비밀번호</Label>
           <Input
             name="password"
             type="password"
@@ -218,7 +221,8 @@ const SignUpPage = () => {
         <Error>{pwErrMsg}</Error>
 
         <Password>
-          비밀번호 확인
+          <Label>비밀번호 확인</Label>
+
           <Input
             name="password"
             type="password"
@@ -228,8 +232,9 @@ const SignUpPage = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
-
-        <BlueButton disabled={notAllow}>회원가입</BlueButton>
+        <SubmitButtonContainer>
+          <BlueButton disabled={notAllow}>회원가입</BlueButton>
+        </SubmitButtonContainer>
       </Form>
       <ToLogin>
         이미 가입 하셨나요?

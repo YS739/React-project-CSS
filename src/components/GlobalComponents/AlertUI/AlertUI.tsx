@@ -2,12 +2,13 @@ import React, { MouseEventHandler } from 'react';
 import {
   AlertBody,
   AlertBox,
-  TitleBox,
+  TextBox,
   Title,
   BtnBox,
   ConfirmBtn,
 } from './style';
 
+// 공통 alert UI
 const AlertUI: React.FC<{
   title: string;
   onClose: MouseEventHandler<HTMLElement>;
@@ -15,9 +16,9 @@ const AlertUI: React.FC<{
   return (
     <AlertBody>
       <AlertBox>
-        <TitleBox>
+        <TextBox>
           <Title>{props.title}</Title>
-        </TitleBox>
+        </TextBox>
         <BtnBox>
           <ConfirmBtn onClick={props.onClose}>확인</ConfirmBtn>
         </BtnBox>

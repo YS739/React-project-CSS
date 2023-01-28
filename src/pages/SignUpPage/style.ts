@@ -1,49 +1,51 @@
 import styled from 'styled-components';
-import { color } from '../../common/color';
+import { colors } from '../../common/colors';
 
 export const SignUpContainer = styled.div`
   padding: 50px;
-  /* margin-bottom: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: antiquewhite; */
 `;
 
 export const Logo = styled.img`
   width: 220px;
-  height: 130px;
+  height: 150px;
   justify-content: center;
 `;
 
 export const Form = styled.form`
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 50px;
-  background-color: aliceblue;
+  padding: 40px;
+  /* background-color: aliceblue; */
 `;
 
 export const Id = styled.div`
   display: flex;
-  justify-content: space-between;
-  /* padding-bottom: 5px; */
+  flex-direction: column;
   width: 300px;
 `;
+
 export const Name = styled.div`
   display: flex;
-  justify-content: space-between;
-  /* padding-bottom: 30px; */
+  flex-direction: column;
   width: 300px;
 `;
+
 export const Password = styled.div`
   display: flex;
-  justify-content: space-between;
-  /* padding-bottom: 30px; */
+  flex-direction: column;
   width: 300px;
 `;
+
+export const Label = styled.div`
+  display: flex;
+`;
+
 export const Input = styled.input`
   border: none;
   border-bottom: 1px solid #ccc;
@@ -53,29 +55,40 @@ export const Input = styled.input`
   :focus-visible {
     outline: none;
   }
+  margin-top: 3px;
   padding-left: 10px;
 `;
+
 export const Error = styled.div`
   color: red;
   font-size: 12px;
   padding: 5px;
 `;
+
+export const SubmitButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+`;
+
 export const BlueButton = styled.button`
-  background-color: ${color.lightColor};
+  align-items: center;
+  background-color: ${colors.GREY};
   border-radius: 5px;
   width: 250px;
   height: 40px;
   color: white;
   font-size: 15px;
-  margin-bottom: 10px;
   cursor: pointer;
 `;
+
 export const ToLogin = styled.div`
   font-size: 15px;
   display: flex;
   flex-direction: row;
   padding: 10px;
 `;
+
 export const Login = styled.div`
   font-weight: bold;
   cursor: pointer;

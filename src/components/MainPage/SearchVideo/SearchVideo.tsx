@@ -1,3 +1,5 @@
+import { HiOutlineSearch } from 'react-icons/hi';
+import CategorySlide from '../CategorySlide/CategorySlide';
 import {
   SearchSection,
   SearchForm,
@@ -5,9 +7,6 @@ import {
   SearchResultBox,
   SearchResult,
 } from './style';
-import { HiOutlineSearch } from 'react-icons/hi';
-import CategorySlide from '../CategorySlide/CategorySlide';
-import React from 'react';
 
 // call signature
 type SearchVideoJ = (props: any) => any;

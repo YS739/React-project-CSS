@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../common/colors';
 
 export const AlertBody = styled.div`
   display: flex;
@@ -15,22 +16,20 @@ export const AlertBox = styled.div`
   height: 200px;
   border-radius: 10px;
   background-color: #ffffff;
-
   position: relative;
   bottom: 80px;
-  box-shadow: 2px 2px 15px 2px #205295;
+  box-shadow: 2px 2px 15px 2px ${colors.PURPLE};
 `;
 
-export const TitleBox = styled.div`
+export const TextBox = styled.div`
   display: flex;
   justify-content: center;
-
   margin-top: 25px;
 `;
 
 export const Title = styled.p`
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 800;
 `;
 
 export const BtnBox = styled.div`
@@ -39,13 +38,12 @@ export const BtnBox = styled.div`
   justify-content: center;
   gap: 15px;
 `;
+
 export const ConfirmBtn = styled.button`
   font-size: 16px;
   font-weight: 600;
-  color: #205295;
-
+  color: ${colors.GREY};
   background: none;
   border: none;
-
   cursor: pointer;
 `;

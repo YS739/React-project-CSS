@@ -32,12 +32,8 @@ const MyPage = () => {
 
   // 모달창 노출 여부 state
   const [modalOpen, setModalOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState('');
   // 현재 유저
-  // const currentUser = authService.currentUser;
-  // 유저 닉네임
-  // const userNickname = currentUser.displayName;
-
+  const [currentUser, setCurrentUser] = useState('');
   // 닉네임 수정
   const [userName, setUserName] = useState('');
 
@@ -68,10 +64,8 @@ const MyPage = () => {
 
   // 유저 정보 가져오기
   const getUserInfo = async () => {
-    // console.log('currentUser***', currentUser);
     const docRef = doc(db, 'users', currentUser);
     const docSnap = await getDoc(docRef);
-    console.log('docSnap', docSnap);
     if (docSnap.exists()) {
       setGithub(docSnap.data().github);
     }

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { color } from '../../common/color';
+import { colors } from '../../common/colors';
 
 export const LoginContainer = styled.div`
   padding: 50px;
-  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,27 +10,34 @@ export const LoginContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 200px;
-  height: 100px;
+  width: 220px;
+  height: 150px;
+  justify-content: center;
 `;
+
 export const Form = styled.form`
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 60px;
+  padding: 40px;
+  /* background-color: aliceblue; */
 `;
 
 export const Id = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 20px;
+  flex-direction: column;
   width: 300px;
 `;
+
 export const Password = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 300px;
+`;
+
+export const Label = styled.div`
+  display: flex;
 `;
 
 export const Input = styled.input`
@@ -43,38 +49,51 @@ export const Input = styled.input`
   :focus-visible {
     outline: none;
   }
+  margin-top: 3px;
   padding-left: 10px;
 `;
-export const Error = styled.text`
+
+export const Error = styled.div`
   color: red;
   font-size: 12px;
   padding: 5px;
 `;
+
 export const ToSignUp = styled.div`
   display: flex;
   flex-direction: row;
   padding: 20px;
 `;
+
 export const SignUp = styled.div`
   padding-left: 5px;
   font-weight: bold;
   cursor: pointer;
 `;
 
+export const SubmitButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+`;
+
 export const BlueButton = styled.button`
-  background-color: ${color.lightColor};
+  align-items: center;
+  background-color: ${colors.GREY};
   border-radius: 5px;
   width: 250px;
   height: 40px;
   color: white;
   font-size: 15px;
   margin-bottom: 10px;
-
   cursor: pointer;
 `;
 
 export const Button = styled.button`
   background-color: white;
+  color: ${colors.GREY};
+  font-weight: 700;
+  font-size: 14px;
   width: 250px;
   height: 40px;
   cursor: pointer;

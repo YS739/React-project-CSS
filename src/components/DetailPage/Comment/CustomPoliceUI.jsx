@@ -1,5 +1,7 @@
+import { confirmAlert } from 'react-confirm-alert';
 import styled from 'styled-components';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
+import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 
 export default function CustomPoliceUI(props) {
   return (
@@ -9,14 +11,17 @@ export default function CustomPoliceUI(props) {
           <ConfirmTitle>신고 사유</ConfirmTitle>
         </TitleBox>
         <TextBox>
-          <Textinput type="text" placeholder="신고 사유를 입력해주세요!" />
+          <TextInput type="text" placeholder="신고 사유를 입력해주세요." />
         </TextBox>
         <BtnBox>
           <ConfirmCancelBtn onClick={props.onClose}>취소</ConfirmCancelBtn>
           <ConfirmDeleteBtn
             onClick={() => {
-              alert('완료');
-              props.onClose();
+              confirmAlert({
+                customUI: ({ onClose }) => {
+                  return <AlertUI title={'신고 완료!'} onClose={onClose} />;
+                },
+              });
             }}
           >
             완료
@@ -45,7 +50,7 @@ const ConfirmBox = styled.div`
 
   position: relative;
   bottom: 80px;
-  box-shadow: 2px 2px 15px 2px #205295;
+  box-shadow: 2px 2px 15px 2px ${colors.PURPLE};
 `;
 
 const TitleBox = styled.div`
@@ -60,7 +65,7 @@ const TextBox = styled.div`
   justify-content: center;
 `;
 
-const Textinput = styled.input`
+const TextInput = styled.input`
   width: 270px;
   height: 25px;
 
@@ -91,7 +96,7 @@ const BtnBox = styled.div`
 const ConfirmCancelBtn = styled.button`
   font-size: 16px;
   font-weight: 600;
-  color: ${color.lightColor};
+  color: ${colors.GREY};
 
   background: none;
   border: none;

@@ -1,26 +1,29 @@
 import styled from 'styled-components';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
-import { color } from '../../common/color';
+import { colors } from '../../common/colors';
 
 export const MyPageContainer = styled.div`
   display: flex;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 1200px;
+  width: 100%;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    margin: 0 auto;
   }
 `;
 export const MyInfoContainer = styled.div`
   padding-top: 65px;
   flex: 30%;
   margin: 0 auto;
+  padding-left: 40px;
+  box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 0px;
   }
 `;
 
@@ -47,7 +50,7 @@ export const MyPageTagTitle = styled.div`
 
 export const MyInfoInput = styled.div`
   border: none;
-  border-bottom: 0.6px solid #c6c6c6;
+  border-bottom: 0.6px solid ${colors.PURPLE};
   min-width: 200px;
   width: 70%;
   margin: 20px 10px 20px 0;
@@ -56,9 +59,9 @@ export const MyInfoInput = styled.div`
 `;
 
 export const MyInfoEditButton = styled.button`
-  border: 1px solid ${color.darkColor};
+  border: 1px solid ${colors.PURPLE};
   border-radius: 7px;
-  color: ${color.darkColor};
+  color: ${colors.PURPLE};
   background-color: #fff;
   font-weight: 600;
   padding: 5px 10px;
@@ -69,7 +72,7 @@ export const MyInfoEditButton = styled.button`
   flex: 20%;
 
   &:hover {
-    background: ${color.darkColor};
+    background: ${colors.PURPLE};
     color: #fff;
   }
 
@@ -102,9 +105,9 @@ export const TabItem = styled(Tab)`
   width: 410px;
   height: 26px;
   margin-right: 4px;
-  border: 1px solid ${color.darkColor};
+  border: 1px solid ${colors.PURPLE};
   border-radius: 7px;
-  color: ${color.darkColor};
+  color: ${colors.PURPLE};
   font-weight: 600;
   padding: 4px;
   cursor: pointer;
@@ -112,7 +115,7 @@ export const TabItem = styled(Tab)`
   align-items: center;
   justify-content: center;
   &.is-selected {
-    background: ${color.darkColor};
+    background: ${colors.PURPLE};
     color: #fff;
   }
   &:focus {
@@ -122,7 +125,6 @@ export const TabItem = styled(Tab)`
   @media screen and (max-width: 1300px) {
     width: 310px;
   }
-
   @media screen and (max-width: 1000px) {
     width: 200px;
   }
@@ -140,7 +142,7 @@ export const TabsPanel = styled(TabPanel)`
 TabsPanel.tabsRole = 'TabPanel';
 
 export const TabContents = styled.div`
-  border: 1px solid ${color.darkColor};
+  border: 1px solid ${colors.PURPLE};
   border-radius: 7px;
   width: 845px;
   height: 520px;
@@ -152,7 +154,6 @@ export const TabContents = styled.div`
   @media screen and (max-width: 1300px) {
     max-width: 645px;
   }
-
   @media screen and (max-width: 1000px) {
     max-width: 425px;
   }

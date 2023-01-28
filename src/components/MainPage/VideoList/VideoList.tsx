@@ -1,12 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { Videos, Video, VideoTitle, VideoFooter, Creator } from './style';
 import { format, register } from 'timeago.js';
 import KoLocale from 'timeago.js/lib/lang/ko';
+import { Videos, Video, VideoTitle, VideoFooter, Creator } from './style';
 
 // 비디오 생성날짜 한국어로 표기하기
 register('ko', KoLocale);
 
-// TODO: any 수정하기
 const VideoList = ({ video }: any) => {
   const navigate = useNavigate();
 

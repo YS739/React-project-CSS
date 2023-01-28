@@ -10,9 +10,7 @@ export const Videos = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
   cursor: pointer;
-
   :hover {
     width: 350px;
     height: 250px;

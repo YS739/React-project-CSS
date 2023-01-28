@@ -5,6 +5,8 @@ export const VideoSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  background-color: antiquewhite;
 `;
 
 export const VideoBox = styled.div`
@@ -13,6 +15,27 @@ export const VideoBox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 30px;
+  margin-right: 3%;
+  margin-left: 7%;
+  @media screen and (max-width: 1200px) {
+  margin-left: 19%;
+  }
+  @media screen and (max-width: 1000px) {
+  margin-left: 15%;
+  }
+  @media screen and (max-width: 900px) {
+  margin-left: 9%;
+  }
+  @media screen and (max-width: 800px) {
+  margin-left: 26%;
+  }
+  @media screen and (max-width: 600px) {
+    margin-left: 23%;
+  }
+  @media screen and (max-width: 500px) {
+    margin-left: 16%;
+  }
 `;

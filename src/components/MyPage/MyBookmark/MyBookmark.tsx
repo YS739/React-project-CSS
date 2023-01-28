@@ -1,3 +1,9 @@
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { authService, db } from '../../../common/firebase';
+import { useState, useEffect } from 'react';
+import {onAuthStateChanged, User } from 'firebase/auth';
+import { format, register } from 'timeago.js';
+import KoLocale from 'timeago.js/lib/lang/ko';
 import {
   BookMarkContainer,
   ThumNailContainer,
@@ -8,26 +14,15 @@ import {
   ChannelTitle,
   BookmarkText,
 } from './style';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { authService, db } from '../../../common/firebase';
-import { useState, useEffect } from 'react';
-import {onAuthStateChanged, User } from 'firebase/auth';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { format, register } from 'timeago.js';
-import KoLocale from 'timeago.js/lib/lang/ko';
 
 const MyBookmark = () => {
   // 비디오 생성날짜 한국어로 표기하기
   register('ko', KoLocale);
-  // const {
-  //   state: { video },
-  // } = useLocation();
-  // console.log(video)
+
   // 북마크 리스트
   const [bookmarks, setBookmarks] = useState<BookmarkH[]>([]);
   // 현재 유저
   const [currentUser, setCurrentUser] = useState<User | null>(null);
-  // const currentUser = authService.currentUser;
 
   useEffect(() => {
     onAuthStateChanged(authService, (user) => {
@@ -40,12 +35,6 @@ const MyBookmark = () => {
       }
     });
   }, [currentUser]);
-
-  // const {
-  //   state: { video },
-  // } = useLocation();
-  // const { title, channelTitle, description, thumbnails } = video.snippet;
-  // console.log('비디오', video);
 
   const getBookmarks = async () => {
     const q = query(
@@ -68,9 +57,6 @@ const MyBookmark = () => {
       setBookmarks(bookMarklist);
     });
   };
-  // console.log(bookmarks);
-  const navigate = useNavigate();
-  // onClick={(() => navigate(`/detail/${x.videoId}`), { state: { x.video } })}
   return (
     <>
       {bookmarks.map((bookmark) => {

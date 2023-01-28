@@ -45,6 +45,7 @@ export const ModalClose = styled.button`
   cursor: pointer;
   color: #d7d7d7;
   font-size: 16px;
+  
   :hover {
     color: #000;
   }
