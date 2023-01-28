@@ -24,13 +24,10 @@ export const LoginToggle = styled.div`
 export const Nav = styled.div`
   font-weight: bold;
   padding-left: 30px;
-  /* background-color: aliceblue; */
   box-sizing: border-box;
   cursor: pointer;
 `;
 
-// export const Link = styled.div`
-//   font-weight: bold;
-//   padding-right: 5px;
-//   cursor: pointer;
-// `;
+export const Name = styled.div`
+  font-weight: bold;
+`;
