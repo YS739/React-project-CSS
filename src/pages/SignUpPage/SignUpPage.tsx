@@ -18,6 +18,7 @@ import {
   useEffect,
   ChangeEvent,
   FormEventHandler,
+  MouseEvent,
 } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
@@ -58,45 +59,46 @@ const SignUpPage = () => {
   const pwConfirmRef = useRef(null);
 
   // 회원가입 완료
-  const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async () => {
+  const onSubmit = async (e: MouseEvent<HTMLFormElement>) => {
+    e.preventDefault();
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
-        if (authService.currentUser === null) return;
         console.log('회원가입 성공!');
-        updateProfile(authService?.currentUser, {
-          displayName: nickName,
-        })
-          .then(() => {
-            confirmAlert({
-              customUI: ({ onClose }) => {
-                return (
-                  <AlertUI
-                    title={'회원가입이 완료되었습니다.'}
-                    onClose={onClose}
-                  />
-                );
-              },
-            });
-
-            setId('');
-            setNickName('');
-            setPw('');
-            navigate('/');
+        if (authService.currentUser)
+          updateProfile(authService?.currentUser, {
+            displayName: nickName,
           })
-          .catch((error) => {
-            console.log(error.message);
-            confirmAlert({
-              customUI: ({ onClose }) => {
-                return (
-                  <AlertUI
-                    title={'회원가입을 다시 진행해주세요.'}
-                    onClose={onClose}
-                  />
-                );
-              },
+            .then(() => {
+              confirmAlert({
+                customUI: ({ onClose }) => {
+                  return (
+                    <AlertUI
+                      title={'회원가입이 완료되었습니다.'}
+                      onClose={onClose}
+                    />
+                  );
+                },
+              });
+
+              setId('');
+              setNickName('');
+              setPw('');
+              navigate('/');
+            })
+            .catch((error) => {
+              console.log(error.message);
+              confirmAlert({
+                customUI: ({ onClose }) => {
+                  return (
+                    <AlertUI
+                      title={'회원가입을 다시 진행해주세요.'}
+                      onClose={onClose}
+                    />
+                  );
+                },
+              });
+              navigate('/signUp');
             });
-            navigate('/signUp');
-          });
       })
       .catch((error) => {
         setError(error.message);

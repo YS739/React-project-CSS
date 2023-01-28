@@ -28,7 +28,7 @@ export const Video = styled.div`
 export const VideoTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 export const VideoFooter = styled.div`
@@ -36,7 +36,8 @@ export const VideoFooter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 `;
 
 export const Creator = styled.div`
