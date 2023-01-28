@@ -23,7 +23,6 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
 } from 'firebase/auth';
-import { FacebookLoginButton } from 'react-social-login-buttons';
 import { authService } from '../../common/firebase';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
@@ -158,7 +157,12 @@ const LoginPage = () => {
         <Id>
           <Label>이메일</Label>
 
-          <Input ref={idRef} value={id} onChange={onChangeId} />
+          <Input
+            ref={idRef}
+            value={id}
+            placeholder={'css@gmail.com'}
+            onChange={onChangeId}
+          />
         </Id>
         <Error>
           {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
@@ -174,6 +178,7 @@ const LoginPage = () => {
           </BlueButton>
         </SubmitButtonContainer>
       </Form>
+
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>

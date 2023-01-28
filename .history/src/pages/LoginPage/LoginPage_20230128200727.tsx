@@ -12,6 +12,8 @@ import {
   SubmitButtonContainer,
   BlueButton,
   Button,
+  GoogleLoginButton,
+  GithubLoginButton,
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
@@ -158,7 +160,12 @@ const LoginPage = () => {
         <Id>
           <Label>이메일</Label>
 
-          <Input ref={idRef} value={id} onChange={onChangeId} />
+          <Input
+            ref={idRef}
+            value={id}
+            placeholder={'css@gmail.com'}
+            onChange={onChangeId}
+          />
         </Id>
         <Error>
           {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
@@ -174,13 +181,16 @@ const LoginPage = () => {
           </BlueButton>
         </SubmitButtonContainer>
       </Form>
+
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <Button onClick={googleSignUpHandler}>Google 로그인</Button>
-        <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button>
+        <GoogleLoginButton onClick={googleSignUpHandler} />
+        <GithubLoginButton onClick={githubSignUpHandler} />
+        {/* <Button onClick={googleSignUpHandler}>Google 로그인</Button>
+        <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button> */}
       </SocialLogin>
     </LoginContainer>
   );

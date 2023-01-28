@@ -4,12 +4,10 @@ import {
   Form,
   Id,
   Password,
-  Label,
   Input,
   ToSignUp,
   SignUp,
   Error,
-  SubmitButtonContainer,
   BlueButton,
   Button,
   SocialLogin,
@@ -23,7 +21,6 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
 } from 'firebase/auth';
-import { FacebookLoginButton } from 'react-social-login-buttons';
 import { authService } from '../../common/firebase';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
@@ -156,24 +153,26 @@ const LoginPage = () => {
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
       <Form>
         <Id>
-          <Label>이메일</Label>
-
-          <Input ref={idRef} value={id} onChange={onChangeId} />
+          이메일
+          <Input
+            ref={idRef}
+            value={id}
+            placeholder={'css@gmail.com'}
+            onChange={onChangeId}
+          />
         </Id>
         <Error>
           {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
         </Error>
         <Password>
-          <Label>비밀번호</Label>
-
+          비밀번호
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
-        <SubmitButtonContainer>
-          <BlueButton disabled={notAllow} type="submit">
-            로그인
-          </BlueButton>
-        </SubmitButtonContainer>
       </Form>
+      <BlueButton disabled={notAllow} onClick={onSubmit}>
+        로그인
+      </BlueButton>
+
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>

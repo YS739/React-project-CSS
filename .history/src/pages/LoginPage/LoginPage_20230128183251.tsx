@@ -23,7 +23,6 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
 } from 'firebase/auth';
-import { FacebookLoginButton } from 'react-social-login-buttons';
 import { authService } from '../../common/firebase';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
@@ -158,7 +157,12 @@ const LoginPage = () => {
         <Id>
           <Label>이메일</Label>
 
-          <Input ref={idRef} value={id} onChange={onChangeId} />
+          <Input
+            ref={idRef}
+            value={id}
+            placeholder={'css@gmail.com'}
+            onChange={onChangeId}
+          />
         </Id>
         <Error>
           {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
@@ -174,12 +178,25 @@ const LoginPage = () => {
           </BlueButton>
         </SubmitButtonContainer>
       </Form>
+
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <Button onClick={googleSignUpHandler}>Google 로그인</Button>
+        <Button onClick={googleSignUpHandler}>
+          <a
+            target="_blank"
+            href="https://icons8.com/icon/17949/%EA%B5%AC%EA%B8%80-%EB%A1%9C%EA%B3%A0"
+          >
+            구글 로고
+          </a>{' '}
+          icon by{' '}
+          <a target="_blank" href="https://icons8.com">
+            Icons8
+          </a>
+          Google 로그인
+        </Button>
         <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button>
       </SocialLogin>
     </LoginContainer>

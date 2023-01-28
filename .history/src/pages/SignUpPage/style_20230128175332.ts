@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../common/colors';
+import { color } from '../../common/color';
 
 export const SignUpContainer = styled.div`
   padding: 50px;
@@ -20,7 +20,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
+  padding: 50px;
   /* background-color: aliceblue; */
 `;
 
@@ -39,7 +39,7 @@ export const Password = styled.div`
   flex-direction: column;
   width: 300px;
 `;
-export const Label = styled.div`
+export const Label = styled.text`
   display: flex;
 `;
 export const Input = styled.input`
@@ -62,16 +62,16 @@ export const Error = styled.div`
 export const SubmitButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 30px;
 `;
 export const BlueButton = styled.button`
   align-items: center;
-  background-color: ${colors.GREY};
+  background-color: ${color.lightColor};
   border-radius: 5px;
   width: 250px;
   height: 40px;
   color: white;
   font-size: 15px;
+  margin-bottom: 10px;
   cursor: pointer;
 `;
 export const ToLogin = styled.div`
