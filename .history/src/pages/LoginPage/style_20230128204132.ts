@@ -80,6 +80,22 @@ export const BlueButton = styled.button`
   cursor: pointer;
 `;
 
+export const GoogleLoginButton = styled.button`
+  background-color: white;
+  width: 250px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+`;
+export const GithubLoginButton = styled.button`
+  background-color: white;
+  width: 250px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+`;
 export const Button = styled.button`
   background-color: white;
   color: ${colors.GREY};
