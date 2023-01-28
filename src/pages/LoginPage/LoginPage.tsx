@@ -17,13 +17,11 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useState, useRef, useEffect, ChangeEvent } from 'react';
 import {
-  getAuth,
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
   GithubAuthProvider,
 } from 'firebase/auth';
-import { FacebookLoginButton } from 'react-social-login-buttons';
 import { authService } from '../../common/firebase';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
