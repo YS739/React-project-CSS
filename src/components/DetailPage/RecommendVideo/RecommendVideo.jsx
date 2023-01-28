@@ -1,6 +1,8 @@
 import { RecommendVideoList } from '../../../common/apis';
 import Recommend from './Recommend';
 import { useQuery } from 'react-query';
+import RodingRecommend from './RodingRecommend';
+import ErrorRecommendUI from './ErrorRecommendUI';
 
 const RecommendVideo = ({ videoId }) => {
   const {
@@ -11,12 +13,8 @@ const RecommendVideo = ({ videoId }) => {
 
   return (
     <>
-      {isLoading && <p>Loading...</p>}
-      {isError && (
-        <>
-          <p>Something is wrong..</p>
-        </>
-      )}
+      {isLoading && <RodingRecommend />}
+      {isError && <ErrorRecommendUI />}
       {recommendList?.map((video) => (
         <Recommend key={video.id['videoId']} video={video} />
       ))}

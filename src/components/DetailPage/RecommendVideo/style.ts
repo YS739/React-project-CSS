@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const RecommendBody = styled.div`
   width: 100%;
-  height: 100%;
+  height: 18vh;
   margin-left: 11%;
   padding: 1%;
   cursor: pointer;

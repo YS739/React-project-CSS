@@ -32,7 +32,6 @@ export default function DetailVideo() {
   return (
     <DetailPageBody>
       <DetailVideoContainer>
-        {/* <TestLogin /> */}
         <DetailVideoSection>
           <iframe
             id="player"
