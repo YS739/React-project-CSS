@@ -20,8 +20,7 @@ const VideoList = ({ video }: any) => {
     >
       <Video>
         <img
-          width={'100%'}
-          height={'90%'}
+          style={{ width: '100%', height: '90%', borderRadius: 20 }}
           src={thumbnails.medium.url}
           alt="videoThumbnail"
         />
