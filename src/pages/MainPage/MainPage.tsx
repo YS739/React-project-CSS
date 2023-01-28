@@ -105,7 +105,7 @@ const MainPage = () => {
 
   return (
     <>
-      {/* 검색창 및 결과 컴포넌트*/}
+      {/* 검색창 및 결과(+카테고리 슬라이드)컴포넌트*/}
       <SearchVideo
         keyword={keyword}
         setKeyword={setKeyword}
@@ -127,7 +127,6 @@ const MainPage = () => {
         {/* TODO: 더 간단하게 리팩토링 가능? */}
         {keyword ? (
           <VideoBox>
-            {/* TODO: any 수정하기  */}
             {searchedList?.map((video: any) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
@@ -142,7 +141,6 @@ const MainPage = () => {
                 <p>{String(errorCategory)}</p>
               </>
             )}
-            {/* TODO: any 수정하기  */}
             {categoryList?.map((video: any) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
@@ -156,12 +154,8 @@ const MainPage = () => {
               ))}
             </VideoBox>
           </>
-          // {/* // <VideoBox>
-          // //   {allListData?.map((video) => ( */}
-          // {/* //     <VideoList key={video.id['videoId']} video={video} />
-          // //   ))}
-          // // </VideoBox> */}
         )}
+        {/* observer api가 관찰하는 부분 - 이 위치에 스크롤이 도달하면 다음데이터를 불러온다 */}
         <div ref={observerRef}></div>
       </VideoSection>
     </>
