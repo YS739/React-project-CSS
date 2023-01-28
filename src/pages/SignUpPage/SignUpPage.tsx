@@ -23,6 +23,8 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
 import { updateProfile } from 'firebase/auth';
 import { async } from '@firebase/util';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -65,7 +67,17 @@ const SignUpPage = () => {
           displayName: nickName,
         })
           .then(() => {
-            alert('회원가입이 완료되었습니다.');
+            confirmAlert({
+              customUI: ({ onClose }) => {
+                return (
+                  <AlertUI
+                    title={'회원가입이 완료되었습니다.'}
+                    onClose={onClose}
+                  />
+                );
+              },
+            });
+
             setId('');
             setNickName('');
             setPw('');
@@ -73,13 +85,31 @@ const SignUpPage = () => {
           })
           .catch((error) => {
             console.log(error.message);
-            alert('회원가입을 다시 진행해주세요');
+            confirmAlert({
+              customUI: ({ onClose }) => {
+                return (
+                  <AlertUI
+                    title={'회원가입을 다시 진행해주세요.'}
+                    onClose={onClose}
+                  />
+                );
+              },
+            });
             navigate('/signUp');
           });
       })
       .catch((error) => {
         setError(error.message);
-        alert('! 이미 존재하는 계정 입니다.');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return (
+              <AlertUI
+                title={'! 이미 존재하는 계정 입니다.'}
+                onClose={onClose}
+              />
+            );
+          },
+        });
         console.log(error);
       });
   };

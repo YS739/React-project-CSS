@@ -13,6 +13,8 @@ import {
   SaveButton,
   ErrorMessage,
 } from './style';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 
 const EditModal = ({
   setModalOpen,
@@ -35,7 +37,11 @@ const EditModal = ({
 
   // 수정 취소
   const cancelEdit = () => {
-    alert('변경 사항이 없습니다.');
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return <AlertUI title={'변경 사항이 없습니다.'} onClose={onClose} />;
+      },
+    });
     setModalOpen(false);
   };
 
@@ -50,7 +56,13 @@ const EditModal = ({
         console.log(error.message);
       });
       updateNickname(currentInput);
-      alert('정보가 업데이트 되었습니다');
+      confirmAlert({
+        customUI: ({ onClose }) => {
+          return (
+            <AlertUI title={'정보가 업데이트 되었습니다.'} onClose={onClose} />
+          );
+        },
+      });
     } else {
       // github 수정
       mutation.mutate({ github: currentInput, userId: currentUser });

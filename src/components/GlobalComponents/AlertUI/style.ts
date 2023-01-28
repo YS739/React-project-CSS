@@ -1,23 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const CustomAddBtnAlertUI = (props) => {
-  return (
-    <ConfirmBody>
-      <ConfirmBox>
-        <TextBox>
-          <ConfirmText>댓글을 입력해주세요</ConfirmText>
-        </TextBox>
-        <BtnBox>
-          <ConfirmCancelBtn onClick={props.onClose}>확인</ConfirmCancelBtn>
-        </BtnBox>
-      </ConfirmBox>
-    </ConfirmBody>
-  );
-};
-export default CustomAddBtnAlertUI;
-
-const ConfirmBody = styled.div`
+export const AlertBody = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +10,7 @@ const ConfirmBody = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const ConfirmBox = styled.div`
+export const AlertBox = styled.div`
   width: 350px;
   height: 200px;
   border-radius: 10px;
@@ -38,25 +21,25 @@ const ConfirmBox = styled.div`
   box-shadow: 2px 2px 15px 2px #205295;
 `;
 
-const TextBox = styled.div`
+export const TitleBox = styled.div`
   display: flex;
   justify-content: center;
 
   margin-top: 25px;
 `;
 
-const ConfirmText = styled.p`
+export const Title = styled.p`
   font-size: 20px;
   font-weight: 550;
 `;
 
-const BtnBox = styled.div`
+export const BtnBox = styled.div`
   margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 15px;
 `;
-const ConfirmCancelBtn = styled.button`
+export const ConfirmBtn = styled.button`
   font-size: 16px;
   font-weight: 600;
   color: #205295;

@@ -22,6 +22,8 @@ import {
   GithubAuthProvider,
 } from 'firebase/auth';
 import { authService } from '../../common/firebase';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 
 const LoginPage = () => {
   // TODO: 헤더는 사라져야함
@@ -80,7 +82,11 @@ const LoginPage = () => {
     await signInWithEmailAndPassword(authService, id, pw)
       .then(() => {
         // Signed in
-        alert('로그인 되었습니다.');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return <AlertUI title={'로그인 되었습니다.'} onClose={onClose} />;
+          },
+        });
         setId('');
         setPw('');
         navigate('/');
@@ -89,7 +95,16 @@ const LoginPage = () => {
         const errorMessage = error.message;
         console.log('errorMessage', errorMessage);
         setError(errorMessage);
-        alert('! 계정을 다시 확인해주세요');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return (
+              <AlertUI
+                title={'! 이메일과 비밀번호를 확인해주세요.'}
+                onClose={onClose}
+              />
+            );
+          },
+        });
       });
   };
 
@@ -97,7 +112,11 @@ const LoginPage = () => {
   const googleSignUpHandler = () => {
     signInWithPopup(authService, new GoogleAuthProvider())
       .then(() => {
-        alert('회원가입이 완료되었습니다.');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return <AlertUI title={'로그인 되었습니다.'} onClose={onClose} />;
+          },
+        });
         navigate('/');
       })
       .catch((error) => {
@@ -109,7 +128,11 @@ const LoginPage = () => {
   const githubSignUpHandler = () => {
     signInWithPopup(authService, new GithubAuthProvider())
       .then(() => {
-        alert('회원가입이 완료되었습니다.');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return <AlertUI title={'로그인 되었습니다.'} onClose={onClose} />;
+          },
+        });
         navigate('/');
       })
       .catch((error) => {

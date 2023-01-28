@@ -29,7 +29,7 @@ import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
 import { confirmAlert } from 'react-confirm-alert';
-import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
+import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 
 //TODO: any 수정하기
 const AddComment: React.FC = ({ video }: any) => {
@@ -87,7 +87,7 @@ const AddComment: React.FC = ({ video }: any) => {
     } else if (commentText === '') {
       confirmAlert({
         customUI: ({ onClose }) => {
-          return <CustomAddBtnAlertUI onClose={onClose} />;
+          return <AlertUI title={'댓글을 입력해주세요.'} onClose={onClose} />;
         },
       });
     }

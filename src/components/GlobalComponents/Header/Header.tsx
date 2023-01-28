@@ -2,6 +2,8 @@ import { Container, Logo, LoginToggle, Nav } from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../AlertUI/AlertUI';
 
 const Header = () => {
   // TODO: 네비게이트 적용 - 로고, 회원가입, 로그인 버튼 클릭 시
@@ -14,7 +16,11 @@ const Header = () => {
   const LogOutHandler = async () => {
     await signOut(auth)
       .then(() => {
-        alert('로그아웃되었습니다.');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return <AlertUI title={'로그아웃되었습니다.'} onClose={onClose} />;
+          },
+        });
         // Sign-out successful.
         navigate('/');
       })
