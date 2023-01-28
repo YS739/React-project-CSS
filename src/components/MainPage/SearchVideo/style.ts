@@ -31,6 +31,10 @@ export const SearchForm = styled.form`
       outline: none;
     }
   }
+
+  @media screen and (max-width: 650px) {
+    width: 400px;
+  }
 `;
 
 export const SearchBtn = styled.button`
@@ -53,4 +57,5 @@ export const SearchResult = styled.div`
   font-size: 22px;
   font-weight: 800;
   text-align: center;
+  margin-bottom: 20px;
 `;

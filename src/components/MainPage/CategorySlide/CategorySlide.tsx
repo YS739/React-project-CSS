@@ -38,6 +38,22 @@ const CategorySlide = ({ categoryClick, onClick }: any) => {
     centerPadding: '10px',
     centerMode: true,
     slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow onClick={onClick} />,
     swipeToSlide: true,

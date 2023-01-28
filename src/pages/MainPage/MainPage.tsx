@@ -12,6 +12,7 @@ import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
+import { colors } from '../../common/colors';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState<string>('');
@@ -21,6 +22,7 @@ const MainPage = () => {
   const [videos, setVideos] = useState<any>([]);
   const [nextPageToken, setNextPageToken] = useState<string>('');
   const observerRef = useRef<HTMLDivElement>(null);
+
   // 클론 코딩 전체 리스트 불러오기
   const {
     isLoading: isLoadingAll,
@@ -124,7 +126,6 @@ const MainPage = () => {
       )}
 
       <VideoSection>
-        {/* TODO: 더 간단하게 리팩토링 가능? */}
         {keyword ? (
           <VideoBox>
             {searchedList?.map((video: any) => (

@@ -49,7 +49,7 @@ const ConfirmBox = styled.div`
 
   position: relative;
   bottom: 80px;
-  box-shadow: 2px 2px 15px 2px ${colors.GREY};
+  box-shadow: 2px 2px 15px 2px ${colors.PURPLE};
 `;
 
 const TitleBox = styled.div`

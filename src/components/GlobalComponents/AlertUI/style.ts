@@ -19,7 +19,7 @@ export const AlertBox = styled.div`
 
   position: relative;
   bottom: 80px;
-  box-shadow: 2px 2px 15px 2px ${colors.GREY};
+  box-shadow: 2px 2px 15px 2px ${colors.PURPLE};
 `;
 
 export const TextBox = styled.div`
@@ -31,7 +31,7 @@ export const TextBox = styled.div`
 
 export const Title = styled.p`
   font-size: 20px;
-  font-weight: 550;
+  font-weight: 800;
 `;
 
 export const BtnBox = styled.div`
