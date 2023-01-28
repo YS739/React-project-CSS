@@ -1,0 +1,829 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "A_RV3aKyPM8o4JRUbbaqnz-uOJk",
+  "nextPageToken": "CDEQAA",
+  "prevPageToken": "CBkQAQ",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 61355,
+    "resultsPerPage": 24
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "s5ZHpCLdkKPEbGO9Y09x1_9Hrj4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "i8DBoKBtGUo"
+      },
+      "snippet": {
+        "publishedAt": "2020-05-16T08:54:25Z",
+        "channelId": "UC73ImCmCziXI_Lb12HHCTaQ",
+        "title": "카카오톡 클론 강의 1",
+        "description": "카카오톡 클론 코딩 강의 1회차 건양대학교 멋쟁이 사자처럼 8기 운영진 박상희, 신아정 ▷ Font Awesome : https://fontawesome.com/ ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/i8DBoKBtGUo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/i8DBoKBtGUo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/i8DBoKBtGUo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "멋쟁이사자처럼 at 건양대",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-05-16T08:54:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3RSxgGkQAsmID5pPWBZ0APCdpuY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "11uygoUcIm4"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-14T13:36:53Z",
+        "channelId": "UCVrhnbfe78ODeQglXtT1Elw",
+        "title": "HTML을 이용한 에어비앤비(airbnb) 만들기 1강 - 뼈대 구성",
+        "description": "사진과 완성 파일은 아래 블로그에서 airbnb_sample.zip 파일 받으시면 되요. https://blog.naver.com/getinthere/221576015779.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/11uygoUcIm4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/11uygoUcIm4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/11uygoUcIm4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "메타코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-14T13:36:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3YwsYVrlGP0Kfw9gW1572UztR98",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "a9sT9jAzG0c"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-31T07:12:08Z",
+        "channelId": "UC0Y0T9JpgIBbyGDjvy9PbOg",
+        "title": "[강의 홍보] 초보자도 만들 수 있는 애플 UI 클론코딩 | 인프런 | 클론코딩 | 강의 소개",
+        "description": "깡코딩 님의 강의가 궁금하시다면? 더 알아보기 : https://bit.ly/2X9jp65 애플 등 국내 기업에서 많이 사용되는 UI 스크롤 인터렉션 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/a9sT9jAzG0c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/a9sT9jAzG0c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/a9sT9jAzG0c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "인프런 inflearn",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-31T07:12:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Bt004Iaj54q3KKQ4JYu2SOnkgjo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Z2PlwNfLT_0"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-12T05:53:10Z",
+        "channelId": "UCCaunu3Cv09ZCDxU13Gx3Hg",
+        "title": "[FLASK 클론코딩] 6강 - 받은 정보 html로 보내기 1 (파이썬으로 웹사이트 만들기)",
+        "description": "여기서 동영상의 데이터베이스 코드를 확인하실 수 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Z2PlwNfLT_0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Z2PlwNfLT_0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Z2PlwNfLT_0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "고준서",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-12T05:53:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ddsapOUlg7S54CecGdsnePfT6gM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FVyONrSv3GU"
+      },
+      "snippet": {
+        "publishedAt": "2019-11-14T23:00:02Z",
+        "channelId": "UCq7-gOh15ChDcFJ9xN9SYmg",
+        "title": "잡코리아 모바일(하이브리드)앱  클론코딩 준비하기  - sass, html5, css3 웹퍼블리셔 2-1",
+        "description": "라이브 편집영상입니다. SCSS로 잡코리아 어플리케이션을 클론코딩해보았습니다. 이 영상은 준비작업 영상입니다. ✓ 채널에 가입 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FVyONrSv3GU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FVyONrSv3GU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FVyONrSv3GU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "리베하얀",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-11-14T23:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KPKyfXDktGxJ9upkFVm26s7SL8M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NtVf7lShrhA"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-13T08:00:09Z",
+        "channelId": "UCCaunu3Cv09ZCDxU13Gx3Hg",
+        "title": "[FLASK 클론코딩] 8강 - 이미지 보여주기 / 항상 웹사이트 켜두기 (파이썬으로 웹사이트 만들기)",
+        "description": "1. HTML을 전혀 모르셔도 됩니다. 2. 파이썬의 기초(함수, 딕셔너리, 리스트, global)만 아시면 웹사이트를 제작할 수 있습니다. 3.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NtVf7lShrhA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NtVf7lShrhA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NtVf7lShrhA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "고준서",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-13T08:00:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Q1CBbYZulCND-jtlRR8jwOXQCuc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9ArY5LLBSpg"
+      },
+      "snippet": {
+        "publishedAt": "2021-01-31T23:19:35Z",
+        "channelId": "UCCaunu3Cv09ZCDxU13Gx3Hg",
+        "title": "[FLASK 클론코딩] 5.5강 - 리스트로 만들어서 집 보여주기 (끊어진 내용 보강!!)",
+        "description": "여기서 동영상의 데이터베이스 코드를 확인하실 수 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9ArY5LLBSpg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9ArY5LLBSpg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9ArY5LLBSpg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "고준서",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-01-31T23:19:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vb-3DX5Qnw1unqwA6JbkOGbRV10",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iB43qkoJuB0"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-05T12:43:44Z",
+        "channelId": "UCdnWPvHy7CbsWAgT7F8aS-A",
+        "title": "airbnb 사이트 클론코딩 - 일명 airdnd 프로젝트 (코딩 8개월차)",
+        "description": "프론트엔드 4명 백엔드 4명이서 6주 기간동안 airdnd사이트를 클론 코딩한 프로젝트 입니다. 기획 1주 개발 5주간 진행했습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iB43qkoJuB0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iB43qkoJuB0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iB43qkoJuB0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Leehaeun",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-05T12:43:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PxMnd1R3_y4mpT2XRvb0-8SO58k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kuir_fIPcPw"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-03T15:30:12Z",
+        "channelId": "UChzThmQBwwNF7Jxd8ljtpBA",
+        "title": "[클론코딩] 구글 만들기 - html편 | 따라만 치면 구글이 만들어진다고?",
+        "description": "안녕하세요 오늘은 모바일에서 보는 구글 사이트를 만들어 보겠습니다. 심플해서 간단하게 만들어보기 좋은 것 같아요. 100% 똑같이 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kuir_fIPcPw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kuir_fIPcPw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kuir_fIPcPw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "컁스",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-03T15:30:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "UNczpGgyYw9pWnOY3K_Y6vbfy7s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fEWJHsVuJ7Q"
+      },
+      "snippet": {
+        "publishedAt": "2021-04-09T08:41:57Z",
+        "channelId": "UCIrUaMSMIk8m86w9DX4yq8Q",
+        "title": "비전공자도 할수있다🔥HTML/CSS로 인스타그램 웹페이지 똑.같.이 만들기!💻📌 l 인스타 클론코딩 클래스",
+        "description": "HTML/CSS  가 뭐야? 코딩? 그게뭐야? 몰라 무서워ㅠ 무서운거 아니야! 무서움 멈춰!  ‍♂️  ‍♀️ 코딩 1도 모르는 비전공자가 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fEWJHsVuJ7Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fEWJHsVuJ7Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fEWJHsVuJ7Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "베어유",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-04-09T08:41:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "T5b1JjfbXOQsLfRtOuQiZwyrkNU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qHCcnwnS33U"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-07T06:00:05Z",
+        "channelId": "UCCaunu3Cv09ZCDxU13Gx3Hg",
+        "title": "[FLASK 클론코딩] 7강 - 받은 정보 html로 보내기 2 (파이썬으로 웹사이트 만들기)",
+        "description": "1. HTML을 전혀 모르셔도 됩니다. 2. 파이썬의 기초(함수, 딕셔너리, 리스트, global)만 아시면 웹사이트를 제작할 수 있습니다. 3.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qHCcnwnS33U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qHCcnwnS33U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qHCcnwnS33U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "고준서",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-07T06:00:05Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "LHCu2IUKrgxRcfPPkA48d0fquw4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NHx4nofrfnE"
+      },
+      "snippet": {
+        "publishedAt": "2020-02-18T14:15:04Z",
+        "channelId": "UC4o-YqtOgaz1H5AnMv81lSA",
+        "title": "[프론트 엔드.02] 카카오톡 클론 코딩 html css",
+        "description": "노마드코더 깃허브에 올라와 있는 예제를 보고 카카오톡을 클론 코딩 하는 영상 입니다. html css 만으로 제작하고 있기때문에 초보자 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NHx4nofrfnE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NHx4nofrfnE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NHx4nofrfnE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "한승훈 유튜브",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-02-18T14:15:04Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "t98vzlAXzJaJhi6IaVmoydR5IDk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "oJG9yQ6FXTI"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-08T12:35:13Z",
+        "channelId": "UChzThmQBwwNF7Jxd8ljtpBA",
+        "title": "[클론코딩] 구글 만들기 - css편 | 따라만 치면 구글이 만들어진다고?",
+        "description": "지난 시간에 html로 구글 사이트를 작성해 보았습니다. 이어서 오늘은 작성했던 html에 색깔을 넣고 위치를 조절하는 등 옷을 입혀 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oJG9yQ6FXTI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oJG9yQ6FXTI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oJG9yQ6FXTI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "컁스",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-08T12:35:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x954tdmuy4RsGeVf7YcfKOkRWg0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tshTCv1hwJQ"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-24T14:30:47Z",
+        "channelId": "UChfcUNsM20UbvKrYaydBNqA",
+        "title": "[클론코딩] 쿠팡로그인 클론코딩 JS까지! #HTML #CSS #javascript #클론코딩  #초보 #쉬운코딩",
+        "description": "영상봐주셔서 감사합니다! 구독 꾹 ~! 눌러주세요 강의 블로그 링크(아래) https://webty.tistory.com/ *영상에서 사용한 이미지자료는 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "유코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-24T14:30:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-fqBa7uxeClz9gUn5rmNLZjTWvY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FMtN5FcbTWM"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-31T11:27:55Z",
+        "channelId": "UC_jdHCSOKZ66kQBwPp2CAgg",
+        "title": "[클론코딩으로 배우는 Rails] 1-3. 히스킨 클론코딩 1 (어드민 페이지 초기 설정)",
+        "description": "참고 자료 rails version : 5.2.4.3 ruby version : 2.6.3 히스킨 : https://hieskin.com/ active_admin gem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FMtN5FcbTWM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FMtN5FcbTWM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FMtN5FcbTWM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "원노의 원투노",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-31T11:27:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1h_-95hcfKzvIb3EHqOSw59Xk0M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kDvycvCexN8"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-30T12:47:37Z",
+        "channelId": "UCtf7TX1PMJ9tnbkX8nct0VA",
+        "title": "클론 코딩, 넷플릭스 스위트홈을 작성하면서 배우는 UI 구현 방법 #01 프로젝트 설정",
+        "description": "넷플릭스 스위트홈 페이지를 작성하면서 UI 강의를 정리하려고 합니다. 자바스크립트 개발 환경 필요없이 순수하게 텍스트로만 코딩 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kDvycvCexN8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kDvycvCexN8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kDvycvCexN8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코드구깃",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-30T12:47:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "p7RKcaPSfmJqAdRgzfbqkpq2Qjw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aZmpioOo7zM"
+      },
+      "snippet": {
+        "publishedAt": "2020-05-25T16:24:49Z",
+        "channelId": "UC_jdHCSOKZ66kQBwPp2CAgg",
+        "title": "[클론코딩으로 배우는 Rails] 0-4. 첫 웹페이지 만들기",
+        "description": "html 공부 사이트 : 1. https://poiemaweb.com/ 2. https://opentutorials.org/course/3084 3.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aZmpioOo7zM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aZmpioOo7zM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aZmpioOo7zM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "원노의 원투노",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-05-25T16:24:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sNLktnp-Brv-KibZ-lgQE8GpZRU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zl_R5BCOvMU"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-11T19:07:47Z",
+        "channelId": "UCdnWPvHy7CbsWAgT7F8aS-A",
+        "title": "airbnb 사이트 클론코딩 개인 페이지 [일명 airdnd 프로젝트]",
+        "description": "프론트엔드 4명 백엔드 4명이서 6주 기간동안 airdnd사이트를 클론코딩한 프로젝트 입니다. 기획 1주 개발 5주간 진행했습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zl_R5BCOvMU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zl_R5BCOvMU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zl_R5BCOvMU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Leehaeun",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-11T19:07:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QpC04IADCqNoZ8kO1N3grycooOY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_r0lbX1VuR8"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-31T04:42:37Z",
+        "channelId": "UCtf7TX1PMJ9tnbkX8nct0VA",
+        "title": "클론 코딩, 넷플릭스 스위트홈을 작성하면서 배우는 UI 를 만드는 방법 #04 UI 작성   HTML &amp; CSS",
+        "description": "넷플릭스 스위트홈 페이지를 작성하면서 UI 강의를 정리하려고 합니다. 자바스크립트 개발 환경 필요없이 순수하게 텍스트로만 코딩 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_r0lbX1VuR8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_r0lbX1VuR8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_r0lbX1VuR8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코드구깃",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-31T04:42:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m0Pgh-M2HogOTiLJCwf08Eue8Kg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cejXT8aAVQg"
+      },
+      "snippet": {
+        "publishedAt": "2021-03-20T06:49:11Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "슬랙클론코딩 보너스1 - 이미지 드래그 업로드하기",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cejXT8aAVQg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cejXT8aAVQg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cejXT8aAVQg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-20T06:49:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9yduSbX-9ShKW1aJPBWngYOKjPw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "otL88QNJOgA"
+      },
+      "snippet": {
+        "publishedAt": "2022-05-26T02:32:09Z",
+        "channelId": "UCkgDFniWXiEGY4SZm0NHf2w",
+        "title": "누구나 할 수 있는 클론 코딩! 편집자 P와 클론 코딩 줌 시작하기 | Do it! 클론 코딩 줌",
+        "description": "주니어 개발자들의 필수 북마크, '노마드 코더'의 대표 강사 니꼴라스는 세상에서 가장 빠르게 프로그래밍을 배울 수 있는 방법은 '클론 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/otL88QNJOgA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/otL88QNJOgA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/otL88QNJOgA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "easyspub",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-05-26T02:32:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bT6qhVJkio6_8WV3fyz7pJLr3_A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "MNRNkRZG2Xo"
+      },
+      "snippet": {
+        "publishedAt": "2019-05-09T05:18:30Z",
+        "channelId": "UCw9t6aprCOnNfK16Zjpp6bQ",
+        "title": "장고프로젝트(인스타그램클론)04-base.html",
+        "description": "장고프로젝트 인스타그램 클론 코딩에 관련된 내용입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MNRNkRZG2Xo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MNRNkRZG2Xo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MNRNkRZG2Xo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "대구올빼미의 새벽 개발로그",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-05-09T05:18:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "u9lh5HwCQdEgLLQS1QX5JomQH14",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Xok-dDxHJ0A"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-10T17:26:07Z",
+        "channelId": "UChfcUNsM20UbvKrYaydBNqA",
+        "title": "[클론코딩] 쇼핑몰 상품주문영역 HTML&amp;CSS #클론코딩 #초보 #쉬운코딩",
+        "description": "강의 블로그 링크(아래) https://webty.tistory.com/ *영상에서 사용한 이미지자료는 블로그에 첨부파일로 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Xok-dDxHJ0A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Xok-dDxHJ0A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Xok-dDxHJ0A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "유코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-10T17:26:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pZ7XO3-pQKSVZNVqjyJ52o5bB5k",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fzj0jMhFZbM"
+      },
+      "snippet": {
+        "publishedAt": "2020-05-28T02:42:56Z",
+        "channelId": "UC_jdHCSOKZ66kQBwPp2CAgg",
+        "title": "[클론코딩으로 배우는 Rails] 0-5. Rails에 숨겨진 부분들",
+        "description": "1. @변수 2. erb template 코드 3. embedded ruby 코드 4. application.css, application.js 5. root.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fzj0jMhFZbM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fzj0jMhFZbM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fzj0jMhFZbM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "원노의 원투노",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-05-28T02:42:56Z"
+      }
+    }
+  ]
+}

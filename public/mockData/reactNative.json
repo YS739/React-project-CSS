@@ -1,0 +1,829 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "GOEFNIB2DfBykLDtBgOlotPX2u0",
+  "nextPageToken": "CDEQAA",
+  "prevPageToken": "CBkQAQ",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 526206,
+    "resultsPerPage": 24
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9ECYy6ze6yzkbKnLcM8lQEHXF4U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "r6ka_VZ1N-s"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-13T06:16:45Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "🔴  Build the Uber clone in React Native (Tutorial for Beginners) [Part 3]",
+        "description": "Let's learn React Native by building the Uber clone from scratch even if you are a beginner. Enroll NOW for \"The Full-stack ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r6ka_VZ1N-s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r6ka_VZ1N-s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r6ka_VZ1N-s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-13T06:16:45Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "45sidu1CIJy3_awK4J3lpcomf90",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "SzwTGDDXTAE"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-27T13:58:11Z",
+        "channelId": "UCM-4HE0R3iLxKB7qaq1bskw",
+        "title": "#17  Building Standalone Apps | generate apk using React Native expo | YouTube clone in React Native",
+        "description": "In this video we will build app with React Native expo. React Native tutorial Read docs for building app here ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SzwTGDDXTAE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SzwTGDDXTAE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SzwTGDDXTAE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "CODERS NEVER QUIT",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-27T13:58:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vNU36beD9i7TQjn8s9-kxSJN3D4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5Ko7B3G4U04"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-26T12:30:02Z",
+        "channelId": "UCIPZVAwDGa-A4ZJxCBvXRuQ",
+        "title": "News App in React Native [ Full Tutorial ] | Inshorts Clone Project | Context API",
+        "description": "ReactNative #ReactNativeTutorial #ReactNativeProject Build a News App Project with React Native in one video which will be ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5Ko7B3G4U04/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5Ko7B3G4U04/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5Ko7B3G4U04/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "RoadsideCoder",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-26T12:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gsarlWnWtpXH84ZGHTZkkIMi9kA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kxbvsYJbcxw"
+      },
+      "snippet": {
+        "publishedAt": "2021-12-13T01:54:01Z",
+        "channelId": "UCvgnb3kENvf1lt0oXw0t5Dg",
+        "title": "Building YouTube Clone with React Native #reactjs #javascript #coding",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kxbvsYJbcxw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kxbvsYJbcxw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kxbvsYJbcxw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Naz Dumanskyy",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-12-13T01:54:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lmwxbd5vjxbu6MibATAzJxBvOPc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vlwiYy8WnVA"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-28T13:00:27Z",
+        "channelId": "UCPZlE8KsMkumnjEMOcJDxuQ",
+        "title": "Banking App UI with React Native (Speed Code)",
+        "description": "Let's turn this awesome BANKING UI design into an app, using Styled Components, React Navigation 5, Custom Text ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vlwiYy8WnVA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vlwiYy8WnVA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vlwiYy8WnVA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "DesignIntoCode",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-28T13:00:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "78I-n5aol_L_Q4N_6LVe_1ZsSkE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jt-thh8y-RE"
+      },
+      "snippet": {
+        "publishedAt": "2020-01-30T05:34:40Z",
+        "channelId": "UCVv81jfV-WgDNua-HHdGqOw",
+        "title": "React Native Tutorial | Building YouTube Clone App",
+        "description": "In this video we go over React Native framework by building the YouTube clone App. Follow me on Instagram @iam_ab4 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jt-thh8y-RE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jt-thh8y-RE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jt-thh8y-RE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ABTube",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-01-30T05:34:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5he0AdrCAjk_pSeK8uDHRAGNY7E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uUDPSKJEwCI"
+      },
+      "snippet": {
+        "publishedAt": "2018-03-06T08:36:53Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "리액트 네이티브, 이때는 쓰지마라 (When not to use React Native)",
+        "description": "(한글자막 ON!) 에어비앤비, 우버, 인스타그램이 쓴다는 요즘 핫한 리액트 네이티브! 언제 사용하고, 언제 안쓰는게 좋은걸까?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uUDPSKJEwCI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uUDPSKJEwCI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uUDPSKJEwCI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-03-06T08:36:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "eh0LpSnUuKLKGgswzpJpxmIPP7M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yLnRIeaLeBY"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-05T18:32:55Z",
+        "channelId": "UCXmdrz2OC_vPDovCYSQfNlQ",
+        "title": "Facebook React Native clone Interface &amp; styled components",
+        "description": "Recreating the Facebook interface using React Native and styled components. Aprenda a testar Aplicações Javascript ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yLnRIeaLeBY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yLnRIeaLeBY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yLnRIeaLeBY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ReCreating",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-05T18:32:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jcnq7teemO1brICbVna3v-nhcCA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TlS9n58OwLY"
+      },
+      "snippet": {
+        "publishedAt": "2022-03-18T19:01:30Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "Let&#39;s build a DISCORD clone with React Native (p2)  🔴",
+        "description": "Let's challenge ourselves and build a fully-fledged Discord clone with React Native and Stream Chat SDK ➡️ Open your Free ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TlS9n58OwLY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TlS9n58OwLY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TlS9n58OwLY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-18T19:01:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "l_Ld6AkRe_OW5JrF-FK32D34Q68",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "vZue2RLLN0M"
+      },
+      "snippet": {
+        "publishedAt": "2021-03-27T06:40:56Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "🔴  In-app Subscriptions in React Native Netflix Clone (Tutorial for Beginners)",
+        "description": "Let's implement an In-app subscription in React Native using RevenueCat based on the Netflix Clone ⚡ Get your free ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vZue2RLLN0M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vZue2RLLN0M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vZue2RLLN0M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-27T06:40:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7OaoufumD4qzD0mU15KHPXl0BBg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mmHywzVkKn8"
+      },
+      "snippet": {
+        "publishedAt": "2018-05-03T01:48:49Z",
+        "channelId": "UCiNWv52iO_OAdZ12kslG4Cg",
+        "title": "#2 Tinder UI Clone Swipe Deck Animation Tutorial | React Native | Pan Responder",
+        "description": "2 Complete Animation of the swipe Tinder Swipe Deck. Show Like/Nope Text, Rotate the card and modify the scale and opacity of ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mmHywzVkKn8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mmHywzVkKn8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mmHywzVkKn8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Unsure Programmer",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-05-03T01:48:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ARvodbkSqv3lZG96Arww6yx550g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "QfaV2AfQysE"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-01T16:15:00Z",
+        "channelId": "UCbWV65OoGP6mw2pGd0c5E-g",
+        "title": "Build a Tinder clone with React Native and Expo (React Native Tutorial)",
+        "description": "Build a UI tinder clone with React Native, Expo, and React Native Gesture Handler (Beginner Tutorial) Source code of the project ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/QfaV2AfQysE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/QfaV2AfQysE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/QfaV2AfQysE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Esteban Codes",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-01T16:15:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "40VqJBY4fp1-VGjaJ8SG_J4ehpM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8zT6CYu0iYQ"
+      },
+      "snippet": {
+        "publishedAt": "2020-04-24T12:38:28Z",
+        "channelId": "UCM-4HE0R3iLxKB7qaq1bskw",
+        "title": "#13 WebView in React Native | working on video player screen | YouTube clone | React Native tutorial",
+        "description": "In this video we will play videos using webview in React Native. React Native tutorial. code ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8zT6CYu0iYQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8zT6CYu0iYQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8zT6CYu0iYQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "CODERS NEVER QUIT",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-04-24T12:38:28Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "I9ywcUB-dzs1_NJTZ4oap4U1Jd8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Wt8jo1znYWA"
+      },
+      "snippet": {
+        "publishedAt": "2021-08-06T19:37:03Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "Let&#39;s Build a TINDER clone with REACT NATIVE and AWS Amplify (pt. 2)",
+        "description": "In this video, you will learn React Native and AWS Amplify from scratch by building a cross-platform (ios and android), full-stack ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Wt8jo1znYWA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Wt8jo1znYWA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Wt8jo1znYWA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-08-06T19:37:03Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "piufx8MFLaUzTVnXUBoKs8RMH0g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HrN1Fvjp2CE"
+      },
+      "snippet": {
+        "publishedAt": "2021-07-02T16:30:15Z",
+        "channelId": "UCQ5xY26cw5Noh6poIE-VBog",
+        "title": "TIKTOK Clone React Native Tutorial 2021 👨‍💻 - Setting Up Expo and Firebase (#1)",
+        "description": "In this tiktok clone video we'll be setting up the project, let's learn in this tutorial how to install everything that's needed to develop ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HrN1Fvjp2CE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HrN1Fvjp2CE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HrN1Fvjp2CE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "SimCoder",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-07-02T16:30:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JTsFyxaQon1TkeqhBtnAspGVPTI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mCBoOpJNGCU"
+      },
+      "snippet": {
+        "publishedAt": "2021-08-16T08:23:55Z",
+        "channelId": "UC07K1c4xgD6x21Lak4wVuiA",
+        "title": "Instagram Clone React Native | #1 - Create Home Screen UI",
+        "description": "In this series, we will make an Instagram AppUI Clone using ReactNative. In this part, we will make the home screen and status ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mCBoOpJNGCU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mCBoOpJNGCU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mCBoOpJNGCU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Mr. J",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-08-16T08:23:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BWSvM6FSWqQMTKzLBud7N0ZSXHQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YmynMyn8o6E"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-26T02:22:01Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "Build a Spotify Clone in React Native for Beginners [Backend] 🔴 Live 🔴",
+        "description": "Let's build a Spotify clone mobile application in React Native. Enroll in \"The Full-stack Mobile Developer\" and become a ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YmynMyn8o6E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YmynMyn8o6E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YmynMyn8o6E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-26T02:22:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "MFSCgeBHeo7fHrWzAFd1A5IDbMk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "V3U02vofsTg"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-07T14:45:59Z",
+        "channelId": "UCEY0BIkMQCb4l3LnsJkBe7g",
+        "title": "Amazon clone app react native | Build Fullstack Ecommerce App with React Native",
+        "description": "This project let's you Build amazon ecommerce clone app app with/on react native. You don't need any previous knowledge on ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V3U02vofsTg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V3U02vofsTg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V3U02vofsTg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Thelle Codes",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-07T14:45:59Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "03AQ1Gviu1MGdX1xuYxG7At6lc8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Fc062FgrAJ0"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-01T17:09:22Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "Let&#39;s build a Pinterest clone with React Native 🔴",
+        "description": "Let's challenge ourselves and build a Pinterest clone with React Native. This is a great project-based tutorial for beginners to learn ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Fc062FgrAJ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Fc062FgrAJ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Fc062FgrAJ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-01T17:09:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hBcT7b1bxS33oNA24zvulfvFqEU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uXKZ3sGw7oE"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-25T09:48:39Z",
+        "channelId": "UCUanvWKX67CVZaIfOz4o_TQ",
+        "title": "Deeply Clone Instagram with React Native and Firebase. Why don&#39;t?",
+        "description": "Hello guys, This my 2nd React Native project what I spent more than 3 months to develop. Github URL: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uXKZ3sGw7oE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uXKZ3sGw7oE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uXKZ3sGw7oE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "I'm VuCms",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-25T09:48:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ky97oC1XlRV9oOhHAMzRjgxAGOA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "etiLbYKSanI"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-24T16:00:13Z",
+        "channelId": "UCQ5xY26cw5Noh6poIE-VBog",
+        "title": "TIKTOK Clone React Native Tutorial 2021 👨‍💻 - Introduction (#0)",
+        "description": "Let's start a new series! This one will be on one of the most iconic apps ever made, TikTok. This will be one of our most complete ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/etiLbYKSanI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/etiLbYKSanI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/etiLbYKSanI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "SimCoder",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-24T16:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "suxYlfPso4bJzE4JlFNREfDm6rI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cHk5Rizms5U"
+      },
+      "snippet": {
+        "publishedAt": "2020-03-21T10:30:15Z",
+        "channelId": "UCuiwOlBrSZVTiJCujQ0X9FQ",
+        "title": "#12 WhatsApp UI Clone In React Native | Part 1",
+        "description": "In this video I have tried to create the WhatsApp UI clone. It is the first part of the video in which I created header bar and upper ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cHk5Rizms5U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cHk5Rizms5U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cHk5Rizms5U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Er Harinder Singh",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-03-21T10:30:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ovNer2YuRnvm74vs7L_LsMbRF3Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TI8EkuhaIiM"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-05T00:49:54Z",
+        "channelId": "UCYSa_YLoJokZAwHhlwJntIA",
+        "title": "Build a Twitter Clone in React Native for Beginners [Backend] 🔴 Live 🔴",
+        "description": "Let's build a Twitter clone mobile application in React Native. Enroll in \"The Full-stack Mobile Developer\" and become a ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TI8EkuhaIiM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TI8EkuhaIiM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TI8EkuhaIiM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "notJust․dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-05T00:49:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OollmtDmh1KRtCGAlrwqH-zpAb8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7QhTs6vr4mY"
+      },
+      "snippet": {
+        "publishedAt": "2021-11-16T07:21:20Z",
+        "channelId": "UCXtczRgxdQV9Vr7oepH3O6w",
+        "title": "The Real Uber Clone in React Native &amp; Node.JS + MongoDB Part 2A ( Driver Request Screen)",
+        "description": "In this tutorial we will begin coding the driver request screen. The main components of these screens are Google places search ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7QhTs6vr4mY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7QhTs6vr4mY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7QhTs6vr4mY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Efficient Programming",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-11-16T07:21:20Z"
+      }
+    }
+  ]
+}

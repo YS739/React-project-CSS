@@ -1,0 +1,829 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "Ech2sFql6HHX5ZHLdBEtn39Fhlw",
+  "nextPageToken": "CDEQAA",
+  "prevPageToken": "CBkQAQ",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 920559,
+    "resultsPerPage": 24
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "URNd_kUrDGlW_G4Are5LHalteoo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PR14aPbP8dk"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-02T12:57:38Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "슬랙 클론 코딩 코드 점검!",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PR14aPbP8dk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PR14aPbP8dk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PR14aPbP8dk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-02T12:57:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iUeoQWvIzOOIHYHLg9wAWayNQOg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "r36fDtgXaWQ"
+      },
+      "snippet": {
+        "publishedAt": "2018-11-27T13:24:19Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "유튜브 클론 코딩__ 웹 사이트 vs 웹 앱 (Youtube Clone__Websites vs Webapps)",
+        "description": "한글 번역 ON 초보자 전용 풀스택은 무엇? 유튜브 클론 코딩 수업의 맛보기 입니다 :) .",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r36fDtgXaWQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r36fDtgXaWQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r36fDtgXaWQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-11-27T13:24:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vb-3DX5Qnw1unqwA6JbkOGbRV10",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iB43qkoJuB0"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-05T12:43:44Z",
+        "channelId": "UCdnWPvHy7CbsWAgT7F8aS-A",
+        "title": "airbnb 사이트 클론코딩 - 일명 airdnd 프로젝트 (코딩 8개월차)",
+        "description": "프론트엔드 4명 백엔드 4명이서 6주 기간동안 airdnd사이트를 클론 코딩한 프로젝트 입니다. 기획 1주 개발 5주간 진행했습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iB43qkoJuB0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iB43qkoJuB0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iB43qkoJuB0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Leehaeun",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-05T12:43:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fiFMKw2aS2-mHnWPDYqxGgi_Rvk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ks7e69dk4uU"
+      },
+      "snippet": {
+        "publishedAt": "2021-05-25T13:20:11Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "Slack 클론 코딩 보너스 - SWR Devtools 소개",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ks7e69dk4uU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ks7e69dk4uU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ks7e69dk4uU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-05-25T13:20:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ltyy57z1ulZ3dR64hBXkXZ0TZCc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PhZREXzhXjo"
+      },
+      "snippet": {
+        "publishedAt": "2018-03-11T09:01:24Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "JavaScript로 비트코인 클론코딩 - 블록 구조 만들기 (Bitcoin Clone with JS #3 Creating the block structure)",
+        "description": "(한글자막 ON!!!) 비트코인을 클론코딩해서 '노마드 코인'을 만들었어요! 맛보기 강의랍니다! 블록 구조 만들기! + Transaction + Proof ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PhZREXzhXjo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PhZREXzhXjo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PhZREXzhXjo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-03-11T09:01:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "aVJ4Z0eUAxMCX1Az4JDXcvZZelE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KZb1wGVFzsQ"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-27T06:23:35Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "클론코딩 마지막 점검(이제 그만하고 싶다~~~)",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KZb1wGVFzsQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KZb1wGVFzsQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KZb1wGVFzsQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-27T06:23:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x954tdmuy4RsGeVf7YcfKOkRWg0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tshTCv1hwJQ"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-24T14:30:47Z",
+        "channelId": "UChfcUNsM20UbvKrYaydBNqA",
+        "title": "[클론코딩] 쿠팡로그인 클론코딩 JS까지! #HTML #CSS #javascript #클론코딩  #초보 #쉬운코딩",
+        "description": "영상봐주셔서 감사합니다! 구독 꾹 ~! 눌러주세요 강의 블로그 링크(아래) https://webty.tistory.com/ *영상에서 사용한 이미지자료는 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tshTCv1hwJQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "유코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-24T14:30:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "vpSM_shhf4-lA7YppWyijma718M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CQ4uBiotN0A"
+      },
+      "snippet": {
+        "publishedAt": "2018-11-13T04:12:24Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "유튜브 풀스택 클론코딩_예약판매가 뭔가요?",
+        "description": "초보자를 위한 풀스택? Youtube Clone! 유튜브 풀스택 클론코딩!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CQ4uBiotN0A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CQ4uBiotN0A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CQ4uBiotN0A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-11-13T04:12:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iwUn4Yg3dnpK-NMElF7KrnWXe10",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-L1ngvcGf0A"
+      },
+      "snippet": {
+        "publishedAt": "2018-11-16T06:41:19Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "유튜브 클론 코딩__ 풀스택의 현주소! Youtube Clone_The State of Fullstack",
+        "description": "초보자 전용 풀스택은 무엇? 유튜브 클론 코딩 수업의 맛보기 입니다 :) .",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-L1ngvcGf0A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-L1ngvcGf0A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-L1ngvcGf0A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-11-16T06:41:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "bD_ADxa_tcqbvsYN3POJxYocgnA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "0W-__lgt0v0"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-30T12:46:09Z",
+        "channelId": "UCtf7TX1PMJ9tnbkX8nct0VA",
+        "title": "클론 코딩, 넷플릭스 스위트홈을 작성하면서 배우는 UI 구현 방법 #00 서론",
+        "description": "넷플릭스 스위트홈 페이지를 작성하면서 UI 강의를 정리하려고 합니다. 자바스크립트 개발 환경 필요없이 순수하게 텍스트로만 코딩 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0W-__lgt0v0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0W-__lgt0v0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0W-__lgt0v0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코드구깃",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-30T12:46:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4Avg__6Ciq_1j6sCXQzQ0gk3PhM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "O1yoZc1BtkU"
+      },
+      "snippet": {
+        "publishedAt": "2018-03-10T08:50:48Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "JavaScript로 비트코인 클론코딩 - 필요사항 (Bitcoin Clone with JS #1 Requirements)",
+        "description": "(한글자막 ON!!!) 비트코인을 클론코딩해서 '노마드 코인'을 만들었어요! 이 수업을 듣기위해서 필요사항을 설명합니다! + Transaction ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/O1yoZc1BtkU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/O1yoZc1BtkU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/O1yoZc1BtkU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-03-10T08:50:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-fqBa7uxeClz9gUn5rmNLZjTWvY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FMtN5FcbTWM"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-31T11:27:55Z",
+        "channelId": "UC_jdHCSOKZ66kQBwPp2CAgg",
+        "title": "[클론코딩으로 배우는 Rails] 1-3. 히스킨 클론코딩 1 (어드민 페이지 초기 설정)",
+        "description": "참고 자료 rails version : 5.2.4.3 ruby version : 2.6.3 히스킨 : https://hieskin.com/ active_admin gem ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FMtN5FcbTWM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FMtN5FcbTWM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FMtN5FcbTWM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "원노의 원투노",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-31T11:27:55Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nzvedqGNTaXl00zdFa3TzCh6QkI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sGnAb7JZNEI"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-22T15:53:19Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "클론코딩 버그 수정 &amp; 느린 서버 개선하기",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sGnAb7JZNEI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sGnAb7JZNEI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sGnAb7JZNEI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-22T15:53:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1h_-95hcfKzvIb3EHqOSw59Xk0M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kDvycvCexN8"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-30T12:47:37Z",
+        "channelId": "UCtf7TX1PMJ9tnbkX8nct0VA",
+        "title": "클론 코딩, 넷플릭스 스위트홈을 작성하면서 배우는 UI 구현 방법 #01 프로젝트 설정",
+        "description": "넷플릭스 스위트홈 페이지를 작성하면서 UI 강의를 정리하려고 합니다. 자바스크립트 개발 환경 필요없이 순수하게 텍스트로만 코딩 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kDvycvCexN8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kDvycvCexN8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kDvycvCexN8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코드구깃",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-30T12:47:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "sNLktnp-Brv-KibZ-lgQE8GpZRU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zl_R5BCOvMU"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-11T19:07:47Z",
+        "channelId": "UCdnWPvHy7CbsWAgT7F8aS-A",
+        "title": "airbnb 사이트 클론코딩 개인 페이지 [일명 airdnd 프로젝트]",
+        "description": "프론트엔드 4명 백엔드 4명이서 6주 기간동안 airdnd사이트를 클론코딩한 프로젝트 입니다. 기획 1주 개발 5주간 진행했습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zl_R5BCOvMU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zl_R5BCOvMU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zl_R5BCOvMU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Leehaeun",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-11T19:07:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QpC04IADCqNoZ8kO1N3grycooOY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_r0lbX1VuR8"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-31T04:42:37Z",
+        "channelId": "UCtf7TX1PMJ9tnbkX8nct0VA",
+        "title": "클론 코딩, 넷플릭스 스위트홈을 작성하면서 배우는 UI 를 만드는 방법 #04 UI 작성   HTML &amp; CSS",
+        "description": "넷플릭스 스위트홈 페이지를 작성하면서 UI 강의를 정리하려고 합니다. 자바스크립트 개발 환경 필요없이 순수하게 텍스트로만 코딩 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_r0lbX1VuR8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_r0lbX1VuR8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_r0lbX1VuR8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코드구깃",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-31T04:42:37Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m0Pgh-M2HogOTiLJCwf08Eue8Kg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "cejXT8aAVQg"
+      },
+      "snippet": {
+        "publishedAt": "2021-03-20T06:49:11Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "슬랙클론코딩 보너스1 - 이미지 드래그 업로드하기",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cejXT8aAVQg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cejXT8aAVQg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cejXT8aAVQg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-20T06:49:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3nDs5X3qMI90jMAakIbkCRZW7_A",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "U6Px0-0K768"
+      },
+      "snippet": {
+        "publishedAt": "2018-08-28T15:49:02Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "우버 클론코딩, JSON 웹 토큰 만들기 (Uber Clone Coding _ Creating Custom JWT)",
+        "description": "한글 자막 ON JSON 웹 토큰 만들기 JSON 웹 토큰이 무엇인지 설명하고, 차근차근 만들어봅니다 ;) 우버 클론코딩 - 백엔드 - 1-41 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/U6Px0-0K768/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/U6Px0-0K768/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/U6Px0-0K768/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-08-28T15:49:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cX1x6zBD-7M753_HM8N8Zr5O3s4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ieikfdrk9c4"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-18T14:42:39Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "리버스 인피니트 스크롤(클론코딩 마지막)",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ieikfdrk9c4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ieikfdrk9c4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ieikfdrk9c4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-18T14:42:39Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9yduSbX-9ShKW1aJPBWngYOKjPw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "otL88QNJOgA"
+      },
+      "snippet": {
+        "publishedAt": "2022-05-26T02:32:09Z",
+        "channelId": "UCkgDFniWXiEGY4SZm0NHf2w",
+        "title": "누구나 할 수 있는 클론 코딩! 편집자 P와 클론 코딩 줌 시작하기 | Do it! 클론 코딩 줌",
+        "description": "주니어 개발자들의 필수 북마크, '노마드 코더'의 대표 강사 니꼴라스는 세상에서 가장 빠르게 프로그래밍을 배울 수 있는 방법은 '클론 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/otL88QNJOgA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/otL88QNJOgA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/otL88QNJOgA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "easyspub",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-05-26T02:32:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DAROpsrQZj2gsYyabGGm0LV1iyw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "l9nfcBHjsX4"
+      },
+      "snippet": {
+        "publishedAt": "2018-11-16T06:13:57Z",
+        "channelId": "UCUpJs89fSBXNolQGOYKn0YQ",
+        "title": "유튜브 클론 코딩__ 우리가 만드는 것은 무엇인가? Youtube Clone_What are we building",
+        "description": "초보자 전용 풀스택은 무엇? 유튜브 클론 코딩 수업의 맛보기 입니다 :) .",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/l9nfcBHjsX4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/l9nfcBHjsX4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/l9nfcBHjsX4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "노마드 코더 Nomad Coders",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-11-16T06:13:57Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NudJWDBAopgnzWe4_2_OT8U4kZQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "-4DGkXUTJII"
+      },
+      "snippet": {
+        "publishedAt": "2021-03-20T06:49:49Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "슬랙클론코딩 보너스2 - 안 읽은 메시지 개수 표시하기",
+        "description": "조현영(zerocho)의 자바스크립트와 노드 프로그래밍 강좌 멤버십 가입: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-4DGkXUTJII/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-4DGkXUTJII/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-4DGkXUTJII/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-20T06:49:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "u9lh5HwCQdEgLLQS1QX5JomQH14",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Xok-dDxHJ0A"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-10T17:26:07Z",
+        "channelId": "UChfcUNsM20UbvKrYaydBNqA",
+        "title": "[클론코딩] 쇼핑몰 상품주문영역 HTML&amp;CSS #클론코딩 #초보 #쉬운코딩",
+        "description": "강의 블로그 링크(아래) https://webty.tistory.com/ *영상에서 사용한 이미지자료는 블로그에 첨부파일로 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Xok-dDxHJ0A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Xok-dDxHJ0A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Xok-dDxHJ0A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "유코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-10T17:26:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9UDCndk2QvyPVViTiadlW24aNI8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1rUTQfIUM6c"
+      },
+      "snippet": {
+        "publishedAt": "2021-01-12T12:10:07Z",
+        "channelId": "UCjpik_Cbt0SeE5kBzao4nqg",
+        "title": "(113-Clone-Code) Flutter React Web &amp; App : [클론 코딩] 쇼핑몰 웹 &amp; 어플 한번에 만들기",
+        "description": "클론을 통해 완성 된 모습입니다, Node.js를 사용하였으며 최대한 모든 내용을 다룰 수 있도록 준비하였습니다. 사용 된 내용 중 기능 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1rUTQfIUM6c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1rUTQfIUM6c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1rUTQfIUM6c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "제임쓰 Dev",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-01-12T12:10:07Z"
+      }
+    }
+  ]
+}
