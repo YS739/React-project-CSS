@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 
 export const CommentContainer = styled.div`
   cursor: pointer;
@@ -13,7 +13,7 @@ export const CommentInfo = styled.div`
 
 export const CommentNickName = styled.p`
   /* padding-right: 10px;
-  border-right: 1px solid ${color.darkColor}; */
+  border-right: 1px solid ${colors.PURPLE}; */
 `;
 
 export const CommentDate = styled.p`
@@ -32,5 +32,5 @@ export const GitHubIcon = styled.a`
 export const CommentContents = styled.p`
   margin: 0;
   padding-bottom: 25px;
-  border-bottom: 1px solid ${color.darkColor};
+  border-bottom: 1px solid ${colors.PURPLE};
 `;
