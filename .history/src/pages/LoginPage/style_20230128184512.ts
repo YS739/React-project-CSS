@@ -33,7 +33,7 @@ export const Password = styled.div`
   flex-direction: column;
   width: 300px;
 `;
-export const Label = styled.div`
+export const Label = styled.text`
   display: flex;
 `;
 export const Input = styled.input`
@@ -48,7 +48,7 @@ export const Input = styled.input`
   margin-top: 3px;
   padding-left: 10px;
 `;
-export const Error = styled.div`
+export const Error = styled.text`
   color: red;
   font-size: 12px;
   padding: 5px;
@@ -89,14 +89,6 @@ export const GoogleLoginButton = styled.button`
   border-radius: 5px;
 `;
 export const GithubLoginButton = styled.button`
-  background-color: white;
-  width: 250px;
-  height: 40px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  border-radius: 5px;
-`;
-export const Button = styled.button`
   background-color: white;
   width: 250px;
   height: 40px;

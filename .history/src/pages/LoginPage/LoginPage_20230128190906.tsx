@@ -187,10 +187,10 @@ const LoginPage = () => {
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <GoogleLoginButton onClick={googleSignUpHandler} />
-        <GithubLoginButton onClick={githubSignUpHandler} />
-        {/* <Button onClick={googleSignUpHandler}>Google 로그인</Button>
-        <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button> */}
+        {/* <GoogleLoginButton onClick={googleSignUpHandler} />
+        <GithubLoginButton onClick={githubSignUpHandler} /> */}
+        <Button onClick={googleSignUpHandler}>Google 로그인</Button>
+        <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button>
       </SocialLogin>
     </LoginContainer>
   );

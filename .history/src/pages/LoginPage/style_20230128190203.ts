@@ -33,7 +33,7 @@ export const Password = styled.div`
   flex-direction: column;
   width: 300px;
 `;
-export const Label = styled.div`
+export const Label = styled.text`
   display: flex;
 `;
 export const Input = styled.input`
@@ -48,7 +48,7 @@ export const Input = styled.input`
   margin-top: 3px;
   padding-left: 10px;
 `;
-export const Error = styled.div`
+export const Error = styled.text`
   color: red;
   font-size: 12px;
   padding: 5px;

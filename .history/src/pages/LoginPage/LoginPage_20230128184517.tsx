@@ -11,7 +11,6 @@ import {
   Error,
   SubmitButtonContainer,
   BlueButton,
-  Button,
   GoogleLoginButton,
   GithubLoginButton,
   SocialLogin,

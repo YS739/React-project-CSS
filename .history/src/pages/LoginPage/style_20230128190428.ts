@@ -33,7 +33,7 @@ export const Password = styled.div`
   flex-direction: column;
   width: 300px;
 `;
-export const Label = styled.div`
+export const Label = styled.text`
   display: flex;
 `;
 export const Input = styled.input`
