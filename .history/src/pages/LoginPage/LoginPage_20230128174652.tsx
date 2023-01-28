@@ -9,7 +9,6 @@ import {
   ToSignUp,
   SignUp,
   Error,
-  SubmitButtonContainer,
   BlueButton,
   Button,
   SocialLogin,
@@ -60,9 +59,9 @@ const LoginPage = () => {
     const idRegex =
       /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     if (idRegex.test(currentId)) {
-      setIdValid(true);
-    } else {
       setIdValid(false);
+    } else {
+      setIdValid(true);
     }
   };
 
@@ -172,11 +171,9 @@ const LoginPage = () => {
 
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
-        <SubmitButtonContainer>
-          <BlueButton disabled={notAllow} type="submit">
-            로그인
-          </BlueButton>
-        </SubmitButtonContainer>
+        <BlueButton disabled={notAllow} type="submit">
+          로그인
+        </BlueButton>
       </Form>
 
       <ToSignUp>

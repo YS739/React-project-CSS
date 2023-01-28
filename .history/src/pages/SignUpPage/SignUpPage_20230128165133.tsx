@@ -5,10 +5,8 @@ import {
   Id,
   Name,
   Password,
-  Label,
   Input,
   Error,
-  SubmitButtonContainer,
   BlueButton,
   Login,
   ToLogin,
@@ -179,8 +177,7 @@ const SignUpPage = () => {
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
       <Form onSubmit={onSubmit}>
         <Id>
-          <Label>이메일</Label>
-
+          이메일
           <Input
             name="id"
             type="email"
@@ -197,8 +194,7 @@ const SignUpPage = () => {
           )}
         </Error>
         <Name>
-          <Label>닉네임</Label>
-
+          닉네임
           <Input
             name="nickName"
             maxLength={10}
@@ -210,7 +206,7 @@ const SignUpPage = () => {
         <Error>{nickNameErrMsg}</Error>
 
         <Password>
-          <Label>비밀번호</Label>
+          비밀번호
           <Input
             name="password"
             type="password"
@@ -222,8 +218,7 @@ const SignUpPage = () => {
         <Error>{pwErrMsg}</Error>
 
         <Password>
-          <Label>비밀번호 확인</Label>
-
+          비밀번호 확인
           <Input
             name="password"
             type="password"
@@ -233,9 +228,8 @@ const SignUpPage = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
-        <SubmitButtonContainer>
-          <BlueButton disabled={notAllow}>회원가입</BlueButton>
-        </SubmitButtonContainer>
+
+        <BlueButton disabled={notAllow}>회원가입</BlueButton>
       </Form>
       <ToLogin>
         이미 가입 하셨나요?

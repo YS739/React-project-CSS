@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { color } from '../../common/color';
 
-export const SignUpContainer = styled.div`
+export const LoginContainer = styled.div`
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,6 @@ export const Logo = styled.img`
   height: 150px;
   justify-content: center;
 `;
-
 export const Form = styled.form`
   min-width: 280px;
   display: flex;
@@ -25,11 +24,6 @@ export const Form = styled.form`
 `;
 
 export const Id = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-`;
-export const Name = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -54,15 +48,26 @@ export const Input = styled.input`
   margin-top: 3px;
   padding-left: 10px;
 `;
-export const Error = styled.div`
+export const Error = styled.text`
   color: red;
   font-size: 12px;
   padding: 5px;
 `;
+export const ToSignUp = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+`;
+export const SignUp = styled.div`
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+`;
+
 export const SubmitButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding: 20px;
 `;
 export const BlueButton = styled.button`
   align-items: center;
@@ -72,16 +77,21 @@ export const BlueButton = styled.button`
   height: 40px;
   color: white;
   font-size: 15px;
+  margin-bottom: 10px;
   cursor: pointer;
 `;
-export const ToLogin = styled.div`
-  font-size: 15px;
+
+export const Button = styled.button`
+  background-color: white;
+  width: 250px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+`;
+
+export const SocialLogin = styled.div`
   display: flex;
-  flex-direction: row;
-  padding: 10px;
-`;
-export const Login = styled.div`
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 5px;
+  flex-direction: column;
+  align-items: center;
 `;

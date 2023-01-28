@@ -8,7 +8,6 @@ import {
   Label,
   Input,
   Error,
-  SubmitButtonContainer,
   BlueButton,
   Login,
   ToLogin,
@@ -233,9 +232,8 @@ const SignUpPage = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
-        <SubmitButtonContainer>
-          <BlueButton disabled={notAllow}>회원가입</BlueButton>
-        </SubmitButtonContainer>
+
+        <BlueButton disabled={notAllow}>회원가입</BlueButton>
       </Form>
       <ToLogin>
         이미 가입 하셨나요?

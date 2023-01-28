@@ -72,6 +72,7 @@ export const BlueButton = styled.button`
   height: 40px;
   color: white;
   font-size: 15px;
+  margin-bottom: 10px;
   cursor: pointer;
 `;
 export const ToLogin = styled.div`

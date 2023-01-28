@@ -9,7 +9,6 @@ import {
   ToSignUp,
   SignUp,
   Error,
-  SubmitButtonContainer,
   BlueButton,
   Button,
   SocialLogin,
@@ -172,11 +171,9 @@ const LoginPage = () => {
 
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
-        <SubmitButtonContainer>
-          <BlueButton disabled={notAllow} type="submit">
-            로그인
-          </BlueButton>
-        </SubmitButtonContainer>
+        <BlueButton disabled={notAllow} type="submit">
+          로그인
+        </BlueButton>
       </Form>
 
       <ToSignUp>

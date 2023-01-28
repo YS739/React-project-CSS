@@ -4,12 +4,10 @@ import {
   Form,
   Id,
   Password,
-  Label,
   Input,
   ToSignUp,
   SignUp,
   Error,
-  SubmitButtonContainer,
   BlueButton,
   Button,
   SocialLogin,
@@ -155,8 +153,7 @@ const LoginPage = () => {
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
       <Form>
         <Id>
-          <Label>이메일</Label>
-
+          이메일
           <Input
             ref={idRef}
             value={id}
@@ -168,16 +165,13 @@ const LoginPage = () => {
           {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
         </Error>
         <Password>
-          <Label>비밀번호</Label>
-
+          비밀번호
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
-        <SubmitButtonContainer>
-          <BlueButton disabled={notAllow} type="submit">
-            로그인
-          </BlueButton>
-        </SubmitButtonContainer>
       </Form>
+      <BlueButton disabled={notAllow} onClick={onSubmit}>
+        로그인
+      </BlueButton>
 
       <ToSignUp>
         아이디가 없으신가요?

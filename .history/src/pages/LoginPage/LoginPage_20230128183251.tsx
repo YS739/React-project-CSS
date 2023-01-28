@@ -184,7 +184,19 @@ const LoginPage = () => {
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
       </ToSignUp>
       <SocialLogin>
-        <Button onClick={googleSignUpHandler}>Google 로그인</Button>
+        <Button onClick={googleSignUpHandler}>
+          <a
+            target="_blank"
+            href="https://icons8.com/icon/17949/%EA%B5%AC%EA%B8%80-%EB%A1%9C%EA%B3%A0"
+          >
+            구글 로고
+          </a>{' '}
+          icon by{' '}
+          <a target="_blank" href="https://icons8.com">
+            Icons8
+          </a>
+          Google 로그인
+        </Button>
         <Button onClick={githubSignUpHandler}>Git Hub 로그인</Button>
       </SocialLogin>
     </LoginContainer>
