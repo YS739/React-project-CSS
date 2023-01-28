@@ -5,6 +5,7 @@ export const RecommendBody = styled.div`
   height: 18vh;
   margin-left: 11%;
   padding: 1%;
+
   cursor: pointer;
 `;
 

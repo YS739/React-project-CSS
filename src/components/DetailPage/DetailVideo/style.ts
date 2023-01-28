@@ -6,18 +6,18 @@ import styled from 'styled-components';
 
 // 디테일 페이지 전체 Body
 export const DetailPageBody = styled.div`
-  width: 100%;
+  width: 1200px;
   /* height: 100%; */
   /* background-color: aliceblue; */
   /* margin: 0 auto; */
   /* margin: 0px 100px; */
-  display: flex;
+  /* display: flex; */
   max-width: 1600px;
   justify-content: center;
 `;
 
 export const DetailVideoContainer = styled.div`
-  width: 700px;
+  width: 1200px;
   /* height: 500px; */
   /* background-color:blueviolet; */
   /* margin-left: 8%; */
