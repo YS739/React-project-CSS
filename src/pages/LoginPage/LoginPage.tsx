@@ -1,7 +1,22 @@
+import {
+  Logo,
+  LoginContainer,
+  Form,
+  Id,
+  Password,
+  Label,
+  Input,
+  ToSignUp,
+  SignUp,
+  Error,
+  SubmitButtonContainer,
+  BlueButton,
+  Button,
+  SocialLogin,
+} from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState, useRef, useEffect, ChangeEvent } from 'react';
 import {
-  getAuth,
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
@@ -10,20 +25,6 @@ import {
 import { authService } from '../../common/firebase';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
-import {
-  Logo,
-  LoginContainer,
-  Form,
-  Id,
-  Password,
-  Input,
-  ToSignUp,
-  SignUp,
-  Error,
-  BlueButton,
-  Button,
-  SocialLogin,
-} from './style';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -150,26 +151,24 @@ const LoginPage = () => {
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
       <Form>
         <Id>
-          이메일
-          <Input
-            ref={idRef}
-            value={id}
-            placeholder={'css@gmail.com'}
-            onChange={onChangeId}
-          />
+          <Label>이메일</Label>
+
+          <Input ref={idRef} value={id} onChange={onChangeId} />
         </Id>
         <Error>
           {!idValid && id.length > 0 && <div>! 이메일을 확인해주세요.</div>}
         </Error>
         <Password>
-          비밀번호
+          <Label>비밀번호</Label>
+
           <Input ref={pwRef} type="password" value={pw} onChange={onChangePw} />
         </Password>
+        <SubmitButtonContainer>
+          <BlueButton disabled={notAllow} type="submit">
+            로그인
+          </BlueButton>
+        </SubmitButtonContainer>
       </Form>
-      <BlueButton disabled={notAllow} onClick={onSubmit}>
-        로그인
-      </BlueButton>
-
       <ToSignUp>
         아이디가 없으신가요?
         <SignUp onClick={() => navigate('/signUp')}> 회원가입</SignUp>
