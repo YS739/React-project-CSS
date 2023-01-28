@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BsFillBookmarkFill } from 'react-icons/bs';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 
 export const AddCommentListAll = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ export const AddCommentListAll = styled.div`
 export const AddCommentListWrap = styled.div`
   display: flex;
   flex-direction: row;
-  border: 2px solid ${color.darkColor};
+  border: 2px solid ${colors.PURPLE};
   border-radius: 10px;
   width: 100%;
   /* height: 100%; */
@@ -109,9 +109,7 @@ export const AddInputGihub = styled.input`
   }
 `;
 
-export const AddInputContent = styled(AddInputGihub)`
-
-`;
+export const AddInputContent = styled(AddInputGihub)``;
 
 export const AddCommentBtnDiv = styled.div`
   display: flex;
@@ -126,14 +124,14 @@ export const AddCommentBtn = styled.button`
   cursor: pointer;
 
   background-color: white;
-  color: ${color.darkColor};
-  border: 2px solid ${color.darkColor};
+  color: ${colors.PURPLE};
+  border: 2px solid ${colors.PURPLE};
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 600;
 
   :hover {
-    background-color: ${color.darkColor};
+    background-color: ${colors.PURPLE};
     color: white;
     border-radius: 5px;
     border: none;

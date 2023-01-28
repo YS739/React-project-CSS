@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from 'react';
 import {
   AlertBody,
   AlertBox,
-  TitleBox,
+  TextBox,
   Title,
   BtnBox,
   ConfirmBtn,
@@ -15,9 +15,9 @@ const AlertUI: React.FC<{
   return (
     <AlertBody>
       <AlertBox>
-        <TitleBox>
+        <TextBox>
           <Title>{props.title}</Title>
-        </TitleBox>
+        </TextBox>
         <BtnBox>
           <ConfirmBtn onClick={props.onClose}>확인</ConfirmBtn>
         </BtnBox>

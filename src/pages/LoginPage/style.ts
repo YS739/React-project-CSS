@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../../common/color';
+import { colors } from '../../common/colors';
 
 export const LoginContainer = styled.div`
   padding: 50px;
@@ -71,7 +71,7 @@ export const SubmitButtonContainer = styled.div`
 `;
 export const BlueButton = styled.button`
   align-items: center;
-  background-color: ${color.lightColor};
+  background-color: ${colors.GREY};
   border-radius: 5px;
   width: 250px;
   height: 40px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 
 // 검색창
 export const SearchSection = styled.div`
@@ -12,7 +12,7 @@ export const SearchSection = styled.div`
 export const SearchForm = styled.form`
   width: 500px;
   height: 50px;
-  border: 1px solid ${color.darkColor};
+  border: 1px solid ${colors.PURPLE};
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
@@ -30,6 +30,10 @@ export const SearchForm = styled.form`
     :focus-visible {
       outline: none;
     }
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 400px;
   }
 `;
 
@@ -49,8 +53,9 @@ export const SearchResultBox = styled.div`
 
 export const SearchResult = styled.div`
   width: 250px;
-  border-bottom: 3px solid ${color.darkColor};
+  border-bottom: 3px solid ${colors.PURPLE};
   font-size: 22px;
   font-weight: 800;
   text-align: center;
+  margin-bottom: 20px;
 `;

@@ -4,6 +4,7 @@ export const Videos = styled.div`
   width: 330px;
   height: 220px;
   margin-bottom: 40px;
+  margin-right: 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
   display: flex;

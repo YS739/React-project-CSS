@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { CategoryBox, Category, LeftIcon, RightIcon } from './style';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 import React, { MouseEventHandler } from 'react';
 
 interface Props {
@@ -15,7 +15,7 @@ const SampleNextArrow = (props: Props) => {
   const { onClick } = props;
   return (
     <LeftIcon onClick={onClick}>
-      <MdChevronLeft style={{ fontSize: 50, color: color.lightColor }} />
+      <MdChevronLeft style={{ fontSize: 50, color: colors.GREY }} />
     </LeftIcon>
   );
 };
@@ -26,7 +26,7 @@ const SamplePrevArrow: React.FC<{
   const { onClick } = props;
   return (
     <RightIcon onClick={onClick}>
-      <MdChevronRight style={{ fontSize: 50, color: color.lightColor }} />
+      <MdChevronRight style={{ fontSize: 50, color: colors.GREY }} />
     </RightIcon>
   );
 };
@@ -38,6 +38,22 @@ const CategorySlide = ({ categoryClick, onClick }: any) => {
     centerPadding: '10px',
     centerMode: true,
     slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow onClick={onClick} />,
     swipeToSlide: true,
