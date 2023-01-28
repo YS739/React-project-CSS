@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../../common/color';
+import { colors } from '../../common/colors';
 
 export const SignUpContainer = styled.div`
   padding: 50px;
@@ -61,7 +61,7 @@ export const Error = styled.div`
   padding: 5px;
 `;
 export const BlueButton = styled.button`
-  background-color: ${color.lightColor};
+  background-color: ${colors.GREY};
   border-radius: 5px;
   width: 250px;
   height: 40px;

@@ -9,8 +9,7 @@ export const Container = styled.div`
   align-items: center;
 `;
 export const Logo = styled.img`
-  width: 100px;
-  height: 70px;
+  width: 120px;
   justify-content: center;
   cursor: pointer;
 `;
@@ -25,13 +24,10 @@ export const LoginToggle = styled.div`
 export const Nav = styled.div`
   font-weight: bold;
   padding-left: 30px;
-  /* background-color: aliceblue; */
   box-sizing: border-box;
   cursor: pointer;
 `;
 
-// export const Link = styled.div`
-//   font-weight: bold;
-//   padding-right: 5px;
-//   cursor: pointer;
-// `;
+export const Name = styled.div`
+  font-weight: bold;
+`;

@@ -1,7 +1,6 @@
-import { Container, Logo, LoginToggle, Nav } from './style';
+import { Container, Logo, LoginToggle, Nav, Name } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { getAuth, signOut, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../AlertUI/AlertUI';
 
@@ -40,7 +39,7 @@ const Header = () => {
       <LoginToggle>
         {currentUser ? (
           <>
-            <Nav>{userNickName}님 </Nav>
+            <Name>{userNickName}님 </Name>
             <Nav onClick={() => navigate('/my')}>마이페이지</Nav>
             <Nav onClick={LogOutHandler}>로그아웃</Nav>
           </>

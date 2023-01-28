@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 
-export const ListContainer
- = styled.div`
+export const ListContainer = styled.div`
   margin-bottom: 20px;
 `;
-
 
 export const ListTitleSection = styled.div`
   width: 100%;
@@ -95,8 +93,8 @@ export const CommentDeleteBtn = styled.button`
   height: 30px;
 
   background-color: white;
-  border:2px solid ${color.darkColor};
-  color: ${color.darkColor};
+  border: 2px solid ${colors.PURPLE};
+  color: ${colors.PURPLE};
   border-radius: 5px;
   cursor: pointer;
 
@@ -107,7 +105,7 @@ export const CommentDeleteBtn = styled.button`
   margin-bottom: 5px;
 
   :hover {
-    background-color: ${color.darkColor};
+    background-color: ${colors.PURPLE};
     color: white;
     border-radius: 5px;
     border: none;
