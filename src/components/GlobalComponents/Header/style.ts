@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   padding: 2rem 3rem;
@@ -8,26 +7,36 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 export const Logo = styled.img`
   width: 120px;
   justify-content: center;
   cursor: pointer;
 `;
+
 export const LoginToggle = styled.div`
   display: flex;
   align-items: center;
   font-size: 15px;
   display: flex;
-  /* margin-left: 20px; */
   align-items: center;
 `;
+
 export const Nav = styled.div`
   font-weight: bold;
   padding-left: 30px;
   box-sizing: border-box;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    padding-left: 15px;
+  }
 `;
 
+<<<<<<< HEAD
+=======
 export const Name = styled.div`
   font-weight: bold;
 `;
+>>>>>>> 15d1024b447ff26f764f04db8432e5796207567e

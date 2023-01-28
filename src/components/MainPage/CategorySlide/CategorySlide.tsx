@@ -1,11 +1,10 @@
+import React, { MouseEventHandler } from 'react';
+import { colors } from '../../../common/colors';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { CategoryBox, Category, LeftIcon, RightIcon } from './style';
-import { colors } from '../../../common/colors';
-import React, { MouseEventHandler } from 'react';
-
 interface Props {
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
 }
@@ -20,6 +19,7 @@ const SampleNextArrow = (props: Props) => {
   );
 };
 
+// 이전 화살표 
 const SamplePrevArrow: React.FC<{
   onClick: MouseEventHandler<HTMLSpanElement>;
 }> = (props) => {

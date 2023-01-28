@@ -57,7 +57,6 @@ const SignUpPage = () => {
     e.preventDefault();
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
-        console.log('회원가입 성공!');
         if (authService.currentUser)
           updateProfile(authService?.currentUser, {
             displayName: nickName,

@@ -5,26 +5,29 @@ import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../AlertUI/AlertUI';
 
 const Header = () => {
-  // TODO: 네비게이트 적용 - 로고, 회원가입, 로그인 버튼 클릭 시
   const navigate = useNavigate();
   const auth = getAuth();
-
   const currentUser = auth.currentUser;
   const userNickName = currentUser?.displayName;
-  // // 로그아웃
+  // 로그아웃
   const LogOutHandler = async () => {
     await signOut(auth)
       .then(() => {
         confirmAlert({
           customUI: ({ onClose }) => {
-            return <AlertUI title={'로그아웃되었습니다.'} onClose={onClose} />;
+            return <AlertUI title={'로그아웃 되었습니다.'} onClose={onClose} />;
           },
         });
-        // Sign-out successful.
+        // 로그아웃 성공
         navigate('/');
       })
       .catch((error) => {
-        // An error happened.
+        // 로그아웃 실패
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return <AlertUI title={'로그아웃 되지 않았습니다.'} onClose={onClose} />;
+          },
+        });
       });
   };
 
@@ -35,7 +38,6 @@ const Header = () => {
         src={require('../../../assets/css_logo.png')}
         alt="css"
       />
-
       <LoginToggle>
         {currentUser ? (
           <>
