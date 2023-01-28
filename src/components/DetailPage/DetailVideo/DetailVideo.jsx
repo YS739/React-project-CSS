@@ -11,6 +11,7 @@ import {
   ChannelName,
   ChannelBox,
   ChannelImg,
+  RecommendVideoBox,
 } from './style';
 
 // interface DetailIframeJ {
@@ -37,7 +38,7 @@ const DetailVideo = () => {
             id="player"
             type="text/html"
             width="100%"
-            height="400px"
+            height="700px"
             src={`http://www.youtube.com/embed/${video.id.videoId}`}
             frameBorder="0"
             title="유튜브"
@@ -48,13 +49,15 @@ const DetailVideo = () => {
             <ChannelName>{channelTitle}</ChannelName>
           </ChannelBox>
         </DetailVideoSection>
-        <DetailCommentBody>
-          <AddComment video={video} />
-        </DetailCommentBody>
       </DetailVideoContainer>
 
       <RecommendVideoBody>
-        <RecommendVideo videoId={video.id.videoId} />
+        <DetailCommentBody>
+          <AddComment video={video} />
+        </DetailCommentBody>
+        <RecommendVideoBox>
+          <RecommendVideo videoId={video.id.videoId} />
+        </RecommendVideoBox>
       </RecommendVideoBody>
     </DetailPageBody>
   );
