@@ -19,7 +19,7 @@ export const Category = styled.button`
   height: 35px;
   border: 1px solid ${colors.PURPLE};
   border-radius: 10px;
-  background-color: ${(props) => (props.color ? props.color : colors.PURPLE)};
+  background-color: ${colors.PURPLE};
   color: white;
   text-align: center;
   font-size: 16px;
