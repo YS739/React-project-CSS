@@ -13,7 +13,7 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, ChangeEvent } from 'react';
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -50,7 +50,7 @@ const LoginPage = () => {
   const pwRef = useRef(null);
 
   //* id (이메일)
-  const onChangeId = (e) => {
+  const onChangeId = (e: ChangeEvent<HTMLInputElement>) => {
     const currentId = e.target.value;
     setId(currentId);
     const idRegex =
@@ -63,7 +63,7 @@ const LoginPage = () => {
   };
 
   //* 비밀번호
-  const onChangePw = (e) => {
+  const onChangePw = (e: ChangeEvent<HTMLInputElement>) => {
     const currentPw = e.target.value;
     setPw(currentPw);
     const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;

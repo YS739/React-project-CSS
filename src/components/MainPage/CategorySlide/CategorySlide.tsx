@@ -4,9 +4,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { CategoryBox, Category, LeftIcon, RightIcon } from './style';
 import { color } from '../../../common/color';
+import React, { MouseEventHandler } from 'react';
+
+interface Props {
+  onClick?: React.MouseEventHandler<HTMLSpanElement>;
+}
 
 // 왼쪽, 오른쪽 화살표 커스텀
-const SampleNextArrow = (props) => {
+const SampleNextArrow = (props: Props) => {
   const { onClick } = props;
   return (
     <LeftIcon onClick={onClick}>
@@ -15,7 +20,9 @@ const SampleNextArrow = (props) => {
   );
 };
 
-const SamplePrevArrow = (props) => {
+const SamplePrevArrow: React.FC<{
+  onClick: MouseEventHandler<HTMLSpanElement>;
+}> = (props) => {
   const { onClick } = props;
   return (
     <RightIcon onClick={onClick}>
@@ -24,7 +31,7 @@ const SamplePrevArrow = (props) => {
   );
 };
 
-const CategorySlide = ({ categoryClick }) => {
+const CategorySlide = ({ categoryClick, onClick }: any) => {
   const settings = {
     className: 'center',
     infinite: true,
@@ -32,7 +39,7 @@ const CategorySlide = ({ categoryClick }) => {
     centerMode: true,
     slidesToShow: 5,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    prevArrow: <SamplePrevArrow onClick={onClick} />,
     swipeToSlide: true,
   };
   return (

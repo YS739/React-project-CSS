@@ -12,11 +12,20 @@ import {
   ToLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
+import {
+  useState,
+  useRef,
+  useEffect,
+  ChangeEvent,
+  FormEventHandler,
+  MouseEvent,
+} from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
 import { updateProfile } from 'firebase/auth';
 import { async } from '@firebase/util';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -35,13 +44,13 @@ const SignUpPage = () => {
   const [pwConfirmErrMsg, setPwConfirmErrMsg] = useState('');
 
   // 유효성 검사
-  const [isId, setIsId] = useState(false);
-  const [isPw, setIsPw] = useState(false);
-  const [isPwConfirm, setIsPwConfirm] = useState(false);
-  const [isNickName, setIsNickName] = useState(false);
+  const [isId, setIsId] = useState<boolean>(false);
+  const [isPw, setIsPw] = useState<boolean>(false);
+  const [isPwConfirm, setIsPwConfirm] = useState<boolean>(false);
+  const [isNickName, setIsNickName] = useState<boolean>(false);
 
   // 회원가입 버튼 활성화
-  const [notAllow, setNotAllow] = useState(true);
+  const [notAllow, setNotAllow] = useState<boolean>(true);
 
   // 에러 나면 그곳에 커서 이동되도록
   const idRef = useRef(null);
@@ -50,37 +59,65 @@ const SignUpPage = () => {
   const pwConfirmRef = useRef(null);
 
   // 회원가입 완료
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: MouseEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     await createUserWithEmailAndPassword(authService, id, pw)
       .then(() => {
         console.log('회원가입 성공!');
-        updateProfile(authService.currentUser, {
-          displayName: nickName,
-        })
-          .then(() => {
-            alert('회원가입이 완료되었습니다.');
-            setId('');
-            setNickName('');
-            setPw('');
-            navigate('/');
+        if (authService.currentUser)
+          updateProfile(authService?.currentUser, {
+            displayName: nickName,
           })
-          .catch((error) => {
-            console.log(error.message);
-            alert('회원가입을 다시 진행해주세요');
-            navigate('/signUp');
-          });
+            .then(() => {
+              confirmAlert({
+                customUI: ({ onClose }) => {
+                  return (
+                    <AlertUI
+                      title={'회원가입이 완료되었습니다.'}
+                      onClose={onClose}
+                    />
+                  );
+                },
+              });
+
+              setId('');
+              setNickName('');
+              setPw('');
+              navigate('/');
+            })
+            .catch((error) => {
+              console.log(error.message);
+              confirmAlert({
+                customUI: ({ onClose }) => {
+                  return (
+                    <AlertUI
+                      title={'회원가입을 다시 진행해주세요.'}
+                      onClose={onClose}
+                    />
+                  );
+                },
+              });
+              navigate('/signUp');
+            });
       })
       .catch((error) => {
         setError(error.message);
-        alert('! 이미 존재하는 계정 입니다.');
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return (
+              <AlertUI
+                title={'! 이미 존재하는 계정 입니다.'}
+                onClose={onClose}
+              />
+            );
+          },
+        });
         console.log(error);
       });
   };
 
   //* id (이메일)
-  const onChangeId = (e) => {
+  const onChangeId = (e: ChangeEvent<HTMLInputElement>) => {
     const currentId = e.target.value;
     setId(currentId);
     const idRegex =
@@ -95,7 +132,7 @@ const SignUpPage = () => {
   };
 
   //* 닉네임
-  const onChangeNickName = (e) => {
+  const onChangeNickName = (e: ChangeEvent<HTMLInputElement>) => {
     const currentNickName = e.target.value;
     setNickName(currentNickName);
 
@@ -108,7 +145,7 @@ const SignUpPage = () => {
     }
   };
   //* 비밀번호
-  const onChangePw = (e) => {
+  const onChangePw = (e: ChangeEvent<HTMLInputElement>) => {
     const currentPw = e.target.value;
     setPw(currentPw);
     const pwRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
@@ -123,7 +160,7 @@ const SignUpPage = () => {
   };
 
   //* 비밀번호 확인
-  const onChangePwConfirm = (e) => {
+  const onChangePwConfirm = (e: ChangeEvent<HTMLInputElement>) => {
     const currentPwConfirm = e.target.value;
     setPwConfirm(currentPwConfirm);
     if (pw === currentPwConfirm) {
@@ -199,10 +236,9 @@ const SignUpPage = () => {
           />
         </Password>
         <Error>{pwConfirmErrMsg}</Error>
+
+        <BlueButton disabled={notAllow}>회원가입</BlueButton>
       </Form>
-      <BlueButton disabled={notAllow} onClick={onSubmit}>
-        회원가입
-      </BlueButton>
       <ToLogin>
         이미 가입 하셨나요?
         <Login onClick={() => navigate('/login')}>로그인</Login>
