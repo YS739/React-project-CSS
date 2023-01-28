@@ -4,6 +4,7 @@ export const Videos = styled.div`
   width: 330px;
   height: 220px;
   margin-bottom: 40px;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@ export const Video = styled.div`
 export const VideoTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 export const VideoFooter = styled.div`
@@ -35,7 +36,8 @@ export const VideoFooter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 `;
 
 export const Creator = styled.div`

@@ -16,7 +16,7 @@ import KoLocale from 'timeago.js/lib/lang/ko';
 
 register('ko', KoLocale);
 
-export default function Recommend({ video }) {
+const Recommend = ({ video }) => {
   const navigate = useNavigate();
 
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
@@ -45,4 +45,5 @@ export default function Recommend({ video }) {
       </ViewBody>
     </RecommendBody>
   );
-}
+};
+export default Recommend;

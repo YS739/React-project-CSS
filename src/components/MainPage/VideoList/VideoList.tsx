@@ -12,7 +12,7 @@ const VideoList = ({ video }: any) => {
 
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   return (
-    // 클릭한 영상의 id로 이동하기 - state(param)로 video를 넘겨준다.
+    // 클릭한 영상의 id로 이동하기 - state(param)으로 video를 넘겨준다.
     <Videos
       onClick={() => {
         navigate(`/detail/${video.id.videoId}`, { state: { video } });
@@ -20,8 +20,12 @@ const VideoList = ({ video }: any) => {
     >
       <Video>
         <img
-          width={'100%'}
-          height={'90%'}
+          style={{
+            width: '100%',
+            height: '90%',
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+          }}
           src={thumbnails.medium.url}
           alt="videoThumbnail"
         />

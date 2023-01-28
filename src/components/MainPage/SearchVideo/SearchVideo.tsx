@@ -9,7 +9,10 @@ import { HiOutlineSearch } from 'react-icons/hi';
 import CategorySlide from '../CategorySlide/CategorySlide';
 import React from 'react';
 
-const SearchVideo = ({
+// call signature
+type SearchVideoJ = (props: any) => any;
+
+const SearchVideo: SearchVideoJ = ({
   keyword,
   setKeyword,
   OnKeyPressHandler,

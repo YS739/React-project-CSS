@@ -1,9 +1,17 @@
-import React, { useState, useEffect, useRef, KeyboardEvent } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  KeyboardEvent,
+  MouseEvent,
+} from 'react';
 import { useQuery } from 'react-query';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
 import { allVideoList, categoryVideoList } from '../../common/apis';
 import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
+import { confirmAlert } from 'react-confirm-alert';
+import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState<string>('');
@@ -33,8 +41,8 @@ const MainPage = () => {
     isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
+  // nextPageToken과 category가 있을 때만 api 호출하기
   useEffect(() => {}, [nextPageToken]);
-
   useEffect(() => {}, [category]);
 
   // 해당 카테고리를 눌렀을 때 api 검색어 부분에 넣을 단어를 받아오기
@@ -43,11 +51,14 @@ const MainPage = () => {
   };
 
   // 검색 실행 함수 - 검색 버튼 눌렀을 때
-  // TODO: e: MouseEvent<HTMLButtonElement> 지웠음
-  const searchHandler = () => {
-    // TODO: confirm alert로 바꾸기
+  const searchHandler = (e?: MouseEvent<HTMLButtonElement>) => {
+    e?.preventDefault();
     if (keyword.trim().length === 0) {
-      alert('검색어를 입력해주세요.');
+      confirmAlert({
+        customUI: ({ onClose }) => {
+          return <AlertUI title={'검색어를 입력해주세요.'} onClose={onClose} />;
+        },
+      });
     }
     setKeyword(keyword);
   };
@@ -61,7 +72,6 @@ const MainPage = () => {
   };
 
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
-  // TODO: any 수정하기
   const searchedList = allListData?.filter((item: any) =>
     item.snippet.title.includes(keyword),
   );
@@ -80,7 +90,7 @@ const MainPage = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 0.2,
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -95,7 +105,7 @@ const MainPage = () => {
 
   return (
     <>
-      {/* 검색창 및 결과 컴포넌트*/}
+      {/* 검색창 및 결과(+카테고리 슬라이드)컴포넌트*/}
       <SearchVideo
         keyword={keyword}
         setKeyword={setKeyword}
@@ -117,7 +127,6 @@ const MainPage = () => {
         {/* TODO: 더 간단하게 리팩토링 가능? */}
         {keyword ? (
           <VideoBox>
-            {/* TODO: any 수정하기  */}
             {searchedList?.map((video: any) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
@@ -132,7 +141,6 @@ const MainPage = () => {
                 <p>{String(errorCategory)}</p>
               </>
             )}
-            {/* TODO: any 수정하기  */}
             {categoryList?.map((video: any) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
@@ -146,12 +154,8 @@ const MainPage = () => {
               ))}
             </VideoBox>
           </>
-          // {/* // <VideoBox>
-          // //   {allListData?.map((video) => ( */}
-          // {/* //     <VideoList key={video.id['videoId']} video={video} />
-          // //   ))}
-          // // </VideoBox> */}
         )}
+        {/* observer api가 관찰하는 부분 - 이 위치에 스크롤이 도달하면 다음데이터를 불러온다 */}
         <div ref={observerRef}></div>
       </VideoSection>
     </>

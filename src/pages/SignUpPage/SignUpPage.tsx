@@ -12,18 +12,10 @@ import {
   ToLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import {
-  useState,
-  useRef,
-  useEffect,
-  ChangeEvent,
-  FormEventHandler,
-  MouseEvent,
-} from 'react';
+import { useState, useRef, useEffect, ChangeEvent, MouseEvent } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../../common/firebase';
 import { updateProfile } from 'firebase/auth';
-import { async } from '@firebase/util';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
 

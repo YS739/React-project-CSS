@@ -29,15 +29,16 @@ import { authService, db } from '../../../common/firebase';
 import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
 import { confirmAlert } from 'react-confirm-alert';
-import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
-import { color } from '../../../common/color';
+import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 
 //TODO: any 수정하기
 const AddComment: React.FC = ({ video }: any) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
   const [bookmark, setBookmark] = useState(false);
-  const [changeColor, setChangeColor] = useState<string>('rgba(32, 82, 149, 0.6)');
+  const [changeColor, setChangeColor] = useState<string>(
+    'rgba(32, 82, 149, 0.6)',
+  );
   const AddGithubText = (e: ChangeEvent<HTMLInputElement>) => {
     setGithubText(e.target.value);
   };
@@ -59,7 +60,7 @@ const AddComment: React.FC = ({ video }: any) => {
         setCurrentUserName(authService.currentUser?.displayName);
         setCurrentUserUid(authService.currentUser?.uid);
       } else if (!user) {
-        console.log('로그인 안됨');
+        console.log('로그인 안됨.');
       }
     });
 
@@ -81,14 +82,22 @@ const AddComment: React.FC = ({ video }: any) => {
       createdAt: new Date(),
       date: NewDate,
     };
-    if (commentText !== '') {
+    if (!authService.currentUser) {
+      confirmAlert({
+        customUI: ({ onClose }) => {
+          return <AlertUI title={'로그인을 해주세요.'} onClose={onClose} />;
+        },
+      });
+      setGithubText('');
+      setCommentText('');
+    } else if (commentText !== '') {
       await addDoc(collection(db, 'comments'), newComment);
       setGithubText('');
       setCommentText('');
     } else if (commentText === '') {
       confirmAlert({
         customUI: ({ onClose }) => {
-          return <CustomAddBtnAlertUI onClose={onClose} />;
+          return <AlertUI title={'댓글을 입력해주세요.'} onClose={onClose} />;
         },
       });
     }

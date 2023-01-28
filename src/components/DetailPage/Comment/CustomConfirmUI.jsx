@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { db } from '../../../common/firebase';
 import { color } from '../../../common/color';
 
-export default function CustomConfirmUI(props) {
+const CustomConfirmUI = (props) => {
   return (
     <ConfirmBody>
       <ConfirmBox>
@@ -28,7 +28,8 @@ export default function CustomConfirmUI(props) {
       </ConfirmBox>
     </ConfirmBody>
   );
-}
+};
+export default CustomConfirmUI;
 
 const ConfirmBody = styled.div`
   display: flex;

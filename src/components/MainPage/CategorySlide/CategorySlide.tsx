@@ -45,30 +45,38 @@ const CategorySlide = ({ categoryClick, onClick }: any) => {
   return (
     <CategoryBox>
       <Slider {...settings}>
-        {/* TODO: api로 변경하고 나서는 Click 인자 변경하기 
-        All => 클론 코딩하기, html => html 클론 코딩하기 */}
         <div>
-          <Category onClick={() => categoryClick('allList')}>All</Category>
+          <Category onClick={() => categoryClick('클론 코딩하기')}>
+            All
+          </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('html')}>HTML</Category>
+          <Category onClick={() => categoryClick('HTML 클론 코딩')}>
+            HTML
+          </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('css')}>CSS</Category>
+          <Category onClick={() => categoryClick('CSS 클론 코딩')}>
+            CSS
+          </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('js')}>Javascript</Category>
+          <Category onClick={() => categoryClick('Javascript 클론 코딩')}>
+            Javascript
+          </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('react')}>React</Category>
+          <Category onClick={() => categoryClick('React 클론 코딩')}>
+            React
+          </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('reactNative')}>
+          <Category onClick={() => categoryClick('React Native 클론')}>
             ReactNative
           </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('typescript')}>
+          <Category onClick={() => categoryClick('typescript basic project')}>
             Typescript
           </Category>
         </div>

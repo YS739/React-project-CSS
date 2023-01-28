@@ -23,7 +23,7 @@ import {
 //   title: string;
 // }
 
-export default function DetailVideo() {
+const DetailVideo = () => {
   const {
     state: { video },
   } = useLocation();
@@ -58,4 +58,5 @@ export default function DetailVideo() {
       </RecommendVideoBody>
     </DetailPageBody>
   );
-}
+};
+export default DetailVideo;

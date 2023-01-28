@@ -16,6 +16,7 @@
     "@types/slick-carousel": "^1.6.37",
     "@types/styled-components": "^5.1.26",
     "axios": "^1.2.4",
+    "dotenv": "^16.0.3",
     "firebase": "^9.16.0",
     "react": "^18.2.0",
     "react-confirm-alert": "^3.0.6",

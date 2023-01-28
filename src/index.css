@@ -1,21 +1,22 @@
 body {
   margin: 0 auto;
   font-family: 'MonoplexKR-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
-    font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2')
+    format('woff2');
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  /* height: 100%; */
-  
+  align-items: center;
+  height: 100%; */
 }
 
 @font-face {
-    font-family: 'MonoplexKR-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'MonoplexKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
