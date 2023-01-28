@@ -12,7 +12,6 @@ import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
-import { colors } from '../../common/colors';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState<string>('');

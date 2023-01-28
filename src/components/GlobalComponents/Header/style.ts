@@ -34,9 +34,6 @@ export const Nav = styled.div`
   }
 `;
 
-<<<<<<< HEAD
-=======
 export const Name = styled.div`
   font-weight: bold;
 `;
->>>>>>> 15d1024b447ff26f764f04db8432e5796207567e
