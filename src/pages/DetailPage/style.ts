@@ -5,4 +5,3 @@ export const DetialFragment = styled.div`
   display: flex;
   margin: 2% 3%;
 `;
-

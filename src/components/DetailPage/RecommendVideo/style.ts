@@ -5,7 +5,11 @@ export const RecommendBody = styled.div`
   height: 18vh;
   margin-left: 11%;
   padding: 1%;
+
   cursor: pointer;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const ViewBody = styled.div`
@@ -20,6 +24,9 @@ export const ViewBody = styled.div`
 export const VideoViewBox = styled.div`
   width: 40%;
   height: 100%;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const VideoView = styled.img`
@@ -28,6 +35,9 @@ export const VideoView = styled.img`
   border-radius: 10px;
 
   margin-right: 3%;
+  @media screen and (max-width: 1200px) {
+    width: 170px;
+  }
 `;
 
 export const VideoViewTextBody = styled.div`
@@ -37,6 +47,9 @@ export const VideoViewTextBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media screen and (max-width: 1200px) {
+    width: 550px;
+  }
 `;
 
 export const VideoTextBody = styled.div`

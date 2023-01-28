@@ -9,6 +9,12 @@ export const AddCommentListAll = styled.div`
   display: flex;
   /* justify-content: space-between; */
   /* background-color: aliceblue; */
+  @media screen and (max-width: 1200px) {
+    width: 400px;
+  }
+  @media screen and (max-width: 780px) {
+    width: 630px;
+  }
 `;
 
 export const AddCommentListWrap = styled.div`
