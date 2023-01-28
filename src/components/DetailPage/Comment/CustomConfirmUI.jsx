@@ -1,7 +1,7 @@
 import { deleteDoc, doc } from 'firebase/firestore';
 import styled from 'styled-components';
 import { db } from '../../../common/firebase';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 
 const CustomConfirmUI = (props) => {
   return (
@@ -49,7 +49,7 @@ const ConfirmBox = styled.div`
 
   position: relative;
   bottom: 80px;
-  box-shadow: 2px 2px 15px 2px;
+  box-shadow: 2px 2px 15px 2px ${colors.GREY};
 `;
 
 const TitleBox = styled.div`
@@ -74,8 +74,8 @@ const BtnBox = styled.div`
 `;
 const ConfirmCancelBtn = styled.button`
   font-size: 16px;
-  font-weight: 600;
-  color: ${color.lightColor};
+  font-weight: 800;
+  color: ${colors.GREY};
 
   background: none;
   border: none;

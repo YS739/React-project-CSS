@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../../../common/color';
+import { colors } from '../../../common/colors';
 
 export const CategoryBox = styled.div`
   width: 800px;
@@ -10,9 +10,9 @@ export const CategoryBox = styled.div`
 export const Category = styled.div`
   width: 120px;
   height: 35px;
-  border: 1px solid ${color.darkColor};
+  border: 1px solid ${colors.PURPLE};
   border-radius: 10px;
-  background-color: ${color.darkColor};
+  background-color: ${colors.PURPLE};
   color: white;
   text-align: center;
   font-weight: 400;
@@ -24,7 +24,7 @@ export const Category = styled.div`
   /* TODO: 컬러를 props으로 받아서 클릭했을 때 변경해주기 */
   :hover {
     background-color: white;
-    color: ${color.darkColor};
+    color: ${colors.PURPLE};
   }
 `;
 

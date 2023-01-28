@@ -26,8 +26,8 @@ export const categoryVideoList = (category) => {
 // // TODO: videoId 설정해야 함
 export const recommendVideoList = (videoId) => {
   return axios
-    .get(
-      `${BASE_URL}&relatedToVideoId=${videoId}&type=video&maxResults=9&key=${API_KEY}`,
-    )
+    .get
+    //   `${BASE_URL}&relatedToVideoId=${videoId}&type=video&maxResults=9&key=${API_KEY}`,
+    ()
     .then((res) => res.data.items);
 };
