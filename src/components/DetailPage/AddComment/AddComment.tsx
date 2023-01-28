@@ -30,13 +30,14 @@ import CommentList from '../CommentList/CommentList';
 import { onAuthStateChanged } from 'firebase/auth';
 import { confirmAlert } from 'react-confirm-alert';
 import CustomAddBtnAlertUI from './CustomAddBtnAlertUI';
+import { color } from '../../../common/color';
 
 //TODO: any 수정하기
 const AddComment: React.FC = ({ video }: any) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');
   const [bookmark, setBookmark] = useState(false);
-  const [changeColor, setChangeColor] = useState('rgba(32, 82, 149, 0.6)');
+  const [changeColor, setChangeColor] = useState<string>('rgba(32, 82, 149, 0.6)');
   const AddGithubText = (e: ChangeEvent<HTMLInputElement>) => {
     setGithubText(e.target.value);
   };
@@ -100,7 +101,7 @@ const AddComment: React.FC = ({ video }: any) => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       setBookmark(true);
-      setChangeColor('#205295');
+      setChangeColor('#84D2C5');
     }
   };
 
@@ -140,7 +141,7 @@ const AddComment: React.FC = ({ video }: any) => {
                 <AddGitText>Github Link </AddGitText>
                 <AddGitInputDiv>
                   <AddInputGihub
-                    placeholder="https:// 로 시작해주세요"
+                    placeholder="https:// 로 시작해주세요."
                     onChange={AddGithubText}
                     value={githubText}
                   />

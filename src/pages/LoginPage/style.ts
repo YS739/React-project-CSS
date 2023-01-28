@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from '../../common/color';
 
 export const LoginContainer = styled.div`
   padding: 50px;
@@ -10,8 +11,8 @@ export const LoginContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 100px;
 `;
 export const Form = styled.form`
   display: flex;
@@ -61,7 +62,7 @@ export const SignUp = styled.div`
 `;
 
 export const BlueButton = styled.button`
-  background-color: #205295;
+  background-color: ${color.lightColor};
   border-radius: 5px;
   width: 250px;
   height: 40px;

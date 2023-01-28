@@ -10,7 +10,9 @@ import { FaGithub } from 'react-icons/fa';
 import { authService, db } from '../../../common/firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import { User } from 'firebase/auth';
+import {onAuthStateChanged, User } from 'firebase/auth';
+
+
 interface CommentListJ {
   userId: string;
   comment: string;
@@ -25,37 +27,44 @@ const MyComments = () => {
   const [userNickname, setUserNickname] = useState<string | null | undefined>(
     '',
   );
+
+  // 현재 유저
   const [currentUser, setCurrentUser] = useState<User | null>(null);
 
   // export const AuthContext = React.createContext<User | null>(null);
 
-  // 현재 유저
-  // const currentUser = authService.currentUser;
-
   // 유저 닉네임
   // const userNickname = currentUser.displayName;
   useEffect(() => {
-    if (!authService.currentUser) return;
-    setCurrentUser(authService.currentUser);
-    setUserNickname(authService.currentUser.displayName);
-  }, [currentUser, userNickname]);
-
-  const q = query(
-    collection(db, 'comments'),
-    where('userId', '==', currentUser?.uid),
-  );
-  getDocs(q).then((querySnapshot) => {
-    const commentList: any = [];
-    querySnapshot.forEach((doc) => {
-      commentList.push({
-        userId: doc.data().userId,
-        comment: doc.data().comment,
-        github: doc.data().github,
-        date: doc.data().date,
-      });
+    onAuthStateChanged(authService, (user) => {
+      if (user) {
+        setCurrentUser(authService.currentUser);
+        getComments();
+        console.log('로그인 되어있음');
+      } else if (!user) {
+        console.log('로그인 안됨');
+      }
     });
-    setComments(commentList);
+  }, [currentUser]);
+
+  const getComments = () => {
+    const q = query(
+      collection(db, 'comments'),
+      where('userId', '==', currentUser?.uid),
+    );
+    getDocs(q).then((querySnapshot) => {
+      const commentList: any = [];
+      querySnapshot.forEach((doc) => {
+        commentList.push({
+          userId: doc.data().userId,
+          comment: doc.data().comment,
+          github: doc.data().github,
+          date: doc.data().date,
+        });
+      });
+      setComments(commentList);
   });
+  }
 
   return (
     <div>
@@ -63,7 +72,7 @@ const MyComments = () => {
         return (
           <CommentContainer key={comment.id}>
             <CommentInfo>
-              <CommentNickName>{userNickname}</CommentNickName>
+              <CommentNickName>{currentUser?.displayName}</CommentNickName>
               <CommentDate>{comment.date}</CommentDate>
               {comment.github.length > 0 ? (
                 <GitHubIcon href={comment.github} target="_blank">

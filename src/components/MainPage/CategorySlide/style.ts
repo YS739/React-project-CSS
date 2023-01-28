@@ -10,9 +10,9 @@ export const CategoryBox = styled.div`
 export const Category = styled.div`
   width: 120px;
   height: 35px;
-  border: 1px solid ${color.navy};
+  border: 1px solid ${color.darkColor};
   border-radius: 10px;
-  background-color: ${color.navy};
+  background-color: ${color.darkColor};
   color: white;
   text-align: center;
   font-weight: 400;
@@ -24,7 +24,7 @@ export const Category = styled.div`
   /* TODO: 컬러를 props으로 받아서 클릭했을 때 변경해주기 */
   :hover {
     background-color: white;
-    color: ${color.navy};
+    color: ${color.darkColor};
   }
 `;
 

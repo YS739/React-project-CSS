@@ -6,19 +6,16 @@ export const BASE_URL =
 
 // 클론 코딩 관련 전체 리스트 가져오기
 export const allVideoList = (nextPageToken) => {
-  return (
-    axios
-      // .get(`/mockData/allList.json`).then((res) => res.data);
+  return axios.get(`/mockData/allList.json`).then((res) => res.data);
 
-      // pagenation 안 할 때 mockData
-      // .get(`/mockData/allList.json`).then((res) => res.data.items);
+  // pagenation 안 할 때 mockData
+  // .get(`/mockData/allList.json`).then((res) => res.data.items);
 
-      // pagenation 할 때 씀
-      .get(
-        `${BASE_URL}&pageToken=${nextPageToken}&maxResults=12&q=클론 코딩&key=${API_KEY}`,
-      )
-      .then((res) => res.data)
-  );
+  // pagenation 할 때 씀
+  // .get(
+  //   `${BASE_URL}&pageToken=${nextPageToken}&maxResults=12&q=클론 코딩&key=${API_KEY}`,
+  // )
+  // .then((res) => res.data)
 
   //  pagenation 안 할 때 api
   // .get(`${BASE_URL}&pageToken=${nextPageToken}&maxResults=24&q=클론 코딩&key=${API_KEY}`)

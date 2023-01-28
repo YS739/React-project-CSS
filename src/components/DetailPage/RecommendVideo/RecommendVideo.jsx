@@ -12,11 +12,11 @@ const RecommendVideo = ({ videoId }) => {
   return (
     <>
       {isLoading && <p>Loading...</p>}
-      {isError && (
+      {/*  {isError && (
         <>
           <p>Something is wrong.</p>
         </>
-      )}
+      )} */}
       {recommendList?.map((video) => (
         <Recommend key={video.id['videoId']} video={video} />
       ))}
