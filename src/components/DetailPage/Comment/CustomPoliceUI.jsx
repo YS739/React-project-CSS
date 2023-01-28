@@ -9,7 +9,7 @@ export default function CustomPoliceUI(props) {
           <ConfirmTitle>신고 사유</ConfirmTitle>
         </TitleBox>
         <TextBox>
-          <Textinput type="text" placeholder="신고 사유를 입력해주세요." />
+          <Textinput type="text" placeholder="신고 사유를 입력해주세요.." />
         </TextBox>
         <BtnBox>
           <ConfirmCancelBtn onClick={props.onClose}>취소</ConfirmCancelBtn>
