@@ -19,7 +19,7 @@ const SampleNextArrow = (props: Props) => {
   );
 };
 
-// 이전 화살표 
+// 이전 화살표
 const SamplePrevArrow: React.FC<{
   onClick: MouseEventHandler<HTMLSpanElement>;
 }> = (props) => {
@@ -92,7 +92,7 @@ const CategorySlide = ({ categoryClick, onClick }: any) => {
           </Category>
         </div>
         <div>
-          <Category onClick={() => categoryClick('typescript basic project')}>
+          <Category onClick={() => categoryClick('Typescript basic project')}>
             Typescript
           </Category>
         </div>
