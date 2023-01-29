@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import AddComment from '../AddComment/AddComment';
-import RecommendVideo from '../RecommendVideo/RecommendVideo';
+import RecommendVideoSection from '../RecommendVideo/RecommendVideoSection';
 import {
   DetailVideoContainer,
   DetailVideoSection,
@@ -13,16 +13,6 @@ import {
   ChannelImg,
   RecommendVideoBox,
 } from './style';
-
-// interface DetailIframeJ {
-//   id: string;
-//   type: string;
-//   width: string;
-//   height: string;
-//   src: string;
-//   frameBorder: string;
-//   title: string;
-// }
 
 const DetailVideo = () => {
   const {
@@ -56,7 +46,7 @@ const DetailVideo = () => {
           <AddComment video={video} />
         </DetailCommentBody>
         <RecommendVideoBox>
-          <RecommendVideo videoId={video.id.videoId} />
+          <RecommendVideoSection videoId={video.id.videoId} />
         </RecommendVideoBox>
       </RecommendVideoBody>
     </DetailPageBody>

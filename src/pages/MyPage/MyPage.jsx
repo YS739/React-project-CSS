@@ -4,10 +4,8 @@ import EditModal from '../../components/MyPage/EditModal/EditModal';
 import { Fragment, useEffect } from 'react';
 import { db, authService } from '../../common/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-
 import { doc, getDoc } from 'firebase/firestore';
 import { useState } from 'react';
-
 import {
   MyPageContainer,
   MyInfoContainer,

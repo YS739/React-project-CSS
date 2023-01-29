@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const RodingRecommend = () => {
+const LoadingRecommend = () => {
   return (
     <RodingRecommendBody>
       <RodingViewBody>
@@ -56,6 +56,7 @@ const RodingRecommend = () => {
     </RodingRecommendBody>
   );
 };
+export default LoadingRecommend;
 
 const RodingRecommendBody = styled.div`
   width: 100%;
@@ -105,4 +106,3 @@ const RodingVideoTitle = styled.div`
 
   margin-top: 5%;
 `;
-export default RodingRecommend;

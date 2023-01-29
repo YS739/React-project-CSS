@@ -1,11 +1,11 @@
 import { recommendVideoList } from '../../../common/apis';
-import Recommend from './Recommend';
+import RecommendVideos from './RecommendVideos';
 import { useQuery } from 'react-query';
 import { useEffect } from 'react';
-import RodingRecommend from './RodingRecommend';
-import ErrorRecommendUI from './ErrorRecommendUI';
+import LoadingRecommend from '../../SkeletonUI/LoadingRecommend';
+import ErrorRecommendUI from '../../SkeletonUI/ErrorRecommendUI';
 
-const RecommendVideo = ({ videoId }) => {
+const RecommendVideoSection = ({ videoId }) => {
   const {
     isLoading,
     data: recommendList,
@@ -18,13 +18,13 @@ const RecommendVideo = ({ videoId }) => {
 
   return (
     <>
-      {isLoading && <RodingRecommend />}
+      {isLoading && <LoadingRecommend />}
       {isError && <ErrorRecommendUI />}
       {recommendList?.map((video) => (
-        <Recommend key={video.id['videoId']} video={video} />
+        <RecommendVideos key={video.id['videoId']} video={video} />
       ))}
     </>
   );
 };
 
-export default RecommendVideo;
+export default RecommendVideoSection;
