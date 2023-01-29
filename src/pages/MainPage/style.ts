@@ -19,9 +19,7 @@ export const VideoBox = styled.div`
   gap: 30px;
   margin-right: 3%;
   margin-left: 7%;
-  @media screen and (max-width: 1200px) {
-    margin-left: 19%;
-  }
+
   @media screen and (max-width: 1000px) {
     margin-left: 15%;
   }
