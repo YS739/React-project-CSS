@@ -28,7 +28,6 @@ const MainPage = () => {
   const {
     isLoading: isLoadingAll,
     data: allList,
-    error,
     isError,
   } = useQuery(['allVideoList', nextPageToken], () =>
     allVideoList(nextPageToken),
@@ -38,7 +37,6 @@ const MainPage = () => {
   const {
     isLoading: isLoadingCategory,
     data: categoryList,
-    error: errorCategory,
     isError: isErrorCategory,
   } = useQuery(['categoryList', category], () => categoryVideoList(category));
 
@@ -72,9 +70,8 @@ const MainPage = () => {
     }
   };
 
-  // TODO: api키 변경 후 videos.filter로 바꾸기
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
-  const searchedList = allList?.items.filter((item: any) =>
+  const searchedList = videos.filter((item: any) =>
     item.snippet.title.includes(keyword),
   );
 
