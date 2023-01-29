@@ -17,7 +17,7 @@ export const VideoBox = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 30px;
-  margin-left: 4%;
+  margin-left: 10%;
   box-sizing: border-box;
 
   @media screen and (max-width: 1100px) {
