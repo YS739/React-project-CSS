@@ -9,7 +9,7 @@ export const VideoSection = styled.div`
 `;
 
 export const VideoBox = styled.div`
-  width: 1100px;
+  width: 1200px;
   height: 100%;
   display: flex;
   flex-direction: row;

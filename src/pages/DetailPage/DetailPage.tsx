@@ -1,11 +1,11 @@
 import DetailVideo from '../../components/DetailPage/DetailVideo/DetailVideo';
-import { DetialFragment } from './style';
+import { DetailFragment } from './style';
 
 const DetailPage = () => {
   return (
-    <DetialFragment>
+    <DetailFragment>
       <DetailVideo />
-    </DetialFragment>
+    </DetailFragment>
   );
 };
 

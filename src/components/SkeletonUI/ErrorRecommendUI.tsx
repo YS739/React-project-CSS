@@ -23,6 +23,9 @@ const ErrorRecommendUI = () => {
   );
 };
 
+export default ErrorRecommendUI;
+
+// Style component
 const ErrorRecommendBody = styled.div`
   width: 100%;
   height: 18vh;
@@ -92,5 +95,3 @@ const ErrorVideoTitle = styled.div`
 
   margin-top: 5%;
 `;
-
-export default ErrorRecommendUI;

@@ -12,6 +12,8 @@ import { VideoSection, VideoBox } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
+import MainVideoListLoadingUI from '../../components/SkeletonUI/MainVideoListLoadingUI';
+import MainErrorUI from '../../components/SkeletonUI/MainErrorUI';
 
 const MainPage = () => {
   const [keyword, setKeyword] = useState<string>('');
@@ -31,8 +33,6 @@ const MainPage = () => {
   } = useQuery(['allVideoList', nextPageToken], () =>
     allVideoList(nextPageToken),
   );
-
-  const allListData = allList?.items;
 
   // 카테고리별 리스트 불러오기
   const {
@@ -114,16 +114,6 @@ const MainPage = () => {
         OnKeyPressHandler={OnKeyPressHandler}
         categoryHandler={categoryHandler}
       />
-
-      {/* allList - 로딩중이거나 에러가 생기면 화면에 표시 */}
-      {isLoadingAll && <p>Loading...</p>}
-      {isError && (
-        <>
-          <p>Something is wrong.</p>
-          <p>{String(error)}</p>
-        </>
-      )}
-
       <VideoSection>
         {keyword ? (
           <VideoBox>
@@ -134,13 +124,8 @@ const MainPage = () => {
         ) : category ? (
           <VideoBox>
             {/* categoryList - 로딩중이거나 에러가 생기면 화면에 표시 */}
-            {isLoadingCategory && <p>Loading...</p>}
-            {isErrorCategory && (
-              <>
-                <p>Something is wrong.</p>
-                <p>{String(errorCategory)}</p>
-              </>
-            )}
+            {isLoadingCategory && <MainVideoListLoadingUI />}
+            {isErrorCategory && <MainErrorUI />}
             {categoryList?.map((video: any) => (
               <VideoList key={video.id['videoId']} video={video} />
             ))}
@@ -148,6 +133,10 @@ const MainPage = () => {
         ) : (
           <>
             <VideoBox>
+              {/* allList - 로딩중이거나 에러가 생기면 화면에 표시 */}
+              {isLoadingAll && <MainVideoListLoadingUI />}
+              {isError && <MainErrorUI />}
+
               {/* infinite scroll - nextPage Video 불러오는 부분 */}
               {videos.map((video: any) => (
                 <VideoList key={video.id['videoId']} video={video} />

@@ -3,68 +3,51 @@ import styled from 'styled-components';
 
 const LoadingRecommend = () => {
   return (
-    <RodingRecommendBody>
-      <RodingViewBody>
-        <RodingVideoViewBox></RodingVideoViewBox>
+    <LoadingRecommendBody>
+      <LoadingViewBody>
+        <LoadingVideoViewBox />
+        <LoadingVideoViewTextBody>
+          <LoadingVideoTextBody />
+          <LoadingVideoTitle />
+        </LoadingVideoViewTextBody>
+      </LoadingViewBody>
 
-        <RodingVideoViewTextBody>
-          <RodingVideoTextBody></RodingVideoTextBody>
+      <LoadingViewBody>
+        <LoadingVideoViewBox />
+        <LoadingVideoViewTextBody>
+          <LoadingVideoTextBody />
+          <LoadingVideoTitle />
+        </LoadingVideoViewTextBody>
+      </LoadingViewBody>
 
-          <RodingVideoTitle></RodingVideoTitle>
-        </RodingVideoViewTextBody>
-      </RodingViewBody>
+      <LoadingViewBody>
+        <LoadingVideoViewBox />
+        <LoadingVideoViewTextBody>
+          <LoadingVideoTextBody />
+          <LoadingVideoTitle />
+        </LoadingVideoViewTextBody>
+      </LoadingViewBody>
 
-      <RodingViewBody>
-        <RodingVideoViewBox></RodingVideoViewBox>
-
-        <RodingVideoViewTextBody>
-          <RodingVideoTextBody></RodingVideoTextBody>
-
-          <RodingVideoTitle></RodingVideoTitle>
-        </RodingVideoViewTextBody>
-      </RodingViewBody>
-
-      <RodingViewBody>
-        <RodingVideoViewBox></RodingVideoViewBox>
-
-        <RodingVideoViewTextBody>
-          <RodingVideoTextBody></RodingVideoTextBody>
-
-          <RodingVideoTitle></RodingVideoTitle>
-        </RodingVideoViewTextBody>
-      </RodingViewBody>
-
-      <RodingViewBody>
-        <RodingVideoViewBox></RodingVideoViewBox>
-
-        <RodingVideoViewTextBody>
-          <RodingVideoTextBody></RodingVideoTextBody>
-
-          <RodingVideoTitle></RodingVideoTitle>
-        </RodingVideoViewTextBody>
-      </RodingViewBody>
-
-      <RodingViewBody>
-        <RodingVideoViewBox></RodingVideoViewBox>
-
-        <RodingVideoViewTextBody>
-          <RodingVideoTextBody></RodingVideoTextBody>
-
-          <RodingVideoTitle></RodingVideoTitle>
-        </RodingVideoViewTextBody>
-      </RodingViewBody>
-    </RodingRecommendBody>
+      <LoadingViewBody>
+        <LoadingVideoViewBox />
+        <LoadingVideoViewTextBody>
+          <LoadingVideoTextBody />
+          <LoadingVideoTitle />
+        </LoadingVideoViewTextBody>
+      </LoadingViewBody>
+    </LoadingRecommendBody>
   );
 };
 export default LoadingRecommend;
 
-const RodingRecommendBody = styled.div`
+// Style component
+const LoadingRecommendBody = styled.div`
   width: 100%;
   height: 18vh;
   margin-left: 11%;
 `;
 
-const RodingViewBody = styled.div`
+const LoadingViewBody = styled.div`
   width: 80%;
   height: 100%;
 
@@ -73,7 +56,7 @@ const RodingViewBody = styled.div`
   margin-bottom: 2%;
 `;
 
-const RodingVideoViewBox = styled.div`
+const LoadingVideoViewBox = styled.div`
   width: 70%;
   height: 100%;
   border-radius: 10px;
@@ -82,12 +65,12 @@ const RodingVideoViewBox = styled.div`
   background-color: #e7e7e7;
 `;
 
-const RodingVideoViewTextBody = styled.div`
+const LoadingVideoViewTextBody = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-const RodingVideoTextBody = styled.div`
+const LoadingVideoTextBody = styled.div`
   width: 80%;
   height: 20%;
 
@@ -97,7 +80,7 @@ const RodingVideoTextBody = styled.div`
   margin-top: 2%;
 `;
 
-const RodingVideoTitle = styled.div`
+const LoadingVideoTitle = styled.div`
   width: 50%;
   height: 15%;
 
