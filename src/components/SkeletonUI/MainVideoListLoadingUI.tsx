@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Videos } from '../../components/MainPage/VideoList/style';
-import { VideoBox, VideoSection } from '../../pages/MainPage/style';
+import { VideoSection } from '../../pages/MainPage/style';
 
 const MainVideoListLoadingUI = () => {
   return (
     <VideoSection>
-      <VideoBox>
+      <VideoBoxSkeleton>
         <Videos>
           <VideoSkeleton />
           <VideoFooterSkeleton />
@@ -31,7 +31,7 @@ const MainVideoListLoadingUI = () => {
           <VideoSkeleton />
           <VideoFooterSkeleton />
         </Videos>
-      </VideoBox>
+      </VideoBoxSkeleton>
     </VideoSection>
   );
 };
@@ -39,6 +39,28 @@ const MainVideoListLoadingUI = () => {
 export default MainVideoListLoadingUI;
 
 // Style component
+
+export const VideoBoxSkeleton = styled.div`
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1100px) {
+    width: 800px;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 500px;
+    margin-left: 10%;
+  }
+`;
+
 export const VideoSkeleton = styled.div`
   width: 100%;
   height: 70%;
