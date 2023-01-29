@@ -94,7 +94,7 @@ const Comment = ({ user }) => {
         <CommentTime>{user.date}</CommentTime>
         <CommentGitIcon>
           {user.github !== '' ? (
-            <a href={user.github} target="_blank" title={user.github}>
+            <a href={user.github} target="blank" title={user.github}>
               <BsGithub svg color="black" />
             </a>
           ) : (
