@@ -45,7 +45,7 @@ export const ListTextSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
     width: 350px;
   }
   @media screen and (max-width: 780px) {
