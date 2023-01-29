@@ -73,7 +73,7 @@ const MainPage = () => {
   };
 
   // allList에서 검색어가 포함된 title이 있는 list만 가져오기
-  const searchedList = allListData?.filter((item: any) =>
+  const searchedList = videos.filter((item: any) =>
     item.snippet.title.includes(keyword),
   );
 
@@ -91,7 +91,7 @@ const MainPage = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.2,
+      threshold: 0.5,
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
