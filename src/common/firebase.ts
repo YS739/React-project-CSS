@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'process.env.REACT_APP_FIREBASE_KEY',
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: 'clonecodingsharespace.firebaseapp.com',
   projectId: 'clonecodingsharespace',
   storageBucket: 'clonecodingsharespace.appspot.com',

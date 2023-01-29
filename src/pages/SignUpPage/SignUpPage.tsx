@@ -105,6 +105,7 @@ const SignUpPage = () => {
             );
           },
         });
+        navigate('/login');
         console.log(error);
       });
   };

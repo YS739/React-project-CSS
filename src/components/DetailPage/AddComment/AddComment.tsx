@@ -31,7 +31,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../GlobalComponents/AlertUI/AlertUI';
 
-//TODO: any 수정하기
 const AddComment: React.FC = ({ video }: any) => {
   const [githubText, setGithubText] = useState('');
   const [commentText, setCommentText] = useState('');

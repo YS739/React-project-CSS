@@ -15,7 +15,7 @@ import {
   SocialLogin,
 } from './style';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef, useEffect, ChangeEvent } from 'react';
+import { useState, useRef, useEffect, ChangeEvent, MouseEvent } from 'react';
 import {
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -76,7 +76,8 @@ const LoginPage = () => {
     }
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (e: MouseEvent<HTMLFormElement>) => {
+    e.preventDefault();
     await signInWithEmailAndPassword(authService, id, pw)
       .then(() => {
         // Signed in
@@ -106,7 +107,7 @@ const LoginPage = () => {
       });
   };
 
-  // google signin
+  // google signIn
   const googleSignUpHandler = () => {
     signInWithPopup(authService, new GoogleAuthProvider())
       .then(() => {
@@ -122,7 +123,7 @@ const LoginPage = () => {
       });
   };
 
-  // git hub signin
+  // git hub signIn
   const githubSignUpHandler = () => {
     signInWithPopup(authService, new GithubAuthProvider())
       .then(() => {
@@ -149,7 +150,7 @@ const LoginPage = () => {
   return (
     <LoginContainer>
       <Logo src={require('../../assets/css_logo.png')} alt="css" />
-      <Form>
+      <Form onSubmit={onSubmit}>
         <Id>
           <Label>이메일</Label>
 
