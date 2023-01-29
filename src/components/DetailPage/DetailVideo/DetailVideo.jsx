@@ -29,7 +29,7 @@ const DetailVideo = () => {
             type="text/html"
             width="100%"
             height="700px"
-            src={`http://www.youtube.com/embed/${video.id.videoId}`}
+            src={`https://www.youtube.com/embed/${video.id.videoId}`}
             frameBorder="0"
             title="유튜브"
           />
