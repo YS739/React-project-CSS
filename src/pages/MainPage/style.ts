@@ -17,22 +17,15 @@ export const VideoBox = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 30px;
-  margin-right: 3%;
-  margin-left: 7%;
+  margin-left: 4%;
+  box-sizing: border-box;
 
-  @media screen and (max-width: 1000px) {
-    margin-left: 15%;
+  @media screen and (max-width: 1100px) {
+    width: 800px;
   }
-  @media screen and (max-width: 900px) {
-    margin-left: 9%;
-  }
-  @media screen and (max-width: 800px) {
-    margin-left: 26%;
-  }
-  @media screen and (max-width: 600px) {
-    margin-left: 23%;
-  }
-  @media screen and (max-width: 500px) {
-    margin-left: 16%;
+
+  @media screen and (max-width: 750px) {
+    width: 500px;
+    margin-left: 10%;
   }
 `;
