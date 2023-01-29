@@ -1,5 +1,5 @@
 ## 내일배움 캠프 4기 React B반 6조(뭐든 해보조) React outsourcing project
-## 팀원: 김민우 남마리나 심대호 정윤숙(팀장) 최희라
+## 팀원: 정윤숙(팀장) 김민우 남마리나 심대호 최희라
 <center><img src="https://user-images.githubusercontent.com/112805225/215319779-8065fd17-4aea-4f26-b224-7fbf15cc79a4.png" width="400" height="250"/></center>
 
 ## 프로젝트 명: CSS - clone-coding share space
