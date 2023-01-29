@@ -4,12 +4,9 @@ import { colors } from '../../../common/colors';
 
 export const AddCommentListAll = styled.div`
   width: 100%;
-  /* height: 25%; */
-  /* margin-top: 1%; */
   display: flex;
-  /* justify-content: space-between; */
-  /* background-color: aliceblue; */
-  @media screen and (max-width: 1200px) {
+
+  @media screen and (max-width: 900px) {
     width: 400px;
   }
   @media screen and (max-width: 780px) {
