@@ -101,7 +101,7 @@ export const CommentDeleteBtn = styled.button`
   width: 80px;
   height: 30px;
 
-  background-color: white;
+  background-color: #fff;
   border: 2px solid ${colors.PURPLE};
   color: ${colors.PURPLE};
   border-radius: 5px;
@@ -115,7 +115,7 @@ export const CommentDeleteBtn = styled.button`
 
   :hover {
     background-color: ${colors.PURPLE};
-    color: white;
+    color: #fff;
     border-radius: 5px;
     border: none;
   }

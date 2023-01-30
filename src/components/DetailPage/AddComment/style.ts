@@ -126,7 +126,7 @@ export const AddCommentBtn = styled.button`
   height: 40px;
   cursor: pointer;
 
-  background-color: white;
+  background-color: #fff;
   color: ${colors.PURPLE};
   border: 2px solid ${colors.PURPLE};
   border-radius: 5px;
@@ -135,7 +135,7 @@ export const AddCommentBtn = styled.button`
 
   :hover {
     background-color: ${colors.PURPLE};
-    color: white;
+    color: #fff;
     border-radius: 5px;
     border: none;
   }

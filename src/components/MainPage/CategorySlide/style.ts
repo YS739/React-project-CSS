@@ -20,7 +20,7 @@ export const Category = styled.button`
   border: 1px solid ${colors.PURPLE};
   border-radius: 10px;
   background-color: ${colors.PURPLE};
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 16px;
   font-weight: 400;
@@ -29,11 +29,11 @@ export const Category = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: white;
+    background-color: #fff;
     color: ${colors.PURPLE};
   }
   :focus {
-    background-color: white;
+    background-color: #fff;
     color: ${colors.PURPLE};
   }
 `;

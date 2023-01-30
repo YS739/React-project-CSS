@@ -77,7 +77,7 @@ export const BlueButton = styled.button`
   border-radius: 5px;
   width: 250px;
   height: 40px;
-  color: white;
+  color: #fff;
   font-size: 15px;
   cursor: pointer;
 `;

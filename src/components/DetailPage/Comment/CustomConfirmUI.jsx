@@ -45,7 +45,7 @@ const ConfirmBox = styled.div`
   width: 350px;
   height: 200px;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
 
   position: relative;
   bottom: 80px;

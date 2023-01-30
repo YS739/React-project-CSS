@@ -73,7 +73,7 @@ export const VideoSkeleton = styled.div`
 export const VideoFooterSkeleton = styled.div`
   width: 100%;
   height: 30%;
-  background-color: white;
+  background-color: #fff;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 `;

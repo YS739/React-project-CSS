@@ -83,14 +83,14 @@ export const BlueButton = styled.button`
   border-radius: 5px;
   width: 250px;
   height: 40px;
-  color: white;
+  color: #fff;
   font-size: 15px;
   margin-bottom: 10px;
   cursor: pointer;
 `;
 
 export const Button = styled.button`
-  background-color: white;
+  background-color: #fff;
   color: ${colors.GREY};
   font-weight: 700;
   font-size: 14px;
