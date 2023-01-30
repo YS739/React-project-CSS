@@ -3,12 +3,12 @@ import {
   AddCommentListWrap,
   AddCommentListAll,
   AddCommentListTwo,
-  AddInputGihub,
+  AddInputGithub,
   AddInputContent,
   AddGitLink,
   AddCommentText,
   AddCommentBtn,
-  AddIcornBtn,
+  AddIconBtn,
   AddGitInputDiv,
   AddCommentPlusGit,
   AddGitText,
@@ -148,7 +148,7 @@ const AddComment: React.FC = ({ video }: any) => {
               <AddGitLink>
                 <AddGitText>Github Link </AddGitText>
                 <AddGitInputDiv>
-                  <AddInputGihub
+                  <AddInputGithub
                     placeholder="https:// 로 시작해주세요."
                     onChange={AddGithubText}
                     value={githubText}
@@ -170,9 +170,9 @@ const AddComment: React.FC = ({ video }: any) => {
             </AddCommentBtnDiv>
           </AddCommentListTwo>
         </AddCommentListWrap>
-        <AddIcornBtn>
+        <AddIconBtn>
           <BookMark onClick={updateBookmark} style={{ color: changeColor }} />
-        </AddIcornBtn>
+        </AddIconBtn>
       </AddCommentListAll>
 
       <CommentList video={video} />

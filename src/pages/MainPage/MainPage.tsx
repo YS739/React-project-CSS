@@ -19,12 +19,12 @@ const MainPage = () => {
   const [keyword, setKeyword] = useState<string>('');
   const [category, setCategory] = useState<string>('');
 
-  // 스크롤 시 추가로 불러오는 VideoList
+  // 스크롤 할 때 추가로 불러오는 VideoList(무한 스크롤)
   const [videos, setVideos] = useState<any>([]);
   const [nextPageToken, setNextPageToken] = useState<string>('');
   const observerRef = useRef<HTMLDivElement>(null);
 
-  // 클론 코딩 전체 리스트 불러오기
+  // 클론 코딩 전체 리스트 불러오기(+PageNation)
   const {
     isLoading: isLoadingAll,
     data: allList,
@@ -70,12 +70,12 @@ const MainPage = () => {
     }
   };
 
-  // allList에서 검색어가 포함된 title이 있는 list만 가져오기
+  // 전체 video list에서 검색어가 포함된 title을 가진 video list
   const searchedList = videos.filter((item: any) =>
     item.snippet.title.includes(keyword),
   );
 
-  // Intersection Observer API - 무한 스크롤
+  // Intersection Observer API - 무한 스크롤 실행 함수
   const handleLoadMore = async () => {
     try {
       setVideos([...videos, ...allList?.items]);
@@ -89,8 +89,9 @@ const MainPage = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 0.7,
     };
+    // 스크롤이 특정 위치에 도달했을 때 handleLoadMore 함수가 실행되며 다음 data를 불러옴
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
@@ -112,6 +113,8 @@ const MainPage = () => {
         OnKeyPressHandler={OnKeyPressHandler}
         categoryHandler={categoryHandler}
       />
+
+      {/* Video List */}
       <VideoSection>
         {keyword ? (
           <VideoBox>
@@ -135,14 +138,14 @@ const MainPage = () => {
               {isLoadingAll && <MainVideoListLoadingUI />}
               {isError && <MainErrorUI />}
 
-              {/* infinite scroll - nextPage Video 불러오는 부분 */}
+              {/* 무한 스크롤 되는 video list */}
               {videos.map((video: any) => (
                 <VideoList key={video.id['videoId']} video={video} />
               ))}
             </VideoBox>
           </>
         )}
-        {/* observer api가 관찰하는 부분 - 이 위치에 스크롤이 도달하면 다음데이터를 불러온다 */}
+        {/* observer api가 관찰하는 부분 - 이 위치에 스크롤이 도달하면 다음 데이터를 불러온다 */}
         <div ref={observerRef}></div>
       </VideoSection>
     </>

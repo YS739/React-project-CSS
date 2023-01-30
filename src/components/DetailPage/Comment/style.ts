@@ -22,14 +22,14 @@ export const CommentNickname = styled.div`
 
 export const CommentNicknameBar = styled.div`
   font-size: 1.5rem;
-  color: gray;
+  color: #555;
   margin-right: 1.5%;
   margin-left: 1.5%;
   margin-bottom: 0.5%;
 `;
 
 export const CommentTime = styled.div`
-  color: gray;
+  color: #555;
   margin-right: 1.5%;
 `;
 

@@ -87,7 +87,7 @@ export const AddInputDiv = styled.div`
   margin-left: 1%;
 `;
 
-export const AddIcornBtn = styled.button`
+export const AddIconBtn = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -99,7 +99,7 @@ export const AddIcornBtn = styled.button`
   /* margin-right: 10%; */
 `;
 
-export const AddInputGihub = styled.input`
+export const AddInputGithub = styled.input`
   width: 100%;
   border: 1px solid rgb(150, 150, 150);
   border-radius: 10px;
@@ -112,7 +112,7 @@ export const AddInputGihub = styled.input`
   }
 `;
 
-export const AddInputContent = styled(AddInputGihub)``;
+export const AddInputContent = styled(AddInputGithub)``;
 
 export const AddCommentBtnDiv = styled.div`
   display: flex;

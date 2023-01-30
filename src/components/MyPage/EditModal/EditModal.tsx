@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ChangeEvent } from 'react';
 import { updateProfile } from 'firebase/auth';
 import { useFirestoreDocumentMutation } from '@react-query-firebase/firestore';
 import { doc } from 'firebase/firestore';
@@ -16,7 +16,9 @@ import {
   ErrorMessage,
 } from './style';
 
-const EditModal = ({
+type EditModalJ = (props: any) => any;
+
+const EditModal: EditModalJ = ({
   setModalOpen,
   setContentInfo,
   setUserName,
@@ -72,7 +74,7 @@ const EditModal = ({
   };
 
   // input 수정
-  const checkInput = (e) => {
+  const checkInput = (e: ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
     setCurrentInput(input);
     if (setContentInfo) {

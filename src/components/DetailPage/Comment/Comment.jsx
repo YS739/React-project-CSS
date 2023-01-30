@@ -1,30 +1,29 @@
-import { useState } from 'react';
-import { BsGithub, BsPencil, BsFillTrashFill, BsFlag } from 'react-icons/bs';
-import { GrMoreVertical } from 'react-icons/gr';
-import { db, authService } from '../../../common/firebase';
 import { doc, updateDoc } from 'firebase/firestore';
+import { useState } from 'react';
 import { confirmAlert } from 'react-confirm-alert';
-import {
-  ListTitleSection,
-  CommentNickname,
-  CommentNicknameBar,
-  CommentTime,
-  CommentGitIcon,
-  ListContainer,
-  ListTextSection,
-  CommentText,
-  CommentTextIcon,
-  CommentUpdateBtn,
-  CommentDeleteBtn,
-  UpdateDeleteBody,
-  CommentIconBody,
-  CommentEditInput,
-  NoneDiv,
-  CommentPoliceBtn,
-} from './style';
+import { BsFillTrashFill, BsFlag, BsGithub, BsPencil } from 'react-icons/bs';
+import { GrMoreVertical } from 'react-icons/gr';
+import { authService, db } from '../../../common/firebase';
 import CustomConfirmUI from './CustomConfirmUI';
 import CustomPoliceUI from './CustomPoliceUI';
-import React from 'react';
+import {
+  CommentDeleteBtn,
+  CommentEditInput,
+  CommentGitIcon,
+  CommentIconBody,
+  CommentNickname,
+  CommentNicknameBar,
+  CommentPoliceBtn,
+  CommentText,
+  CommentTextIcon,
+  CommentTime,
+  CommentUpdateBtn,
+  ListContainer,
+  ListTextSection,
+  ListTitleSection,
+  NoneDiv,
+  UpdateDeleteBody,
+} from './style';
 
 const Comment = ({ user }) => {
   const [editBox, setEditBox] = useState(false);

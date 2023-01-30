@@ -10,6 +10,7 @@ interface Props {
 }
 
 // 왼쪽, 오른쪽 화살표 커스텀
+// 오른쪽 화살표
 const SampleNextArrow = (props: Props) => {
   const { onClick } = props;
   return (
@@ -19,7 +20,7 @@ const SampleNextArrow = (props: Props) => {
   );
 };
 
-// 이전 화살표
+// 왼쪽 화살표
 const SamplePrevArrow: React.FC<{
   onClick: MouseEventHandler<HTMLSpanElement>;
 }> = (props) => {
@@ -62,6 +63,7 @@ const CategorySlide = ({ categoryClick, onClick }: any) => {
     <CategoryBox>
       <Slider {...settings}>
         <div>
+          {/* 카테고리 클릭시 문자열을 categoryClick함수에 인자로 넘겨줌 */}
           <Category onClick={() => categoryClick('클론 코딩하기')}>
             All
           </Category>
