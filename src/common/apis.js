@@ -16,25 +16,26 @@ export const allVideoList = (nextPageToken) => {
 
 // 카테고리별 클론 코딩 리스트 가져오기 - mockData
 export const categoryVideoList = (category) => {
-  return axios
-    .get(
-      `${BASE_URL}&q=${category}&maxResults=24&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
-    )
-    .then((res) => res.data.items);
-
   // mockData
-  // .get(`/mockData/${category}.json`).then((res) => res.data.items);
+  return axios.get(`/mockData/${category}.json`).then((res) => res.data.items);
+
+  // api
+  // .get(
+  //   `${BASE_URL}&q=${category}&maxResults=9&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+  // )
+  // .then((res) => res.data.items);
 };
 
 // 연관 비디오 리스트 가져오기 - mockData
 export const recommendVideoList = (videoId) => {
+  // mockData
   return axios
-    .get(
-      `${BASE_URL}&relatedToVideoId=${videoId}&type=video&maxResults=9&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
-    )
+    .get(`/mockData/클론 코딩하기.json`)
     .then((res) => res.data.items);
 
-  // mockData
-  // .get(`/mockData/클론 코딩하기.json`)
+  // Api
+  // .get(
+  //   `${BASE_URL}&relatedToVideoId=${videoId}&type=video&maxResults=6&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+  // )
   // .then((res) => res.data.items);
 };
