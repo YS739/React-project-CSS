@@ -21,7 +21,6 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   padding: 40px;
-  /* background-color: aliceblue; */
 `;
 
 export const Id = styled.div`
@@ -60,9 +59,29 @@ export const Input = styled.input`
 `;
 
 export const Error = styled.div`
-  color: red;
   font-size: 12px;
   padding: 5px;
+    .message{
+  &.success {
+    color: green;
+  }
+  &.error{
+    color: red;
+  }
+}
+`;
+
+export const ErrorMessage
+ = styled.span`
+  font-size: 12px;
+  padding: 5px;
+  &.success {
+    color: green;
+  }
+  &.error{
+    color: red;
+  }
+
 `;
 
 export const SubmitButtonContainer = styled.div`

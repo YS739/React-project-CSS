@@ -3,15 +3,7 @@ import { BsFillBookmarkFill } from 'react-icons/bs';
 import { colors } from '../../../common/colors';
 
 export const AddCommentListAll = styled.div`
-  width: 100%;
   display: flex;
-
-  @media screen and (max-width: 900px) {
-    width: 400px;
-  }
-  @media screen and (max-width: 780px) {
-    width: 630px;
-  }
 `;
 
 export const AddCommentListWrap = styled.div`
@@ -20,20 +12,15 @@ export const AddCommentListWrap = styled.div`
   border: 2px solid ${colors.PURPLE};
   border-radius: 10px;
   width: 100%;
-  /* height: 100%; */
   padding: 20px;
+  box-sizing: border-box;
 `;
 
 export const AddCommentListTwo = styled.div`
-  /* margin-left: 5%;
-  margin-top: 2%; */
   width: 100%;
-  /* height: 100%; */
 `;
 
 export const AddCommentPlusGit = styled.div`
-  /* width: 100%; */
-  /* height: 50%; */
 `;
 
 export const AddNickName = styled.div`
@@ -46,15 +33,12 @@ export const AddNickName = styled.div`
 export const AddGitLink = styled.div`
   display: flex;
   margin-bottom: 10px;
-  /* width: 100%; */
-  /* height: 50%; */
 `;
 
 export const AddGitText = styled.div`
   display: flex;
   align-items: center;
   min-width: 90px;
-  /* width: 100%; */
   font-size: 0.9rem;
   font-weight: 700;
   justify-content: right;
@@ -96,7 +80,6 @@ export const AddIcornBtn = styled.button`
   background-color: transparent;
   width: 50px;
   font-size: 30px;
-  /* margin-right: 10%; */
 `;
 
 export const AddInputGihub = styled.input`
@@ -117,7 +100,6 @@ export const AddInputContent = styled(AddInputGihub)``;
 export const AddCommentBtnDiv = styled.div`
   display: flex;
   justify-content: flex-end;
-  /* margin-right: 4.5%; */
   margin-top: 2%;
 `;
 
