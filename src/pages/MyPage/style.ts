@@ -87,6 +87,7 @@ export const TabsList = styled(TabList)`
   margin: 0;
   padding-left: 0px;
 `;
+// @ts-ignore
 TabsList.tabsRole = 'TabList';
 
 export const MyPageTabsContainer = styled(Tabs)`
@@ -129,6 +130,7 @@ export const TabItem = styled(Tab)`
     width: 200px;
   }
 `;
+// @ts-ignore
 TabItem.tabsRole = 'Tab';
 
 export const TabsPanel = styled(TabPanel)`
@@ -139,6 +141,7 @@ export const TabsPanel = styled(TabPanel)`
     display: block;
   }
 `;
+// @ts-ignore
 TabsPanel.tabsRole = 'TabPanel';
 
 export const TabContents = styled.div`
