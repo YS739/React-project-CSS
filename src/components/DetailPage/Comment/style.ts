@@ -65,25 +65,20 @@ export const CommentEditInput = styled.input`
   border-left: none;
   border-right: none;
   border-bottom: 1px solid black;
-
+  font-size: 1rem;
+  margin-left: 1%;
   :focus {
     outline: none;
   }
-
-  font-size: 1rem;
-  /* font-weight: 600; */
-  margin-left: 1%;
 `;
 
 export const CommentTextIcon = styled.div`
   width: 7%;
-
   font-size: 1.4rem;
-  cursor: pointer;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const CommentIconBody = styled.div`
@@ -94,35 +89,30 @@ export const CommentIconBody = styled.div`
 export const UpdateDeleteBody = styled.div`
   width: 50%;
   margin-right: 25%;
-  /* background-color: aliceblue; */
 `;
 
 export const CommentDeleteBtn = styled.button`
   width: 80px;
   height: 30px;
-
   background-color: #fff;
   border: 2px solid ${colors.PURPLE};
   color: ${colors.PURPLE};
   border-radius: 5px;
-  cursor: pointer;
-
   font-size: 0.9rem;
   font-weight: 600;
-
   display: block;
   margin-bottom: 5px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
   :hover {
     background-color: ${colors.PURPLE};
     color: #fff;
     border-radius: 5px;
     border: none;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
 `;
 
 export const CommentUpdateBtn = styled(CommentDeleteBtn)``;

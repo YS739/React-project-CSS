@@ -12,6 +12,7 @@ import {
   BlueButton,
   Login,
   ToLogin,
+  ErrorMessage
 } from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState, useRef, useEffect, ChangeEvent, MouseEvent } from 'react';
@@ -207,7 +208,7 @@ const SignUpPage = () => {
             onChange={onChangeNickName}
           />
         </Name>
-        <Error>{nickNameErrMsg}</Error>
+        <Error><span className={`message ${isNickName ? 'success' : 'error'}`}>{nickNameErrMsg}</span></Error>
 
         <Password>
           <Label>비밀번호</Label>
@@ -219,7 +220,7 @@ const SignUpPage = () => {
             onChange={onChangePw}
           />
         </Password>
-        <Error>{pwErrMsg}</Error>
+        <Error><span className={`message ${isPw ? 'success' : 'error'}`}>{pwErrMsg}</span></Error>
 
         <Password>
           <Label>비밀번호 확인</Label>
@@ -232,7 +233,7 @@ const SignUpPage = () => {
             onChange={onChangePwConfirm}
           />
         </Password>
-        <Error>{pwConfirmErrMsg}</Error>
+        <Error><span className={`message ${isPwConfirm ? 'success' : 'error'}`}>{pwConfirmErrMsg}</span></Error>
         <SubmitButtonContainer>
           <BlueButton disabled={notAllow}>회원가입</BlueButton>
         </SubmitButtonContainer>

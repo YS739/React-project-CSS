@@ -21,7 +21,6 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   padding: 40px;
-  /* background-color: aliceblue; */
 `;
 
 export const Id = styled.div`
