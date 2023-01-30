@@ -7,12 +7,12 @@ export const BASE_URL =
 export const allVideoList = (nextPageToken) => {
   return axios
     .get(
-      `${BASE_URL}&pageToken=${nextPageToken}&maxResults=9&q=클론 코딩&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+      `${BASE_URL}&pageToken=${nextPageToken}&maxResults=9&q=클론 코딩하기&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
     )
     .then((res) => res.data);
 };
 // mockData
-// .get(`/mockData/allList.json`).then((res) => res.data);
+// .get(`/mockData/클론 코딩하기.json`).then((res) => res.data);
 
 // 카테고리별 클론 코딩 리스트 가져오기 - mockData
 export const categoryVideoList = (category) => {

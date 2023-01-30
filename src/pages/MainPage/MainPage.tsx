@@ -8,7 +8,7 @@ import React, {
 import { useQuery } from 'react-query';
 import VideoList from '../../components/MainPage/VideoList/VideoList';
 import { allVideoList, categoryVideoList } from '../../common/apis';
-import { VideoSection, VideoBox } from './style';
+import { VideoSection, VideoBox, TopBtnSection, TopBtn } from './style';
 import SearchVideo from '../../components/MainPage/SearchVideo/SearchVideo';
 import { confirmAlert } from 'react-confirm-alert';
 import AlertUI from '../../components/GlobalComponents/AlertUI/AlertUI';
@@ -23,6 +23,9 @@ const MainPage = () => {
   const [videos, setVideos] = useState<any>([]);
   const [nextPageToken, setNextPageToken] = useState<string>('');
   const observerRef = useRef<HTMLDivElement>(null);
+
+  // Top button
+  const [showButton, setShowButton] = useState(false);
 
   // 클론 코딩 전체 리스트 불러오기(+PageNation)
   const {
@@ -103,8 +106,39 @@ const MainPage = () => {
     return () => observer.disconnect();
   }, [handleLoadMore]);
 
+  // Top button
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  useEffect(() => {
+    const handleShowButton = () => {
+      if (window.scrollY > 500) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    console.log(window.scrollY);
+    window.addEventListener('scroll', handleShowButton);
+    return () => {
+      window.removeEventListener('scroll', handleShowButton);
+    };
+  }, []);
+
   return (
     <>
+      {/* Top 버튼 */}
+      {showButton && (
+        <TopBtnSection>
+          <TopBtn onClick={scrollToTop} type="button">
+            Top
+          </TopBtn>
+        </TopBtnSection>
+      )}
       {/* 검색창 및 결과(+카테고리 슬라이드)컴포넌트*/}
       <SearchVideo
         keyword={keyword}
