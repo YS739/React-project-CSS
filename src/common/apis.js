@@ -7,7 +7,7 @@ export const BASE_URL =
 export const allVideoList = (nextPageToken) => {
   return axios
     .get(
-      `${BASE_URL}&pageToken=${nextPageToken}&maxResults=9&q=클론 코딩하기&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
+      `${BASE_URL}&pageToken=${nextPageToken}&maxResults=6&q=클론 코딩하기&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
     )
     .then((res) => res.data);
 };
@@ -19,7 +19,7 @@ export const categoryVideoList = (category) => {
   // mockData
   return axios.get(`/mockData/${category}.json`).then((res) => res.data.items);
 
-  // api
+  // Api
   // .get(
   //   `${BASE_URL}&q=${category}&maxResults=9&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
   // )
